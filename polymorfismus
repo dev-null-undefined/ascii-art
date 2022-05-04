@@ -1,0 +1,22 @@
+# Polymorfismus
+polymorfismusmu bude v tomto projektu využito:
+
+frame (reprezentující jeden obrázek, nebo frame z videa):
+    - získání barvy pixelu pixelu na dané pozici
+    - získání rozměru zdroje
+
+datový zdroj (reprezentující obrázek videa):
+    - získání framu na dané pozici
+    - získání počtu framů (pro obrázek 1)
+    - získání typu zdroje (obrázek, video, ...)
+    - aplikování filtru na zdroj/framy
+
+filtr:
+    - získání nové barvy pixelu na dané pozici
+
+video bude odděděno od datového zdroje, a bude navíc umožňovat změnu pořadí framů, smazání nebo kopírování framů
+
+obrázek bude odděděn od datového zdroje
+různé typy obrázků (BMP/SVG/RAW/TGA/PNG/JPEG) budou odděděny od obrázku a budou vytvářeny pomocí pomocné funkce
+
+filtr bude jednoduchá třída s metodou přijímající barvu pixelu jeho pozici a frame, vracet bude novou barvu na kterou se má originální pixel nastavit
