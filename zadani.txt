@@ -1,0 +1,21 @@
+# ASCII art
+
+Cílem je vytvořit program, spustitelný v terminálu, který bude schopen převádět obrázky předané jako parametr a nebo i videa do podoby ASCII znaků.
+Kde každý znak bude reprezentovat skupinu nebo pouze jeden pixel z zdrojového obrázku nebo videa.
+A podle jasu nebo jiného parametru, který bude určen, bude tento znak vybrán z několika možných znaků určených konfiguračním souborem.
+
+Dále bude program schopen na vstupní data aplikovat různé effekty a poté vygenerovat výsledný ASCII art na upravených datech.
+Například:
+    - multiplikativní konstanty pro složky RGB pixelů
+    - additivní konstanty pro složky RGB pixelů
+(pomocí kombinace těchto změn by mělo být možné změnit jas pixelů, udělat negativní obrázek a nebo i jiné filtry)
+    - zvětšení/zmenšení výsledného obrázku
+
+Konfiguraci filtru bude možné uložit do souboru a při dalším spuštění programu ji načíst,
+také bude možné měnit tato nastavení během běhu programu, nebo při spuštění, přes odpovídající parametry.
+
+Program by měl být schopen pracovat s více formáty obrázků (BMP/SVG/RAW/TGA/PNG/JPEG)
+
+Dobrovolné funkce programu:
+    - možnost přehrávání videa či animace (GIF, MP4, AVI)
+    - možnost ůpravy videa (mazání framů, kopírování framů, změna pozice framů, aplikovení filtru na framy, atd...)
