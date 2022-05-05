@@ -33,7 +33,7 @@ debug: compile
 release: CXXFLAGS += -O2
 release: compile
 
-compile: directories deps binaries
+compile: directories binaries
 
 run: release
 	./$(BIN_DIR)/$(PROJECT)
@@ -48,14 +48,20 @@ $(BIN_DIR)/$(PROJECT): $(OBJECTS)
 binaries: $(BIN_DIR)/$(PROJECT)
 
 clean:
-	rm -f $(OBJECTS)
-	rm -f $(BIN_DIR)/$(PROJECT)
-	rm -f $(MAKE_INCLUDE)/deps
+	rm -rf $(MAKE_INCLUDE)
+	rm -rf $(OUT_DIR)
+	rm -rf $(BIN_DIR)
 
-directories:
-	mkdir -p $(OUT_DIR)
-	mkdir -p $(BIN_DIR)
+directories: $(OUT_DIR) $(BIN_DIR) $(MAKE_INCLUDE)
+
+$(MAKE_INCLUDE):
 	mkdir -p $(MAKE_INCLUDE)
+
+$(OUT_DIR):
+	mkdir -p $(OUT_DIR)
+
+$(BIN_DIR):
+	mkdir -p $(BIN_DIR)
 
 define execute-command
 $(1)
@@ -64,8 +70,8 @@ endef
 
 deps: $(MAKE_INCLUDE)/deps
 
-$(MAKE_INCLUDE)/deps: $(SOURCE_DIR)
+$(MAKE_INCLUDE)/deps: $(MAKE_INCLUDE) $(SOURCE_DIR)
 	printf "" > $(MAKE_INCLUDE)/deps
 	$(foreach SOURCE_FILE,$(SOURCE_FILES),$(call execute-command,$(CXX) -MT $(OUT_DIR)/$(notdir $(basename $(SOURCE_FILE))).o -MM $(SOURCE_FILE) >> $(MAKE_INCLUDE)/deps))
 
--include $(MAKE_INCLUDE)/*
+include $(MAKE_INCLUDE)/deps
