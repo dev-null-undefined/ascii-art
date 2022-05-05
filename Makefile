@@ -72,7 +72,7 @@ endef
 deps: $(MAKE_INCLUDE)/deps
 
 $(MAKE_INCLUDE)/deps: $(MAKE_INCLUDE) $(SOURCE_DIR)
-	printf "" > $(MAKE_INCLUDE)/deps
+	: > $(MAKE_INCLUDE)/deps
 	$(foreach SOURCE_FILE,$(SOURCE_FILES),$(call execute-command,$(CXX) -MT $(OUT_DIR)/$(notdir $(basename $(SOURCE_FILE))).o -MM $(SOURCE_FILE) >> $(MAKE_INCLUDE)/deps))
 
 include $(MAKE_INCLUDE)/deps
