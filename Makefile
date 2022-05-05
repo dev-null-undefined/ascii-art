@@ -1,4 +1,4 @@
-.PHONY: all clean
+.PHONY: all clean run compile release debug
 .DEFAULT_GOAL = all
 PROJECT := ascii-art
 
