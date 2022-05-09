@@ -47,8 +47,8 @@ void Menu::showStatus() const {
 
 #if NCURSES_EXT_FUNCS >= 20181013
 
-short getRoundedColorIndex(Color color) {
-    return 16 + (25 * (color.getRed() / 51) + 5 * (color.getGreen() / 51) + (color.getBlue() / 51));
+int getRoundedColorIndex(Color color) {
+    return 16 + (36 * (color.getRed() / 51) + 6 * (color.getGreen() / 51) + (color.getBlue() / 51));
 }
 
 int min(int a, int b) {
