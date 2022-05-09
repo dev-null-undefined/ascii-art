@@ -43,7 +43,7 @@ release: compile
 compile: directories binaries
 
 run: compile
-	./$(BIN_DIR)/$(PROJECT) ~/print_me2.jpeg ~/print_me.jpeg
+	./$(BIN_DIR)/$(PROJECT) ./examples
 
 
 $(OUT_DIR)/%.o:
