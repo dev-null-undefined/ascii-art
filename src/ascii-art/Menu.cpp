@@ -41,7 +41,7 @@ void Menu::showStatus() const {
 }
 
 
-#if NCURSES_EXT_FUNCS>= 20181013
+#if NCURSES_EXT_FUNCS >= 20181013
 
 int getRoundedColorIndex(Color color) {
     return 16 + 36 * color.getRed() / 51 + 6 * color.getGreen() / 51 + color.getBlue() / 51;
@@ -76,7 +76,6 @@ void Menu::show() const {
     Vector resolution = frame.getSize();
     Vector window_size = {static_cast<size_t>(m_main_window->_maxx - m_main_window->_begx),
                           static_cast<size_t>(m_main_window->_maxy - m_main_window->_begy)};
-    wclear(m_main_window);
     box(m_main_window, 0, 0);
     std::shared_ptr<Frame> frame_ptr;
     if (m_settings.m_dithering) {
