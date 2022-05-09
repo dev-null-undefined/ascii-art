@@ -18,7 +18,7 @@ LD = g++
 LIBS = -ljpeg
 LIBPATH = -L/nix/store/43iz38yxmjn8am7ji6mlidkl599kxc39-libjpeg-9e/lib
 
-CXXFLAGS := -Wall -Wextra -pedantic --std=c++17 $(INCLUDE_DIR)
+CXXFLAGS := -Wall -Wextra -pedantic -std=c++17 $(INCLUDE_DIR)
 
 LDFLAGS := $(LIBS) $(LIBPATH)
 
