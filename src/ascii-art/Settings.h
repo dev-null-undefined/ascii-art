@@ -17,17 +17,21 @@ class Settings {
 
     bool m_dithering = true;
     bool m_colors = true;
-    bool m_color_dithering = true;
+    bool m_color_dithering = false;
+    bool m_debug = false;
 
     double m_red_factor = 0.2126f * 100;
     double m_green_factor = 0.7152f * 100;
     double m_blue_factor = 0.0722f * 100;
-    double m_alpha_factor = 0.0f * 100;
+    double m_alpha_factor = 0.0f;
 
     double m_red_offset = 0.0f;
     double m_green_offset = 0.0f;
     double m_blue_offset = 0.0f;
-    double m_alpha_offset = 255.0f;
+    double m_alpha_offset = 0.0f;
+
+
+    size_t max_depth = 5;
 
     Color getRoundedColor(Color color) const;
 

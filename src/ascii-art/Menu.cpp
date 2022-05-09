@@ -306,12 +306,18 @@ void Menu::resize() {
 }
 
 void Menu::tryAddSource(const std::string & path, size_t depth) {
-    if (fs::is_directory(path) && depth < MAX_DEPTH) {
+    if (fs::is_directory(path) && depth < m_settings.max_depth) {
         std::set<fs::path> sorted_by_name;
-        for (const auto & entry : fs::directory_iterator(path))
-            sorted_by_name.insert(entry.path());
-        for (auto & filename : sorted_by_name)
-            tryAddSource(filename, depth + 1);
+        try{
+            for (const auto & entry : fs::directory_iterator(path))
+                sorted_by_name.insert(entry.path());
+            for (auto & filename : sorted_by_name)
+                tryAddSource(filename, depth + 1);
+        } catch (fs::filesystem_error & e) {
+#if LOG_LEVEL >= 1
+            std::cerr << e.what() << std::endl;
+#endif
+        }
     } else {
         try {
             std::shared_ptr<DataSource> dataSource = DataSourceFactory::getDataSource(path);

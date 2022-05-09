@@ -23,7 +23,6 @@ class Menu {
 
     static constexpr Vector MINIMUM_WINDOW_SIZE = {10,10};
     static constexpr int STATUS_WINDOW_HEIGHT = 3;
-    static constexpr size_t MAX_DEPTH = 10;
 
     void input_loop();
 
