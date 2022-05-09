@@ -9,6 +9,6 @@ std::shared_ptr<DataSource> DataSourceFactory::getDataSource(const std::string &
     } else if(filename.find(".png") != std::string::npos) {
         return std::make_shared<PNGImage>(filename);
     } else {
-        throw std::invalid_argument("Unknown image format");
+        throw std::invalid_argument("Unknown image format: " + filename);
     }
 }
