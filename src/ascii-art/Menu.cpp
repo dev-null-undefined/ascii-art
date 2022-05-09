@@ -94,8 +94,8 @@ void Menu::show() const {
             char ascii = m_settings.getChar(frame_ptr->getPixel({x, y}));
             Color rounded;
 #if NCURSES_EXT_FUNCS >= 20181013
-            int colorIndex = getRoundedColorIndex(m_settings.m_color_dithering ? c : original_c);
-            rounded = Color{(c.getRed() / 51) * 51, (c.getBlue() / 51) * 51, (c.getBlue() / 51) * 51, c.getAlpha()};
+            int colorIndex = getRoundedColorIndex((m_settings.m_color_dithering ? c : original_c).normalize());
+            rounded = Color{(c.getRed() / 51) * 51, (c.getGreen() / 51) * 51, (c.getBlue() / 51) * 51, c.getAlpha()};
 #else
             rounded = m_settings.getRoundedColor(c);
 #endif
