@@ -47,22 +47,22 @@ void Menu::showStatus() const {
 
 #if NCURSES_EXT_FUNCS >= 20181013
 
-int getRoundedColorIndex(Color color) {
-    return 16 + 36 * color.getRed() / 51 + 6 * color.getGreen() / 51 + color.getBlue() / 51;
+short getRoundedColorIndex(Color color) {
+    return 16 + (25 * (color.getRed() / 51) + 5 * (color.getGreen() / 51) + (color.getBlue() / 51));
 }
 
-
-int getColorPairId(int foregroundId, int backgroundId) {
-    return foregroundId + (backgroundId << 8);
+int min(int a, int b) {
+    return a < b ? a : b;
 }
 
 void initColorPairs() {
-    for (int foregroundId = 0; foregroundId < 255; foregroundId++) {
-        for (int backgroundId = 0; backgroundId < 255; backgroundId++) {
-            init_extended_pair(
-                    getColorPairId(foregroundId, backgroundId),
-                    foregroundId,
-                    backgroundId);
+    for (int red = 0; red <= 51; ++red) {
+        for (int green = 0; green <= 51; ++green) {
+            for (short blue = 0; blue <= 51; ++blue) {
+                int foregroundId = getRoundedColorIndex(Color(red * 5, green * 5, blue * 5));
+                init_extended_color(foregroundId, min(red * 5 * 4,999),min(green * 5 * 4,999), min(blue * 5 * 4,999));
+                init_extended_pair(foregroundId, COLOR_BLACK, foregroundId);
+            }
         }
     }
 }
@@ -94,15 +94,11 @@ void Menu::show() const {
             char ascii = m_settings.getChar(frame_ptr->getPixel({x, y}));
             Color rounded;
 #if NCURSES_EXT_FUNCS >= 20181013
-            int colorIndex = getColorPairId(getRoundedColorIndex(m_settings.m_color_dithering ? c : original_c),
-                                            COLOR_BLACK);
+            int colorIndex = getRoundedColorIndex(m_settings.m_color_dithering ? c : original_c);
             rounded = Color{(c.getRed() / 51) * 51, (c.getBlue() / 51) * 51, (c.getBlue() / 51) * 51, c.getAlpha()};
 #else
             rounded = m_settings.getRoundedColor(c);
 #endif
-            if (!m_settings.m_color_dithering) {
-                rounded = m_settings.getRoundedColor(c);
-            }
             if (m_settings.m_dithering) {
 
                 Color diff = c - rounded;
