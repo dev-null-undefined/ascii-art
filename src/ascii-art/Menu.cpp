@@ -90,14 +90,16 @@ void Menu::show() const {
             Color original_c = frame.getPixel({x, y});
             char ascii = m_settings.getChar(frame_ptr->getPixel({x, y}));
             Color rounded;
-#if NCURSES_EXT_FUNCS>=20211021
-            int colorIndex = getColorPairId(getRoundedColorIndex(m_settings.m_color_dithering ? c : original_c) % 255,
-                                            COLOR_GREEN);
+#if NCURSES_EXT_FUNCS >= 20181013
+            int colorIndex = getColorPairId(getRoundedColorIndex(m_settings.m_color_dithering ? c : original_c),
+                                            COLOR_BLACK);
             rounded = Color{(c.getRed() / 51) * 51, (c.getBlue() / 51) * 51, (c.getBlue() / 51) * 51, c.getAlpha()};
 #else
             rounded = m_settings.getRoundedColor(c);
 #endif
-            rounded = m_settings.getRoundedColor(c);
+            if (!m_settings.m_color_dithering) {
+                rounded = m_settings.getRoundedColor(c);
+            }
             if (m_settings.m_dithering) {
 
                 Color diff = c - rounded;
