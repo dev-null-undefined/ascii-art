@@ -12,6 +12,9 @@ class JPEGImage : public Image {
 
   protected:
     void Load() override;
+
+  public:
+    std::string_view filename() const override;
 };
 
 #endif //ASCII_ART_JPEGIMAGE_H_81CA250E46474F5386FA07E2FEA3CB1E
