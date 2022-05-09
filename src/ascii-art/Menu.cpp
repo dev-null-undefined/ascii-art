@@ -3,6 +3,7 @@
 #include "sources/DataSourceFactory.h"
 #include <ncurses.h>
 #include <filesystem>
+#include <set>
 
 namespace fs = std::filesystem;
 
@@ -307,8 +308,11 @@ void Menu::resize() {
 
 void Menu::tryAddSource(const std::string & path, size_t depth) {
     if (fs::is_directory(path) && depth < MAX_DEPTH) {
+        std::set<fs::path> sorted_by_name;
         for (const auto & entry : fs::directory_iterator(path))
-            tryAddSource(entry.path(), depth + 1);
+            sorted_by_name.insert(entry.path());
+        for (auto & filename : sorted_by_name)
+            tryAddSource(filename, depth + 1);
     } else {
         try {
             std::shared_ptr<DataSource> dataSource = DataSourceFactory::getDataSource(path);
