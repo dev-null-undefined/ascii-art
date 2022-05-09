@@ -2,18 +2,16 @@
 #include "Menu.h"
 #include "sources/DataSourceFactory.h"
 #include <ncurses.h>
+#include <filesystem>
 
-//#undef NCURSES_EXT_COLORS
+namespace fs = std::filesystem;
+
 Menu::Menu(const std::vector<std::string> & items) : m_current_index(0), m_frame_index(0) {
     for (const auto & item : items) {
-        try {
-            std::shared_ptr<DataSource> dataSource = DataSourceFactory::getDataSource(item);
-            m_sources.push_back(dataSource);
-        } catch (std::exception & e) {
-            std::cerr << e.what() << std::endl;
-        }
+        tryAddSource(item);
     }
 }
+
 
 void Menu::showStatus() const {
     size_t index = m_current_index + 1;
@@ -300,4 +298,19 @@ void Menu::resize() {
     wrefresh(status_window);
     m_status_window = status_window;
 
+}
+
+void Menu::tryAddSource(const std::string & path, size_t depth) {
+    if (fs::is_directory(path) && depth < MAX_DEPTH) {
+        for (const auto & entry : fs::directory_iterator(path))
+            tryAddSource(entry.path(), depth + 1);
+    } else {
+        try {
+            std::shared_ptr<DataSource> dataSource = DataSourceFactory::getDataSource(path);
+            m_sources.push_back(dataSource);
+            std::cout << "Added " << path << std::endl;
+        } catch (std::exception & e) {
+            std::cerr << e.what() << std::endl;
+        }
+    }
 }
