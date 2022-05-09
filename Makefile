@@ -28,7 +28,7 @@ OBJECTS = $(patsubst %$(SOURCE_EXT),$(OUT_DIR)/%.o,$(notdir $(SOURCE_FILES)))
 all: release
 
 debug: CXXFLAGS += -g -pg -O0 -DDEBUG -fsanitize=address -fPIE -fno-omit-frame-pointer
-debug: LDFLAGS += -g
+debug: LDFLAGS +=
 debug: compile
 
 release: CXXFLAGS += -O2
