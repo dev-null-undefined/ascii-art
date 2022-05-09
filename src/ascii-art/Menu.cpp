@@ -247,6 +247,9 @@ void Menu::start() {
     if (has_colors()) {
         start_color();
         initColorPairs();
+#if LOG_LEVEL >= 1
+        std::cout << "Colors enabled: " << COLORS << " Color pairs:" << COLOR_PAIRS << std::endl;
+#endif
     }
 #endif
 
@@ -317,9 +320,13 @@ void Menu::tryAddSource(const std::string & path, size_t depth) {
         try {
             std::shared_ptr<DataSource> dataSource = DataSourceFactory::getDataSource(path);
             m_sources.push_back(dataSource);
+#if LOG_LEVEL >= 1
             std::cout << "Added " << path << std::endl;
+#endif
         } catch (std::exception & e) {
+#if LOG_LEVEL >= 1
             std::cerr << e.what() << std::endl;
+#endif
         }
     }
 }

@@ -38,8 +38,11 @@ class Color {
 
     void setAlpha(number alpha);
 
+    Color normalize() const;
+
   private:
     number m_r, m_g, m_b, m_a;
+
 };
 
 

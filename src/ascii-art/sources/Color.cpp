@@ -1,5 +1,7 @@
 #include "Color.h"
-
+#if LOG_LEVEL >= 2
+#include <iostream>
+#endif
 
 Color & Color::operator+=(const Color & other) {
 
@@ -46,17 +48,28 @@ Color & Color::operator*(double factor) {
     return *this;
 }
 
-Color::Color(number m_r, number m_g, number m_b, number m_a) : m_r(m_r > 255 ? 255 : m_r),
-                                                               m_g(m_g > 255 ? 255 : m_g),
-                                                               m_b(m_b > 255 ? 255 : m_b),
-                                                               m_a(m_a > 255 ? 255 : m_a) {}
+Color::Color(number m_r, number m_g, number m_b, number m_a) {
+    setRed(m_r);
+    setGreen(m_g);
+    setBlue(m_b);
+    setAlpha(m_a);
+}
+
+Color::number fixedNumber(Color::number number) {
+#if LOG_LEVEL >= 2
+    if(number > 255 || number < -255) {
+        std::cerr << "Color::number fixedNumber(Color::number number): number is out of range: " << number << std::endl;
+    }
+#endif
+    return number > 255 ? 255 : number < -255 ? -255 : number;
+}
 
 Color::number Color::getRed() const {
     return m_r;
 }
 
 void Color::setRed(number red) {
-    m_r = red > 255 ? 255 : red;
+    m_r = fixedNumber(red);
 }
 
 Color::number Color::getGreen() const {
@@ -64,7 +77,7 @@ Color::number Color::getGreen() const {
 }
 
 void Color::setGreen(number green) {
-    m_g = green > 255 ? 255 : green;
+    m_g = fixedNumber(green);
 }
 
 Color::number Color::getBlue() const {
@@ -72,7 +85,7 @@ Color::number Color::getBlue() const {
 }
 
 void Color::setBlue(number blue) {
-    m_b = blue > 255 ? 255 : blue;
+    m_b = fixedNumber(blue);
 }
 
 Color::number Color::getAlpha() const {
@@ -80,5 +93,12 @@ Color::number Color::getAlpha() const {
 }
 
 void Color::setAlpha(number alpha) {
-    m_a = alpha > 255 ? 255 : alpha;
+    m_a = fixedNumber(alpha);
+}
+
+Color::number normalizeNumber(Color::number number) {
+    return number > 255 ? 255 : number < 0 ? 0 : number;
+}
+Color Color::normalize() const {
+    return Color{normalizeNumber(m_r), normalizeNumber(m_g), normalizeNumber(m_b), normalizeNumber(m_a)};
 }

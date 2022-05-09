@@ -33,7 +33,7 @@ fast-debug:
 
 all: release
 
-debug: CXXFLAGS += -g -pg -O0 -DDEBUG -fsanitize=address -fPIE -fno-omit-frame-pointer
+debug: CXXFLAGS += -g -pg -O0 -DDEBUG -DLOG_LEVEL=10 -fsanitize=address -fPIE -fno-omit-frame-pointer
 debug: LDFLAGS +=
 debug: compile
 

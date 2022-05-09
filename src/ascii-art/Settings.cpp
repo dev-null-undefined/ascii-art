@@ -1,8 +1,14 @@
 #include <string>
 #include "Settings.h"
 
+#if LOG_LEVEL >= 1
+
+#include <iostream>
+
+#endif
+
 double Settings::maxValue() const {
-    return colorValue(Color{255, 255, 255, 0});
+    return colorValue(Color{255, 255, 255, 255});
 }
 
 double Settings::colorValue(const Color & color) const {
@@ -20,22 +26,32 @@ Settings::Settings() {
 }
 
 char Settings::getChar(const Color & color) const {
-    double value = colorValue(color);
+    double value = colorValue(color.normalize());
     double max = maxValue();
     auto index = (size_t) (value * (double) (m_chars.size() - 1) / max);
-//#ifdef DEBUG // TODO: fix this lazy hack
+#ifdef DEBUG
     if (index >= m_chars.size()) {
-        std::string x = "Index out of range: " + index;
+#if LOG_LEVEL >= 1
+        std::cerr << "Index out of range: " << index;
+#endif
         index = m_chars.size() - 1;
     }
-//#endif
+#endif
     return m_chars.at(index);
 }
 
 Color Settings::getRoundedColor(Color color) const {
-    double value = colorValue(color);
+    double value = colorValue(color.normalize());
     double max = maxValue();
     auto index = (size_t) (value * (double) (m_chars.size() - 1) / max);
+#ifdef DEBUG
+    if (index >= m_chars.size()) {
+#if LOG_LEVEL >= 1
+        std::cerr << "Index out of range: " << index;
+#endif
+        index = m_chars.size() - 1;
+    }
+#endif
     int remainder = value - static_cast<double>(index) * max / (double) (m_chars.size() - 1);
 
     Color roundedColor{color.getRed() - remainder / 3, color.getGreen() - remainder / 3,
