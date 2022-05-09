@@ -95,3 +95,6 @@ void PNGImage::Load() {
     fclose(fp);
 }
 
+std::string_view PNGImage::filename() const {
+    return std::string_view(m_filename);
+}

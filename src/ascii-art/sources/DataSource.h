@@ -5,6 +5,7 @@
 #include "Frame.h"
 #include "SourceType.h"
 #include "Filter.h"
+#include <string>
 
 
 class DataSource {
@@ -12,6 +13,7 @@ class DataSource {
 public:
     virtual ~DataSource() = default;
     virtual size_t frameCount() const = 0;
+    virtual std::string_view filename() const = 0;
     Frame & getFrame(size_t index);
     virtual SourceType type() const = 0;
     void applyFilter(const Filter & filter);

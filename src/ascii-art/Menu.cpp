@@ -18,10 +18,12 @@ void Menu::showStatus() const {
     size_t max_index = m_sources.size();
     size_t frame_index = m_frame_index + 1;
     size_t max_frame_index = m_sources[m_current_index]->frameCount();
+    std::string_view file_name = m_sources[m_current_index]->filename();
 
     size_t char_count = 0;
-    const char * format = "index %zu/%zu frame %zu/%zu";
+    const char * format = "%s %zu/%zu frame %zu/%zu";
     char_count += std::string(format).length();
+    char_count += file_name.length();
     char_count += std::to_string(index).length();
     char_count += std::to_string(max_index).length();
     char_count += std::to_string(frame_index).length();
@@ -36,7 +38,8 @@ void Menu::showStatus() const {
     }
     wclear(m_status_window);
     box(m_status_window, 0, 0);
-    mvwprintw(m_status_window, 1, (int) middle, format, index, max_index, frame_index, max_frame_index);
+    mvwprintw(m_status_window, 1, (int) middle, format, std::string(file_name).c_str(), index, max_index, frame_index,
+              max_frame_index);
     wrefresh(m_status_window);
 }
 

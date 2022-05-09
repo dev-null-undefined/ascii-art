@@ -14,6 +14,9 @@ class PNGImage : public Image{
   protected:
     std::string m_filename;
     void Load() override;
+
+  public:
+    std::string_view filename() const override;
 };
 
 

@@ -223,3 +223,7 @@ void JPEGImage::Load() {
 JPEGImage::JPEGImage(std::string filename) : m_filename(std::move(filename)) {
 
 }
+
+std::string_view JPEGImage::filename() const {
+    return std::string_view(m_filename);
+}
