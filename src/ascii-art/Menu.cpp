@@ -130,14 +130,14 @@ void Menu::show() const {
                 }
             }
 
-#if NCURSES_EXT_FUNCS>=20211021
+#if NCURSES_EXT_FUNCS >= 20181013
             if (has_colors() && m_settings.m_colors) {
                 wattron(m_main_window, COLOR_PAIR(colorIndex));
             }
 #endif
             mvwaddch(m_main_window, y + 1, x + 1, ascii);
 
-#if NCURSES_EXT_FUNCS>=20211021
+#if NCURSES_EXT_FUNCS >= 20181013
             if (has_colors() && m_settings.m_colors) {
                 wattroff(m_main_window, COLOR_PAIR(colorIndex));
             }
@@ -239,7 +239,7 @@ void Menu::start() {
     noecho(); // Don't repeat input
     cbreak(); // disable line buffering (waiting for newline)
 
-#if NCURSES_EXT_FUNCS>=20211021
+#if NCURSES_EXT_FUNCS >= 20181013
     if (has_colors()) {
         start_color();
         initColorPairs();
