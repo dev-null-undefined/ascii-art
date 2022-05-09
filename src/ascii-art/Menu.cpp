@@ -22,7 +22,7 @@ void Menu::showStatus() const {
     std::string_view file_name = m_sources[m_current_index]->filename();
 
     size_t char_count = 0;
-    const char * format = "%s %zu/%zu frame %zu/%zu";
+    const char * format = "%s %zu/%zu frame %zu/%zu %d %d";
     char_count += std::string(format).length();
     char_count += file_name.length();
     char_count += std::to_string(index).length();
@@ -40,7 +40,7 @@ void Menu::showStatus() const {
     wclear(m_status_window);
     box(m_status_window, 0, 0);
     mvwprintw(m_status_window, 1, (int) middle, format, std::string(file_name).c_str(), index, max_index, frame_index,
-              max_frame_index);
+              max_frame_index,m_settings.m_dithering,m_settings.m_color_dithering);
     wrefresh(m_status_window);
 }
 
