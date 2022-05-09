@@ -17,7 +17,7 @@ class Settings {
 
     bool m_dithering = true;
     bool m_colors = true;
-    bool m_color_dithering = false;
+    bool m_color_dithering = true;
     bool m_debug = false;
 
     double m_red_factor = 0.2126f * 100;
