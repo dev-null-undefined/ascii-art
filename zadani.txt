@@ -17,5 +17,5 @@ také bude možné měnit tato nastavení během běhu programu, nebo při spuš
 Program by měl být schopen pracovat s více formáty obrázků (BMP/SVG/RAW/TGA/PNG/JPEG)
 
 Dobrovolné funkce programu:
-    - možnost přehrávání videa či animace (GIF, MP4, AVI)
+    - možnost přehrávání videa či animace
     - možnost ůpravy videa (mazání framů, kopírování framů, změna pozice framů, aplikovení filtru na framy, atd...)
