@@ -4,7 +4,7 @@
 
 #include "Frame.h"
 #include "SourceType.h"
-#include "Filter.h"
+#include "filters/Filter.h"
 #include <string>
 
 

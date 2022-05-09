@@ -15,7 +15,7 @@ MAKE_INCLUDE = Makefile.d
 CXX = g++
 LD = g++
 
-LIBS = -ljpeg -lncurses -lncursesw -lpng -lz
+LIBS = -lstdc++fs -ljpeg -lncurses -lncursesw -lpng -lz
 LIBPATH = -L/nix/store/43iz38yxmjn8am7ji6mlidkl599kxc39-libjpeg-9e/lib -L/nix/store/6zk45l0g8fri5q3hdvw0vwrw0cs34snc-ncurses-6.3/lib -L/nix/store/bl0dac72m1ibaicsdm8y3jshkq2vjmya-libpng-1.2.59/lib -L/nix/store/bqjh8dc6m5plswxrmmn9x4cpxrrw94lv-zlib-1.2.11/lib
 
 CXXFLAGS := -Wall -Wextra -pedantic -std=c++17 $(INCLUDE_DIR)

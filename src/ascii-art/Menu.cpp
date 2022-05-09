@@ -89,19 +89,20 @@ void Menu::show() const {
     }
     for (size_t y = 0; y < resolution.m_y && y < window_size.m_y - 1; y++) {
         for (size_t x = 0; x < resolution.m_x && x < window_size.m_x - 1; x++) {
-            Color c = frame_ptr->getPixel({x, y});
+            Color color = frame_ptr->getPixel({x, y});
             Color original_c = frame.getPixel({x, y});
-            char ascii = m_settings.getChar(frame_ptr->getPixel({x, y}));
+            char ascii = m_settings.getChar(frame_ptr->getPixel({x, y}).normalize());
             Color rounded;
 #if NCURSES_EXT_FUNCS >= 20181013
-            int colorIndex = getRoundedColorIndex((m_settings.m_color_dithering ? c : original_c).normalize());
-            rounded = Color{(c.getRed() / 51) * 51, (c.getGreen() / 51) * 51, (c.getBlue() / 51) * 51, c.getAlpha()};
+            Color used = (m_settings.modifiedColor(m_settings.m_color_dithering ? color : original_c)).normalize();
+            int colorIndex = getRoundedColorIndex(used);
+            rounded = Color{(color.getRed() / 51) * 51, (color.getGreen() / 51) * 51, (color.getBlue() / 51) * 51, color.getAlpha()};
 #else
-            rounded = m_settings.getRoundedColor(c);
+            rounded = m_settings.getRoundedColor(color);
 #endif
             if (m_settings.m_dithering) {
 
-                Color diff = c - rounded;
+                Color diff = color - rounded;
 
                 Vector cords;
                 cords = {x + 1, y};
@@ -198,27 +199,31 @@ void Menu::input_loop() {
                 update = true;
                 break;
             case 'i':
-                m_settings.m_red_offset += 10;
+                m_settings.m_color_filter.m_red_offset += 10;
                 update = true;
                 break;
             case 'j':
-                m_settings.m_red_offset -= 10;
+                m_settings.m_color_filter.m_red_offset -= 10;
                 update = true;
                 break;
             case 'o':
-                m_settings.m_green_offset += 10;
+                m_settings.m_color_filter.m_green_offset += 10;
                 update = true;
                 break;
             case 'k':
-                m_settings.m_green_offset -= 10;
+                m_settings.m_color_filter.m_green_offset -= 10;
                 update = true;
                 break;
             case 'p':
-                m_settings.m_blue_offset += 10;
+                m_settings.m_color_filter.m_blue_offset += 10;
                 update = true;
                 break;
             case 'l':
-                m_settings.m_blue_offset -= 10;
+                m_settings.m_color_filter.m_blue_offset -= 10;
+                update = true;
+                break;
+            case 's':
+                m_settings.m_debug = !m_settings.m_debug;
                 update = true;
                 break;
             default:

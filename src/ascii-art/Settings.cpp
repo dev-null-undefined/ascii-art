@@ -13,12 +13,18 @@ double Settings::maxValue() const {
 
 double Settings::colorValue(const Color & color) const {
     double value = 0;
-    value += (color.getRed() + m_red_offset) * m_red_factor;
-    value += (color.getGreen() + m_green_offset) * m_green_factor;
-    value += (color.getBlue() + m_blue_offset) * m_blue_factor;
-    value += (color.getAlpha() + m_alpha_offset) * m_alpha_factor;
-    return value;
+    Color modified = m_brightness_filter.apply(color, {}).normalize();
+    value += modified.getRed();
+    value += modified.getGreen();
+    value += modified.getBlue();
+    value += modified.getAlpha();
+    return value < 0 ? 0 : value;
 }
+
+Color Settings::modifiedColor(const Color & color) const {
+    return m_color_filter.apply(color, {});
+}
+
 
 Settings::Settings() {
     std::string chars = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,\"^`'. ";

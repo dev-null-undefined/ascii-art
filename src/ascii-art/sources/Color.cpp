@@ -56,7 +56,7 @@ Color::Color(number m_r, number m_g, number m_b, number m_a) {
 }
 
 Color::number fixedNumber(Color::number number) {
-#if LOG_LEVEL >= 2
+#if LOG_LEVEL >= 3
     if(number > 255 || number < -255) {
         std::cerr << "Color::number fixedNumber(Color::number number): number is out of range: " << number << std::endl;
     }

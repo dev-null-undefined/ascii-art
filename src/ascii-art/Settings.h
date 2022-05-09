@@ -4,12 +4,15 @@
 #include <cstdlib>
 #include <vector>
 #include "sources/Color.h"
+#include "sources/filters/BasicFilter.h"
 
 class Settings {
   public:
     Settings();
 
     double colorValue(const Color & color) const;
+
+    Color modifiedColor(const Color & color) const;
 
     double maxValue() const;
 
@@ -20,16 +23,8 @@ class Settings {
     bool m_color_dithering = true;
     bool m_debug = false;
 
-    double m_red_factor = 0.2126f * 100;
-    double m_green_factor = 0.7152f * 100;
-    double m_blue_factor = 0.0722f * 100;
-    double m_alpha_factor = 0.0f;
-
-    double m_red_offset = 0.0f;
-    double m_green_offset = 0.0f;
-    double m_blue_offset = 0.0f;
-    double m_alpha_offset = 0.0f;
-
+    BasicFilter m_brightness_filter{0.212671f, 0.715160f, 0.072169f, 0.0f};
+    BasicFilter m_color_filter{};
 
     size_t max_depth = 5;
 

@@ -13,7 +13,7 @@ add_executable(ascii_art
         src/ascii-art/sources/Image.cpp
         src/ascii-art/sources/Video.cpp
         src/ascii-art/sources/DataSource.cpp
-        src/ascii-art/sources/Filter.cpp
+        src/ascii-art/sources/filters/BasicFilter.cpp
         src/ascii-art/sources/image-formats/PNGImage.cpp
         src/ascii-art/sources/image-formats/BMPImage.cpp
         src/ascii-art/sources/image-formats/JPEGImage.cpp
