@@ -36,8 +36,8 @@ release: compile
 
 compile: directories binaries
 
-run: release
-	./$(BIN_DIR)/$(PROJECT)
+run: compile
+	./$(BIN_DIR)/$(PROJECT) ~/print_me2.jpeg ~/print_me.jpeg
 
 
 $(OUT_DIR)/%.o:
