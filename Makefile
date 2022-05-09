@@ -1,4 +1,4 @@
-.PHONY: all clean run compile release debug
+.PHONY: all clean run compile release debug fast fast-debug
 .DEFAULT_GOAL = all
 PROJECT := ascii-art
 
@@ -24,6 +24,12 @@ LDFLAGS := $(LIBS) $(LIBPATH)
 
 SOURCE_FILES = $(wildcard $(SOURCE_DIR)/*$(SOURCE_EXT) $(SOURCE_DIR)/*/*$(SOURCE_EXT) $(SOURCE_DIR)/*/*/*$(SOURCE_EXT) $(SOURCE_DIR)/*/*/*/*$(SOURCE_EXT))
 OBJECTS = $(patsubst %$(SOURCE_EXT),$(OUT_DIR)/%.o,$(notdir $(SOURCE_FILES)))
+
+fast:
+	$(MAKE) -j12 release
+
+fast-debug:
+	$(MAKE) -j12 debug
 
 all: release
 
