@@ -66,6 +66,7 @@ void initColorPairs() {
 #endif
 
 void Menu::show() const {
+    wclear(m_main_window);
     showStatus();
     if (m_current_index >= m_sources.size()) {
         std::cerr << "Index out of range" << std::endl;
