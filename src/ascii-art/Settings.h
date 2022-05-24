@@ -23,6 +23,7 @@ class Settings {
     bool m_color_dithering = true;
     bool m_debug = false;
 
+    // TODO: should be base class instead of child
     BasicFilter m_brightness_filter{0.212671f, 0.715160f, 0.072169f, 0.0f};
     BasicFilter m_color_filter{};
 

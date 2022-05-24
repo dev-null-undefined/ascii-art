@@ -1,11 +1,6 @@
 #include <string>
 #include "Settings.h"
-
-#if LOG_LEVEL >= 1
-
-#include <iostream>
-
-#endif
+#include "logging/Logger.h"
 
 double Settings::maxValue() const {
     return colorValue(Color{255, 255, 255, 255});
@@ -37,9 +32,7 @@ char Settings::getChar(const Color & color) const {
     auto index = (size_t) (value * (double) (m_chars.size() - 1) / max);
 #ifdef DEBUG
     if (index >= m_chars.size()) {
-#if LOG_LEVEL >= 1
-        std::cerr << "Index out of range: " << index;
-#endif
+        Logger::log("Index out of range: " + std::to_string(index) + " " + std::to_string(m_chars.size()),LogLevel::ERROR);
         index = m_chars.size() - 1;
     }
 #endif
@@ -52,13 +45,11 @@ Color Settings::getRoundedColor(Color color) const {
     auto index = (size_t) (value * (double) (m_chars.size() - 1) / max);
 #ifdef DEBUG
     if (index >= m_chars.size()) {
-#if LOG_LEVEL >= 1
-        std::cerr << "Index out of range: " << index;
-#endif
+        Logger::log("Index out of range: " + std::to_string(index) + " " + std::to_string(m_chars.size()),LogLevel::ERROR);
         index = m_chars.size() - 1;
     }
 #endif
-    int remainder = value - static_cast<double>(index) * max / (double) (m_chars.size() - 1);
+    int remainder = static_cast<int>(value - static_cast<double>(index) * max / (double) (m_chars.size() - 1));
 
     Color roundedColor{color.getRed() - remainder / 3, color.getGreen() - remainder / 3,
                        color.getBlue() - (remainder / 3 + remainder % 3), color.getAlpha()};

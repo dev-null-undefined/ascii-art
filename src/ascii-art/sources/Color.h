@@ -10,9 +10,13 @@ class Color {
 
     Color & operator+=(const Color & other);
 
-    Color & operator*(number factor);
+    Color operator*(number factor)const;
 
-    Color & operator*(double factor);
+    Color operator*(double factor) const;
+
+    Color & operator*=(number factor);
+
+    Color & operator*=(double factor);
 
     Color operator-() const;
 

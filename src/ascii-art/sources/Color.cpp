@@ -1,7 +1,4 @@
 #include "Color.h"
-#if LOG_LEVEL >= 2
-#include <iostream>
-#endif
 
 Color & Color::operator+=(const Color & other) {
 
@@ -31,8 +28,7 @@ Color & Color::operator-=(const Color & other) {
     return *this += -other;
 }
 
-Color & Color::operator*(Color::number factor) {
-
+Color & Color::operator*=(Color::number factor) {
     m_r *= factor;
     m_g *= factor;
     m_b *= factor;
@@ -40,12 +36,20 @@ Color & Color::operator*(Color::number factor) {
     return *this;
 }
 
-Color & Color::operator*(double factor) {
+Color & Color::operator*=(double factor) {
     m_r = static_cast<number>(static_cast<double>(m_r) * factor);
     m_g = static_cast<number>(static_cast<double>(m_g) * factor);
     m_b = static_cast<number>(static_cast<double>(m_b) * factor);
     m_a = static_cast<number>(static_cast<double>(m_a) * factor);
     return *this;
+}
+
+Color Color::operator*(Color::number factor) const {
+    return Color(*this) *= factor;
+}
+
+Color Color::operator*(double factor) const {
+    return Color(*this) *= factor;
 }
 
 Color::Color(number m_r, number m_g, number m_b, number m_a) {
@@ -56,11 +60,6 @@ Color::Color(number m_r, number m_g, number m_b, number m_a) {
 }
 
 Color::number fixedNumber(Color::number number) {
-#if LOG_LEVEL >= 3
-    if(number > 255 || number < -255) {
-        std::cerr << "Color::number fixedNumber(Color::number number): number is out of range: " << number << std::endl;
-    }
-#endif
     return number > 255 ? 255 : number < -255 ? -255 : number;
 }
 

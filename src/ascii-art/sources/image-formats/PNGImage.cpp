@@ -8,6 +8,7 @@ PNGImage::PNGImage(std::string filename) : m_filename(std::move(filename)) {
 
 }
 
+// TODO: link source of this snippet
 void PNGImage::Load() {
     char header[8];    // 8 is the maximum size that can be checked
 
@@ -50,7 +51,7 @@ void PNGImage::Load() {
     png_byte channels = png_get_channels(png_ptr, end_ptr);
 
     /* read file */
-    if (setjmp(png_jmpbuf(png_ptr)))
+    if (setjmp(png_jmpbuf(png_ptr))) // TODO: error handling with exceptions
         throw std::invalid_argument("[read_png_file] Error during read_image");
 
     auto * row_pointers = (png_bytep *) malloc(sizeof(png_bytep) * (height));
@@ -74,9 +75,9 @@ void PNGImage::Load() {
         m_frame = std::shared_ptr<Frame>(new ImageFrame(std::move(pixels)));
     }
 
-    png_free_data(png_ptr, end_ptr, PNG_FREE_ROWS, -1);
+    png_free_data(png_ptr, end_ptr, PNG_FREE_ALL, -1);
 
-    png_destroy_read_struct(&png_ptr, 0,
+    png_destroy_read_struct(&png_ptr, nullptr,
                             &end_ptr);
 
 

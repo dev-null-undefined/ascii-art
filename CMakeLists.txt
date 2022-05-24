@@ -21,15 +21,80 @@ add_executable(ascii_art
         src/ascii-art/sources/Frame.cpp
         src/ascii-art/sources/Color.cpp
         src/ascii-art/Settings.cpp
-        src/ascii-art/Menu.cpp)
+        src/ascii-art/Application.cpp
+        src/ascii-art/menus/Menu.h
+        src/ascii-art/menus/Gallery.cpp
+        src/ascii-art/menus/Gallery.h
+        src/ascii-art/logging/Logger.cpp
+        src/ascii-art/logging/Logger.h
+        src/ascii-art/logging/LogLevel.h
+        src/ascii-art/logging/LogLevel.cpp)
 
 
-include_directories(/nix/store/0qj6w5zxqac428ipmc7yfjx9y50pv1b5-libjpeg-9e-dev/include /nix/store/01qrnjnd4iiagrjl308305g9ghghbswr-ncurses-6.3-dev/include /nix/store/2wxhxw9l5z4d1wvbnbmlwlnbgrf6p3sg-libpng-1.2.59-dev/include /nix/store/1my9xr1s1nfjmqwyi46pzdrvny7hm66x-zlib-1.2.11-dev/include)
-link_directories(/nix/store/43iz38yxmjn8am7ji6mlidkl599kxc39-libjpeg-9e/lib /nix/store/6zk45l0g8fri5q3hdvw0vwrw0cs34snc-ncurses-6.3/lib /nix/store/bl0dac72m1ibaicsdm8y3jshkq2vjmya-libpng-1.2.59/lib /nix/store/bqjh8dc6m5plswxrmmn9x4cpxrrw94lv-zlib-1.2.11/lib)
+execute_process(COMMAND nix build --no-link nixpkgs\#libjpeg_original.dev
+        OUTPUT_VARIABLE tmp
+        COMMAND nix path-info nixpkgs\#libjpeg_original.dev
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+        OUTPUT_VARIABLE libjpeg-dev)
+execute_process(COMMAND nix build --no-link nixpkgs\#libjpeg_original.out
+        OUTPUT_VARIABLE tmp
+        COMMAND nix path-info nixpkgs\#libjpeg_original.out
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+        OUTPUT_VARIABLE libjpeg)
+execute_process(COMMAND nix build --no-link nixpkgs\#libpng.dev
+        OUTPUT_VARIABLE tmp
+        COMMAND nix path-info nixpkgs\#libpng.dev
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+        OUTPUT_VARIABLE libpng-dev)
+execute_process(COMMAND nix build --no-link nixpkgs\#libpng.out
+        OUTPUT_VARIABLE tmp
+        COMMAND nix path-info nixpkgs\#libpng.out
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+        OUTPUT_VARIABLE libpng)
+execute_process(COMMAND nix build --no-link nixpkgs\#zlib.dev
+        OUTPUT_VARIABLE tmp
+        COMMAND nix path-info nixpkgs\#zlib.dev
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+        OUTPUT_VARIABLE zlib-dev)
+execute_process(COMMAND nix build --no-link nixpkgs\#zlib.out
+        OUTPUT_VARIABLE tmp
+        COMMAND nix path-info nixpkgs\#zlib.out
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+        OUTPUT_VARIABLE zlib)
+execute_process(COMMAND nix build --no-link nixpkgs\#ncurses.dev
+        OUTPUT_VARIABLE tmp
+        COMMAND nix path-info nixpkgs\#ncurses.dev
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+        OUTPUT_VARIABLE ncurses-dev)
+execute_process(COMMAND nix build --no-link nixpkgs\#ncurses.out
+        OUTPUT_VARIABLE tmp
+        COMMAND nix path-info nixpkgs\#ncurses.out
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+        OUTPUT_VARIABLE ncurses)
 
-target_link_libraries(ascii_art jpeg ncurses png z)
-target_link_directories(ascii_art PUBLIC /nix/store/43iz38yxmjn8am7ji6mlidkl599kxc39-libjpeg-9e/lib /nix/store/6zk45l0g8fri5q3hdvw0vwrw0cs34snc-ncurses-6.3/lib /nix/store/bl0dac72m1ibaicsdm8y3jshkq2vjmya-libpng-1.2.59/lib /nix/store/bqjh8dc6m5plswxrmmn9x4cpxrrw94lv-zlib-1.2.11/lib)
+message(STATUS "ncures: ${ncurses}")
+message(STATUS "ncurses-dev: ${ncurses-dev}")
+message(STATUS "libjpeg: ${libjpeg}")
+message(STATUS "libjpeg-dev: ${libjpeg-dev}")
+message(STATUS "libpng: ${libpng}")
+message(STATUS "libpng-dev: ${libpng-dev}")
+message(STATUS "zlib: ${zlib}")
+message(STATUS "zlib-dev: ${zlib-dev}")
 
-set(CMAKE_LIBRARY_PATH /nix/store/43iz38yxmjn8am7ji6mlidkl599kxc39-libjpeg-9e/lib /nix/store/6zk45l0g8fri5q3hdvw0vwrw0cs34snc-ncurses-6.3/lib /nix/store/bl0dac72m1ibaicsdm8y3jshkq2vjmya-libpng-1.2.59/lib /nix/store/bqjh8dc6m5plswxrmmn9x4cpxrrw94lv-zlib-1.2.11/lib)
+include_directories(${libjpeg-dev}/include ${ncurses-dev}/include ${libpng-dev}/include ${zlib-dev}/include)
+link_directories(${libjpeg}/lib ${ncurses}/lib ${libpng}/lib ${zlib}/lib)
+
+target_link_libraries(ascii_art jpeg ncurses png z form)
+target_link_directories(ascii_art PUBLIC ${libjpeg}/lib ${ncurses}/lib ${libpng}/lib ${zlib}/lib)
+
+set(CMAKE_LIBRARY_PATH ${libjpeg}/lib ${ncurses}/lib ${libpng}/lib ${zlib}/lib)
 
 

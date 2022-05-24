@@ -5,6 +5,7 @@
 #include "Frame.h"
 #include "../../container/Matrix.h"
 
+// TODO: rename class to more general name
 class ImageFrame : public Frame {
   public:
     explicit ImageFrame(Matrix<Color> pixels);
@@ -12,14 +13,15 @@ class ImageFrame : public Frame {
 
     std::shared_ptr<Frame> clone() const override;
 
+    // should be virtual method instead
+    Matrix<Color> m_pixels;
+
   protected:
     void GetSize() override;
 
     Color GetPixel(Vector vector) override;
 
     void SetPixel(Vector vector, Color color) override;
-
-    Matrix<Color> m_pixels;
 
 };
 
