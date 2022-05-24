@@ -99,23 +99,14 @@ void Gallery::update() const {
     box(m_main_window, 0, 0);
     std::shared_ptr<Frame> frame_ptr = frame.clone();
 
-    ImageFrame * image_frame = dynamic_cast<ImageFrame *>(frame_ptr.get());
-    if (!image_frame) {
-        Vector size = frame_ptr->getSize();
-        Matrix<Color> matrix(size.m_y, size.m_x);
-        for (size_t y = 0; y < size.m_y; ++y) {
-            for (size_t x = 0; x < size.m_x; ++x) {
-                matrix.at(y,x) = frame_ptr->getPixel({x, y});
-            }
-        }
-    }
+    Matrix<Color> pixels = frame_ptr->getPixels();
 
-    auto resized = std::shared_ptr<Frame>(new ImageFrame(image_frame->m_pixels.resize(m_main_window_size)));
-    auto original = std::shared_ptr<Frame>(new ImageFrame( image_frame->m_pixels.resize(m_main_window_size)));
+    auto resized = std::shared_ptr<Frame>(new ImageFrame(pixels.resize(m_main_window_size-Vector{2,2})));
+    auto original = std::shared_ptr<Frame>(new ImageFrame(pixels.resize(m_main_window_size-Vector{2,2})));
 // TODO: dithering and color dithering before resize
     Vector resolution = original->getSize();
     for (size_t y = 0; y < resolution.m_y && y < m_main_window_size.m_y - 2; y++) {
-        for (size_t x = 0; x < resolution.m_x && x < m_main_window_size.m_x - 1; x++) {
+        for (size_t x = 0; x < resolution.m_x && x < m_main_window_size.m_x - 2; x++) {
             Color color = resized->getPixel({x, y});
             Color original_c = original->getPixel({x, y});
             char ascii = m_settings->getChar(resized->getPixel({x, y}).normalize());

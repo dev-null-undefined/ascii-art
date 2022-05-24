@@ -4,14 +4,17 @@
 
 #include <optional>
 #include <memory>
-#include "../../container/Vector.h"
 #include "Color.h"
+#include "../../container/Vector.h"
+#include "../../container/Matrix.h"
 
 class Frame {
   public:
     virtual ~Frame() = default;
 
     virtual std::shared_ptr<Frame> clone() const = 0;
+
+    virtual Matrix<Color> getPixels() const = 0;
 
     Vector getSize();
 
@@ -22,13 +25,13 @@ class Frame {
     void setPixel(Vector position, Color color);
 
   protected:
-    std::optional<Vector> m_size;
-
     virtual void GetSize() = 0;
 
     virtual Color GetPixel(Vector) = 0;
 
     virtual void SetPixel(Vector, Color) = 0;
+
+    std::optional<Vector> m_size;
 };
 
 

@@ -9,14 +9,17 @@
 class ImageFrame : public Frame {
   public:
     explicit ImageFrame(Matrix<Color> pixels);
+
     ~ImageFrame() override = default;
 
     std::shared_ptr<Frame> clone() const override;
 
-    // should be virtual method instead
-    Matrix<Color> m_pixels;
+
+    Matrix<Color> getPixels() const override;
 
   protected:
+    Matrix<Color> m_pixels;
+
     void GetSize() override;
 
     Color GetPixel(Vector vector) override;
