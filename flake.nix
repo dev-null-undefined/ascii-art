@@ -27,6 +27,7 @@
         devShell = pkgs.devshell.mkShell {
           name = "ascii-art";
           imports = [ "${devshell}/extra/language/c.nix" ];
+          packages = [ pkgs.glibc pkgs.libcxx pkgs.doxygen pkgs.graphviz ];
 
           language.c = {
             libraries =
@@ -59,6 +60,12 @@
               name = "run";
               category = "testing";
               command = "./bin/ascii-art ./";
+            }
+            {
+              name = "docs";
+              category = "c++";
+              help = "Generate documentation";
+              command = "${pkgs.gnumake}/bin/make docs";
             }
           ];
           bash = {
@@ -108,7 +115,6 @@
               platforms = platforms.linux;
             };
           };
-
           default = self.ascii-art;
         };
       });

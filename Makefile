@@ -1,4 +1,4 @@
-.PHONY: all clean run compile release debug fast fast-debug
+.PHONY: all clean run compile release debug fast fast-debug docs
 .DEFAULT_GOAL = all
 PROJECT := ascii-art
 
@@ -9,6 +9,7 @@ SOURCE_DIR = src
 OUT_DIR = build
 LIB_DIR = lib
 BIN_DIR = bin
+DOC_DIR = doc
 MAKE_INCLUDE = Makefile.d
 
 CXX = g++
@@ -29,9 +30,12 @@ fast:
 fast-debug:
 	$(MAKE) -j12 debug
 
-all: release
+all: release docs
 
-debug: CXXFLAGS += -g -pg -O0 -DDEBUG -DLOG_LEVEL=10 -fsanitize=address -fPIE -fno-omit-frame-pointer
+docs: Doxyfile
+	doxygen Doxyfile
+
+debug: CXXFLAGS += -g -pg -O0 -DDEBUG -DLOG_LEVEL=0 -fsanitize=address -fPIE -fno-omit-frame-pointer
 debug: LDFLAGS +=
 debug: compile
 
@@ -40,8 +44,13 @@ release: compile
 
 compile: directories binaries
 
+ifeq (run,$(firstword $(MAKECMDGOALS)))
+  RUN_ARGS := $(wordlist 2,$(words $(MAKECMDGOALS)),$(MAKECMDGOALS))
+  $(eval $(RUN_ARGS):;@:)
+endif
+
 run: compile
-	./$(BIN_DIR)/$(PROJECT) ./examples
+	./$(BIN_DIR)/$(PROJECT) $(RUN_ARGS)
 
 
 $(OUT_DIR)/%.o:
@@ -56,6 +65,7 @@ clean:
 	rm -rf $(MAKE_INCLUDE)
 	rm -rf $(OUT_DIR)
 	rm -rf $(BIN_DIR)
+	rm -rf $(DOC_DIR)
 
 directories: $(OUT_DIR) $(BIN_DIR) $(MAKE_INCLUDE)
 
