@@ -3,9 +3,7 @@
 
 #include <string>
 #include <optional>
-#include <iostream>
 #include <memory>
-#include <map>
 #include <fstream>
 #include "LogLevel.h"
 

@@ -2,6 +2,9 @@
 #include "LogLevel.h"
 
 #include <filesystem>
+#include <iostream>
+#include <iomanip>
+#include <ctime>
 
 namespace fs = std::filesystem;
 
@@ -47,7 +50,7 @@ void Logger::print(const std::string & message) {
 Logger & Logger::getInstance() {
     if(instance == nullptr) {
         instance = std::unique_ptr<Logger>(new Logger(std::string("log.txt")));
-        instance = std::unique_ptr<Logger>(new Logger());
+//        instance = std::unique_ptr<Logger>(new Logger());
     }
     return *instance;
 }
