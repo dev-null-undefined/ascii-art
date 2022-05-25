@@ -49,7 +49,7 @@ ifeq (run,$(firstword $(MAKECMDGOALS)))
   $(eval $(RUN_ARGS):;@:)
 endif
 
-run: compile
+run: debug
 	./$(BIN_DIR)/$(PROJECT) $(RUN_ARGS)
 
 
