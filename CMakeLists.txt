@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.12)
 project(ascii_art)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pedantic -Wall -Wextra -Wno-long-long -D DEBUG -D LOG_LEVEL=10")
@@ -7,29 +7,12 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pedantic -Wall -Wextra -Wno-long-long -
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(ascii_art
-        src/main.cpp
-        src/ascii-art/sources/DataSourceFactory.cpp
-        src/ascii-art/sources/Image.cpp
-        src/ascii-art/sources/Video.cpp
-        src/ascii-art/sources/DataSource.cpp
-        src/ascii-art/sources/filters/BasicFilter.cpp
-        src/ascii-art/sources/image-formats/PNGImage.cpp
-        src/ascii-art/sources/image-formats/BMPImage.cpp
-        src/ascii-art/sources/image-formats/JPEGImage.cpp
-        src/ascii-art/sources/ImageFrame.cpp
-        src/ascii-art/sources/Frame.cpp
-        src/ascii-art/sources/Color.cpp
-        src/ascii-art/Settings.cpp
-        src/ascii-art/Application.cpp
-        src/ascii-art/menus/Menu.h
-        src/ascii-art/menus/Gallery.cpp
-        src/ascii-art/menus/Gallery.h
-        src/ascii-art/logging/Logger.cpp
-        src/ascii-art/logging/Logger.h
-        src/ascii-art/logging/LogLevel.h
-        src/ascii-art/logging/LogLevel.cpp)
+file(GLOB_RECURSE ascii_art_SRC CONFIGURE_DEPENDS
+        "src/*.h"
+        "src/*.cpp"
+        )
 
+add_executable(ascii_art ${ascii_art_SRC} src/container/SmartMutex.h)
 
 execute_process(COMMAND nix build --no-link nixpkgs\#libjpeg_original.dev
         OUTPUT_VARIABLE tmp
