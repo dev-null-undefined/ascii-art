@@ -1,14 +1,15 @@
 #include "Gallery.h"
 #include "../sources/ImageFrame.h"
 #include "../Application.h"
+#include "../logging/Logger.h"
 #include <iostream>
 #include <utility>
 
 void Gallery::show(Vector initial_size) {
+    curs_set(0);
     if (initial_size.m_x < MINIMUM_WINDOW_SIZE.m_x && initial_size.m_y < MINIMUM_WINDOW_SIZE.m_y) {
-        endwin();
-        std::cerr << "Terminal too small" << std::endl;
-        exit(1);
+        Logger::log("Terminal too small", LogLevel::FATAL);
+        throw std::runtime_error("Terminal too small!");
     }
     m_main_window_size = {initial_size.m_x, initial_size.m_y - STATUS_WINDOW_HEIGHT};
     WINDOW * window = newwin((int) m_main_window_size.m_y, (int) m_main_window_size.m_x, 0, 0);
@@ -36,6 +37,7 @@ void Gallery::resize(Vector size) {
         exit(1);
     }
     m_main_window_size = {size.m_x, size.m_y - STATUS_WINDOW_HEIGHT};
+    // TODO: fix memleaks
     WINDOW * window = newwin((int) m_main_window_size.m_y, (int) m_main_window_size.m_x, 0, 0);
     box(window, 0, 0); // 0, 0 gives default characters for the vertical and horizontal lines
     refresh();
@@ -83,6 +85,7 @@ void Gallery::showStatus() const {
 }
 
 void Gallery::hide() {
+    curs_set(1);
     delwin(m_status_window);
     delwin(m_main_window);
 }
@@ -245,8 +248,10 @@ bool Gallery::input(int input) {
     return update;
 }
 
-Gallery::Gallery(std::shared_ptr<std::vector<std::shared_ptr<DataSource>>>  m_sources,
-                 std::shared_ptr<Settings>  m_settings) : m_sources(std::move(m_sources)), m_settings(std::move(m_settings)), m_current_index(0), m_frame_index(0) {
+Gallery::Gallery(std::shared_ptr<std::vector<std::shared_ptr<DataSource>>> m_sources,
+                 std::shared_ptr<Settings> m_settings) : m_sources(std::move(m_sources)),
+                                                         m_settings(std::move(m_settings)), m_current_index(0),
+                                                         m_frame_index(0) {
 }
 
 Gallery::~Gallery() {
