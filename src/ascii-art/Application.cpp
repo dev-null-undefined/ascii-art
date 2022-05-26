@@ -33,12 +33,12 @@ int min(int a, int b) {
 
 void initColorPairs() {
     // TODO: check for maximal number of colors and color pairs
-    for (int red = 0; red <= 51; ++red) {
-        for (int green = 0; green <= 51; ++green) {
-            for (short blue = 0; blue <= 51; ++blue) {
-                int foregroundId = getRoundedColorIndex(Color(red * 5, green * 5, blue * 5));
-                init_extended_color(foregroundId, min(red * 5 * 4, 999), min(green * 5 * 4, 999),
-                                    min(blue * 5 * 4, 999));
+    for (int red = 0; red <= 5; ++red) {
+        for (int green = 0; green <= 5; ++green) {
+            for (short blue = 0; blue <= 5; ++blue) {
+                int foregroundId = getRoundedColorIndex(Color(red * 51, green * 51, blue * 51));
+                init_extended_color(foregroundId, min(red * 51 * 4, 999), min(green * 51 * 4, 999),
+                                    min(blue * 51 * 4, 999));
                 init_extended_pair(foregroundId, COLOR_BLACK, foregroundId);
             }
         }
