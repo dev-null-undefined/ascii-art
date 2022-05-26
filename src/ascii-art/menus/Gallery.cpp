@@ -28,29 +28,16 @@ void Gallery::show(Vector initial_size) {
 }
 
 void Gallery::resize(Vector size) {
-    delwin(m_status_window);
-    delwin(m_main_window);
-
     if (size.m_x < MINIMUM_WINDOW_SIZE.m_x && size.m_y < MINIMUM_WINDOW_SIZE.m_y) {
-        endwin();
-        std::cerr << "Terminal too small" << std::endl;
-        exit(1);
+        Logger::log("Terminal too small", LogLevel::FATAL);
+        throw std::runtime_error("Terminal too small!");
     }
-    m_main_window_size = {size.m_x, size.m_y - STATUS_WINDOW_HEIGHT};
-    // TODO: fix memleaks
-    WINDOW * window = newwin((int) m_main_window_size.m_y, (int) m_main_window_size.m_x, 0, 0);
-    box(window, 0, 0); // 0, 0 gives default characters for the vertical and horizontal lines
-    refresh();
-    keypad(window, true); // enable arrow keys
-    wrefresh(window);
-    m_main_window = window;
 
-    WINDOW * status_window = newwin(STATUS_WINDOW_HEIGHT, (int) m_main_window_size.m_x, (int) m_main_window_size.m_y,
-                                    0);
-    box(status_window, 0, 0);
-    keypad(status_window, true);
-    wrefresh(status_window);
-    m_status_window = status_window;
+    m_main_window_size = {size.m_x, size.m_y - STATUS_WINDOW_HEIGHT};
+    wresize(m_main_window, (int) size.m_y - STATUS_WINDOW_HEIGHT, (int) size.m_x);
+
+    wmove(m_status_window,m_main_window_size.m_y,0);
+    wresize(m_status_window, STATUS_WINDOW_HEIGHT, (int) m_main_window_size.m_x);
 }
 
 void Gallery::showStatus() const {
