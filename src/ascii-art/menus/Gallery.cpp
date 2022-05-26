@@ -5,6 +5,14 @@
 #include <iostream>
 #include <utility>
 
+WINDOW * boxed_window(int height, int width, int y, int x) {
+    WINDOW * status_window = newwin(height, width, y, x);
+    box(status_window, 0, 0);
+    keypad(status_window, true);
+    wrefresh(status_window);
+    return status_window;
+}
+
 void Gallery::show(Vector initial_size) {
     curs_set(0);
     if (initial_size.m_x < MINIMUM_WINDOW_SIZE.m_x && initial_size.m_y < MINIMUM_WINDOW_SIZE.m_y) {
@@ -12,19 +20,9 @@ void Gallery::show(Vector initial_size) {
         throw std::runtime_error("Terminal too small!");
     }
     m_main_window_size = {initial_size.m_x, initial_size.m_y - STATUS_WINDOW_HEIGHT};
-    WINDOW * window = newwin((int) m_main_window_size.m_y, (int) m_main_window_size.m_x, 0, 0);
-    box(window, 0, 0); // 0, 0 gives default characters for the vertical and horizontal lines
+    m_main_window = boxed_window((int) m_main_window_size.m_y, (int) m_main_window_size.m_x, 0, 0);
+    m_status_window = boxed_window(STATUS_WINDOW_HEIGHT, (int) m_main_window_size.m_x, (int) m_main_window_size.m_y, 0);
     refresh();
-    keypad(window, true); // enable arrow keys
-    wrefresh(window);
-    m_main_window = window;
-
-    WINDOW * status_window = newwin(STATUS_WINDOW_HEIGHT, (int) m_main_window_size.m_x, (int) m_main_window_size.m_y,
-                                    0);
-    box(status_window, 0, 0);
-    keypad(status_window, true);
-    wrefresh(status_window);
-    m_status_window = status_window;
 }
 
 void Gallery::resize(Vector size) {
