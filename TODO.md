@@ -42,5 +42,5 @@
 # Configuration menu
 
 # File select menu
-- [ ] regex like path finding
-- [ ] show selected files
+- [x] regex like path finding
+- [x] show selected files

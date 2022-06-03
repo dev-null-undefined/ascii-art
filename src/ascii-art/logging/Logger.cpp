@@ -1,11 +1,11 @@
 #include "Logger.h"
 #include "LogLevel.h"
 
-#include <filesystem>
 #include <iostream>
 #include <iomanip>
 #include <ctime>
 
+#include <filesystem>
 namespace fs = std::filesystem;
 
 std::unique_ptr<Logger> Logger::instance = std::unique_ptr<Logger>(nullptr);

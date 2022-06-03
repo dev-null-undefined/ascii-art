@@ -73,6 +73,8 @@ void PNGImage::Load() {
             }
         }
         m_frame = std::shared_ptr<Frame>(new ImageFrame(std::move(pixels)));
+    } else {
+        Logger::log("Non-standard color type(" + std::to_string(color_type) + ") " + m_filename, LogLevel::INFO);
     }
 
     png_free_data(png_ptr, end_ptr, PNG_FREE_ALL, -1);
@@ -89,11 +91,11 @@ void PNGImage::Load() {
     free(end_ptr);
 
 
+    fclose(fp);
+
     if (!m_frame) {
         throw std::invalid_argument("[read_png_file] Error during read_image");
     }
-
-    fclose(fp);
 }
 
 std::string_view PNGImage::filename() const {

@@ -84,7 +84,7 @@
           ascii-art = let
             inherit system;
             pname = "ascii-art";
-            version = "v0.0.2";
+            version = "v0.0.3";
           in pkgs.stdenv.mkDerivation {
             pname = pname;
             version = version;
