@@ -85,7 +85,7 @@ void Gallery::update() const {
         std::cerr << "Index out of range" << std::endl;
         return;
     }
-    Frame & frame = m_sources->at(m_current_index)->getFrame(m_frame_index);
+    Frame & frame = m_sources->at(m_current_index)->getFrame(m_frame_index); // TODO: handle exception with invalid format while loading
     box(m_main_window, 0, 0);
     std::shared_ptr<Frame> frame_ptr = frame.clone();
 
@@ -202,7 +202,7 @@ bool Gallery::input(int input) {
             update = true;
             break;
         case 'i':
-            m_settings->m_color_filter.m_red_offset += 10;
+            m_settings->m_color_filter.m_red_offset += 10; // TODO: move to constant
             update = true;
             break;
         case 'j':

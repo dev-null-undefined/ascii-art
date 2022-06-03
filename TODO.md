@@ -31,4 +31,16 @@
 ## Gallery:
 - [ ] default values for basic gallery
 ## Application:
-- [ ] search depth
+- [x] search depth
+## Image
+- [ ] scale multiplier
+
+# Performance:
+- [ ] performance test
+- [ ] huge images optimization
+
+# Configuration menu
+
+# File select menu
+- [ ] regex like path finding
+- [ ] show selected files
