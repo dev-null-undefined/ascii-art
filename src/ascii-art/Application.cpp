@@ -123,8 +123,10 @@ void Application::input_loop() {
                         auto files = file_menu->getSelectedFiles();
                         for (const auto & item : files)
                             tryAddSource(item);
-                        m_current_menu = std::make_shared<Gallery>(m_sources, m_settings);
-                        m_current_menu->show(getResolution());
+                        if (!m_sources->empty()) {
+                            m_current_menu = std::make_shared<Gallery>(m_sources, m_settings);
+                            m_current_menu->show(getResolution());
+                        }
                     } else {
                         file_menu = new FileMenu();
                         m_current_menu = std::shared_ptr<FileMenu>(file_menu);
@@ -199,6 +201,7 @@ void Application::tryAddSource(const std::string & path, size_t depth) {
     } else {
         try {
             std::shared_ptr<DataSource> dataSource = DataSourceFactory::getDataSource(path);
+            dataSource->getFrame(0);
             m_sources->push_back(dataSource);
             Logger::log("Added: " + path, LogLevel::TRACE);
         } catch (std::exception & e) {
