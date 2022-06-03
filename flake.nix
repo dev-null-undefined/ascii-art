@@ -92,7 +92,7 @@
               owner = "dev-null-undefined";
               repo = pname;
               rev = version;
-              sha256 = "sha256-gRZI8JGD2kQCw96R6Y3oOwbIfEJBeInhSawRIZKbRjA=";
+              sha256 = "sha256-MkuYh7Fw22rpPj8PBi6neF1c0Uv5Z9Myn2IeFfDvdrw=";
               fetchSubmodules = true;
             };
             buildInputs = [ pkgs.libjpeg_original pkgs.ncurses pkgs.libpng12 ];
