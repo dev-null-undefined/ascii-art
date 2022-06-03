@@ -73,6 +73,8 @@ void PNGImage::Load() {
             }
         }
         m_frame = std::shared_ptr<Frame>(new ImageFrame(std::move(pixels)));
+    } else {
+        Logger::log("Non-standard color type(" + std::to_string(color_type) + ") " + m_filename, LogLevel::INFO);
     }
 
     png_free_data(png_ptr, end_ptr, PNG_FREE_ALL, -1);
