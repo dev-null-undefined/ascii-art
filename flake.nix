@@ -59,7 +59,7 @@
             {
               name = "run";
               category = "testing";
-              command = "./bin/ascii-art ./";
+              command = "${pkgs.gnumake}/bin/make run";
             }
             {
               name = "docs";
