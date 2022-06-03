@@ -17,7 +17,7 @@ void DataSource::applyFilter(const Filter & filter) {
 
 Frame & DataSource::getFrame(size_t index) {
     size_t frame_count = frameCount();
-    if (index < 0 || index >= frame_count) {
+    if (index >= frame_count) {
         throw std::out_of_range(
                 "getFrame: index out of range " + std::to_string(index) + "/" + std::to_string(frame_count));
     }

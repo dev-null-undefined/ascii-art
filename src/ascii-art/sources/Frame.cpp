@@ -12,7 +12,7 @@ Vector Frame::getSize() {
 
 bool Frame::validPosition(Vector position) {
     getSize();
-    return position.m_x >= 0 && position.m_y >= 0 && position.m_x < m_size->m_x && position.m_y < m_size->m_y;
+    return position.m_x < m_size->m_x && position.m_y < m_size->m_y;
 }
 
 Color Frame::getPixel(Vector position) {
