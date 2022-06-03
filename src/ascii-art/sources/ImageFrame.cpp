@@ -19,3 +19,7 @@ void ImageFrame::SetPixel(Vector vector, Color color) {
 ImageFrame::ImageFrame(Matrix<Color> pixels): m_pixels(std::move(pixels)) {
 
 }
+
+Matrix<Color> ImageFrame::getPixels() const {
+    return Matrix<Color>(m_pixels);
+}
