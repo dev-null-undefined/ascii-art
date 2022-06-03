@@ -20,8 +20,11 @@ void Gallery::show(Vector initial_size) {
         throw std::runtime_error("Terminal too small!");
     }
     m_main_window_size = {initial_size.m_x, initial_size.m_y - STATUS_WINDOW_HEIGHT};
-    m_main_window = boxed_window((int) m_main_window_size.m_y, (int) m_main_window_size.m_x, 0, 0);
-    m_status_window = boxed_window(STATUS_WINDOW_HEIGHT, (int) m_main_window_size.m_x, (int) m_main_window_size.m_y, 0);
+    m_main_window = boxed_window(static_cast<int>(m_main_window_size.m_y), static_cast<int>(m_main_window_size.m_x), 0,
+                                 0);
+    m_status_window = boxed_window(STATUS_WINDOW_HEIGHT, static_cast<int>(m_main_window_size.m_x),
+                                   static_cast<int>(m_main_window_size.m_y), 0);
+
     refresh();
 }
 
