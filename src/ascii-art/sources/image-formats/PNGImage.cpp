@@ -89,11 +89,11 @@ void PNGImage::Load() {
     free(end_ptr);
 
 
+    fclose(fp);
+
     if (!m_frame) {
         throw std::invalid_argument("[read_png_file] Error during read_image");
     }
-
-    fclose(fp);
 }
 
 std::string_view PNGImage::filename() const {
