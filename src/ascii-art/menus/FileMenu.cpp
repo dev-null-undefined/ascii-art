@@ -140,6 +140,12 @@ bool FileMenu::input(int input, bool & handled) {
                 }
                 return true;
             }
+            break;
+        case ctrl(' '):
+            m_regex.insert(m_regex_index, ".*");
+            m_regex_index += 2;
+            update_files(m_regex);
+            return true;
         case ctrl('a'):
             m_selected_files.insert(m_files.begin(),m_files.end());
             return true;
