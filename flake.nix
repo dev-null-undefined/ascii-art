@@ -92,7 +92,7 @@
               owner = "dev-null-undefined";
               repo = pname;
               rev = version;
-              sha256 = "sha256-MkuYh7Fw22rpPj8PBi6neF1c0Uv5Z9Myn2IeFfDvdrw=";
+              sha256 = "sha256-zyhKVZlqra1CM0RWZGeDtqPIBx55/ohSXndK1LOtgjc=";
               fetchSubmodules = true;
             };
             buildInputs = [ pkgs.libjpeg_original pkgs.ncurses pkgs.libpng12 ];
@@ -115,7 +115,7 @@
               platforms = platforms.linux;
             };
           };
-          default = self.ascii-art;
+          default = self.packages.${system}.ascii-art;
         };
       });
 }
