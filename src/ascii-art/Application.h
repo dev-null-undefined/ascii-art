@@ -4,10 +4,12 @@
 
 #include <vector>
 #include <ncurses.h>
+#include <chrono>
 #include "sources/DataSource.h"
 #include "Settings.h"
 #include "menus/Menu.h"
 
+// TODO: instance counter to prevent multiple application from running (delete copy constructor as well)
 class Application {
   public:
     explicit Application(const std::vector<std::string> & args);
@@ -18,6 +20,7 @@ class Application {
     std::shared_ptr<Menu> m_current_menu;
 
     std::shared_ptr<Settings> m_settings;
+    std::optional<std::chrono::steady_clock::time_point> m_last_resize;
 
     void input_loop();
 

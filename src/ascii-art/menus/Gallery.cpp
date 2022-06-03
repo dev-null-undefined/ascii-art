@@ -31,6 +31,8 @@ void Gallery::resize(Vector size) {
         throw std::runtime_error("Terminal too small!");
     }
 
+    werase(m_main_window);
+
     m_main_window_size = {size.m_x, size.m_y - STATUS_WINDOW_HEIGHT};
     wresize(m_main_window, (int) size.m_y - STATUS_WINDOW_HEIGHT, (int) size.m_x);
 
@@ -62,7 +64,7 @@ void Gallery::showStatus() const {
     } else {
         middle -= char_count / 2;
     }
-    wclear(m_status_window);
+    werase(m_status_window);
     box(m_status_window, 0, 0);
     mvwprintw(m_status_window, 1, (int) middle, format, std::string(file_name).c_str(), index, max_index, frame_index,
               max_frame_index, m_settings->m_dithering, m_settings->m_color_dithering);

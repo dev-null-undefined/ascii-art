@@ -71,25 +71,70 @@ void Application::input_loop() {
         bool update = false;
         flushinp();
         int c = getch();
-        switch (c) {
-            case 'q':
-                return;
-            case 'r':
-                update = true;
-                break;
-            case KEY_RESIZE:
-                // TODO: smart resizing with timeouts
-                m_current_menu->resize(getResolution());
-                update = true;
-                break;
-            default:
-                update = m_current_menu->input(c);
-                break;
+
+        Logger::log("Got key: " + std::to_string(c), LogLevel::TRACE);
+        // Priority keys
+        if (c == KEY_RESIZE) {
+            Logger::log("Resize event", LogLevel::TRACE);
+
+            m_last_resize = std::chrono::steady_clock::now();
+
+            timeout(m_settings->m_resize_timeout);
+
+            continue;
         }
+        if (m_last_resize) {
+            long duration = std::chrono::duration_cast<std::chrono::milliseconds>(
+                    std::chrono::steady_clock::now() - m_last_resize.value()).count();
+            if (duration >= m_settings->m_resize_timeout) {
+                Logger::log("Resize event at time: " + std::to_string(duration), LogLevel::TRACE);
+                m_current_menu->resize(getResolution());
+                m_current_menu->update();
+                m_last_resize.reset();
+                timeout(-1);
+            } else {
+                timeout(m_settings->m_resize_timeout - duration);
+            }
+        }
+        if (c == ERR) {
+            continue;
+        }
+
+        if (c == 4)
+            return;
+
+        update = m_current_menu->input(c);
+
+        if (!update) {
+            switch (c) {
+                case 'q':
+                    return;
+                case 'r':
+                    update = true;
+                    break;
+                default:
+                    break;
+            }
+        }
+
         if (update) {
             m_current_menu->update();
         }
+        if (m_last_resize) {
+            long duration = std::chrono::duration_cast<std::chrono::milliseconds>(
+                    std::chrono::steady_clock::now() - m_last_resize.value()).count();
+            if (duration >= m_settings->m_resize_timeout) {
+                Logger::log("Resize event at time: " + std::to_string(duration), LogLevel::TRACE);
+                m_current_menu->resize(getResolution());
+                m_current_menu->update();
+                m_last_resize.reset();
+                timeout(-1);
+            } else {
+                timeout(m_settings->m_resize_timeout - duration);
+            }
+        }
     }
+
 }
 
 void Application::start() {
