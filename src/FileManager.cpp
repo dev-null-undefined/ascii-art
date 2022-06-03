@@ -50,6 +50,7 @@ std::set<fs::path> FileManager::find_files(const std::string_view & regex) {
     if (path_regex.size() < 2) return files; // TODO: throw exception
     if (path_regex[0] == PATH_SEPARATOR) {
         folders.insert("/");
+        path_regex = path_regex.substr(1);
     } else if (path_regex[0] == '~') {
         path_regex = path_regex.substr(2);// TODO: check for separator after ~
         folders.insert(get_home());
@@ -81,7 +82,7 @@ std::set<fs::path> FileManager::find_files(const std::string_view & regex) {
         }
         for (const auto & folder : folders) {
             if (!path_regex.empty() && (token == "\\.\\." || token == ".." || token == "\\.." || token == ".\\.")) {
-                next_folders.insert(folder.parent_path());
+                next_folders.insert(folder.parent_path()); // TODO: maximum depth to avoid infinite loop
                 continue;
             }
             if (!path_regex.empty() && (token == "\\." || token == ".")) {
