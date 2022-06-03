@@ -1,6 +1,6 @@
-.PHONY: all clean run compile release debug fast fast-debug docs
+.PHONY: all clean run compile release debug fast fast-debug doc
 .DEFAULT_GOAL = all
-PROJECT := ascii-art
+PROJECT = ascii-art
 
 SOURCE_EXT = .cpp
 HEADER_EXT = .h
@@ -17,9 +17,9 @@ LD = g++
 
 LIBS = -ljpeg -lncurses -lncursesw -lpng -lz -lstdc++fs -lform
 
-CXXFLAGS := -Wall -Wextra -pedantic -std=c++17 $(INCLUDE_DIR)
+CXXFLAGS = -Wall -Wextra -pedantic -std=c++17 $(INCLUDE_DIR)
 
-LDFLAGS := $(LIBS) $(LIBPATH)
+LDFLAGS = $(LIBS) $(LIBPATH)
 
 SOURCE_FILES = $(wildcard $(SOURCE_DIR)/*$(SOURCE_EXT) $(SOURCE_DIR)/*/*$(SOURCE_EXT) $(SOURCE_DIR)/*/*/*$(SOURCE_EXT) $(SOURCE_DIR)/*/*/*/*$(SOURCE_EXT))
 OBJECTS = $(patsubst %$(SOURCE_EXT),$(OUT_DIR)/%.o,$(notdir $(SOURCE_FILES)))
@@ -30,9 +30,9 @@ fast:
 fast-debug:
 	$(MAKE) -j12 debug
 
-all: release docs
+all: release doc
 
-docs: Doxyfile
+doc: Doxyfile
 	doxygen Doxyfile
 
 debug: CXXFLAGS += -g -pg -O0 -DDEBUG -DLOG_LEVEL=0 -fsanitize=address -fPIE -fno-omit-frame-pointer
