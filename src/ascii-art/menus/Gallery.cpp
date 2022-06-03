@@ -36,7 +36,7 @@ void Gallery::resize(Vector size) {
     m_main_window_size = {size.m_x, size.m_y - STATUS_WINDOW_HEIGHT};
     wresize(m_main_window, (int) size.m_y - STATUS_WINDOW_HEIGHT, (int) size.m_x);
 
-    wmove(m_status_window,m_main_window_size.m_y,0);
+    mvwin(m_status_window,m_main_window_size.m_y,0);
     wresize(m_status_window, STATUS_WINDOW_HEIGHT, (int) m_main_window_size.m_x);
 }
 
