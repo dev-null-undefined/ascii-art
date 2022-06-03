@@ -1,6 +1,7 @@
 #include "PNGImage.h"
 #include "../../../container/Matrix.h"
 #include "../ImageFrame.h"
+#include "../../logging/Logger.h"
 #include <png.h>
 #include <stdexcept>
 
