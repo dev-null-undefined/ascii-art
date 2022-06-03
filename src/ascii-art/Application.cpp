@@ -121,6 +121,7 @@ void Application::input_loop() {
                 case ctrl('o'):
                     if (file_menu) {
                         auto files = file_menu->getSelectedFiles();
+                        m_regex_save = file_menu->getRegex();
                         for (const auto & item : files)
                             tryAddSource(item);
                         if (!m_sources->empty()) {
@@ -128,7 +129,12 @@ void Application::input_loop() {
                             m_current_menu->show(getResolution());
                         }
                     } else {
-                        file_menu = new FileMenu();
+                        if (m_regex_save) {
+                            file_menu = new FileMenu(*m_regex_save);
+                        } else {
+                            file_menu = new FileMenu();
+                        }
+
                         m_current_menu = std::shared_ptr<FileMenu>(file_menu);
                         for (const auto & item : *m_sources)
                             file_menu->selectFile(item->filename());

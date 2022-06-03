@@ -170,7 +170,6 @@ FileMenu::~FileMenu() {
     FileMenu::hide();
 }
 
-
 void FileMenu::update_files(const std::string & regex) {
     m_files = FileManager::find_files(regex);
     if (m_index >= m_files.size()) m_index = m_files.size();
@@ -182,4 +181,12 @@ void FileMenu::selectFile(const std::string_view & view) {
 
 const std::set<fs::path> & FileMenu::getSelectedFiles() const {
     return m_selected_files;
+}
+
+std::string FileMenu::getRegex() const {
+    return m_regex;
+}
+
+FileMenu::FileMenu(const std::string & m_regex) : m_regex(m_regex), m_regex_index(m_regex.size()) {
+    update_files(m_regex);
 }

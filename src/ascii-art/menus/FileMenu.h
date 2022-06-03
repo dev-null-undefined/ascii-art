@@ -11,6 +11,8 @@ namespace fs = std::filesystem;
 
 class FileMenu : public Menu{
   public:
+    explicit FileMenu(const std::string & m_regex = "");
+
     ~FileMenu() override;
 
     void show(Vector initial_size) override;
@@ -27,18 +29,20 @@ class FileMenu : public Menu{
 
     const std::set<fs::path> & getSelectedFiles() const;
 
+    std::string getRegex() const;
+
   private:
 
     void update_files(const std::string & regex);
 
     std::set<fs::path> m_selected_files;
     std::set<fs::path> m_files;
-    size_t m_index; //!< index of selected row from window
+    size_t m_index{}; //!< index of selected row from window
 
     std::string m_regex;
     size_t m_regex_index;
 
-    WINDOW * m_window;
+    WINDOW * m_window{};
     Vector m_window_size;
 };
 

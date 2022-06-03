@@ -20,6 +20,7 @@ class Application {
     std::shared_ptr<Menu> m_current_menu;
 
     std::shared_ptr<Settings> m_settings;
+    std::optional<std::string> m_regex_save;
     std::optional<std::chrono::steady_clock::time_point> m_last_resize;
 
     void input_loop();
