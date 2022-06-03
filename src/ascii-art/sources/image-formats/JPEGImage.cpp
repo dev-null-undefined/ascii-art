@@ -187,26 +187,26 @@ void JPEGImage::Load() {
          * with the stdio data source.
          */
 
+        /* Step 8: Release JPEG decompression object */
+
+        /* This is an important step since it will release a good deal of memory. */
+        jpeg_destroy_decompress(&cinfo);
+
+        /* After finish_decompress, we can close the input file.
+         * Here we postpone it until after no more JPEG errors are possible,
+         * so as to simplify the setjmp error logic above.  (Actually, I don't
+         * think that jpeg_destroy can do an error exit, but why assume anything...)
+         */
+        fclose(infile);
+
+        /* At this point you may want to check to see whether any corrupt-data
+         * warnings occurred (test whether jerr.pub.num_warnings is nonzero).
+         */
     } catch (std::invalid_argument & e) {
         jpeg_destroy_decompress(&cinfo);
         fclose(infile);
         throw e;
     }
-    /* Step 8: Release JPEG decompression object */
-
-    /* This is an important step since it will release a good deal of memory. */
-    jpeg_destroy_decompress(&cinfo);
-
-    /* After finish_decompress, we can close the input file.
-     * Here we postpone it until after no more JPEG errors are possible,
-     * so as to simplify the setjmp error logic above.  (Actually, I don't
-     * think that jpeg_destroy can do an error exit, but why assume anything...)
-     */
-    fclose(infile);
-
-    /* At this point you may want to check to see whether any corrupt-data
-     * warnings occurred (test whether jerr.pub.num_warnings is nonzero).
-     */
 }
 
 JPEGImage::JPEGImage(std::string filename) : m_filename(std::move(filename)) {
