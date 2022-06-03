@@ -117,7 +117,9 @@ void Application::start() {
 }
 
 void Application::tryAddSource(const std::string & path, size_t depth) {
-    if (fs::is_directory(path) && depth < m_settings->m_max_depth) {
+    if (depth > m_settings->m_max_depth)
+        return;
+    if (fs::is_directory(path)) {
         std::set<fs::path> sorted_by_name;
         try {
             for (const auto & entry : fs::directory_iterator(path))
