@@ -14,7 +14,25 @@ namespace fs = std::filesystem;
 // TODO: Add argument flags to change settings
 Application::Application(const std::vector<std::string> & args) : m_sources(
         std::make_shared<std::vector<std::shared_ptr<DataSource>>>()), m_settings(std::make_shared<Settings>()) {
+    bool arguments = true;
+    ConfigKey key = ConfigKey::NONE;
     for (const auto & item : args) {
+        Logger::log("Argument: " + item, LogLevel::INFO);
+        if (key != ConfigKey::NONE) {
+            m_settings->parseConfigField(key, item);
+            key = ConfigKey::NONE;
+            continue;
+        }
+        if (item == "--") {
+            arguments = false;
+            continue;
+        }
+        if (arguments && item.size() > 1) {
+            if (item[0] == '-') {
+                key = Settings::getConfigKey(item.substr(1));
+                continue;
+            }
+        }
         tryAddSource(item);
     }
     m_current_menu = std::make_shared<Gallery>(m_sources, m_settings);
@@ -99,7 +117,7 @@ void Application::start() {
 }
 
 void Application::tryAddSource(const std::string & path, size_t depth) {
-    if (fs::is_directory(path) && depth < m_settings->max_depth) {
+    if (fs::is_directory(path) && depth < m_settings->m_max_depth) {
         std::set<fs::path> sorted_by_name;
         try {
             for (const auto & entry : fs::directory_iterator(path))

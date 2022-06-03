@@ -22,8 +22,8 @@
 - [ ] root folder (long recursion)
 
 # Configuration:
-- [ ] configuration file
-- [ ] flags as arguments
+- [x] configuration file
+- [x] flags as arguments
 ## Logger:
 - [ ] path for log file
 ## Filters:
