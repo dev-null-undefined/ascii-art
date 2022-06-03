@@ -64,7 +64,7 @@ binaries: $(BIN_DIR)/$(PROJECT)
 clean:
 	rm -rf $(MAKE_INCLUDE)
 	rm -rf $(OUT_DIR)
-	rm -rf $(BIN_DIR)
+	rm -rf $(BIN_DIR)/$(PROJECT)
 	rm -rf $(DOC_DIR)
 
 directories: $(OUT_DIR) $(BIN_DIR) $(MAKE_INCLUDE)
