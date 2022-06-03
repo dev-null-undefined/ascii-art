@@ -12,7 +12,7 @@ file(GLOB_RECURSE ascii_art_SRC CONFIGURE_DEPENDS
         "src/*.cpp"
         )
 
-add_executable(ascii_art ${ascii_art_SRC} src/container/SmartMutex.h)
+add_executable(ascii_art ${ascii_art_SRC})
 
 execute_process(COMMAND nix build --no-link nixpkgs\#libjpeg_original.dev
         OUTPUT_VARIABLE tmp
