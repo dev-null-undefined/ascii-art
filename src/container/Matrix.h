@@ -92,7 +92,7 @@ Matrix<T> & Matrix<T>::operator=(Matrix && other) noexcept {
 
 template<typename T>
 T & Matrix<T>::at(number col, number row) {
-    if (row < 0 || row >= m_height || col < 0 || col >= m_width) {
+    if (row >= m_height || col >= m_width) {
         throw std::out_of_range("Matrix index out of range");
     }
     return m_data[row * m_width + col];
@@ -100,7 +100,7 @@ T & Matrix<T>::at(number col, number row) {
 
 template<typename T>
 const T & Matrix<T>::at(number col, number row) const {
-    if (row < 0 || row >= m_height || col < 0 || col >= m_width) {
+    if (row >= m_height || col >= m_width) {
         throw std::out_of_range("Matrix index out of range");
     }
     return m_data[row * m_width + col];
