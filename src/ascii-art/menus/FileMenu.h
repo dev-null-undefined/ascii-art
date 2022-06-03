@@ -9,7 +9,7 @@
 #include <filesystem>
 namespace fs = std::filesystem;
 
-class FileMenu : public Menu{
+class FileMenu : public Menu {
   public:
     explicit FileMenu(const std::string & m_regex = "");
 
@@ -35,15 +35,22 @@ class FileMenu : public Menu{
 
     void update_files(const std::string & regex);
 
+    bool key_down();
+
+    bool key_up();
+
     std::set<fs::path> m_selected_files;
     std::set<fs::path> m_files;
-    size_t m_index{}; //!< index of selected row from window
+    size_t m_index = 0; //!< index of selected row from window
+    size_t m_scroll = 0;
 
     std::string m_regex;
     size_t m_regex_index;
 
-    WINDOW * m_window{};
+    WINDOW * m_window = nullptr;
     Vector m_window_size;
+
+    static constexpr size_t MINIMAL_GAP = 5;
 };
 
 

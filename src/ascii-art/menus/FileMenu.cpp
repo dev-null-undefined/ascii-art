@@ -41,22 +41,29 @@ void FileMenu::update() const {
     char * spaces = new char[m_window_size.m_x];
     memset(spaces, ' ', m_window_size.m_x);
     spaces[m_window_size.m_x - 1] = '\0';
-    for (size_t i = 3; i < m_window_size.m_y - 1; ++i) {
+    for (size_t i = 3; i <= m_window_size.m_y; ++i) {
         mvwprintw(m_window, (int) i, 1, "%s", spaces);
     }
     auto iter = m_files.begin();
     auto iter_selected = m_selected_files.begin();
+
+    for (size_t i = 0;
+         i < m_scroll && (iter != m_files.end() || iter_selected != m_selected_files.end()); ++i) {
+        if (iter_selected == m_selected_files.end()) {
+            ++iter;
+        } else {
+            ++iter_selected;
+        }
+    }
+
     size_t iter_index = 0;
     for (size_t i = 3;
-         i < m_window_size.m_y - 1 && (iter != m_files.end() || iter_selected != m_selected_files.end()); ++i) {
+         i <= m_window_size.m_y && (iter != m_files.end() || iter_selected != m_selected_files.end()); ++i) {
+        if (i == m_index + 3) {
+            wattron(m_window, A_UNDERLINE);
+        }
         if (iter_selected == m_selected_files.end()) {
-            if (iter_index == m_index) {
-                wattron(m_window, A_UNDERLINE);
-            }
             mvwprintw(m_window, (int) i, 1, "%s", iter->c_str());
-            if (iter_index == m_index) {
-                wattroff(m_window, A_UNDERLINE);
-            }
             ++iter;
             ++iter_index;
         } else {
@@ -64,6 +71,9 @@ void FileMenu::update() const {
             mvwprintw(m_window, (int) i, 1, "%s", iter_selected->c_str());
             wattroff(m_window, A_BOLD);
             ++iter_selected;
+        }
+        if (i == m_index + 3) {
+            wattroff(m_window, A_UNDERLINE);
         }
     }
     mvwprintw(m_window, 1, 1, "%s", (m_regex + " ").c_str());
@@ -75,7 +85,12 @@ void FileMenu::update() const {
 bool FileMenu::input(int input, bool & handled) {
     handled = true;
     std::set<fs::path> new_selected_files;
+    size_t actual_index = m_index + m_scroll;
     switch (input) {
+        case KEY_UP:
+            return key_up();
+        case KEY_DOWN:
+            return key_down();
         case KEY_LEFT:
             if (m_regex_index > 0) {
                 m_regex_index--;
@@ -88,21 +103,9 @@ bool FileMenu::input(int input, bool & handled) {
                 return true;
             }
             break;
-        case KEY_UP:
-            if (m_index > 0) {
-                m_index--;
-                return true;
-            }
-            break;
         case KEY_HOME:
             if (m_regex_index != 0) {
                 m_regex_index = 0;
-                return true;
-            }
-            break;
-        case KEY_DOWN:
-            if (m_index < m_files.size()) {
-                m_index++;
                 return true;
             }
             break;
@@ -131,8 +134,14 @@ bool FileMenu::input(int input, bool & handled) {
             }
             break;
         case '\n':
-            if (m_index < m_files.size() && !m_files.empty()) {
-                std::string path = *std::next(m_files.begin(), m_index);
+            if (actual_index < m_files.size() + m_selected_files.size() && !m_files.empty()) {
+                std::string path;
+                if (actual_index < m_selected_files.size()) {
+                    path = *std::next(m_selected_files.begin(), (long) actual_index);
+                    m_selected_files.erase(std::move(path));
+                    return true;
+                }
+                path = *std::next(m_files.begin(), (long) (actual_index - m_selected_files.size()));
                 if (m_selected_files.count(path) == 0) {
                     m_selected_files.insert(std::move(path));
                 } else {
@@ -147,13 +156,13 @@ bool FileMenu::input(int input, bool & handled) {
             update_files(m_regex);
             return true;
         case ctrl('a'):
-            m_selected_files.insert(m_files.begin(),m_files.end());
+            m_selected_files.insert(m_files.begin(), m_files.end());
             return true;
         case ctrl('r'):
             m_selected_files.clear();
             return true;
         case ctrl('i'):
-            new_selected_files.insert(m_files.begin(),m_files.end());
+            new_selected_files.insert(m_files.begin(), m_files.end());
             for (const auto & item : m_selected_files)
                 new_selected_files.erase(item);
             m_selected_files = std::set<fs::path>(new_selected_files);
@@ -178,7 +187,13 @@ FileMenu::~FileMenu() {
 
 void FileMenu::update_files(const std::string & regex) {
     m_files = FileManager::find_files(regex);
-    if (m_index >= m_files.size()) m_index = m_files.size();
+    if (m_index + m_scroll >= m_files.size() + m_selected_files.size()) {
+        if (m_scroll >= m_files.size() + m_selected_files.size()) {
+            m_scroll = 0;
+        }
+        m_index = m_files.size() +
+                  m_selected_files.size() - 1 - m_scroll;
+    }
 }
 
 void FileMenu::selectFile(const std::string_view & view) {
@@ -195,4 +210,39 @@ std::string FileMenu::getRegex() const {
 
 FileMenu::FileMenu(const std::string & m_regex) : m_regex(m_regex), m_regex_index(m_regex.size()) {
     update_files(m_regex);
+}
+
+bool FileMenu::key_down() {
+    size_t actual_index = m_index + m_scroll;
+    if (m_index < m_window_size.m_y) {
+        if (m_index < m_window_size.m_y - MINIMAL_GAP - 2) {
+            if (actual_index < m_files.size() + m_selected_files.size() - 1) {
+                m_index++;
+                return true;
+            }
+        } else {
+            if (actual_index < m_files.size() + m_selected_files.size() - 1) {
+                m_scroll++;
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+bool FileMenu::key_up() {
+    if (m_index > 0) {
+        if (m_index >= MINIMAL_GAP) {
+            m_index--;
+            return true;
+        } else {
+            if (m_scroll > 0) {
+                m_scroll--;
+            } else {
+                m_index--;
+            }
+            return true;
+        }
+    }
+    return false;
 }
