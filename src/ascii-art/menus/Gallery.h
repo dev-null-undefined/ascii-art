@@ -24,7 +24,7 @@ class Gallery : public Menu {
 
     void update() const override;
 
-    bool input(int input) override;
+    bool input(int input, bool & handled) override;
   private:
     std::shared_ptr<const std::vector<std::shared_ptr<DataSource>>> m_sources;
     std::shared_ptr<Settings> m_settings;

@@ -162,19 +162,17 @@ void Gallery::update() const {
     wrefresh(m_main_window);
 }
 
-bool Gallery::input(int input) {
+bool Gallery::input(int input, bool & handled) {
     bool update = false;
     switch (input) {
         case KEY_LEFT:
+            update = true;
             if (m_frame_index > 0) {
                 m_frame_index--;
-                update = true;
             } else if (m_current_index > 0) {
                 m_current_index--;
                 m_frame_index = m_sources->at(m_current_index)->frameCount() - 1;
-                update = true;
             }
-
             break;
         case KEY_RIGHT:
 #ifdef DEBUG
@@ -183,13 +181,12 @@ bool Gallery::input(int input) {
                 exit(0);
             }
 #endif
+            update = true;
             if (m_frame_index < m_sources->at(m_current_index)->frameCount() - 1) {
                 m_current_index++;
-                update = true;
             } else if (m_current_index < m_sources->size() - 1) {
                 m_current_index++;
                 m_frame_index = 0;
-                update = true;
             }
             break;
         case 'd':

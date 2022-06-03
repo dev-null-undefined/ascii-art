@@ -4,11 +4,13 @@
 #include "sources/ImageFrame.h"
 #include "menus/Gallery.h"
 #include "./logging/Logger.h"
+#include "menus/FileMenu.h"
 #include <ncurses.h>
 #include <set>
 
 #include <filesystem>
 
+#define ctrl(x)           ((x) & 0x1f)
 namespace fs = std::filesystem;
 
 // TODO: Add argument flags to change settings
@@ -35,7 +37,11 @@ Application::Application(const std::vector<std::string> & args) : m_sources(
         }
         tryAddSource(item);
     }
-    m_current_menu = std::make_shared<Gallery>(m_sources, m_settings);
+    if (m_sources->empty()) {
+        m_current_menu = std::shared_ptr<Menu>(new FileMenu());
+    } else {
+        m_current_menu = std::make_shared<Gallery>(m_sources, m_settings);
+    }
 }
 
 
@@ -102,14 +108,30 @@ void Application::input_loop() {
 
         if (c == 4)
             return;
-
-        update = m_current_menu->input(c);
-
-        if (!update) {
+        bool handled = false;
+        update = m_current_menu->input(c, handled);
+        auto * file_menu = dynamic_cast<FileMenu *>(m_current_menu.get());
+        if (!handled && !update) {
             switch (c) {
                 case 'q':
                     return;
                 case 'r':
+                    update = true;
+                    break;
+                case ctrl('o'):
+                    if (file_menu) {
+                        auto files = file_menu->getSelectedFiles();
+                        for (const auto & item : files)
+                            tryAddSource(item);
+                        m_current_menu = std::make_shared<Gallery>(m_sources, m_settings);
+                        m_current_menu->show(getResolution());
+                    } else {
+                        file_menu = new FileMenu();
+                        m_current_menu = std::shared_ptr<FileMenu>(file_menu);
+                        for (const auto & item : *m_sources)
+                            file_menu->selectFile(item->filename());
+                        m_current_menu->show(getResolution());
+                    }
                     update = true;
                     break;
                 default:

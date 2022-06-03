@@ -10,9 +10,9 @@ public:
 
     virtual void show(Vector initial_size) = 0;
     virtual void resize(Vector size) = 0;
-    virtual void hide() = 0;
+    virtual void hide() = 0; // TODO: add assert if hidden/shown twice in row
     virtual void update() const = 0;
-    virtual bool input(int input) = 0;
+    virtual bool input(int input, bool & handled) = 0;
 
 };
 
