@@ -33,6 +33,8 @@ class FileMenu : public Menu {
 
   private:
 
+    void update_index();
+
     void update_files(const std::string & regex);
 
     bool key_down();

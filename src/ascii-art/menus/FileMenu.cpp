@@ -140,14 +140,16 @@ bool FileMenu::input(int input, bool & handled) {
                 std::string path;
                 if (actual_index < m_selected_files.size()) {
                     path = *std::next(m_selected_files.begin(), (long) actual_index);
-                    m_selected_files.erase(std::move(path));
-                    return true;
+                } else {
+                    path = *std::next(m_files.begin(), (long) (actual_index - m_selected_files.size()));
                 }
-                path = *std::next(m_files.begin(), (long) (actual_index - m_selected_files.size()));
                 if (m_selected_files.count(path) == 0) {
                     m_selected_files.insert(std::move(path));
+                    key_down();
                 } else {
                     m_selected_files.erase(std::move(path));
+                    key_up();
+                    update_index();
                 }
                 return true;
             }
@@ -189,13 +191,7 @@ FileMenu::~FileMenu() {
 
 void FileMenu::update_files(const std::string & regex) {
     m_files = FileManager::find_files(regex);
-    if (m_index + m_scroll >= m_files.size() + m_selected_files.size()) {
-        if (m_scroll >= m_files.size() + m_selected_files.size()) {
-            m_scroll = 0;
-        }
-        m_index = m_files.size() +
-                  m_selected_files.size() - 1 - m_scroll;
-    }
+    update_index();
 }
 
 void FileMenu::selectFile(const std::string_view & view) {
@@ -247,4 +243,14 @@ bool FileMenu::key_up() {
         }
     }
     return false;
+}
+
+void FileMenu::update_index() {
+    if (m_index + m_scroll >= m_files.size() + m_selected_files.size()) {
+        if (m_scroll >= m_files.size() + m_selected_files.size()) {
+            m_scroll = 0;
+        }
+        m_index = m_files.size() +
+                  m_selected_files.size() - 1 - m_scroll;
+    }
 }
