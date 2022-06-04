@@ -21,7 +21,10 @@ Application::Application(const std::vector<std::string> & args) : m_sources(
     for (const auto & item : args) {
         Logger::log("Argument: " + item, LogLevel::INFO);
         if (key != ConfigKey::NONE) {
-            m_settings->parseConfigField(key, item);
+            bool valid = m_settings->parseConfigField(key, item);
+            if (!valid) {
+                Logger::log("Invalid argument: " + item + ", for field: "+to_string(key), LogLevel::ERROR);
+            }
             key = ConfigKey::NONE;
             continue;
         }
@@ -32,6 +35,9 @@ Application::Application(const std::vector<std::string> & args) : m_sources(
         if (arguments && item.size() > 1) {
             if (item[0] == '-') {
                 key = Settings::getConfigKey(item.substr(1));
+                if(key == ConfigKey::NONE) {
+                    Logger::log("Unknown argument: " + item, LogLevel::ERROR);
+                }
                 continue;
             }
         }
