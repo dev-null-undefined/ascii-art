@@ -1,0 +1,11 @@
+<map id="src/ascii&#45;art/sources/Image.h" name="src/ascii&#45;art/sources/Image.h">
+<area shape="rect" id="node1" title=" " alt="" coords="328,5,480,47"/>
+<area shape="rect" id="node2" href="$Image_8cpp.html" title=" " alt="" coords="5,95,157,136"/>
+<area shape="rect" id="node3" href="$BMPImage_8h.html" title=" " alt="" coords="182,95,391,136"/>
+<area shape="rect" id="node5" href="$JPEGImage_8h.html" title=" " alt="" coords="416,95,627,136"/>
+<area shape="rect" id="node8" href="$PNGImage_8h.html" title=" " alt="" coords="651,95,859,136"/>
+<area shape="rect" id="node4" href="$BMPImage_8cpp.html" title=" " alt="" coords="161,184,385,225"/>
+<area shape="rect" id="node6" href="$DataSourceFactory_8cpp.html" title=" " alt="" coords="659,184,832,225"/>
+<area shape="rect" id="node7" href="$JPEGImage_8cpp.html" title=" " alt="" coords="409,184,634,225"/>
+<area shape="rect" id="node9" href="$PNGImage_8cpp.html" title=" " alt="" coords="857,184,1079,225"/>
+</map>

@@ -1,0 +1,27 @@
+var classColor =
+[
+    [ "number", "classColor.html#aee2db9163e5c20085fe51cc73f64507d", null ],
+    [ "Color", "classColor.html#a399a8c15645f5c3c38f87530fb754167", null ],
+    [ "getAlpha", "classColor.html#a12bb22611f2d16f78d1743d81e5ec654", null ],
+    [ "getBlue", "classColor.html#a67f3bba3742cf37c11e48bf8f60d89fa", null ],
+    [ "getGreen", "classColor.html#aee907dc6ce04385d4988a5b1221f2e3b", null ],
+    [ "getRed", "classColor.html#a7871f5a72a9f40efd31ce53fa403fffe", null ],
+    [ "normalize", "classColor.html#ac3a32ddc028428076d68debd2bec8eec", null ],
+    [ "operator*", "classColor.html#a85744cee8908e9203b617a31db45e144", null ],
+    [ "operator*", "classColor.html#a42bfcf855968f17a08f15b5e99fd00ad", null ],
+    [ "operator*=", "classColor.html#a911caebcb057964cc744d83d38b7213a", null ],
+    [ "operator*=", "classColor.html#ac3652630ec3f5db38554a61405a84090", null ],
+    [ "operator+", "classColor.html#af120872d8445c917e04039f4921279d3", null ],
+    [ "operator+=", "classColor.html#a26fc45655619e26ab7606823e39d80eb", null ],
+    [ "operator-", "classColor.html#a989fba33284de1e6d8ca87159fc2a4df", null ],
+    [ "operator-", "classColor.html#a185821340c57a5a560507331052a928d", null ],
+    [ "operator-=", "classColor.html#ab01bb5f62add01c8317f5d559b5b4a6f", null ],
+    [ "setAlpha", "classColor.html#a5a2ee79a52784cf2d5f4c9a2fea97021", null ],
+    [ "setBlue", "classColor.html#adf62be00c291e8a3b79b08dcc78077d1", null ],
+    [ "setGreen", "classColor.html#ae17005ad63592bd70106f69501b16d3c", null ],
+    [ "setRed", "classColor.html#a37d140d4fabb3d33da5d948b04c1d7a5", null ],
+    [ "m_a", "classColor.html#a55802287e9a8d39904bf1646a15a5547", null ],
+    [ "m_b", "classColor.html#a219c426cf40dee0fed5d4e78bd5a292e", null ],
+    [ "m_g", "classColor.html#ae5a8eec816b0988e49fd5ba15162d527", null ],
+    [ "m_r", "classColor.html#a6302f379a307fe0e16415c621aca616b", null ]
+];

@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classDataSource.html" title=" " alt="" coords="5,81,103,108"/>
+<area shape="rect" id="node2" href="$classImage.html" title=" " alt="" coords="151,56,213,83"/>
+<area shape="rect" id="node6" href="$classVideo.html" title=" " alt="" coords="153,107,211,133"/>
+<area shape="rect" id="node3" href="$classBMPImage.html" title=" " alt="" coords="262,5,354,32"/>
+<area shape="rect" id="node4" href="$classJPEGImage.html" title=" " alt="" coords="261,56,355,83"/>
+<area shape="rect" id="node5" href="$classPNGImage.html" title=" " alt="" coords="263,107,353,133"/>
+</map>

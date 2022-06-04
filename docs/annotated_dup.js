@@ -1,0 +1,25 @@
+var annotated_dup =
+[
+    [ "Application", "classApplication.html", "classApplication" ],
+    [ "BasicFilter", "classBasicFilter.html", "classBasicFilter" ],
+    [ "BMPImage", "classBMPImage.html", "classBMPImage" ],
+    [ "Color", "classColor.html", "classColor" ],
+    [ "DataSource", "classDataSource.html", "classDataSource" ],
+    [ "DataSourceFactory", "classDataSourceFactory.html", "classDataSourceFactory" ],
+    [ "error_mgr", "structerror__mgr.html", "structerror__mgr" ],
+    [ "FileManager", "classFileManager.html", "classFileManager" ],
+    [ "FileMenu", "classFileMenu.html", "classFileMenu" ],
+    [ "Filter", "classFilter.html", "classFilter" ],
+    [ "Frame", "classFrame.html", "classFrame" ],
+    [ "Gallery", "classGallery.html", "classGallery" ],
+    [ "Image", "classImage.html", "classImage" ],
+    [ "ImageFrame", "classImageFrame.html", "classImageFrame" ],
+    [ "JPEGImage", "classJPEGImage.html", "classJPEGImage" ],
+    [ "Logger", "classLogger.html", "classLogger" ],
+    [ "Matrix", "classMatrix.html", "classMatrix" ],
+    [ "Menu", "classMenu.html", "classMenu" ],
+    [ "PNGImage", "classPNGImage.html", "classPNGImage" ],
+    [ "Settings", "classSettings.html", "classSettings" ],
+    [ "Vector", "structVector.html", "structVector" ],
+    [ "Video", "classVideo.html", "classVideo" ]
+];
