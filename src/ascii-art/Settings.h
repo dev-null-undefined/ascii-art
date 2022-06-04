@@ -57,4 +57,6 @@ class Settings {
 
 };
 
+std::string to_string(ConfigKey key);
+
 #endif //ASCII_ART_SETTINGS_H_FE39E6A3F5334F97BCC73DCA7EBADD24

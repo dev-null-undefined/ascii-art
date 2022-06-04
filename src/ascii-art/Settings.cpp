@@ -15,7 +15,7 @@ double Settings::maxValue() const {
 
 double Settings::colorValue(const Color & color) const {
     double value = 0;
-    Color modified = m_brightness_filter.apply(m_color_filter.apply(color,{}), {}).normalize();
+    Color modified = m_brightness_filter.apply(m_color_filter.apply(color, {}), {}).normalize();
     value += modified.getRed();
     value += modified.getGreen();
     value += modified.getBlue();
@@ -177,6 +177,15 @@ int getInt(const std::string & value, bool & valid) {
     }
 }
 
+std::string to_string(ConfigKey key) {
+    for (const auto & item : Settings::CONFIG_KEYS) {
+        if (item.second == key) {
+            return item.first;
+        }
+    }
+    return "Unknown key: " + std::to_string((int) key);
+}
+
 bool Settings::parseConfigField(ConfigKey key, const std::string & value) {
     bool valid;
     bool b_temp;
@@ -222,16 +231,8 @@ bool Settings::parseConfigField(ConfigKey key, const std::string & value) {
     bool found = key == ConfigKey::NONE;
     if (found) {
         message += "Invalid";
-    }
-    for (const auto & item : CONFIG_KEYS) {
-        if (item.second == key) {
-            message += item.first;
-            found = true;
-            break;
-        }
-    }
-    if (!found) {
-        message += "Unknown key: " + std::to_string((int) key);
+    } else {
+        message += to_string(key);
     }
     message += " = ";
     message += value;
