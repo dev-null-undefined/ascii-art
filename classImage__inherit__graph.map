@@ -1,0 +1,7 @@
+<map id="Image" name="Image">
+<area shape="rect" id="node1" title=" " alt="" coords="167,219,291,355"/>
+<area shape="rect" id="node3" href="$classBMPImage.html" title=" " alt="" coords="5,403,140,568"/>
+<area shape="rect" id="node4" href="$classJPEGImage.html" title=" " alt="" coords="164,425,293,546"/>
+<area shape="rect" id="node5" href="$classPNGImage.html" title=" " alt="" coords="317,425,444,546"/>
+<area shape="rect" id="node2" href="$classDataSource.html" title=" " alt="" coords="162,5,295,171"/>
+</map>

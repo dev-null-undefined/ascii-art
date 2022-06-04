@@ -1,8 +1,0 @@
-<map id="BMPImage" name="BMPImage">
-<area shape="rect" id="node1" title=" " alt="" coords="347,653,534,819"/>
-<area shape="rect" id="node2" href="$classImage.html" title=" " alt="" coords="12,345,205,569"/>
-<area shape="rect" id="node3" href="$classDataSource.html" title=" " alt="" coords="5,5,212,273"/>
-<area shape="rect" id="node4" href="$structBMPImage_1_1BMPFileHeader.html" title="The BMPHeader structures are sourced from: https://en.wikipedia.org/wiki/BMP_file_format." alt="" coords="229,389,428,525"/>
-<area shape="rect" id="node5" href="$structBMPImage_1_1BMPInfoHeader.html" title=" " alt="" coords="452,323,653,591"/>
-<area shape="rect" id="node6" href="$structBMPImage_1_1BMPColorHeader.html" title=" " alt="" coords="678,381,889,532"/>
-</map>
