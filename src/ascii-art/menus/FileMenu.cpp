@@ -40,6 +40,25 @@ void FileMenu::hide() {
 }
 
 void FileMenu::update() const {
+    mvwprintw(m_window, 0, 1, "File Menu:");
+    int i = 1;
+    mvwprintw(m_window, m_window_size.m_y +1, i,
+              "^A all,");
+    i += 6 + 2;
+    mvwprintw(m_window, m_window_size.m_y +1, i,
+              "^R none,");
+    i += 7 + 2;
+    mvwprintw(m_window, m_window_size.m_y +1, i,
+              "^I inverse,");
+    i += 10 + 2;
+    mvwprintw(m_window, m_window_size.m_y +1, i,
+              "ENTER select,");
+    i += 12 + 2;
+    mvwprintw(m_window, m_window_size.m_y +1, i,
+              "^O open,");
+    i += 7 + 2;
+    mvwprintw(m_window, m_window_size.m_y +1, i,
+              "^D quit");
     char * spaces = new char[m_window_size.m_x];
     memset(spaces, ' ', m_window_size.m_x);
     spaces[m_window_size.m_x - 1] = '\0';
