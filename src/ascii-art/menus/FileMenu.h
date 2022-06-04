@@ -11,7 +11,7 @@ namespace fs = std::filesystem;
 
 class FileMenu : public Menu {
   public:
-    explicit FileMenu(const std::string & m_regex = "");
+    explicit FileMenu(const std::string & m_regex = "~/Images/.*(png|jpg|jpeg)$");
 
     ~FileMenu() override;
 
