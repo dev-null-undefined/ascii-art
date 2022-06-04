@@ -10,7 +10,10 @@
 
 #include <filesystem>
 
-#define ctrl(x)           ((x) & 0x1f)
+constexpr int ctrl(int key) {
+    return key & 0x1f;
+}
+
 namespace fs = std::filesystem;
 
 // TODO: Add argument flags to change settings

@@ -4,7 +4,9 @@
 #include "FileMenu.h"
 #include "../../FileManager.h"
 
-#define ctrl(x)           ((x) & 0x1f)
+constexpr int ctrl(int key){
+        return (key) & 0x1f;
+}
 
 void FileMenu::show(Vector initial_size) {
     curs_set(1);
