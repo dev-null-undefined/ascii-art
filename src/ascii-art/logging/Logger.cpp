@@ -11,7 +11,7 @@ namespace fs = std::filesystem;
 std::unique_ptr<Logger> Logger::instance = std::unique_ptr<Logger>(nullptr);
 
 #ifndef LOG_LEVEL
-#define LOG_LEVEL LogLevel::ERROR
+#define LOG_LEVEL LogLevel::TRACE
 #endif
 
 void Logger::log(const std::string & message, LogLevel logLevel) {
