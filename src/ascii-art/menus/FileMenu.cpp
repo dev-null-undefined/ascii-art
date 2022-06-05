@@ -15,7 +15,7 @@ void FileMenu::show(Vector initial_size) {
     cbreak();
     keypad(stdscr, TRUE);
     // TODO: don't use forms
-    m_window = newwin(initial_size.m_y, initial_size.m_x, 0, 0);
+    m_window = newwin((int) initial_size.m_y, (int) initial_size.m_x, 0, 0);
     m_window_size = initial_size - Vector{2, 2};
     box(m_window, 0, 0);
 
@@ -28,7 +28,7 @@ void FileMenu::resize(Vector size) {
     // TODO: minimal size
     m_window_size = size - Vector{2, 2};
     wclear(m_window);
-    wresize(m_window, size.m_y, size.m_x);
+    wresize(m_window, (int) size.m_y, (int) size.m_x);
     box(m_window, 0, 0);
 
     refresh();
@@ -65,6 +65,8 @@ void FileMenu::update() const {
     for (size_t i = 3; i <= m_window_size.m_y; ++i) {
         mvwprintw(m_window, (int) i, 1, "%s", spaces);
     }
+    delete[] spaces;
+
     auto iter = m_files.begin();
     auto iter_selected = m_selected_files.begin();
 
@@ -98,7 +100,7 @@ void FileMenu::update() const {
         }
     }
     mvwprintw(m_window, 1, 1, "%s", (m_regex + " ").c_str());
-    wmove(m_window, 1, m_regex_index + 1);
+    wmove(m_window, 1, (int) m_regex_index + 1);
     wrefresh(m_window);
 }
 
