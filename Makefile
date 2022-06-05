@@ -1,6 +1,7 @@
 .PHONY: all clean run compile release debug fast fast-debug doc
 .DEFAULT_GOAL = all
 PROJECT = ascii-art
+VERSION = v0.1.0
 
 SOURCE_EXT = .cpp
 HEADER_EXT = .h

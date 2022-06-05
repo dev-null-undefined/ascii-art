@@ -34,3 +34,13 @@ Vector Vector::operator+(const Vector & other) const {
 Vector Vector::operator-(const Vector & other) const {
     return Vector(*this) -= other;
 }
+
+Vector & Vector::operator*=(double factor) {
+    m_x *= factor;
+    m_y *= factor;
+    return *this;
+}
+
+Vector Vector::operator*(double factor) const {
+    return Vector(*this) *= factor;
+}

@@ -3,6 +3,10 @@
 
 #include <cstddef>
 
+/**
+ * @brief A vector class.
+ * Represents 2D mathematical vector.
+ */
 struct Vector {
     size_t m_x{};
     size_t m_y{};
@@ -12,6 +16,10 @@ struct Vector {
     Vector operator*(size_t factor) const;
 
     Vector & operator*=(size_t factor);
+
+    Vector operator*(double factor) const;
+
+    Vector & operator*=(double factor);
 
     Vector operator-() const;
 

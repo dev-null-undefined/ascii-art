@@ -4,7 +4,9 @@
 #include "FileMenu.h"
 #include "../../FileManager.h"
 
-#define ctrl(x)           ((x) & 0x1f)
+constexpr int ctrl(int key) {
+    return (key) & 0x1f;
+}
 
 void FileMenu::show(Vector initial_size) {
     curs_set(1);
@@ -13,7 +15,7 @@ void FileMenu::show(Vector initial_size) {
     cbreak();
     keypad(stdscr, TRUE);
     // TODO: don't use forms
-    m_window = newwin(initial_size.m_y, initial_size.m_x, 0, 0);
+    m_window = newwin((int) initial_size.m_y, (int) initial_size.m_x, 0, 0);
     m_window_size = initial_size - Vector{2, 2};
     box(m_window, 0, 0);
 
@@ -26,7 +28,7 @@ void FileMenu::resize(Vector size) {
     // TODO: minimal size
     m_window_size = size - Vector{2, 2};
     wclear(m_window);
-    wresize(m_window, size.m_y, size.m_x);
+    wresize(m_window, (int) size.m_y, (int) size.m_x);
     box(m_window, 0, 0);
 
     refresh();
@@ -38,12 +40,33 @@ void FileMenu::hide() {
 }
 
 void FileMenu::update() const {
+    mvwprintw(m_window, 0, 1, "File Menu:");
+    int i = 1;
+    mvwprintw(m_window, m_window_size.m_y + 1, i,
+              "^A all,");
+    i += 6 + 2;
+    mvwprintw(m_window, m_window_size.m_y + 1, i,
+              "^R none,");
+    i += 7 + 2;
+    mvwprintw(m_window, m_window_size.m_y + 1, i,
+              "^I inverse,");
+    i += 10 + 2;
+    mvwprintw(m_window, m_window_size.m_y + 1, i,
+              "ENTER select,");
+    i += 12 + 2;
+    mvwprintw(m_window, m_window_size.m_y + 1, i,
+              "^O open,");
+    i += 7 + 2;
+    mvwprintw(m_window, m_window_size.m_y + 1, i,
+              "^D quit");
     char * spaces = new char[m_window_size.m_x];
     memset(spaces, ' ', m_window_size.m_x);
     spaces[m_window_size.m_x - 1] = '\0';
     for (size_t i = 3; i <= m_window_size.m_y; ++i) {
         mvwprintw(m_window, (int) i, 1, "%s", spaces);
     }
+    delete[] spaces;
+
     auto iter = m_files.begin();
     auto iter_selected = m_selected_files.begin();
 
@@ -77,7 +100,7 @@ void FileMenu::update() const {
         }
     }
     mvwprintw(m_window, 1, 1, "%s", (m_regex + " ").c_str());
-    wmove(m_window, 1, m_regex_index + 1);
+    wmove(m_window, 1, (int) m_regex_index + 1);
     wrefresh(m_window);
 }
 
@@ -98,7 +121,7 @@ bool FileMenu::input(int input, bool & handled) {
             }
             break;
         case KEY_RIGHT:
-            if (m_regex_index <= m_regex.size()) {
+            if (m_regex_index < m_regex.size()) {
                 m_regex_index++;
                 return true;
             }
@@ -138,14 +161,16 @@ bool FileMenu::input(int input, bool & handled) {
                 std::string path;
                 if (actual_index < m_selected_files.size()) {
                     path = *std::next(m_selected_files.begin(), (long) actual_index);
-                    m_selected_files.erase(std::move(path));
-                    return true;
+                } else {
+                    path = *std::next(m_files.begin(), (long) (actual_index - m_selected_files.size()));
                 }
-                path = *std::next(m_files.begin(), (long) (actual_index - m_selected_files.size()));
                 if (m_selected_files.count(path) == 0) {
                     m_selected_files.insert(std::move(path));
+                    key_down();
                 } else {
                     m_selected_files.erase(std::move(path));
+                    key_up();
+                    update_index();
                 }
                 return true;
             }
@@ -167,6 +192,8 @@ bool FileMenu::input(int input, bool & handled) {
                 new_selected_files.erase(item);
             m_selected_files = std::set<fs::path>(new_selected_files);
             return true;
+        case KEY_MOUSE:
+            return handle_mouse();
         default:
             if (isprint(input)) {
                 m_regex.insert(m_regex_index, 1, (char) input);
@@ -187,13 +214,7 @@ FileMenu::~FileMenu() {
 
 void FileMenu::update_files(const std::string & regex) {
     m_files = FileManager::find_files(regex);
-    if (m_index + m_scroll >= m_files.size() + m_selected_files.size()) {
-        if (m_scroll >= m_files.size() + m_selected_files.size()) {
-            m_scroll = 0;
-        }
-        m_index = m_files.size() +
-                  m_selected_files.size() - 1 - m_scroll;
-    }
+    update_index();
 }
 
 void FileMenu::selectFile(const std::string_view & view) {
@@ -242,6 +263,58 @@ bool FileMenu::key_up() {
                 m_index--;
             }
             return true;
+        }
+    }
+    return false;
+}
+
+void FileMenu::update_index() {
+    if (m_index + m_scroll >= m_files.size() + m_selected_files.size()) {
+        if (m_scroll >= m_files.size() + m_selected_files.size()) {
+            m_scroll = 0;
+        }
+        m_index = m_files.size() +
+                  m_selected_files.size() - 1 - m_scroll;
+    }
+}
+
+bool FileMenu::handle_mouse() {
+    MEVENT event;
+    if (getmouse(&event) == OK) {
+        if (event.bstate & BUTTON1_PRESSED) {
+            int actual_index = (int) (event.y + m_scroll) - 3;
+            if (event.y < m_window_size.m_y && event.y > 1 && actual_index < m_files.size() + m_selected_files.size() &&
+                !m_files.empty()) {
+                std::string path;
+                if (actual_index < m_selected_files.size()) {
+                    path = *std::next(m_selected_files.begin(), (long) actual_index);
+                } else {
+                    path = *std::next(m_files.begin(), (long) (actual_index - m_selected_files.size()));
+                }
+                if (m_selected_files.count(path) == 0) {
+                    m_selected_files.insert(std::move(path));
+                    key_down();
+                } else {
+                    m_selected_files.erase(std::move(path));
+                    key_up();
+                    update_index();
+                }
+                return true;
+
+            } else if (event.y == 1 && event.x < m_window_size.m_x) {
+                if (event.x - 1 <= m_regex.size()) {
+                    m_regex_index = event.x - 1;
+                    return true;
+                } else {
+                    m_regex_index = m_regex.size();
+                    return true;
+                }
+
+            }
+        } else if (event.bstate & 65536) {
+            return key_up();
+        } else if (event.bstate & 2097152) {
+            return key_down();
         }
     }
     return false;

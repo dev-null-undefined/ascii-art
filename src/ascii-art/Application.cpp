@@ -10,7 +10,10 @@
 
 #include <filesystem>
 
-#define ctrl(x)           ((x) & 0x1f)
+constexpr int ctrl(int key) {
+    return key & 0x1f;
+}
+
 namespace fs = std::filesystem;
 
 // TODO: Add argument flags to change settings
@@ -21,7 +24,10 @@ Application::Application(const std::vector<std::string> & args) : m_sources(
     for (const auto & item : args) {
         Logger::log("Argument: " + item, LogLevel::INFO);
         if (key != ConfigKey::NONE) {
-            m_settings->parseConfigField(key, item);
+            bool valid = m_settings->parseConfigField(key, item);
+            if (!valid) {
+                Logger::log("Invalid argument: " + item + ", for field: " + to_string(key), LogLevel::ERROR);
+            }
             key = ConfigKey::NONE;
             continue;
         }
@@ -32,6 +38,9 @@ Application::Application(const std::vector<std::string> & args) : m_sources(
         if (arguments && item.size() > 1) {
             if (item[0] == '-') {
                 key = Settings::getConfigKey(item.substr(1));
+                if (key == ConfigKey::NONE) {
+                    Logger::log("Unknown argument: " + item, LogLevel::ERROR);
+                }
                 continue;
             }
         }
@@ -173,6 +182,9 @@ void Application::start() {
     cbreak(); // disable line buffering (waiting for newline)
 
     keypad(stdscr, TRUE); // enable keypad globally
+    mouseinterval(0);
+    mousemask(ALL_MOUSE_EVENTS | REPORT_MOUSE_POSITION, NULL);
+    Logger::log("Mouse support: "+std::to_string(has_mouse()), LogLevel::TRACE);
 #ifdef NCURSES_WIDE_COLOR_SUPPORT
     if (has_colors()) {
         start_color();
