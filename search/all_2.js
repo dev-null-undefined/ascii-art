@@ -10,6 +10,7 @@ var searchData=
   ['cols_27',['cols',['../classMatrix.html#a4bdd27a158adf4d6ce39833c8fea3144',1,'Matrix']]],
   ['config_5ffile_5fpaths_28',['CONFIG_FILE_PATHS',['../classSettings.html#a00bba6a031819aa8e8eda4a853d71e7a',1,'Settings']]],
   ['config_5fkeys_29',['CONFIG_KEYS',['../classSettings.html#a47e5aedc41a9fb1557d47e1f41281736',1,'Settings']]],
-  ['configkey_30',['ConfigKey',['../Settings_8h.html#a6a8818f378b391489f8a6477235a36d1',1,'Settings.h']]],
-  ['ctrl_31',['ctrl',['../Application_8cpp.html#af6ee1b872ad26f17423b021733a49311',1,'ctrl():&#160;Application.cpp'],['../FileMenu_8cpp.html#af6ee1b872ad26f17423b021733a49311',1,'ctrl():&#160;FileMenu.cpp']]]
+  ['config_5fseparator_30',['CONFIG_SEPARATOR',['../classSettings.html#a30cab22750ef0c23344ce230a88783cb',1,'Settings']]],
+  ['configkey_31',['ConfigKey',['../Settings_8h.html#a6a8818f378b391489f8a6477235a36d1',1,'Settings.h']]],
+  ['ctrl_32',['ctrl',['../Application_8cpp.html#afdf87bba516776c08119649e981d34f2',1,'ctrl(int key):&#160;Application.cpp'],['../FileMenu_8cpp.html#afdf87bba516776c08119649e981d34f2',1,'ctrl(int key):&#160;FileMenu.cpp']]]
 ];

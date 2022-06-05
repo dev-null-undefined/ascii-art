@@ -1,9 +1,9 @@
 <map id="Color::normalize" name="Color::normalize">
 <area shape="rect" id="node1" title=" " alt="" coords="643,107,772,133"/>
-<area shape="rect" id="node2" href="$classSettings.html#ac1a553bc915a982882e6cf33af491982" title=" " alt="" coords="444,81,595,108"/>
-<area shape="rect" id="node3" href="$classSettings.html#a58da5fdd52c2f6a3c70cbf3e8d5babf3" title=" " alt="" coords="35,5,170,32"/>
-<area shape="rect" id="node4" href="$classSettings.html#a940976240a0acc2e16a83c646180f314" title=" " alt="" coords="5,107,200,133"/>
+<area shape="rect" id="node2" href="$classSettings.html#ac1a553bc915a982882e6cf33af491982" title="Applies filters and returns the resulting sum of the color components." alt="" coords="444,81,595,108"/>
+<area shape="rect" id="node3" href="$classSettings.html#a58da5fdd52c2f6a3c70cbf3e8d5babf3" title="Calculates closes char to give color based on the Settings::maxValue() and Settings::colorValue(const..." alt="" coords="35,5,170,32"/>
+<area shape="rect" id="node4" href="$classSettings.html#a940976240a0acc2e16a83c646180f314" title="Get rounded color that would be exactly equivalent to char returned by Settings::getChar(const Color ..." alt="" coords="5,107,200,133"/>
 <area shape="rect" id="node6" href="$classGallery.html#a25777aea40c19bcb746979ee6d75951c" title=" " alt="" coords="459,208,580,235"/>
-<area shape="rect" id="node5" href="$classSettings.html#a0289344c8a02c8a66712bff64023b4fe" title=" " alt="" coords="248,56,396,83"/>
+<area shape="rect" id="node5" href="$classSettings.html#a0289344c8a02c8a66712bff64023b4fe" title="Maximum possible that could be returned by Settings::colorValue(const Color &amp;)." alt="" coords="248,56,396,83"/>
 <area shape="rect" id="node7" href="$classGallery.html#ae78af5e01a106a5dcee6e853775d4e54" title=" " alt="" coords="267,208,377,235"/>
 </map>

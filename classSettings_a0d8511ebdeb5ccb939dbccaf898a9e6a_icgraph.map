@@ -1,4 +1,4 @@
 <map id="Settings::parseConfigFile" name="Settings::parseConfigFile">
-<area shape="rect" id="node1" title=" " alt="" coords="189,5,372,32"/>
-<area shape="rect" id="node2" href="$classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title=" " alt="" coords="5,5,141,32"/>
+<area shape="rect" id="node1" title="Read line by line file and try to parse key&#45;value pair." alt="" coords="189,5,372,32"/>
+<area shape="rect" id="node2" href="$classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title="Settings constructor." alt="" coords="5,5,141,32"/>
 </map>

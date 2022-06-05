@@ -1,5 +1,5 @@
 <map id="Settings::getConfigKey" name="Settings::getConfigKey">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,175,57"/>
+<area shape="rect" id="node1" title="Get ConfigKey closest to the given string." alt="" coords="5,31,175,57"/>
 <area shape="rect" id="node2" href="$Settings_8cpp.html#a1a32c4d3bd87256731e67936766c65ca" title=" " alt="" coords="223,31,272,57"/>
 <area shape="rect" id="node3" href="$Settings_8cpp.html#a2cef02c8b080eca9c3b431e6366e7005" title=" " alt="" coords="321,5,374,32"/>
 <area shape="rect" id="node4" href="$Settings_8cpp.html#a86a7ab065991bbd3de9bb1dd9afcf961" title=" " alt="" coords="320,56,375,83"/>

@@ -1,6 +1,6 @@
 <map id="equals" name="equals">
 <area shape="rect" id="node1" title=" " alt="" coords="595,5,660,32"/>
 <area shape="rect" id="node2" href="$Settings_8cpp.html#af148a0edfaefba4e2e949b24cc717023" title=" " alt="" coords="475,5,547,32"/>
-<area shape="rect" id="node3" href="$classSettings.html#a70b2402a87e18c562a66cdba52315215" title=" " alt="" coords="236,5,427,32"/>
-<area shape="rect" id="node4" href="$classSettings.html#a0d8511ebdeb5ccb939dbccaf898a9e6a" title=" " alt="" coords="5,5,188,32"/>
+<area shape="rect" id="node3" href="$classSettings.html#a70b2402a87e18c562a66cdba52315215" title="Parse key&#45;value pair based on the ConfigKey key provided." alt="" coords="236,5,427,32"/>
+<area shape="rect" id="node4" href="$classSettings.html#a0d8511ebdeb5ccb939dbccaf898a9e6a" title="Read line by line file and try to parse key&#45;value pair." alt="" coords="5,5,188,32"/>
 </map>

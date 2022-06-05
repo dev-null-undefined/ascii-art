@@ -1,21 +1,23 @@
 <map id="Logger::log" name="Logger::log">
-<area shape="rect" id="node1" title=" " alt="" coords="777,335,872,361"/>
-<area shape="rect" id="node2" href="$classApplication.html#a73075e573b66f55b3f0f9fbc08a78af4" title=" " alt="" coords="307,183,483,209"/>
-<area shape="rect" id="node3" href="$classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333" title=" " alt="" coords="548,31,716,57"/>
-<area shape="rect" id="node7" href="$classSettings.html#a58da5fdd52c2f6a3c70cbf3e8d5babf3" title=" " alt="" coords="565,132,699,159"/>
+<area shape="rect" id="node1" title=" " alt="" coords="777,360,872,387"/>
+<area shape="rect" id="node2" href="$classApplication.html#a73075e573b66f55b3f0f9fbc08a78af4" title="Application constructor." alt="" coords="307,309,483,336"/>
+<area shape="rect" id="node3" href="$classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333" title="Regex file name search." alt="" coords="548,31,716,57"/>
+<area shape="rect" id="node7" href="$classSettings.html#a58da5fdd52c2f6a3c70cbf3e8d5babf3" title="Calculates closes char to give color based on the Settings::maxValue() and Settings::colorValue(const..." alt="" coords="565,132,699,159"/>
 <area shape="rect" id="node8" href="$classImage.html#ac7edbeef1160bd4be0b7289b5fa81ca2" title=" " alt="" coords="565,183,699,209"/>
-<area shape="rect" id="node9" href="$classSettings.html#a940976240a0acc2e16a83c646180f314" title=" " alt="" coords="535,233,729,260"/>
-<area shape="rect" id="node10" href="$classApplication.html#a1f5f77905c8479b599d565b1f94068d2" title=" " alt="" coords="310,335,481,361"/>
-<area shape="rect" id="node11" href="$classApplication.html#aa38ca47b50935092078cef4281ab66bc" title=" " alt="" coords="115,385,249,412"/>
-<area shape="rect" id="node13" href="$classPNGImage.html#ad71ef3a95f6a165b0cedde8a5e27f723" title=" " alt="" coords="567,385,697,412"/>
-<area shape="rect" id="node14" href="$classSettings.html#a70b2402a87e18c562a66cdba52315215" title=" " alt="" coords="537,487,727,513"/>
-<area shape="rect" id="node15" href="$classSettings.html#a0d8511ebdeb5ccb939dbccaf898a9e6a" title=" " alt="" coords="304,563,487,589"/>
-<area shape="rect" id="node17" href="$classGallery.html#acad3d3e68106ec916d2a8075ac3df766" title=" " alt="" coords="575,537,689,564"/>
-<area shape="rect" id="node18" href="$classGallery.html#a62e976e7c9f10bc0837954bf8081c5ac" title=" " alt="" coords="577,588,687,615"/>
-<area shape="rect" id="node19" href="$classApplication.html#a8cb17cae2c930fa642dd402e109b7040" title=" " alt="" coords="537,284,727,311"/>
+<area shape="rect" id="node9" href="$classSettings.html#a940976240a0acc2e16a83c646180f314" title="Get rounded color that would be exactly equivalent to char returned by Settings::getChar(const Color ..." alt="" coords="535,233,729,260"/>
+<area shape="rect" id="node10" href="$classGallery.html#a8673f32694f0b3467e2f7288b5ca9451" title=" " alt="" coords="547,81,717,108"/>
+<area shape="rect" id="node12" href="$classApplication.html#a1f5f77905c8479b599d565b1f94068d2" title="Input handling loop." alt="" coords="310,385,481,412"/>
+<area shape="rect" id="node13" href="$classApplication.html#aa38ca47b50935092078cef4281ab66bc" title="Initializes ncurses and creates starts input loop." alt="" coords="115,436,249,463"/>
+<area shape="rect" id="node15" href="$classPNGImage.html#ad71ef3a95f6a165b0cedde8a5e27f723" title=" " alt="" coords="567,436,697,463"/>
+<area shape="rect" id="node16" href="$classSettings.html#a70b2402a87e18c562a66cdba52315215" title="Parse key&#45;value pair based on the ConfigKey key provided." alt="" coords="537,689,727,716"/>
+<area shape="rect" id="node17" href="$classSettings.html#a0d8511ebdeb5ccb939dbccaf898a9e6a" title="Read line by line file and try to parse key&#45;value pair." alt="" coords="304,613,487,640"/>
+<area shape="rect" id="node19" href="$classGallery.html#acad3d3e68106ec916d2a8075ac3df766" title=" " alt="" coords="575,588,689,615"/>
+<area shape="rect" id="node20" href="$classGallery.html#a62e976e7c9f10bc0837954bf8081c5ac" title=" " alt="" coords="577,639,687,665"/>
+<area shape="rect" id="node21" href="$classApplication.html#a8cb17cae2c930fa642dd402e109b7040" title="Recursively adds sources from given path and all subdirectories." alt="" coords="537,335,727,361"/>
 <area shape="rect" id="node4" href="$classFileMenu.html#a6504cb078a595249e957827856cefd11" title=" " alt="" coords="311,31,479,57"/>
-<area shape="rect" id="node5" href="$classFileMenu.html#aeba383a5d32c31baba11e07761a38a98" title=" " alt="" coords="108,5,256,32"/>
+<area shape="rect" id="node5" href="$classFileMenu.html#ab666b22609a0c0489324ab838805eb43" title=" " alt="" coords="108,5,256,32"/>
 <area shape="rect" id="node6" href="$classFileMenu.html#a8cfe51677d1b2f2706dff3c36e3c5951" title=" " alt="" coords="121,56,243,83"/>
-<area shape="rect" id="node12" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,385,60,412"/>
-<area shape="rect" id="node16" href="$classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title=" " alt="" coords="114,563,250,589"/>
+<area shape="rect" id="node11" href="$classGallery.html#ae78af5e01a106a5dcee6e853775d4e54" title=" " alt="" coords="341,81,450,108"/>
+<area shape="rect" id="node14" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,436,60,463"/>
+<area shape="rect" id="node18" href="$classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title="Settings constructor." alt="" coords="114,613,250,640"/>
 </map>

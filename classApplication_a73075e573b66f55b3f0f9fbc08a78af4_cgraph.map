@@ -1,15 +1,15 @@
 <map id="Application::Application" name="Application::Application">
-<area shape="rect" id="node1" title=" " alt="" coords="5,145,181,172"/>
-<area shape="rect" id="node2" href="$classSettings.html#affe03e79a7510936c797cf0ce4f9899d" title=" " alt="" coords="240,69,409,96"/>
+<area shape="rect" id="node1" title="Application constructor." alt="" coords="5,183,181,209"/>
+<area shape="rect" id="node2" href="$classSettings.html#affe03e79a7510936c797cf0ce4f9899d" title="Get ConfigKey closest to the given string." alt="" coords="240,81,409,108"/>
 <area shape="rect" id="node6" href="$classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title=" " alt="" coords="496,157,591,184"/>
-<area shape="rect" id="node11" href="$classApplication.html#a8cb17cae2c930fa642dd402e109b7040" title=" " alt="" coords="229,196,420,223"/>
+<area shape="rect" id="node10" href="$LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="703,208,781,235"/>
+<area shape="rect" id="node11" href="$classApplication.html#a8cb17cae2c930fa642dd402e109b7040" title="Recursively adds sources from given path and all subdirectories." alt="" coords="229,259,420,285"/>
 <area shape="rect" id="node3" href="$Settings_8cpp.html#a1a32c4d3bd87256731e67936766c65ca" title=" " alt="" coords="519,56,568,83"/>
 <area shape="rect" id="node4" href="$Settings_8cpp.html#a2cef02c8b080eca9c3b431e6366e7005" title=" " alt="" coords="715,5,769,32"/>
 <area shape="rect" id="node5" href="$Settings_8cpp.html#a86a7ab065991bbd3de9bb1dd9afcf961" title=" " alt="" coords="715,56,769,83"/>
 <area shape="rect" id="node7" href="$classLogger.html#acebb37f5538780e6c14f13de6ec497bc" title=" " alt="" coords="667,107,817,133"/>
 <area shape="rect" id="node9" href="$classLogger.html#afba40734614c0379be107002dc5d45ae" title=" " alt="" coords="690,157,794,184"/>
-<area shape="rect" id="node10" href="$LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="703,208,781,235"/>
 <area shape="rect" id="node8" href="$classLogger.html#add0f34d4c753c86af8074840a72366b3" title=" " alt="" coords="865,107,984,133"/>
-<area shape="rect" id="node12" href="$classDataSourceFactory.html#ac540dff85527bf934d656dcbe59ae82d" title=" " alt="" coords="468,230,619,271"/>
-<area shape="rect" id="node13" href="$DataSourceFactory_8cpp.html#aff875062104f1676411c5f9ae67d6354" title=" " alt="" coords="698,259,786,285"/>
+<area shape="rect" id="node12" href="$classDataSourceFactory.html#ac540dff85527bf934d656dcbe59ae82d" title=" " alt="" coords="468,259,619,301"/>
+<area shape="rect" id="node13" href="$DataSourceFactory_8cpp.html#aff875062104f1676411c5f9ae67d6354" title=" " alt="" coords="698,267,786,293"/>
 </map>

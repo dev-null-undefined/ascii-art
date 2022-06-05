@@ -11,6 +11,7 @@ var classSettings =
     [ "parseConfigFile", "classSettings.html#a0d8511ebdeb5ccb939dbccaf898a9e6a", null ],
     [ "CONFIG_FILE_PATHS", "classSettings.html#a00bba6a031819aa8e8eda4a853d71e7a", null ],
     [ "CONFIG_KEYS", "classSettings.html#a47e5aedc41a9fb1557d47e1f41281736", null ],
+    [ "CONFIG_SEPARATOR", "classSettings.html#a30cab22750ef0c23344ce230a88783cb", null ],
     [ "m_brightness_filter", "classSettings.html#a739316f3c94d6e0ac802088c8768b283", null ],
     [ "m_chars", "classSettings.html#aafb7ef6c1b39a20b6876e4fde9ff93bb", null ],
     [ "m_color_dithering", "classSettings.html#a749e3612d53c85527655b5195c3717dd", null ],

@@ -1,5 +1,5 @@
 <map id="Application::tryAddSource" name="Application::tryAddSource">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,196,83"/>
+<area shape="rect" id="node1" title="Recursively adds sources from given path and all subdirectories." alt="" coords="5,56,196,83"/>
 <area shape="rect" id="node2" href="$classDataSourceFactory.html#ac540dff85527bf934d656dcbe59ae82d" title=" " alt="" coords="244,9,395,50"/>
 <area shape="rect" id="node4" href="$classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title=" " alt="" coords="272,85,367,112"/>
 <area shape="rect" id="node3" href="$DataSourceFactory_8cpp.html#aff875062104f1676411c5f9ae67d6354" title=" " alt="" coords="474,5,562,32"/>

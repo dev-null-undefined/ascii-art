@@ -6,6 +6,7 @@ var Settings_8cpp =
     [ "getInt", "Settings_8cpp.html#a78b4c8b4d8c96d20a5a92b53181734a5", null ],
     [ "ltrim", "Settings_8cpp.html#a2cef02c8b080eca9c3b431e6366e7005", null ],
     [ "rtrim", "Settings_8cpp.html#a86a7ab065991bbd3de9bb1dd9afcf961", null ],
+    [ "to_string", "Settings_8cpp.html#a539a058a0ec1f4de8457dbe7a78bd251", null ],
     [ "trim", "Settings_8cpp.html#a1a32c4d3bd87256731e67936766c65ca", null ],
     [ "WHITESPACE", "Settings_8cpp.html#aebab32df5b81a7363596ac2d2b0b557a", null ]
 ];

@@ -1,7 +1,7 @@
 <map id="FileManager::is_separator" name="FileManager::is_separator">
-<area shape="rect" id="node1" title=" " alt="" coords="696,31,887,57"/>
-<area shape="rect" id="node2" href="$classFileManager.html#a8c6f24d88df9ed5217e5a149a47e35bc" title=" " alt="" coords="437,31,648,57"/>
-<area shape="rect" id="node3" href="$classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333" title=" " alt="" coords="221,5,389,32"/>
-<area shape="rect" id="node5" href="$classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title=" " alt="" coords="237,56,373,83"/>
+<area shape="rect" id="node1" title="Tests if given char is file path separator." alt="" coords="696,31,887,57"/>
+<area shape="rect" id="node2" href="$classFileManager.html#a8c6f24d88df9ed5217e5a149a47e35bc" title="Normalize path." alt="" coords="437,31,648,57"/>
+<area shape="rect" id="node3" href="$classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333" title="Regex file name search." alt="" coords="221,5,389,32"/>
+<area shape="rect" id="node5" href="$classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title="Settings constructor." alt="" coords="237,56,373,83"/>
 <area shape="rect" id="node4" href="$classFileMenu.html#a6504cb078a595249e957827856cefd11" title=" " alt="" coords="5,5,173,32"/>
 </map>

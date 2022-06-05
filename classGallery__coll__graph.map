@@ -1,5 +1,5 @@
 <map id="Gallery" name="Gallery">
-<area shape="rect" id="node1" title=" " alt="" coords="17,277,221,545"/>
-<area shape="rect" id="node2" href="$classMenu.html" title=" " alt="" coords="5,27,100,178"/>
-<area shape="rect" id="node3" href="$structVector.html" title=" " alt="" coords="124,5,248,200"/>
+<area shape="rect" id="node1" title=" " alt="" coords="17,351,221,663"/>
+<area shape="rect" id="node2" href="$classMenu.html" title=" " alt="" coords="5,42,100,193"/>
+<area shape="rect" id="node3" href="$structVector.html" title="A vector class." alt="" coords="124,5,248,229"/>
 </map>

@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ascii-art
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">v0.1.0</span>
    </div>
   </td>
  </tr>
@@ -91,13 +91,16 @@ $(document).ready(function(){initNavTree('structVector.html',''); initResizable(
 </div><!--header-->
 <div class="contents">
 
+<p>A vector class.  
+ <a href="structVector.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Vector_8h_source.html">Vector.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Vector:</div>
 <div class="dyncontent">
 <div class="center"><img src="structVector__coll__graph.png" border="0" usemap="#Vector_coll__map" alt="Collaboration graph"/></div>
 <map name="Vector_coll__map" id="Vector_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,129,200"/>
+<area shape="rect" title="A vector class." alt="" coords="5,5,129,229"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -109,6 +112,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a180a2df52403360007772b71ea314565"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a983a509404c98a6c5edafb9529b1fa84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVector.html#a983a509404c98a6c5edafb9529b1fa84">operator*=</a> (size_t factor)</td></tr>
 <tr class="separator:a983a509404c98a6c5edafb9529b1fa84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40c5de93d34460f66abc364d0fd3ef8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVector.html#a40c5de93d34460f66abc364d0fd3ef8a">operator*</a> (double factor) const</td></tr>
+<tr class="separator:a40c5de93d34460f66abc364d0fd3ef8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2245c350bd09a5d191dddc60ba9b165"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVector.html#ab2245c350bd09a5d191dddc60ba9b165">operator*=</a> (double factor)</td></tr>
+<tr class="separator:ab2245c350bd09a5d191dddc60ba9b165"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8226fda013671ae804712d085cc0a12c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVector.html#a8226fda013671ae804712d085cc0a12c">operator-</a> () const</td></tr>
 <tr class="separator:a8226fda013671ae804712d085cc0a12c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b5f826d645256ea206622da31190307"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVector.html#a1b5f826d645256ea206622da31190307">operator-=</a> (const <a class="el" href="structVector.html">Vector</a> &amp;other)</td></tr>
@@ -127,7 +134,10 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a3511206ddc8166094d75e878912c30df"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVector.html#a3511206ddc8166094d75e878912c30df">m_y</a> {}</td></tr>
 <tr class="separator:a3511206ddc8166094d75e878912c30df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A vector class. </p>
+<p>Represents 2D mathematical vector. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a60e60f5fc707cbb7a6fad9c15d97bee4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a60e60f5fc707cbb7a6fad9c15d97bee4">&#9670;&nbsp;</a></span>Vector()</h2>
 
@@ -176,8 +186,35 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a40c5de93d34460f66abc364d0fd3ef8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40c5de93d34460f66abc364d0fd3ef8a">&#9670;&nbsp;</a></span>operator*() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structVector.html">Vector</a> Vector::operator* </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>factor</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="structVector_a40c5de93d34460f66abc364d0fd3ef8a_cgraph.png" border="0" usemap="#structVector_a40c5de93d34460f66abc364d0fd3ef8a_cgraph" alt=""/></div>
+<map name="structVector_a40c5de93d34460f66abc364d0fd3ef8a_cgraph" id="structVector_a40c5de93d34460f66abc364d0fd3ef8a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,139,32"/>
+<area shape="rect" href="structVector.html#a60e60f5fc707cbb7a6fad9c15d97bee4" title=" " alt="" coords="187,5,299,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a180a2df52403360007772b71ea314565"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a180a2df52403360007772b71ea314565">&#9670;&nbsp;</a></span>operator*()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a180a2df52403360007772b71ea314565">&#9670;&nbsp;</a></span>operator*() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -203,8 +240,26 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="ab2245c350bd09a5d191dddc60ba9b165"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2245c350bd09a5d191dddc60ba9b165">&#9670;&nbsp;</a></span>operator*=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structVector.html">Vector</a> &amp; Vector::operator*= </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>factor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a983a509404c98a6c5edafb9529b1fa84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a983a509404c98a6c5edafb9529b1fa84">&#9670;&nbsp;</a></span>operator*=()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a983a509404c98a6c5edafb9529b1fa84">&#9670;&nbsp;</a></span>operator*=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -367,7 +422,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="structVector.html">Vector</a></li>
-    <li class="footer">Generated on Sat Jun 4 2022 00:48:56 for ascii-art by
+    <li class="footer">Generated on Sun Jun 5 2022 12:14:57 for ascii-art by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

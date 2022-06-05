@@ -1,7 +1,7 @@
 <map id="Frame::getSize" name="Frame::getSize">
-<area shape="rect" id="node1" title=" " alt="" coords="601,5,720,32"/>
+<area shape="rect" id="node1" title="Returns the size of the frame." alt="" coords="601,5,720,32"/>
 <area shape="rect" id="node2" href="$classDataSource.html#aa6c592eb118bdb3264a0b4763a80b2fb" title=" " alt="" coords="5,31,180,57"/>
-<area shape="rect" id="node3" href="$classFrame.html#aeb5d014ff9b0105d2f7fee2cc5d3e94b" title=" " alt="" coords="399,31,553,57"/>
+<area shape="rect" id="node3" href="$classFrame.html#aeb5d014ff9b0105d2f7fee2cc5d3e94b" title="Checks if position is inside the frame." alt="" coords="399,31,553,57"/>
 <area shape="rect" id="node4" href="$classFrame.html#a1d99c5a354bcd7be2ca1db2014dd5b65" title=" " alt="" coords="228,31,351,57"/>
 <area shape="rect" id="node5" href="$classFrame.html#a30d096d67b5871a668cf9acc8e68b45c" title=" " alt="" coords="228,81,351,108"/>
 </map>

@@ -1,7 +1,7 @@
 <map id="Frame::setPixel" name="Frame::setPixel">
 <area shape="rect" id="node1" title=" " alt="" coords="5,31,128,57"/>
 <area shape="rect" id="node2" href="$classFrame.html#ae976ce45649358207f389c27b59b373d" title=" " alt="" coords="192,5,315,32"/>
-<area shape="rect" id="node3" href="$classFrame.html#aeb5d014ff9b0105d2f7fee2cc5d3e94b" title=" " alt="" coords="176,56,331,83"/>
-<area shape="rect" id="node4" href="$classFrame.html#a0e6884e77aa2641d6add98ba13dff9aa" title=" " alt="" coords="379,56,497,83"/>
-<area shape="rect" id="node5" href="$classFrame.html#a886460f90a8be33fa126993ea490fd3d" title=" " alt="" coords="545,56,667,83"/>
+<area shape="rect" id="node3" href="$classFrame.html#aeb5d014ff9b0105d2f7fee2cc5d3e94b" title="Checks if position is inside the frame." alt="" coords="176,56,331,83"/>
+<area shape="rect" id="node4" href="$classFrame.html#a0e6884e77aa2641d6add98ba13dff9aa" title="Returns the size of the frame." alt="" coords="379,56,497,83"/>
+<area shape="rect" id="node5" href="$classFrame.html#a886460f90a8be33fa126993ea490fd3d" title="Computes the size of the frame." alt="" coords="545,56,667,83"/>
 </map>

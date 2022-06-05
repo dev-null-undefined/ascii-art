@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ascii-art
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">v0.1.0</span>
    </div>
   </td>
  </tr>
@@ -92,13 +92,16 @@ $(document).ready(function(){initNavTree('classFrame.html',''); initResizable();
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="classFrame.html" title="Frame representing a 2D image.">Frame</a> representing a 2D image.  
+ <a href="classFrame.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Frame_8h_source.html">Frame.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Frame:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFrame__inherit__graph.png" border="0" usemap="#Frame_inherit__map" alt="Inheritance graph"/></div>
 <map name="Frame_inherit__map" id="Frame_inherit__map">
-<area shape="rect" title=" " alt="" coords="10,5,141,215"/>
+<area shape="rect" title="Frame representing a 2D image." alt="" coords="10,5,141,215"/>
 <area shape="rect" href="classImageFrame.html" title=" " alt="" coords="5,263,145,428"/>
 </map>
 </div>
@@ -107,7 +110,7 @@ Collaboration diagram for Frame:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFrame__coll__graph.png" border="0" usemap="#Frame_coll__map" alt="Collaboration graph"/></div>
 <map name="Frame_coll__map" id="Frame_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,136,215"/>
+<area shape="rect" title="Frame representing a 2D image." alt="" coords="5,5,136,215"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -120,8 +123,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a76a1c1e6779a548e10c726d666cff2cf"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classMatrix.html">Matrix</a>&lt; <a class="el" href="classColor.html">Color</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFrame.html#a76a1c1e6779a548e10c726d666cff2cf">getPixels</a> () const =0</td></tr>
 <tr class="separator:a76a1c1e6779a548e10c726d666cff2cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e6884e77aa2641d6add98ba13dff9aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFrame.html#a0e6884e77aa2641d6add98ba13dff9aa">getSize</a> ()</td></tr>
+<tr class="memdesc:a0e6884e77aa2641d6add98ba13dff9aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the frame.  <a href="classFrame.html#a0e6884e77aa2641d6add98ba13dff9aa">More...</a><br /></td></tr>
 <tr class="separator:a0e6884e77aa2641d6add98ba13dff9aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb5d014ff9b0105d2f7fee2cc5d3e94b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFrame.html#aeb5d014ff9b0105d2f7fee2cc5d3e94b">validPosition</a> (<a class="el" href="structVector.html">Vector</a> position)</td></tr>
+<tr class="memdesc:aeb5d014ff9b0105d2f7fee2cc5d3e94b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if position is inside the frame.  <a href="classFrame.html#aeb5d014ff9b0105d2f7fee2cc5d3e94b">More...</a><br /></td></tr>
 <tr class="separator:aeb5d014ff9b0105d2f7fee2cc5d3e94b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d99c5a354bcd7be2ca1db2014dd5b65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFrame.html#a1d99c5a354bcd7be2ca1db2014dd5b65">getPixel</a> (<a class="el" href="structVector.html">Vector</a> position)</td></tr>
 <tr class="separator:a1d99c5a354bcd7be2ca1db2014dd5b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,6 +136,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a886460f90a8be33fa126993ea490fd3d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFrame.html#a886460f90a8be33fa126993ea490fd3d">GetSize</a> ()=0</td></tr>
+<tr class="memdesc:a886460f90a8be33fa126993ea490fd3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the size of the frame.  <a href="classFrame.html#a886460f90a8be33fa126993ea490fd3d">More...</a><br /></td></tr>
 <tr class="separator:a886460f90a8be33fa126993ea490fd3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa801ae8937db6ab8ba24ee45039e0bb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFrame.html#afa801ae8937db6ab8ba24ee45039e0bb">GetPixel</a> (<a class="el" href="structVector.html">Vector</a>)=0</td></tr>
 <tr class="separator:afa801ae8937db6ab8ba24ee45039e0bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,9 +146,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:adbed0948401ee4f895fe2c3afbc71a8e"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="structVector.html">Vector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFrame.html#adbed0948401ee4f895fe2c3afbc71a8e">m_size</a></td></tr>
+<tr class="memdesc:adbed0948401ee4f895fe2c3afbc71a8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached size of the frame.  <a href="classFrame.html#adbed0948401ee4f895fe2c3afbc71a8e">More...</a><br /></td></tr>
 <tr class="separator:adbed0948401ee4f895fe2c3afbc71a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classFrame.html" title="Frame representing a 2D image.">Frame</a> representing a 2D image. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5a95138589641f2e16bfae0be7c112ce"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a95138589641f2e16bfae0be7c112ce">&#9670;&nbsp;</a></span>~Frame()</h2>
 
@@ -228,9 +237,9 @@ Here is the call graph for this function:</div>
 <map name="classFrame_a1d99c5a354bcd7be2ca1db2014dd5b65_cgraph" id="classFrame_a1d99c5a354bcd7be2ca1db2014dd5b65_cgraph">
 <area shape="rect" title=" " alt="" coords="5,31,128,57"/>
 <area shape="rect" href="classFrame.html#afa801ae8937db6ab8ba24ee45039e0bb" title=" " alt="" coords="191,5,316,32"/>
-<area shape="rect" href="classFrame.html#aeb5d014ff9b0105d2f7fee2cc5d3e94b" title=" " alt="" coords="176,56,331,83"/>
-<area shape="rect" href="classFrame.html#a0e6884e77aa2641d6add98ba13dff9aa" title=" " alt="" coords="379,56,497,83"/>
-<area shape="rect" href="classFrame.html#a886460f90a8be33fa126993ea490fd3d" title=" " alt="" coords="545,56,667,83"/>
+<area shape="rect" href="classFrame.html#aeb5d014ff9b0105d2f7fee2cc5d3e94b" title="Checks if position is inside the frame." alt="" coords="176,56,331,83"/>
+<area shape="rect" href="classFrame.html#a0e6884e77aa2641d6add98ba13dff9aa" title="Returns the size of the frame." alt="" coords="379,56,497,83"/>
+<area shape="rect" href="classFrame.html#a886460f90a8be33fa126993ea490fd3d" title="Computes the size of the frame." alt="" coords="545,56,667,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -324,13 +333,16 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns the size of the frame. </p>
+<p>If cached returns the cached size, otherwise computes the size using <a class="el" href="classFrame.html#a886460f90a8be33fa126993ea490fd3d" title="Computes the size of the frame.">Frame::GetSize()</a> method and caches it. </p><dl class="section return"><dt>Returns</dt><dd>size of the frame. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFrame_a0e6884e77aa2641d6add98ba13dff9aa_cgraph.png" border="0" usemap="#classFrame_a0e6884e77aa2641d6add98ba13dff9aa_cgraph" alt=""/></div>
 <map name="classFrame_a0e6884e77aa2641d6add98ba13dff9aa_cgraph" id="classFrame_a0e6884e77aa2641d6add98ba13dff9aa_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,124,32"/>
-<area shape="rect" href="classFrame.html#a886460f90a8be33fa126993ea490fd3d" title=" " alt="" coords="172,5,293,32"/>
+<area shape="rect" title="Returns the size of the frame." alt="" coords="5,5,124,32"/>
+<area shape="rect" href="classFrame.html#a886460f90a8be33fa126993ea490fd3d" title="Computes the size of the frame." alt="" coords="172,5,293,32"/>
 </map>
 </div>
 <div class="dynheader">
@@ -338,9 +350,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFrame_a0e6884e77aa2641d6add98ba13dff9aa_icgraph.png" border="0" usemap="#classFrame_a0e6884e77aa2641d6add98ba13dff9aa_icgraph" alt=""/></div>
 <map name="classFrame_a0e6884e77aa2641d6add98ba13dff9aa_icgraph" id="classFrame_a0e6884e77aa2641d6add98ba13dff9aa_icgraph">
-<area shape="rect" title=" " alt="" coords="601,5,720,32"/>
+<area shape="rect" title="Returns the size of the frame." alt="" coords="601,5,720,32"/>
 <area shape="rect" href="classDataSource.html#aa6c592eb118bdb3264a0b4763a80b2fb" title=" " alt="" coords="5,31,180,57"/>
-<area shape="rect" href="classFrame.html#aeb5d014ff9b0105d2f7fee2cc5d3e94b" title=" " alt="" coords="399,31,553,57"/>
+<area shape="rect" href="classFrame.html#aeb5d014ff9b0105d2f7fee2cc5d3e94b" title="Checks if position is inside the frame." alt="" coords="399,31,553,57"/>
 <area shape="rect" href="classFrame.html#a1d99c5a354bcd7be2ca1db2014dd5b65" title=" " alt="" coords="228,31,351,57"/>
 <area shape="rect" href="classFrame.html#a30d096d67b5871a668cf9acc8e68b45c" title=" " alt="" coords="228,81,351,108"/>
 </map>
@@ -371,16 +383,19 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Computes the size of the frame. </p>
+<p>and caches it. </p>
+
 <p>Implemented in <a class="el" href="classImageFrame.html#a133c3d00259daed233e69e562d3674b9">ImageFrame</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFrame_a886460f90a8be33fa126993ea490fd3d_icgraph.png" border="0" usemap="#classFrame_a886460f90a8be33fa126993ea490fd3d_icgraph" alt=""/></div>
 <map name="classFrame_a886460f90a8be33fa126993ea490fd3d_icgraph" id="classFrame_a886460f90a8be33fa126993ea490fd3d_icgraph">
-<area shape="rect" title=" " alt="" coords="768,5,889,32"/>
-<area shape="rect" href="classFrame.html#a0e6884e77aa2641d6add98ba13dff9aa" title=" " alt="" coords="601,5,720,32"/>
+<area shape="rect" title="Computes the size of the frame." alt="" coords="768,5,889,32"/>
+<area shape="rect" href="classFrame.html#a0e6884e77aa2641d6add98ba13dff9aa" title="Returns the size of the frame." alt="" coords="601,5,720,32"/>
 <area shape="rect" href="classDataSource.html#aa6c592eb118bdb3264a0b4763a80b2fb" title=" " alt="" coords="5,31,180,57"/>
-<area shape="rect" href="classFrame.html#aeb5d014ff9b0105d2f7fee2cc5d3e94b" title=" " alt="" coords="399,31,553,57"/>
+<area shape="rect" href="classFrame.html#aeb5d014ff9b0105d2f7fee2cc5d3e94b" title="Checks if position is inside the frame." alt="" coords="399,31,553,57"/>
 <area shape="rect" href="classFrame.html#a1d99c5a354bcd7be2ca1db2014dd5b65" title=" " alt="" coords="228,31,351,57"/>
 <area shape="rect" href="classFrame.html#a30d096d67b5871a668cf9acc8e68b45c" title=" " alt="" coords="228,81,351,108"/>
 </map>
@@ -420,9 +435,9 @@ Here is the call graph for this function:</div>
 <map name="classFrame_a30d096d67b5871a668cf9acc8e68b45c_cgraph" id="classFrame_a30d096d67b5871a668cf9acc8e68b45c_cgraph">
 <area shape="rect" title=" " alt="" coords="5,31,128,57"/>
 <area shape="rect" href="classFrame.html#ae976ce45649358207f389c27b59b373d" title=" " alt="" coords="192,5,315,32"/>
-<area shape="rect" href="classFrame.html#aeb5d014ff9b0105d2f7fee2cc5d3e94b" title=" " alt="" coords="176,56,331,83"/>
-<area shape="rect" href="classFrame.html#a0e6884e77aa2641d6add98ba13dff9aa" title=" " alt="" coords="379,56,497,83"/>
-<area shape="rect" href="classFrame.html#a886460f90a8be33fa126993ea490fd3d" title=" " alt="" coords="545,56,667,83"/>
+<area shape="rect" href="classFrame.html#aeb5d014ff9b0105d2f7fee2cc5d3e94b" title="Checks if position is inside the frame." alt="" coords="176,56,331,83"/>
+<area shape="rect" href="classFrame.html#a0e6884e77aa2641d6add98ba13dff9aa" title="Returns the size of the frame." alt="" coords="379,56,497,83"/>
+<area shape="rect" href="classFrame.html#a886460f90a8be33fa126993ea490fd3d" title="Computes the size of the frame." alt="" coords="545,56,667,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -500,14 +515,23 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Checks if position is inside the frame. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td><a class="el" href="structVector.html" title="A vector class.">Vector</a> position to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFrame_aeb5d014ff9b0105d2f7fee2cc5d3e94b_cgraph.png" border="0" usemap="#classFrame_aeb5d014ff9b0105d2f7fee2cc5d3e94b_cgraph" alt=""/></div>
 <map name="classFrame_aeb5d014ff9b0105d2f7fee2cc5d3e94b_cgraph" id="classFrame_aeb5d014ff9b0105d2f7fee2cc5d3e94b_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,160,32"/>
-<area shape="rect" href="classFrame.html#a0e6884e77aa2641d6add98ba13dff9aa" title=" " alt="" coords="208,5,327,32"/>
-<area shape="rect" href="classFrame.html#a886460f90a8be33fa126993ea490fd3d" title=" " alt="" coords="375,5,496,32"/>
+<area shape="rect" title="Checks if position is inside the frame." alt="" coords="5,5,160,32"/>
+<area shape="rect" href="classFrame.html#a0e6884e77aa2641d6add98ba13dff9aa" title="Returns the size of the frame." alt="" coords="208,5,327,32"/>
+<area shape="rect" href="classFrame.html#a886460f90a8be33fa126993ea490fd3d" title="Computes the size of the frame." alt="" coords="375,5,496,32"/>
 </map>
 </div>
 <div class="dynheader">
@@ -515,7 +539,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFrame_aeb5d014ff9b0105d2f7fee2cc5d3e94b_icgraph.png" border="0" usemap="#classFrame_aeb5d014ff9b0105d2f7fee2cc5d3e94b_icgraph" alt=""/></div>
 <map name="classFrame_aeb5d014ff9b0105d2f7fee2cc5d3e94b_icgraph" id="classFrame_aeb5d014ff9b0105d2f7fee2cc5d3e94b_icgraph">
-<area shape="rect" title=" " alt="" coords="399,31,553,57"/>
+<area shape="rect" title="Checks if position is inside the frame." alt="" coords="399,31,553,57"/>
 <area shape="rect" href="classFrame.html#a1d99c5a354bcd7be2ca1db2014dd5b65" title=" " alt="" coords="228,5,351,32"/>
 <area shape="rect" href="classFrame.html#a30d096d67b5871a668cf9acc8e68b45c" title=" " alt="" coords="228,56,351,83"/>
 <area shape="rect" href="classDataSource.html#aa6c592eb118bdb3264a0b4763a80b2fb" title=" " alt="" coords="5,31,180,57"/>
@@ -545,6 +569,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Cached size of the frame. </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -557,7 +583,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classFrame.html">Frame</a></li>
-    <li class="footer">Generated on Sat Jun 4 2022 00:48:56 for ascii-art by
+    <li class="footer">Generated on Sun Jun 5 2022 12:14:57 for ascii-art by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

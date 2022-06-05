@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ctrl_552',['ctrl',['../Application_8cpp.html#af6ee1b872ad26f17423b021733a49311',1,'ctrl():&#160;Application.cpp'],['../FileMenu_8cpp.html#af6ee1b872ad26f17423b021733a49311',1,'ctrl():&#160;FileMenu.cpp']]]
+  ['log_5flevel_569',['LOG_LEVEL',['../Logger_8cpp.html#a0b87e0d3bf5853bcbb0b66a7c48fdc05',1,'Logger.cpp']]]
 ];

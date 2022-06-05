@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ends_5fwith_350',['ends_with',['../DataSourceFactory_8cpp.html#aff875062104f1676411c5f9ae67d6354',1,'DataSourceFactory.cpp']]],
-  ['equals_351',['equals',['../Settings_8cpp.html#aff9866f8a028d8bf9bc2b956fcf6000d',1,'Settings.cpp']]]
+  ['ends_5fwith_359',['ends_with',['../DataSourceFactory_8cpp.html#aff875062104f1676411c5f9ae67d6354',1,'DataSourceFactory.cpp']]],
+  ['equals_360',['equals',['../Settings_8cpp.html#aff9866f8a028d8bf9bc2b956fcf6000d',1,'Settings.cpp']]]
 ];

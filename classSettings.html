@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ascii-art
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">v0.1.0</span>
    </div>
   </td>
  </tr>
@@ -89,11 +89,15 @@ $(document).ready(function(){initNavTree('classSettings.html',''); initResizable
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classSettings-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Settings Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="classSettings.html" title="Settings class.">Settings</a> class.  
+ <a href="classSettings.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Settings_8h_source.html">Settings.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -101,7 +105,7 @@ Collaboration diagram for Settings:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSettings__coll__graph.png" border="0" usemap="#Settings_coll__map" alt="Collaboration graph"/></div>
 <map name="Settings_coll__map" id="Settings_coll__map">
-<area shape="rect" title=" " alt="" coords="5,463,176,775"/>
+<area shape="rect" title="Settings class." alt="" coords="5,463,176,789"/>
 <area shape="rect" href="classBasicFilter.html" title=" " alt="" coords="21,161,160,385"/>
 <area shape="rect" href="classFilter.html" title=" " alt="" coords="45,5,136,112"/>
 </map>
@@ -110,62 +114,89 @@ Collaboration diagram for Settings:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab7169a6eefce79566dd07db3b1e5e967"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#ab7169a6eefce79566dd07db3b1e5e967">Settings</a> ()</td></tr>
+<tr class="memdesc:ab7169a6eefce79566dd07db3b1e5e967"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSettings.html" title="Settings class.">Settings</a> constructor.  <a href="classSettings.html#ab7169a6eefce79566dd07db3b1e5e967">More...</a><br /></td></tr>
 <tr class="separator:ab7169a6eefce79566dd07db3b1e5e967"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1a553bc915a982882e6cf33af491982"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#ac1a553bc915a982882e6cf33af491982">colorValue</a> (const <a class="el" href="classColor.html">Color</a> &amp;color) const</td></tr>
+<tr class="memdesc:ac1a553bc915a982882e6cf33af491982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies filters and returns the resulting sum of the color components.  <a href="classSettings.html#ac1a553bc915a982882e6cf33af491982">More...</a><br /></td></tr>
 <tr class="separator:ac1a553bc915a982882e6cf33af491982"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fbf289a31ac7211f1eb78750ddb1e74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#a7fbf289a31ac7211f1eb78750ddb1e74">modifiedColor</a> (const <a class="el" href="classColor.html">Color</a> &amp;color) const</td></tr>
+<tr class="memdesc:a7fbf289a31ac7211f1eb78750ddb1e74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get color after color <a class="el" href="classFilter.html">Filter</a> is applied.  <a href="classSettings.html#a7fbf289a31ac7211f1eb78750ddb1e74">More...</a><br /></td></tr>
 <tr class="separator:a7fbf289a31ac7211f1eb78750ddb1e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0289344c8a02c8a66712bff64023b4fe"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#a0289344c8a02c8a66712bff64023b4fe">maxValue</a> () const</td></tr>
+<tr class="memdesc:a0289344c8a02c8a66712bff64023b4fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum possible that could be returned by Settings::colorValue(const Color &amp;).  <a href="classSettings.html#a0289344c8a02c8a66712bff64023b4fe">More...</a><br /></td></tr>
 <tr class="separator:a0289344c8a02c8a66712bff64023b4fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58da5fdd52c2f6a3c70cbf3e8d5babf3"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#a58da5fdd52c2f6a3c70cbf3e8d5babf3">getChar</a> (const <a class="el" href="classColor.html">Color</a> &amp;color) const</td></tr>
+<tr class="memdesc:a58da5fdd52c2f6a3c70cbf3e8d5babf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates closes char to give color based on the <a class="el" href="classSettings.html#a0289344c8a02c8a66712bff64023b4fe" title="Maximum possible that could be returned by Settings::colorValue(const Color &amp;).">Settings::maxValue()</a> and Settings::colorValue(const Color &amp;).  <a href="classSettings.html#a58da5fdd52c2f6a3c70cbf3e8d5babf3">More...</a><br /></td></tr>
 <tr class="separator:a58da5fdd52c2f6a3c70cbf3e8d5babf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a940976240a0acc2e16a83c646180f314"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#a940976240a0acc2e16a83c646180f314">getRoundedColor</a> (<a class="el" href="classColor.html">Color</a> color) const</td></tr>
+<tr class="memdesc:a940976240a0acc2e16a83c646180f314"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get rounded color that would be exactly equivalent to char returned by Settings::getChar(const Color &amp;).  <a href="classSettings.html#a940976240a0acc2e16a83c646180f314">More...</a><br /></td></tr>
 <tr class="separator:a940976240a0acc2e16a83c646180f314"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70b2402a87e18c562a66cdba52315215"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#a70b2402a87e18c562a66cdba52315215">parseConfigField</a> (<a class="el" href="Settings_8h.html#a6a8818f378b391489f8a6477235a36d1">ConfigKey</a> key, const std::string &amp;value)</td></tr>
+<tr class="memdesc:a70b2402a87e18c562a66cdba52315215"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse key-value pair based on the ConfigKey key provided.  <a href="classSettings.html#a70b2402a87e18c562a66cdba52315215">More...</a><br /></td></tr>
 <tr class="separator:a70b2402a87e18c562a66cdba52315215"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:affe03e79a7510936c797cf0ce4f9899d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="Settings_8h.html#a6a8818f378b391489f8a6477235a36d1">ConfigKey</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#affe03e79a7510936c797cf0ce4f9899d">getConfigKey</a> (const std::string &amp;key)</td></tr>
+<tr class="memdesc:affe03e79a7510936c797cf0ce4f9899d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get ConfigKey closest to the given string.  <a href="classSettings.html#affe03e79a7510936c797cf0ce4f9899d">More...</a><br /></td></tr>
 <tr class="separator:affe03e79a7510936c797cf0ce4f9899d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a7dbdfd9ee758479ff55a166ef4d8bc7c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#a7dbdfd9ee758479ff55a166ef4d8bc7c">m_dithering</a> = true</td></tr>
+<tr class="memdesc:a7dbdfd9ee758479ff55a166ef4d8bc7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dithering and color dithering.  <a href="classSettings.html#a7dbdfd9ee758479ff55a166ef4d8bc7c">More...</a><br /></td></tr>
 <tr class="separator:a7dbdfd9ee758479ff55a166ef4d8bc7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcff6912250182411ff272e1a5b00ca1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#afcff6912250182411ff272e1a5b00ca1">m_colors</a> = true</td></tr>
-<tr class="separator:afcff6912250182411ff272e1a5b00ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a749e3612d53c85527655b5195c3717dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#a749e3612d53c85527655b5195c3717dd">m_color_dithering</a> = true</td></tr>
 <tr class="separator:a749e3612d53c85527655b5195c3717dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcff6912250182411ff272e1a5b00ca1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#afcff6912250182411ff272e1a5b00ca1">m_colors</a> = true</td></tr>
+<tr class="memdesc:afcff6912250182411ff272e1a5b00ca1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classColor.html">Color</a> settings.  <a href="classSettings.html#afcff6912250182411ff272e1a5b00ca1">More...</a><br /></td></tr>
+<tr class="separator:afcff6912250182411ff272e1a5b00ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad52363c6548afb42a00efb9e50fdbc04"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#ad52363c6548afb42a00efb9e50fdbc04">m_debug</a> = false</td></tr>
 <tr class="separator:ad52363c6548afb42a00efb9e50fdbc04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a739316f3c94d6e0ac802088c8768b283"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBasicFilter.html">BasicFilter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#a739316f3c94d6e0ac802088c8768b283">m_brightness_filter</a> {0.212671f, 0.715160f, 0.072169f, 0.0f}</td></tr>
+<tr class="memdesc:a739316f3c94d6e0ac802088c8768b283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Brightness filter used for calculating brightness of color based on multiplicative constants.  <a href="classSettings.html#a739316f3c94d6e0ac802088c8768b283">More...</a><br /></td></tr>
 <tr class="separator:a739316f3c94d6e0ac802088c8768b283"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c480e549f5bcd7dccb1666d49dc3756"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classBasicFilter.html">BasicFilter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#a7c480e549f5bcd7dccb1666d49dc3756">m_color_filter</a> {}</td></tr>
+<tr class="memdesc:a7c480e549f5bcd7dccb1666d49dc3756"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classColor.html">Color</a> filter.  <a href="classSettings.html#a7c480e549f5bcd7dccb1666d49dc3756">More...</a><br /></td></tr>
 <tr class="separator:a7c480e549f5bcd7dccb1666d49dc3756"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbc6b5aadbf9d2fc8ef0db04164f4adf"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#abbc6b5aadbf9d2fc8ef0db04164f4adf">m_max_depth</a> = 2</td></tr>
+<tr class="memdesc:abbc6b5aadbf9d2fc8ef0db04164f4adf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum recursion depth when searching for files.  <a href="classSettings.html#abbc6b5aadbf9d2fc8ef0db04164f4adf">More...</a><br /></td></tr>
 <tr class="separator:abbc6b5aadbf9d2fc8ef0db04164f4adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab943c93d04f21a2b0ba4e6ec68475177"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#ab943c93d04f21a2b0ba4e6ec68475177">m_resize_timeout</a> = 200</td></tr>
+<tr class="memdesc:ab943c93d04f21a2b0ba4e6ec68475177"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum timeout between resizing.  <a href="classSettings.html#ab943c93d04f21a2b0ba4e6ec68475177">More...</a><br /></td></tr>
 <tr class="separator:ab943c93d04f21a2b0ba4e6ec68475177"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a00bba6a031819aa8e8eda4a853d71e7a"><td class="memItemLeft" align="right" valign="top">static constexpr std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#a00bba6a031819aa8e8eda4a853d71e7a">CONFIG_FILE_PATHS</a> [] = { &quot;ascii-art.conf&quot;, &quot;~/.config/ascii-art/ascii-art.conf&quot;, &quot;/etc/ascii-art/ascii-art.conf&quot; }</td></tr>
+<tr class="memdesc:a00bba6a031819aa8e8eda4a853d71e7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paths for config files.  <a href="classSettings.html#a00bba6a031819aa8e8eda4a853d71e7a">More...</a><br /></td></tr>
 <tr class="separator:a00bba6a031819aa8e8eda4a853d71e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47e5aedc41a9fb1557d47e1f41281736"><td class="memItemLeft" align="right" valign="top">static const std::map&lt; std::string, <a class="el" href="Settings_8h.html#a6a8818f378b391489f8a6477235a36d1">ConfigKey</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#a47e5aedc41a9fb1557d47e1f41281736">CONFIG_KEYS</a></td></tr>
+<tr class="memdesc:a47e5aedc41a9fb1557d47e1f41281736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map mapping strings to ConfigKeys.  <a href="classSettings.html#a47e5aedc41a9fb1557d47e1f41281736">More...</a><br /></td></tr>
 <tr class="separator:a47e5aedc41a9fb1557d47e1f41281736"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a0d8511ebdeb5ccb939dbccaf898a9e6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#a0d8511ebdeb5ccb939dbccaf898a9e6a">parseConfigFile</a> (const std::string_view &amp;path)</td></tr>
+<tr class="memdesc:a0d8511ebdeb5ccb939dbccaf898a9e6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read line by line file and try to parse key-value pair.  <a href="classSettings.html#a0d8511ebdeb5ccb939dbccaf898a9e6a">More...</a><br /></td></tr>
 <tr class="separator:a0d8511ebdeb5ccb939dbccaf898a9e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:aafb7ef6c1b39a20b6876e4fde9ff93bb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#aafb7ef6c1b39a20b6876e4fde9ff93bb">m_chars</a></td></tr>
+<tr class="memdesc:aafb7ef6c1b39a20b6876e4fde9ff93bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chars used for ascii-art output.  <a href="classSettings.html#aafb7ef6c1b39a20b6876e4fde9ff93bb">More...</a><br /></td></tr>
 <tr class="separator:aafb7ef6c1b39a20b6876e4fde9ff93bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a30cab22750ef0c23344ce230a88783cb"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSettings.html#a30cab22750ef0c23344ce230a88783cb">CONFIG_SEPARATOR</a> = '='</td></tr>
+<tr class="memdesc:a30cab22750ef0c23344ce230a88783cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Separator for key-value pair.  <a href="classSettings.html#a30cab22750ef0c23344ce230a88783cb">More...</a><br /></td></tr>
+<tr class="separator:a30cab22750ef0c23344ce230a88783cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classSettings.html" title="Settings class.">Settings</a> class. </p>
+<p>class for storing, parsing, managing and loading settings. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab7169a6eefce79566dd07db3b1e5e967"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7169a6eefce79566dd07db3b1e5e967">&#9670;&nbsp;</a></span>Settings()</h2>
 
@@ -180,25 +211,29 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="classSettings.html" title="Settings class.">Settings</a> constructor. </p>
+<p>constructors <a class="el" href="classSettings.html" title="Settings class.">Settings</a> class with default values and tries to load settings from files based on the CONFIG_FILE_PATHS. Reading in reversed order to allow overriding of settings from files with higher priority. If key provide multiple times, the last value is used. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSettings_ab7169a6eefce79566dd07db3b1e5e967_cgraph.png" border="0" usemap="#classSettings_ab7169a6eefce79566dd07db3b1e5e967_cgraph" alt=""/></div>
 <map name="classSettings_ab7169a6eefce79566dd07db3b1e5e967_cgraph" id="classSettings_ab7169a6eefce79566dd07db3b1e5e967_cgraph">
-<area shape="rect" title=" " alt="" coords="5,107,141,133"/>
-<area shape="rect" href="classFileManager.html#a8c6f24d88df9ed5217e5a149a47e35bc" title=" " alt="" coords="189,56,400,83"/>
-<area shape="rect" href="classSettings.html#a0d8511ebdeb5ccb939dbccaf898a9e6a" title=" " alt="" coords="203,132,386,159"/>
-<area shape="rect" href="classFileManager.html#a79f086b623a49b3d43ae058961b0b12a" title=" " alt="" coords="456,5,631,32"/>
-<area shape="rect" href="classFileManager.html#a66f79da55f4135915f43b0df87df9590" title=" " alt="" coords="448,56,639,83"/>
-<area shape="rect" href="classSettings.html#affe03e79a7510936c797cf0ce4f9899d" title=" " alt="" coords="459,107,628,133"/>
+<area shape="rect" title="Settings constructor." alt="" coords="5,107,141,133"/>
+<area shape="rect" href="classFileManager.html#a8c6f24d88df9ed5217e5a149a47e35bc" title="Normalize path." alt="" coords="189,56,400,83"/>
+<area shape="rect" href="classSettings.html#a0d8511ebdeb5ccb939dbccaf898a9e6a" title="Read line by line file and try to parse key&#45;value pair." alt="" coords="203,132,386,159"/>
+<area shape="rect" href="classFileManager.html#a79f086b623a49b3d43ae058961b0b12a" title="Get home folder based on the current user and ENV variables." alt="" coords="456,5,631,32"/>
+<area shape="rect" href="classFileManager.html#a66f79da55f4135915f43b0df87df9590" title="Tests if given char is file path separator." alt="" coords="448,56,639,83"/>
+<area shape="rect" href="classSettings.html#affe03e79a7510936c797cf0ce4f9899d" title="Get ConfigKey closest to the given string." alt="" coords="459,107,628,133"/>
 <area shape="rect" href="classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title=" " alt="" coords="687,157,781,184"/>
-<area shape="rect" href="classSettings.html#a70b2402a87e18c562a66cdba52315215" title=" " alt="" coords="448,208,639,235"/>
+<area shape="rect" href="classSettings.html#a70b2402a87e18c562a66cdba52315215" title="Parse key&#45;value pair based on the ConfigKey key provided." alt="" coords="448,208,639,235"/>
 <area shape="rect" href="Settings_8cpp.html#a1a32c4d3bd87256731e67936766c65ca" title=" " alt="" coords="709,107,759,133"/>
 <area shape="rect" href="classLogger.html#acebb37f5538780e6c14f13de6ec497bc" title=" " alt="" coords="829,107,980,133"/>
 <area shape="rect" href="classLogger.html#afba40734614c0379be107002dc5d45ae" title=" " alt="" coords="853,157,957,184"/>
 <area shape="rect" href="LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="865,208,944,235"/>
-<area shape="rect" href="Settings_8cpp.html#af148a0edfaefba4e2e949b24cc717023" title=" " alt="" coords="698,259,770,285"/>
-<area shape="rect" href="Settings_8cpp.html#a78b4c8b4d8c96d20a5a92b53181734a5" title=" " alt="" coords="704,309,764,336"/>
+<area shape="rect" href="Settings_8cpp.html#af148a0edfaefba4e2e949b24cc717023" title=" " alt="" coords="698,208,770,235"/>
+<area shape="rect" href="Settings_8cpp.html#a78b4c8b4d8c96d20a5a92b53181734a5" title=" " alt="" coords="704,259,764,285"/>
+<area shape="rect" href="Settings_8cpp.html#a539a058a0ec1f4de8457dbe7a78bd251" title="to_string method for ConfigKey enum." alt="" coords="695,333,773,360"/>
 </map>
 </div>
 
@@ -220,12 +255,21 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Applies filters and returns the resulting sum of the color components. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td><a class="el" href="classColor.html">Color</a> to apply filters to. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>sum of all <a class="el" href="classColor.html">Color</a> components after applying Filters. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSettings_ac1a553bc915a982882e6cf33af491982_cgraph.png" border="0" usemap="#classSettings_ac1a553bc915a982882e6cf33af491982_cgraph" alt=""/></div>
 <map name="classSettings_ac1a553bc915a982882e6cf33af491982_cgraph" id="classSettings_ac1a553bc915a982882e6cf33af491982_cgraph">
-<area shape="rect" title=" " alt="" coords="5,119,156,145"/>
+<area shape="rect" title="Applies filters and returns the resulting sum of the color components." alt="" coords="5,119,156,145"/>
 <area shape="rect" href="classBasicFilter.html#a53dd02e4446bf9be681f9e2fea06ee55" title=" " alt="" coords="204,93,339,120"/>
 <area shape="rect" href="classColor.html#a12bb22611f2d16f78d1743d81e5ec654" title=" " alt="" coords="395,5,517,32"/>
 <area shape="rect" href="classColor.html#a67f3bba3742cf37c11e48bf8f60d89fa" title=" " alt="" coords="399,68,513,95"/>
@@ -240,10 +284,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSettings_ac1a553bc915a982882e6cf33af491982_icgraph.png" border="0" usemap="#classSettings_ac1a553bc915a982882e6cf33af491982_icgraph" alt=""/></div>
 <map name="classSettings_ac1a553bc915a982882e6cf33af491982_icgraph" id="classSettings_ac1a553bc915a982882e6cf33af491982_icgraph">
-<area shape="rect" title=" " alt="" coords="444,31,595,57"/>
-<area shape="rect" href="classSettings.html#a58da5fdd52c2f6a3c70cbf3e8d5babf3" title=" " alt="" coords="35,5,170,32"/>
-<area shape="rect" href="classSettings.html#a940976240a0acc2e16a83c646180f314" title=" " alt="" coords="5,68,200,95"/>
-<area shape="rect" href="classSettings.html#a0289344c8a02c8a66712bff64023b4fe" title=" " alt="" coords="248,31,396,57"/>
+<area shape="rect" title="Applies filters and returns the resulting sum of the color components." alt="" coords="444,31,595,57"/>
+<area shape="rect" href="classSettings.html#a58da5fdd52c2f6a3c70cbf3e8d5babf3" title="Calculates closes char to give color based on the Settings::maxValue() and Settings::colorValue(const..." alt="" coords="35,5,170,32"/>
+<area shape="rect" href="classSettings.html#a940976240a0acc2e16a83c646180f314" title="Get rounded color that would be exactly equivalent to char returned by Settings::getChar(const Color ..." alt="" coords="5,68,200,95"/>
+<area shape="rect" href="classSettings.html#a0289344c8a02c8a66712bff64023b4fe" title="Maximum possible that could be returned by Settings::colorValue(const Color &amp;)." alt="" coords="248,31,396,57"/>
 </map>
 </div>
 
@@ -264,26 +308,36 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Calculates closes char to give color based on the <a class="el" href="classSettings.html#a0289344c8a02c8a66712bff64023b4fe" title="Maximum possible that could be returned by Settings::colorValue(const Color &amp;).">Settings::maxValue()</a> and Settings::colorValue(const Color &amp;). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td><a class="el" href="classColor.html">Color</a> to approximate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>char that approximates the color. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSettings_a58da5fdd52c2f6a3c70cbf3e8d5babf3_cgraph.png" border="0" usemap="#classSettings_a58da5fdd52c2f6a3c70cbf3e8d5babf3_cgraph" alt=""/></div>
 <map name="classSettings_a58da5fdd52c2f6a3c70cbf3e8d5babf3_cgraph" id="classSettings_a58da5fdd52c2f6a3c70cbf3e8d5babf3_cgraph">
-<area shape="rect" title=" " alt="" coords="5,252,140,279"/>
-<area shape="rect" href="classSettings.html#ac1a553bc915a982882e6cf33af491982" title=" " alt="" coords="384,151,535,177"/>
+<area shape="rect" title="Calculates closes char to give color based on the Settings::maxValue() and Settings::colorValue(const..." alt="" coords="5,252,140,279"/>
+<area shape="rect" href="classSettings.html#ac1a553bc915a982882e6cf33af491982" title="Applies filters and returns the resulting sum of the color components." alt="" coords="384,151,535,177"/>
 <area shape="rect" href="classColor.html#ac3a32ddc028428076d68debd2bec8eec" title=" " alt="" coords="585,252,715,279"/>
-<area shape="rect" href="classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title=" " alt="" coords="215,328,309,355"/>
-<area shape="rect" href="LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="420,404,499,431"/>
-<area shape="rect" href="classSettings.html#a0289344c8a02c8a66712bff64023b4fe" title=" " alt="" coords="188,151,336,177"/>
+<area shape="rect" href="classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title=" " alt="" coords="215,303,309,329"/>
+<area shape="rect" href="classSettings.html#a0289344c8a02c8a66712bff64023b4fe" title="Maximum possible that could be returned by Settings::colorValue(const Color &amp;)." alt="" coords="188,151,336,177"/>
+<area shape="rect" href="Settings_8cpp.html#a539a058a0ec1f4de8457dbe7a78bd251" title="to_string method for ConfigKey enum." alt="" coords="223,377,301,404"/>
 <area shape="rect" href="classBasicFilter.html#a53dd02e4446bf9be681f9e2fea06ee55" title=" " alt="" coords="583,100,717,127"/>
 <area shape="rect" href="classColor.html#a12bb22611f2d16f78d1743d81e5ec654" title=" " alt="" coords="773,144,896,171"/>
 <area shape="rect" href="classColor.html#a67f3bba3742cf37c11e48bf8f60d89fa" title=" " alt="" coords="777,201,892,228"/>
 <area shape="rect" href="classColor.html#aee907dc6ce04385d4988a5b1221f2e3b" title=" " alt="" coords="773,5,897,32"/>
 <area shape="rect" href="classColor.html#a7871f5a72a9f40efd31ce53fa403fffe" title=" " alt="" coords="779,81,890,108"/>
 <area shape="rect" href="Color_8cpp.html#a54c2579ab3a14c8be20185336ab9e3b3" title=" " alt="" coords="765,252,904,279"/>
-<area shape="rect" href="classLogger.html#acebb37f5538780e6c14f13de6ec497bc" title=" " alt="" coords="384,353,535,380"/>
-<area shape="rect" href="classLogger.html#afba40734614c0379be107002dc5d45ae" title=" " alt="" coords="407,303,511,329"/>
-<area shape="rect" href="classLogger.html#add0f34d4c753c86af8074840a72366b3" title=" " alt="" coords="591,353,709,380"/>
+<area shape="rect" href="classLogger.html#acebb37f5538780e6c14f13de6ec497bc" title=" " alt="" coords="384,303,535,329"/>
+<area shape="rect" href="classLogger.html#afba40734614c0379be107002dc5d45ae" title=" " alt="" coords="407,353,511,380"/>
+<area shape="rect" href="LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="420,404,499,431"/>
+<area shape="rect" href="classLogger.html#add0f34d4c753c86af8074840a72366b3" title=" " alt="" coords="591,303,709,329"/>
 </map>
 </div>
 
@@ -312,12 +366,21 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Get ConfigKey closest to the given string. </p>
+<p>if none key is found or multiple keys are matching <a class="el" href="Settings_8h.html#a6a8818f378b391489f8a6477235a36d1ab50339a10e1de285ac99d4c3990b8693">ConfigKey::NONE</a> is returned. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>string to match. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ConfigKey closest to the given string. or <a class="el" href="Settings_8h.html#a6a8818f378b391489f8a6477235a36d1ab50339a10e1de285ac99d4c3990b8693">ConfigKey::NONE</a>. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSettings_affe03e79a7510936c797cf0ce4f9899d_cgraph.png" border="0" usemap="#classSettings_affe03e79a7510936c797cf0ce4f9899d_cgraph" alt=""/></div>
 <map name="classSettings_affe03e79a7510936c797cf0ce4f9899d_cgraph" id="classSettings_affe03e79a7510936c797cf0ce4f9899d_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,175,57"/>
+<area shape="rect" title="Get ConfigKey closest to the given string." alt="" coords="5,31,175,57"/>
 <area shape="rect" href="Settings_8cpp.html#a1a32c4d3bd87256731e67936766c65ca" title=" " alt="" coords="223,31,272,57"/>
 <area shape="rect" href="Settings_8cpp.html#a2cef02c8b080eca9c3b431e6366e7005" title=" " alt="" coords="321,5,374,32"/>
 <area shape="rect" href="Settings_8cpp.html#a86a7ab065991bbd3de9bb1dd9afcf961" title=" " alt="" coords="320,56,375,83"/>
@@ -328,10 +391,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSettings_affe03e79a7510936c797cf0ce4f9899d_icgraph.png" border="0" usemap="#classSettings_affe03e79a7510936c797cf0ce4f9899d_icgraph" alt=""/></div>
 <map name="classSettings_affe03e79a7510936c797cf0ce4f9899d_icgraph" id="classSettings_affe03e79a7510936c797cf0ce4f9899d_icgraph">
-<area shape="rect" title=" " alt="" coords="420,31,589,57"/>
-<area shape="rect" href="classApplication.html#a73075e573b66f55b3f0f9fbc08a78af4" title=" " alt="" coords="193,5,369,32"/>
-<area shape="rect" href="classSettings.html#a0d8511ebdeb5ccb939dbccaf898a9e6a" title=" " alt="" coords="189,56,372,83"/>
-<area shape="rect" href="classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title=" " alt="" coords="5,56,141,83"/>
+<area shape="rect" title="Get ConfigKey closest to the given string." alt="" coords="420,31,589,57"/>
+<area shape="rect" href="classApplication.html#a73075e573b66f55b3f0f9fbc08a78af4" title="Application constructor." alt="" coords="193,5,369,32"/>
+<area shape="rect" href="classSettings.html#a0d8511ebdeb5ccb939dbccaf898a9e6a" title="Read line by line file and try to parse key&#45;value pair." alt="" coords="189,56,372,83"/>
+<area shape="rect" href="classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title="Settings constructor." alt="" coords="5,56,141,83"/>
 </map>
 </div>
 
@@ -352,26 +415,35 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get rounded color that would be exactly equivalent to char returned by Settings::getChar(const Color &amp;). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>rounded color. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSettings_a940976240a0acc2e16a83c646180f314_cgraph.png" border="0" usemap="#classSettings_a940976240a0acc2e16a83c646180f314_cgraph" alt=""/></div>
 <map name="classSettings_a940976240a0acc2e16a83c646180f314_cgraph" id="classSettings_a940976240a0acc2e16a83c646180f314_cgraph">
-<area shape="rect" title=" " alt="" coords="5,259,200,285"/>
-<area shape="rect" href="classSettings.html#ac1a553bc915a982882e6cf33af491982" title=" " alt="" coords="444,157,595,184"/>
+<area shape="rect" title="Get rounded color that would be exactly equivalent to char returned by Settings::getChar(const Color ..." alt="" coords="5,259,200,285"/>
+<area shape="rect" href="classSettings.html#ac1a553bc915a982882e6cf33af491982" title="Applies filters and returns the resulting sum of the color components." alt="" coords="444,157,595,184"/>
 <area shape="rect" href="classColor.html#a12bb22611f2d16f78d1743d81e5ec654" title=" " alt="" coords="833,5,956,32"/>
 <area shape="rect" href="classColor.html#a67f3bba3742cf37c11e48bf8f60d89fa" title=" " alt="" coords="837,157,952,184"/>
 <area shape="rect" href="classColor.html#aee907dc6ce04385d4988a5b1221f2e3b" title=" " alt="" coords="833,208,957,235"/>
 <area shape="rect" href="classColor.html#a7871f5a72a9f40efd31ce53fa403fffe" title=" " alt="" coords="839,56,950,83"/>
 <area shape="rect" href="classColor.html#ac3a32ddc028428076d68debd2bec8eec" title=" " alt="" coords="645,360,775,387"/>
-<area shape="rect" href="classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title=" " alt="" coords="275,436,369,463"/>
-<area shape="rect" href="LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="480,512,559,539"/>
-<area shape="rect" href="classSettings.html#a0289344c8a02c8a66712bff64023b4fe" title=" " alt="" coords="248,208,396,235"/>
+<area shape="rect" href="classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title=" " alt="" coords="275,411,369,437"/>
+<area shape="rect" href="classSettings.html#a0289344c8a02c8a66712bff64023b4fe" title="Maximum possible that could be returned by Settings::colorValue(const Color &amp;)." alt="" coords="248,208,396,235"/>
+<area shape="rect" href="Settings_8cpp.html#a539a058a0ec1f4de8457dbe7a78bd251" title="to_string method for ConfigKey enum." alt="" coords="283,485,361,512"/>
 <area shape="rect" href="classBasicFilter.html#a53dd02e4446bf9be681f9e2fea06ee55" title=" " alt="" coords="643,107,777,133"/>
 <area shape="rect" href="Color_8cpp.html#a54c2579ab3a14c8be20185336ab9e3b3" title=" " alt="" coords="825,360,964,387"/>
-<area shape="rect" href="classLogger.html#acebb37f5538780e6c14f13de6ec497bc" title=" " alt="" coords="444,461,595,488"/>
-<area shape="rect" href="classLogger.html#afba40734614c0379be107002dc5d45ae" title=" " alt="" coords="467,411,571,437"/>
-<area shape="rect" href="classLogger.html#add0f34d4c753c86af8074840a72366b3" title=" " alt="" coords="651,461,769,488"/>
+<area shape="rect" href="classLogger.html#acebb37f5538780e6c14f13de6ec497bc" title=" " alt="" coords="444,411,595,437"/>
+<area shape="rect" href="classLogger.html#afba40734614c0379be107002dc5d45ae" title=" " alt="" coords="467,461,571,488"/>
+<area shape="rect" href="LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="480,512,559,539"/>
+<area shape="rect" href="classLogger.html#add0f34d4c753c86af8074840a72366b3" title=" " alt="" coords="651,411,769,437"/>
 </map>
 </div>
 
@@ -391,13 +463,16 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Maximum possible that could be returned by Settings::colorValue(const Color &amp;). </p>
+<dl class="section return"><dt>Returns</dt><dd>maximum possible value. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSettings_a0289344c8a02c8a66712bff64023b4fe_cgraph.png" border="0" usemap="#classSettings_a0289344c8a02c8a66712bff64023b4fe_cgraph" alt=""/></div>
 <map name="classSettings_a0289344c8a02c8a66712bff64023b4fe_cgraph" id="classSettings_a0289344c8a02c8a66712bff64023b4fe_cgraph">
-<area shape="rect" title=" " alt="" coords="5,119,153,145"/>
-<area shape="rect" href="classSettings.html#ac1a553bc915a982882e6cf33af491982" title=" " alt="" coords="201,119,352,145"/>
+<area shape="rect" title="Maximum possible that could be returned by Settings::colorValue(const Color &amp;)." alt="" coords="5,119,153,145"/>
+<area shape="rect" href="classSettings.html#ac1a553bc915a982882e6cf33af491982" title="Applies filters and returns the resulting sum of the color components." alt="" coords="201,119,352,145"/>
 <area shape="rect" href="classBasicFilter.html#a53dd02e4446bf9be681f9e2fea06ee55" title=" " alt="" coords="400,93,535,120"/>
 <area shape="rect" href="classColor.html#a12bb22611f2d16f78d1743d81e5ec654" title=" " alt="" coords="591,5,713,32"/>
 <area shape="rect" href="classColor.html#a67f3bba3742cf37c11e48bf8f60d89fa" title=" " alt="" coords="595,68,709,95"/>
@@ -412,9 +487,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSettings_a0289344c8a02c8a66712bff64023b4fe_icgraph.png" border="0" usemap="#classSettings_a0289344c8a02c8a66712bff64023b4fe_icgraph" alt=""/></div>
 <map name="classSettings_a0289344c8a02c8a66712bff64023b4fe_icgraph" id="classSettings_a0289344c8a02c8a66712bff64023b4fe_icgraph">
-<area shape="rect" title=" " alt="" coords="248,31,396,57"/>
-<area shape="rect" href="classSettings.html#a58da5fdd52c2f6a3c70cbf3e8d5babf3" title=" " alt="" coords="35,5,170,32"/>
-<area shape="rect" href="classSettings.html#a940976240a0acc2e16a83c646180f314" title=" " alt="" coords="5,56,200,83"/>
+<area shape="rect" title="Maximum possible that could be returned by Settings::colorValue(const Color &amp;)." alt="" coords="248,31,396,57"/>
+<area shape="rect" href="classSettings.html#a58da5fdd52c2f6a3c70cbf3e8d5babf3" title="Calculates closes char to give color based on the Settings::maxValue() and Settings::colorValue(const..." alt="" coords="35,5,170,32"/>
+<area shape="rect" href="classSettings.html#a940976240a0acc2e16a83c646180f314" title="Get rounded color that would be exactly equivalent to char returned by Settings::getChar(const Color ..." alt="" coords="5,56,200,83"/>
 </map>
 </div>
 
@@ -435,12 +510,21 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get color after color <a class="el" href="classFilter.html">Filter</a> is applied. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td><a class="el" href="classColor.html">Color</a> to apply <a class="el" href="classFilter.html">Filter</a> to. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>color after applying <a class="el" href="classFilter.html">Filter</a>. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSettings_a7fbf289a31ac7211f1eb78750ddb1e74_cgraph.png" border="0" usemap="#classSettings_a7fbf289a31ac7211f1eb78750ddb1e74_cgraph" alt=""/></div>
 <map name="classSettings_a7fbf289a31ac7211f1eb78750ddb1e74_cgraph" id="classSettings_a7fbf289a31ac7211f1eb78750ddb1e74_cgraph">
-<area shape="rect" title=" " alt="" coords="5,81,180,108"/>
+<area shape="rect" title="Get color after color Filter is applied." alt="" coords="5,81,180,108"/>
 <area shape="rect" href="classBasicFilter.html#a53dd02e4446bf9be681f9e2fea06ee55" title=" " alt="" coords="228,81,363,108"/>
 <area shape="rect" href="classColor.html#a12bb22611f2d16f78d1743d81e5ec654" title=" " alt="" coords="411,5,534,32"/>
 <area shape="rect" href="classColor.html#a67f3bba3742cf37c11e48bf8f60d89fa" title=" " alt="" coords="415,56,530,83"/>
@@ -476,19 +560,30 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Parse key-value pair based on the ConfigKey key provided. </p>
+<p>if valid key-value pair is provided, the value is stored in the this <a class="el" href="classSettings.html" title="Settings class.">Settings</a> object. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>ConfigKey. </td></tr>
+    <tr><td class="paramname">value</td><td>Value to set to the key. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>status of the operation. true if key-value pair is valid and was stored in this <a class="el" href="classSettings.html" title="Settings class.">Settings</a> object. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSettings_a70b2402a87e18c562a66cdba52315215_cgraph.png" border="0" usemap="#classSettings_a70b2402a87e18c562a66cdba52315215_cgraph" alt=""/></div>
 <map name="classSettings_a70b2402a87e18c562a66cdba52315215_cgraph" id="classSettings_a70b2402a87e18c562a66cdba52315215_cgraph">
-<area shape="rect" title=" " alt="" coords="5,81,196,108"/>
+<area shape="rect" title="Parse key&#45;value pair based on the ConfigKey key provided." alt="" coords="5,81,196,108"/>
 <area shape="rect" href="Settings_8cpp.html#af148a0edfaefba4e2e949b24cc717023" title=" " alt="" coords="255,5,327,32"/>
 <area shape="rect" href="Settings_8cpp.html#a78b4c8b4d8c96d20a5a92b53181734a5" title=" " alt="" coords="261,56,321,83"/>
 <area shape="rect" href="classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title=" " alt="" coords="244,107,339,133"/>
-<area shape="rect" href="LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="423,157,501,184"/>
+<area shape="rect" href="Settings_8cpp.html#a539a058a0ec1f4de8457dbe7a78bd251" title="to_string method for ConfigKey enum." alt="" coords="252,181,331,208"/>
 <area shape="rect" href="Settings_8cpp.html#aff9866f8a028d8bf9bc2b956fcf6000d" title=" " alt="" coords="429,5,495,32"/>
 <area shape="rect" href="classLogger.html#acebb37f5538780e6c14f13de6ec497bc" title=" " alt="" coords="387,56,537,83"/>
 <area shape="rect" href="classLogger.html#afba40734614c0379be107002dc5d45ae" title=" " alt="" coords="410,107,514,133"/>
+<area shape="rect" href="LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="423,157,501,184"/>
 <area shape="rect" href="classLogger.html#add0f34d4c753c86af8074840a72366b3" title=" " alt="" coords="585,56,704,83"/>
 </map>
 </div>
@@ -497,9 +592,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSettings_a70b2402a87e18c562a66cdba52315215_icgraph.png" border="0" usemap="#classSettings_a70b2402a87e18c562a66cdba52315215_icgraph" alt=""/></div>
 <map name="classSettings_a70b2402a87e18c562a66cdba52315215_icgraph" id="classSettings_a70b2402a87e18c562a66cdba52315215_icgraph">
-<area shape="rect" title=" " alt="" coords="420,5,611,32"/>
-<area shape="rect" href="classSettings.html#a0d8511ebdeb5ccb939dbccaf898a9e6a" title=" " alt="" coords="189,5,372,32"/>
-<area shape="rect" href="classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title=" " alt="" coords="5,5,141,32"/>
+<area shape="rect" title="Parse key&#45;value pair based on the ConfigKey key provided." alt="" coords="420,5,611,32"/>
+<area shape="rect" href="classSettings.html#a0d8511ebdeb5ccb939dbccaf898a9e6a" title="Read line by line file and try to parse key&#45;value pair." alt="" coords="189,5,372,32"/>
+<area shape="rect" href="classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title="Settings constructor." alt="" coords="5,5,141,32"/>
 </map>
 </div>
 
@@ -528,15 +623,23 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Read line by line file and try to parse key-value pair. </p>
+<p>Separated by CONFIG_SEPARATOR. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>file read and parse. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSettings_a0d8511ebdeb5ccb939dbccaf898a9e6a_cgraph.png" border="0" usemap="#classSettings_a0d8511ebdeb5ccb939dbccaf898a9e6a_cgraph" alt=""/></div>
 <map name="classSettings_a0d8511ebdeb5ccb939dbccaf898a9e6a_cgraph" id="classSettings_a0d8511ebdeb5ccb939dbccaf898a9e6a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,157,188,184"/>
-<area shape="rect" href="classSettings.html#affe03e79a7510936c797cf0ce4f9899d" title=" " alt="" coords="247,81,416,108"/>
+<area shape="rect" title="Read line by line file and try to parse key&#45;value pair." alt="" coords="5,157,188,184"/>
+<area shape="rect" href="classSettings.html#affe03e79a7510936c797cf0ce4f9899d" title="Get ConfigKey closest to the given string." alt="" coords="247,81,416,108"/>
 <area shape="rect" href="classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title=" " alt="" coords="475,157,569,184"/>
-<area shape="rect" href="classSettings.html#a70b2402a87e18c562a66cdba52315215" title=" " alt="" coords="236,208,427,235"/>
+<area shape="rect" href="classSettings.html#a70b2402a87e18c562a66cdba52315215" title="Parse key&#45;value pair based on the ConfigKey key provided." alt="" coords="236,208,427,235"/>
 <area shape="rect" href="Settings_8cpp.html#a1a32c4d3bd87256731e67936766c65ca" title=" " alt="" coords="497,56,547,83"/>
 <area shape="rect" href="Settings_8cpp.html#a2cef02c8b080eca9c3b431e6366e7005" title=" " alt="" coords="666,5,719,32"/>
 <area shape="rect" href="Settings_8cpp.html#a86a7ab065991bbd3de9bb1dd9afcf961" title=" " alt="" coords="665,56,720,83"/>
@@ -544,8 +647,9 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="classLogger.html#afba40734614c0379be107002dc5d45ae" title=" " alt="" coords="641,157,745,184"/>
 <area shape="rect" href="LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="653,208,732,235"/>
 <area shape="rect" href="classLogger.html#add0f34d4c753c86af8074840a72366b3" title=" " alt="" coords="816,107,935,133"/>
-<area shape="rect" href="Settings_8cpp.html#af148a0edfaefba4e2e949b24cc717023" title=" " alt="" coords="486,259,558,285"/>
-<area shape="rect" href="Settings_8cpp.html#a78b4c8b4d8c96d20a5a92b53181734a5" title=" " alt="" coords="492,309,552,336"/>
+<area shape="rect" href="Settings_8cpp.html#af148a0edfaefba4e2e949b24cc717023" title=" " alt="" coords="486,208,558,235"/>
+<area shape="rect" href="Settings_8cpp.html#a78b4c8b4d8c96d20a5a92b53181734a5" title=" " alt="" coords="492,259,552,285"/>
+<area shape="rect" href="Settings_8cpp.html#a539a058a0ec1f4de8457dbe7a78bd251" title="to_string method for ConfigKey enum." alt="" coords="483,333,561,360"/>
 <area shape="rect" href="Settings_8cpp.html#aff9866f8a028d8bf9bc2b956fcf6000d" title=" " alt="" coords="660,259,725,285"/>
 </map>
 </div>
@@ -554,8 +658,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSettings_a0d8511ebdeb5ccb939dbccaf898a9e6a_icgraph.png" border="0" usemap="#classSettings_a0d8511ebdeb5ccb939dbccaf898a9e6a_icgraph" alt=""/></div>
 <map name="classSettings_a0d8511ebdeb5ccb939dbccaf898a9e6a_icgraph" id="classSettings_a0d8511ebdeb5ccb939dbccaf898a9e6a_icgraph">
-<area shape="rect" title=" " alt="" coords="189,5,372,32"/>
-<area shape="rect" href="classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title=" " alt="" coords="5,5,141,32"/>
+<area shape="rect" title="Read line by line file and try to parse key&#45;value pair." alt="" coords="189,5,372,32"/>
+<area shape="rect" href="classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title="Settings constructor." alt="" coords="5,5,141,32"/>
 </map>
 </div>
 
@@ -581,6 +685,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Paths for config files. </p>
+<p>Last having lowest priority. </p>
 
 </div>
 </div>
@@ -611,6 +718,33 @@ Here is the caller graph for this function:</div>
 <div class="line">        {<span class="stringliteral">&quot;COLOR&quot;</span>,           <a class="code" href="Settings_8h.html#a6a8818f378b391489f8a6477235a36d1a04bd834032febb3fda8c6936ee140949">ConfigKey::COLOR</a>}</div>
 <div class="line">}</div>
 </div><!-- fragment -->
+<p>Map mapping strings to ConfigKeys. </p>
+<p>Used for parsing config files. Or getting string from ConfigKey enum. </p>
+
+</div>
+</div>
+<a id="a30cab22750ef0c23344ce230a88783cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30cab22750ef0c23344ce230a88783cb">&#9670;&nbsp;</a></span>CONFIG_SEPARATOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr char Settings::CONFIG_SEPARATOR = '='</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Separator for key-value pair. </p>
+
 </div>
 </div>
 <a id="a739316f3c94d6e0ac802088c8768b283"></a>
@@ -624,6 +758,8 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Brightness filter used for calculating brightness of color based on multiplicative constants. </p>
 
 </div>
 </div>
@@ -646,6 +782,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Chars used for ascii-art output. </p>
 
 </div>
 </div>
@@ -675,6 +813,8 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="classColor.html">Color</a> filter. </p>
+
 </div>
 </div>
 <a id="afcff6912250182411ff272e1a5b00ca1"></a>
@@ -688,6 +828,8 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="classColor.html">Color</a> settings. </p>
 
 </div>
 </div>
@@ -717,6 +859,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Dithering and color dithering. </p>
+<p><a class="el" href="classColor.html">Color</a> dithering is applied only if dithering is enabled. </p>
+
 </div>
 </div>
 <a id="abbc6b5aadbf9d2fc8ef0db04164f4adf"></a>
@@ -731,6 +876,8 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>Maximum recursion depth when searching for files. </p>
+
 </div>
 </div>
 <a id="ab943c93d04f21a2b0ba4e6ec68475177"></a>
@@ -744,6 +891,8 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Minimum timeout between resizing. </p>
 
 </div>
 </div>
@@ -762,7 +911,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classSettings.html">Settings</a></li>
-    <li class="footer">Generated on Sat Jun 4 2022 00:48:56 for ascii-art by
+    <li class="footer">Generated on Sun Jun 5 2022 12:14:57 for ascii-art by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

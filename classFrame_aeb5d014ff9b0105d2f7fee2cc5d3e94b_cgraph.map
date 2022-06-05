@@ -1,5 +1,5 @@
 <map id="Frame::validPosition" name="Frame::validPosition">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,160,32"/>
-<area shape="rect" id="node2" href="$classFrame.html#a0e6884e77aa2641d6add98ba13dff9aa" title=" " alt="" coords="208,5,327,32"/>
-<area shape="rect" id="node3" href="$classFrame.html#a886460f90a8be33fa126993ea490fd3d" title=" " alt="" coords="375,5,496,32"/>
+<area shape="rect" id="node1" title="Checks if position is inside the frame." alt="" coords="5,5,160,32"/>
+<area shape="rect" id="node2" href="$classFrame.html#a0e6884e77aa2641d6add98ba13dff9aa" title="Returns the size of the frame." alt="" coords="208,5,327,32"/>
+<area shape="rect" id="node3" href="$classFrame.html#a886460f90a8be33fa126993ea490fd3d" title="Computes the size of the frame." alt="" coords="375,5,496,32"/>
 </map>

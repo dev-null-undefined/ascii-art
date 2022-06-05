@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ascii-art
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">v0.1.0</span>
    </div>
   </td>
  </tr>
@@ -83,7 +83,7 @@ $(document).ready(function(){initNavTree('Application_8cpp.html',''); initResiza
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Application.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -137,41 +137,60 @@ Include dependency graph for Application.cpp:</div>
 </map>
 </div>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:af6ee1b872ad26f17423b021733a49311"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Application_8cpp.html#af6ee1b872ad26f17423b021733a49311">ctrl</a>(x)&#160;&#160;&#160;((x) &amp; 0x1f)</td></tr>
-<tr class="separator:af6ee1b872ad26f17423b021733a49311"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:afdf87bba516776c08119649e981d34f2"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Application_8cpp.html#afdf87bba516776c08119649e981d34f2">ctrl</a> (int key)</td></tr>
+<tr class="separator:afdf87bba516776c08119649e981d34f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="af6ee1b872ad26f17423b021733a49311"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6ee1b872ad26f17423b021733a49311">&#9670;&nbsp;</a></span>ctrl</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="afdf87bba516776c08119649e981d34f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdf87bba516776c08119649e981d34f2">&#9670;&nbsp;</a></span>ctrl()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">#define ctrl</td>
+          <td class="memname">constexpr int ctrl </td>
           <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">x</td><td>)</td>
-          <td>&#160;&#160;&#160;((x) &amp; 0x1f)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="Application_8cpp_afdf87bba516776c08119649e981d34f2_icgraph.png" border="0" usemap="#Application_8cpp_afdf87bba516776c08119649e981d34f2_icgraph" alt=""/></div>
+<map name="Application_8cpp_afdf87bba516776c08119649e981d34f2_icgraph" id="Application_8cpp_afdf87bba516776c08119649e981d34f2_icgraph">
+<area shape="rect" title=" " alt="" coords="508,5,551,32"/>
+<area shape="rect" href="classApplication.html#a1f5f77905c8479b599d565b1f94068d2" title="Input handling loop." alt="" coords="289,5,460,32"/>
+<area shape="rect" href="classApplication.html#aa38ca47b50935092078cef4281ab66bc" title="Initializes ncurses and creates starts input loop." alt="" coords="108,5,241,32"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,32"/>
+</map>
+</div>
 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassApplication_html"><div class="ttname"><a href="classApplication.html">Application</a></div><div class="ttdef"><b>Definition:</b> Application.h:13</div></div>
-<div class="ttc" id="aclassApplication_html_aa38ca47b50935092078cef4281ab66bc"><div class="ttname"><a href="classApplication.html#aa38ca47b50935092078cef4281ab66bc">Application::start</a></div><div class="ttdeci">void start()</div><div class="ttdef"><b>Definition:</b> Application.cpp:170</div></div>
+<div class="ttc" id="aclassApplication_html"><div class="ttname"><a href="classApplication.html">Application</a></div><div class="ttdoc">The Application class controls ncurses and menus.</div><div class="ttdef"><b>Definition:</b> Application.h:20</div></div>
+<div class="ttc" id="aclassApplication_html_aa38ca47b50935092078cef4281ab66bc"><div class="ttname"><a href="classApplication.html#aa38ca47b50935092078cef4281ab66bc">Application::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">Initializes ncurses and creates starts input loop.</div><div class="ttdef"><b>Definition:</b> Application.cpp:179</div></div>
 <div class="ttc" id="amain_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> main.cpp:5</div></div>
 <div class="ttc" id="aApplication_8h_html"><div class="ttname"><a href="Application_8h.html">Application.h</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e54a2744356c30f22bb916660f7ffa66.html">ascii-art</a></li><li class="navelem"><a class="el" href="Application_8cpp.html">Application.cpp</a></li>
-    <li class="footer">Generated on Sat Jun 4 2022 00:48:56 for ascii-art by
+    <li class="footer">Generated on Sun Jun 5 2022 12:14:57 for ascii-art by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

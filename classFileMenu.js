@@ -1,9 +1,10 @@
 var classFileMenu =
 [
-    [ "FileMenu", "classFileMenu.html#aeba383a5d32c31baba11e07761a38a98", null ],
+    [ "FileMenu", "classFileMenu.html#ab666b22609a0c0489324ab838805eb43", null ],
     [ "~FileMenu", "classFileMenu.html#a3a2997b808b2dec197d4c88fb16770c8", null ],
     [ "getRegex", "classFileMenu.html#ab47facecce8a6c74c786347ce62dff97", null ],
     [ "getSelectedFiles", "classFileMenu.html#a8d68bdab0a9260bea8fe1d56a9306372", null ],
+    [ "handle_mouse", "classFileMenu.html#a5fd739a48446596668124499730417e8", null ],
     [ "hide", "classFileMenu.html#a32c52a2fa869e6531d699350ceca47e3", null ],
     [ "input", "classFileMenu.html#a8cfe51677d1b2f2706dff3c36e3c5951", null ],
     [ "key_down", "classFileMenu.html#afdb24fb7b8e1c9f1df864774a34b0527", null ],
@@ -13,6 +14,7 @@ var classFileMenu =
     [ "show", "classFileMenu.html#a69657f691506ab820b22cf0af010d818", null ],
     [ "update", "classFileMenu.html#a95c0d509b88e729d0cbe1fadb60376ed", null ],
     [ "update_files", "classFileMenu.html#a6504cb078a595249e957827856cefd11", null ],
+    [ "update_index", "classFileMenu.html#a521536927bc16505a0a54d67aaf82ddf", null ],
     [ "m_files", "classFileMenu.html#aac9c88a92738612684541a41090f7655", null ],
     [ "m_index", "classFileMenu.html#a16609d3cead03572d21a448bd005d368", null ],
     [ "m_regex", "classFileMenu.html#a97c7e49f4b99636a27ce657bfa558ee4", null ],

@@ -1,6 +1,6 @@
 <map id="Settings::maxValue" name="Settings::maxValue">
-<area shape="rect" id="node1" title=" " alt="" coords="5,119,153,145"/>
-<area shape="rect" id="node2" href="$classSettings.html#ac1a553bc915a982882e6cf33af491982" title=" " alt="" coords="201,119,352,145"/>
+<area shape="rect" id="node1" title="Maximum possible that could be returned by Settings::colorValue(const Color &amp;)." alt="" coords="5,119,153,145"/>
+<area shape="rect" id="node2" href="$classSettings.html#ac1a553bc915a982882e6cf33af491982" title="Applies filters and returns the resulting sum of the color components." alt="" coords="201,119,352,145"/>
 <area shape="rect" id="node3" href="$classBasicFilter.html#a53dd02e4446bf9be681f9e2fea06ee55" title=" " alt="" coords="400,93,535,120"/>
 <area shape="rect" id="node4" href="$classColor.html#a12bb22611f2d16f78d1743d81e5ec654" title=" " alt="" coords="591,5,713,32"/>
 <area shape="rect" id="node5" href="$classColor.html#a67f3bba3742cf37c11e48bf8f60d89fa" title=" " alt="" coords="595,68,709,95"/>
