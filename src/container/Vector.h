@@ -3,6 +3,10 @@
 
 #include <cstddef>
 
+/**
+ * @brief A vector class.
+ * Represents 2D mathematical vector.
+ */
 struct Vector {
     size_t m_x{};
     size_t m_y{};

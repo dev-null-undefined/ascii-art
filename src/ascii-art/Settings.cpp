@@ -260,7 +260,7 @@ void Settings::parseConfigFile(const std::string_view & path) {
     while (std::getline(file, line)) {
         std::istringstream is_line(line);
         std::string key;
-        if (std::getline(is_line, key, '=')) {
+        if (std::getline(is_line, key, CONFIG_SEPARATOR)) {
             std::string value;
             if (std::getline(is_line, value)) {
                 ConfigKey enumKey = getConfigKey(key);
