@@ -44,3 +44,7 @@
 # File select menu
 - [x] regex like path finding
 - [x] show selected files
+
+# Gallery menu
+- [x] mouse support and zoom
+- [ ] font scale compensation
