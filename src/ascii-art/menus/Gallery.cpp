@@ -39,7 +39,7 @@ void Gallery::resize(Vector size) {
     m_main_window_size = {size.m_x, size.m_y - STATUS_WINDOW_HEIGHT};
     wresize(m_main_window, (int) size.m_y - STATUS_WINDOW_HEIGHT, (int) size.m_x);
 
-    mvwin(m_status_window,m_main_window_size.m_y,0);
+    mvwin(m_status_window, m_main_window_size.m_y, 0);
     wresize(m_status_window, STATUS_WINDOW_HEIGHT, (int) m_main_window_size.m_x);
 }
 
@@ -88,21 +88,25 @@ void Gallery::update() const {
         std::cerr << "Index out of range" << std::endl;
         return;
     }
-    Frame & frame = m_sources->at(m_current_index)->getFrame(m_frame_index); // TODO: handle exception with invalid format while loading
+    Frame & frame = m_sources->at(m_current_index)->getFrame(
+            m_frame_index); // TODO: handle exception with invalid format while loading
     box(m_main_window, 0, 0);
     std::shared_ptr<Frame> frame_ptr = frame.clone();
 
     Matrix<Color> pixels = frame_ptr->getPixels();
 
-    auto resized = std::shared_ptr<Frame>(new ImageFrame(pixels.resize(m_main_window_size-Vector{2,2})));
-    auto original = std::shared_ptr<Frame>(new ImageFrame(pixels.resize(m_main_window_size-Vector{2,2})));
+    Vector image_size = (m_main_window_size - Vector{2, 2}) * m_image_scale;
+    auto resized = std::shared_ptr<Frame>(new ImageFrame(pixels.resize(image_size)));
+    auto original = std::shared_ptr<Frame>(new ImageFrame(pixels.resize(image_size)));
 // TODO: dithering and color dithering before resize
     Vector resolution = original->getSize();
-    for (size_t y = 0; y < resolution.m_y && y < m_main_window_size.m_y - 2; y++) {
-        for (size_t x = 0; x < resolution.m_x && x < m_main_window_size.m_x - 2; x++) {
-            Color color = resized->getPixel({x, y});
-            Color original_c = original->getPixel({x, y});
-            char ascii = m_settings->getChar(resized->getPixel({x, y}).normalize());
+    for (size_t y = 0, img_y = m_image_position.m_y;
+         img_y < resolution.m_y && y < m_main_window_size.m_y - 2; y++, img_y++) {
+        for (size_t x = 0, img_x = m_image_position.m_x;
+             img_x < resolution.m_x && x < m_main_window_size.m_x - 2; x++, img_x++) {
+            Color color = resized->getPixel({img_x, img_y});
+            Color original_c = original->getPixel({img_x, img_y});
+            char ascii = m_settings->getChar(resized->getPixel({img_x, img_y}).normalize());
             Color rounded;
 
 #ifdef NCURSES_WIDE_COLOR_SUPPORT
@@ -119,26 +123,26 @@ void Gallery::update() const {
                 Color diff = color - rounded;
 
                 Vector cords;
-                cords = {x + 1, y};
-                if (x + 1 < resolution.m_x) {
+                cords = {img_x + 1, img_y};
+                if (img_x + 1 < resolution.m_x) {
                     Color c2 = resized->getPixel(cords);
                     c2 += diff * (7.0 / 16);
                     resized->setPixel(cords, c2);
                 }
-                cords = {x - 1, y + 1};
-                if (y + 1 < resolution.m_y && x >= 1) {
+                cords = {img_x - 1, img_y + 1};
+                if (img_y + 1 < resolution.m_y && img_x >= 1) {
                     Color c2 = resized->getPixel(cords);
                     c2 += diff * (3.0 / 16);
                     resized->setPixel(cords, c2);
                 }
-                cords = {x, y + 1};
-                if (y + 1 < resolution.m_y) {
+                cords = {img_x, img_y + 1};
+                if (img_y + 1 < resolution.m_y) {
                     Color c2 = resized->getPixel(cords);
                     c2 += diff * (5.0 / 16);
                     resized->setPixel(cords, c2);
                 }
-                cords = {x + 1, y + 1};
-                if (y + 1 < resolution.m_y && x + 1 < resolution.m_x) {
+                cords = {img_x + 1, img_y + 1};
+                if (img_y + 1 < resolution.m_y && img_x + 1 < resolution.m_x) {
                     Color c2 = resized->getPixel(cords);
                     c2 += diff * (1.0 / 16);
                     resized->setPixel(cords, c2);
@@ -229,6 +233,9 @@ bool Gallery::input(int input, bool & handled) {
             m_settings->m_debug = !m_settings->m_debug;
             update = true;
             break;
+        case KEY_MOUSE:
+            update = handle_mouse();
+            break;
         default:
             break;
     }
@@ -243,4 +250,53 @@ Gallery::Gallery(std::shared_ptr<std::vector<std::shared_ptr<DataSource>>> m_sou
 
 Gallery::~Gallery() {
     Gallery::hide();
+}
+
+void Gallery::zoom(int x, int y, double zoom) {
+    Vector image_size_before = m_main_window_size * m_image_scale;
+    m_image_scale = m_image_scale * zoom;
+    if (m_image_scale < 0.5) {
+        m_image_scale = 0.5;
+    } else if (m_image_scale > 2.0) {
+        m_image_scale = 2.0;
+    }
+    Vector image_size_after = m_main_window_size * m_image_scale;
+    int delta_x = ((int) image_size_after.m_x - (int) image_size_before.m_x);
+    int delta_y = ((int) image_size_after.m_y - (int) image_size_before.m_y);
+
+    double new_x = (double) m_image_position.m_x + x / (double) m_main_window_size.m_x * delta_x;
+    double new_y = (double) m_image_position.m_y + y / (double) m_main_window_size.m_y * delta_y;
+    m_image_position.m_x = new_x > 0 ? (size_t) new_x : 0;
+    m_image_position.m_y = new_y > 0 ? (size_t) new_y : 0;
+}
+
+bool Gallery::handle_mouse() {
+    MEVENT event;
+    if (getmouse(&event) == OK) {
+        Logger::log("Mouse event: x:" + std::to_string(event.x) + " y:" + std::to_string(event.y) + " state:" +
+                    std::to_string(event.bstate), LogLevel::TRACE);
+        if (event.bstate & BUTTON1_PRESSED) {
+            m_last_mouse_position = {static_cast<size_t>(event.x), static_cast<size_t>(event.y)};
+        } else if (event.bstate & BUTTON1_RELEASED) {
+            m_image_position += m_last_mouse_position;
+            if (m_image_position.m_x < event.x) {
+                m_image_position.m_x = 0;
+            } else {
+                m_image_position.m_x -= event.x;
+            }
+            if (m_image_position.m_y < event.y) {
+                m_image_position.m_y = 0;
+            } else {
+                m_image_position.m_y -= event.y;
+            }
+            return true;
+        } else if (event.bstate & 65536) {// in
+            zoom(event.x, event.y, 1.1);
+            return true;
+        } else if (event.bstate & 2097152) { // out
+            zoom(event.x, event.y, 0.9);
+            return true;
+        }
+    }
+    return false;
 }

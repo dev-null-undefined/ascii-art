@@ -11,8 +11,8 @@
 
 class Gallery : public Menu {
   public:
-    Gallery(std::shared_ptr<std::vector<std::shared_ptr<DataSource>>>  m_sources,
-            std::shared_ptr<Settings>  m_settings);
+    Gallery(std::shared_ptr<std::vector<std::shared_ptr<DataSource>>> m_sources,
+            std::shared_ptr<Settings> m_settings);
 
     ~Gallery() override;
 
@@ -40,8 +40,17 @@ class Gallery : public Menu {
 
     Vector m_main_window_size;
 
+    Vector m_last_mouse_position = {0, 0};
+    Vector m_image_position;
+    Vector m_image_size;
+    double m_image_scale = 1.0;
+
     static constexpr int STATUS_WINDOW_HEIGHT = 3;
-    static constexpr Vector MINIMUM_WINDOW_SIZE = {10,10};
+    static constexpr Vector MINIMUM_WINDOW_SIZE = {10, 10};
+
+    void zoom(int x, int y, double zoom);
+
+    bool handle_mouse();
 };
 
 

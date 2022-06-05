@@ -13,6 +13,10 @@ struct Vector {
 
     Vector & operator*=(size_t factor);
 
+    Vector operator*(double factor) const;
+
+    Vector & operator*=(double factor);
+
     Vector operator-() const;
 
     Vector & operator-=(const Vector & other);
