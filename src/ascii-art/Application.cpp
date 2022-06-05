@@ -131,6 +131,7 @@ void Application::input_loop() {
                     if (file_menu) {
                         auto files = file_menu->getSelectedFiles();
                         m_regex_save = file_menu->getRegex();
+                        m_sources->clear();
                         for (const auto & item : files)
                             tryAddSource(item);
                         if (!m_sources->empty()) {
