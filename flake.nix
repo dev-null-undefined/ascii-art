@@ -84,7 +84,7 @@
           ascii-art = let
             inherit system;
             pname = "ascii-art";
-            version = "v0.0.3-p1";
+            version = "v0.1.0";
           in pkgs.stdenv.mkDerivation {
             pname = pname;
             version = version;
@@ -92,7 +92,7 @@
               owner = "dev-null-undefined";
               repo = pname;
               rev = version;
-              sha256 = "sha256-R504kXqMoWac9p8UIZ5Thxoe2wQO/4pUy1DX3Rsk4uI=";
+              sha256 = "sha256-coigICY3YOc4QkhttTC9YYrIX82Ls3mVRYS9ZQJQ90U=";
               fetchSubmodules = true;
             };
             buildInputs = [ pkgs.libjpeg_original pkgs.ncurses pkgs.libpng12 ];
