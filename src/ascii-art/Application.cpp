@@ -182,6 +182,9 @@ void Application::start() {
     cbreak(); // disable line buffering (waiting for newline)
 
     keypad(stdscr, TRUE); // enable keypad globally
+    mouseinterval(0);
+    mousemask(ALL_MOUSE_EVENTS | REPORT_MOUSE_POSITION, NULL);
+    Logger::log("Mouse support: "+std::to_string(has_mouse()), LogLevel::TRACE);
 #ifdef NCURSES_WIDE_COLOR_SUPPORT
     if (has_colors()) {
         start_color();

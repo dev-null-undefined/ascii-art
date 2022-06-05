@@ -53,6 +53,8 @@ class FileMenu : public Menu {
     Vector m_window_size;
 
     static constexpr size_t MINIMAL_GAP = 5;
+
+    bool handle_mouse();
 };
 
 
