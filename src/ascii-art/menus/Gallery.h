@@ -46,6 +46,10 @@ class Gallery : public Menu {
     double m_image_scale = 1.0;
 
     static constexpr int STATUS_WINDOW_HEIGHT = 3;
+    static constexpr int COLOR_FILTER_ADDITION = 10;
+
+    static constexpr double MINIMUM_ZOOM = 0.5;
+    static constexpr double MAXIMUM_ZOOM = 10.0;
     static constexpr Vector MINIMUM_WINDOW_SIZE = {10, 10};
 
     void zoom(int x, int y, double zoom);

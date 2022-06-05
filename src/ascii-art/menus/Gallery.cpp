@@ -218,27 +218,27 @@ bool Gallery::input(int input, bool & handled) {
             update = true;
             break;
         case 'i':
-            m_settings->m_color_filter.m_red_offset += 10; // TODO: move to constant
+            m_settings->m_color_filter.m_red_offset += COLOR_FILTER_ADDITION;
             update = true;
             break;
         case 'j':
-            m_settings->m_color_filter.m_red_offset -= 10;
+            m_settings->m_color_filter.m_red_offset -= COLOR_FILTER_ADDITION;
             update = true;
             break;
         case 'o':
-            m_settings->m_color_filter.m_green_offset += 10;
+            m_settings->m_color_filter.m_green_offset += COLOR_FILTER_ADDITION;
             update = true;
             break;
         case 'k':
-            m_settings->m_color_filter.m_green_offset -= 10;
+            m_settings->m_color_filter.m_green_offset -= COLOR_FILTER_ADDITION;
             update = true;
             break;
         case 'p':
-            m_settings->m_color_filter.m_blue_offset += 10;
+            m_settings->m_color_filter.m_blue_offset += COLOR_FILTER_ADDITION;
             update = true;
             break;
         case 'l':
-            m_settings->m_color_filter.m_blue_offset -= 10;
+            m_settings->m_color_filter.m_blue_offset -= COLOR_FILTER_ADDITION;
             update = true;
             break;
         case 's':
@@ -267,10 +267,10 @@ Gallery::~Gallery() {
 void Gallery::zoom(int x, int y, double zoom) {
     Vector image_size_before = m_main_window_size * m_image_scale;
     m_image_scale = m_image_scale * zoom;
-    if (m_image_scale < 0.5) {
-        m_image_scale = 0.5;
-    } else if (m_image_scale > 2.0) {
-        m_image_scale = 2.0;
+    if (m_image_scale < MINIMUM_ZOOM) {
+        m_image_scale = MINIMUM_ZOOM;
+    } else if (m_image_scale > MAXIMUM_ZOOM) {
+        m_image_scale = MAXIMUM_ZOOM;
     }
     Vector image_size_after = m_main_window_size * m_image_scale;
     int delta_x = ((int) image_size_after.m_x - (int) image_size_before.m_x);
@@ -302,10 +302,10 @@ bool Gallery::handle_mouse() {
                 m_image_position.m_y -= event.y;
             }
             return true;
-        } else if (event.bstate & 65536) {// in
+        } else if (event.bstate & 65536) {
             zoom(event.x, event.y, 1.1);
             return true;
-        } else if (event.bstate & 2097152) { // out
+        } else if (event.bstate & 2097152) {
             zoom(event.x, event.y, 0.9);
             return true;
         }
