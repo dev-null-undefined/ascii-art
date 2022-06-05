@@ -35,7 +35,10 @@ class Matrix {
 
     const T & at(Vector position) const;
 
-    Matrix<T> resize(Vector new_size) const;
+    Matrix<T> resize(Vector new_size, double scale_multiplier = 1.0) const;
+
+    static constexpr double MINIMUM_SCALE_FACTOR = 0.21;
+    static constexpr double MAXIMUM_SCALE_FACTOR = 10.1;
 
   private:
     std::vector<T> m_data;
@@ -135,10 +138,13 @@ inline double double_cast(size_t number) {
 }
 
 template<typename T>
-Matrix<T> Matrix<T>::resize(Vector new_size) const {
+Matrix<T> Matrix<T>::resize(Vector new_size, double scale_multiplier) const {
     // Calculate the maximum size while keeping the same scale as the original matrix and
     // being smaller or equal to the new_size
-    double matrix_scale = m_width / double_cast(m_height);
+    if (scale_multiplier < 0.2 || scale_multiplier > 10.0) {
+        throw std::invalid_argument("Scale multiplier must be between 0.2 and 10.0");
+    }
+    double matrix_scale = m_width / double_cast(m_height) * scale_multiplier;
 
     double desired_scale = double_cast(new_size.m_x) / double_cast(new_size.m_y);
 
@@ -157,12 +163,13 @@ Matrix<T> Matrix<T>::resize(Vector new_size) const {
         for (size_t x = 0; x < new_size.m_x; x++) {
             for (size_t y = 0; y < new_size.m_y; y++) {
                 double dx = double_cast(x);
-                double dy = double_cast(y);
+                double dy = double_cast(y) * scale_multiplier;
                 T value{};
                 double count = 0;
                 for (size_t j = 0; double_cast(j) < box_rounded && double_cast(j) + dx * box_size < m_width; ++j) {
                     for (size_t k = 0; double_cast(k) < box_rounded && double_cast(k) + dy * box_size < m_height; ++k) {
-                        value += at(static_cast<size_t>(dx * box_size + double_cast(j)), static_cast<size_t>(dy * box_size + double_cast(k)));
+                        value += at(static_cast<size_t>(dx * box_size + double_cast(j)),
+                                    static_cast<size_t>(dy * box_size + double_cast(k)));
                         count++;
                     }
                     if (box_rounded + dy * box_size < m_height) {
@@ -187,7 +194,7 @@ Matrix<T> Matrix<T>::resize(Vector new_size) const {
         for (size_t x = 0; x < new_size.m_x; x++) {
             for (size_t y = 0; y < new_size.m_y; y++) {
                 double dx = double_cast(x);
-                double dy = double_cast(y);
+                double dy = double_cast(y) * scale_multiplier;
                 T value = at(static_cast<size_t>(dx / realScale), static_cast<size_t>(dy / realScale));
                 newMatrix.at(x, y) = value;
             }

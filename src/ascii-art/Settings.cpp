@@ -2,6 +2,7 @@
 #include "Settings.h"
 #include "logging/Logger.h"
 #include "../FileManager.h"
+#include "../container/Matrix.h"
 
 #include <algorithm>
 #include <filesystem>
@@ -107,11 +108,12 @@ bool equals(const std::string & a, const std::string & b) {
 }
 
 const std::map<std::string, ConfigKey> Settings::CONFIG_KEYS = {
-        {"RECURSIVE_DEPTH", ConfigKey::RECURSIVE_DEPTH},
-        {"RESIZE_TIMEOUT",  ConfigKey::RESIZE_TIMEOUT},
-        {"CHARS",           ConfigKey::CHARS},
-        {"DITHERING",       ConfigKey::DITHERING},
-        {"COLOR",           ConfigKey::COLOR}
+        {"RECURSIVE_DEPTH",    ConfigKey::RECURSIVE_DEPTH},
+        {"RESIZE_TIMEOUT",     ConfigKey::RESIZE_TIMEOUT},
+        {"CHARS",              ConfigKey::CHARS},
+        {"DITHERING",          ConfigKey::DITHERING},
+        {"COLOR",              ConfigKey::COLOR},
+        {"IMAGE_SCALE_FACTOR", ConfigKey::IMAGE_SCALE_FACTOR}
 };
 
 const std::string WHITESPACE = " \n\r\t\f\v";
@@ -177,6 +179,16 @@ int getInt(const std::string & value, bool & valid) {
     }
 }
 
+double getDouble(const std::string & value, bool & valid) {
+    try {
+        valid = true;
+        return std::stod(value);
+    } catch (std::invalid_argument & e) {
+        valid = false;
+        return 0;
+    }
+}
+
 std::string to_string(ConfigKey key) {
     for (const auto & item : Settings::CONFIG_KEYS) {
         if (item.second == key) {
@@ -190,6 +202,7 @@ bool Settings::parseConfigField(ConfigKey key, const std::string & value) {
     bool valid;
     bool b_temp;
     int i_temp;
+    double d_temp;
     switch (key) {
         case ConfigKey::RECURSIVE_DEPTH:
             i_temp = getInt(value, valid);
@@ -220,6 +233,15 @@ bool Settings::parseConfigField(ConfigKey key, const std::string & value) {
             b_temp = getBool(value, valid);
             if (valid) {
                 m_dithering = b_temp;
+            }
+            break;
+        case ConfigKey::IMAGE_SCALE_FACTOR:
+            d_temp = getDouble(value, valid);
+            if (d_temp < Matrix<Color>::MINIMUM_SCALE_FACTOR || d_temp > Matrix<Color>::MAXIMUM_SCALE_FACTOR) {
+                valid = false;
+            }
+            if (valid) {
+                m_image_scale_factor = d_temp;
             }
             break;
         case ConfigKey::NONE:

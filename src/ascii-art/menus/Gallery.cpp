@@ -96,8 +96,8 @@ void Gallery::update() const {
     Matrix<Color> pixels = frame_ptr->getPixels();
 
     Vector image_size = (m_main_window_size - Vector{2, 2}) * m_image_scale;
-    auto resized = std::shared_ptr<Frame>(new ImageFrame(pixels.resize(image_size)));
-    auto original = std::shared_ptr<Frame>(new ImageFrame(pixels.resize(image_size)));
+    auto resized = std::shared_ptr<Frame>(new ImageFrame(pixels.resize(image_size, m_settings->m_image_scale_factor)));
+    auto original = resized->clone();
 // TODO: dithering and color dithering before resize
     Vector resolution = original->getSize();
     for (size_t y = 0, img_y = m_image_position.m_y;
@@ -191,6 +191,18 @@ bool Gallery::input(int input, bool & handled) {
             } else if (m_current_index < m_sources->size() - 1) {
                 m_current_index++;
                 m_frame_index = 0;
+            }
+            break;
+        case 'u':
+            if (m_settings->m_image_scale_factor + 0.1 < Matrix<Color>::MAXIMUM_SCALE_FACTOR) {
+                m_settings->m_image_scale_factor += 0.1;
+                update = true;
+            }
+            break;
+        case 'h':
+            if (m_settings->m_image_scale_factor - 0.1 > Matrix<Color>::MINIMUM_SCALE_FACTOR) {
+                m_settings->m_image_scale_factor -= 0.1;
+                update = true;
             }
             break;
         case 'd':

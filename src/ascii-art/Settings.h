@@ -18,6 +18,7 @@ enum class ConfigKey: int {
     CHARS = 2,
     COLOR = 3,
     DITHERING = 4,
+    IMAGE_SCALE_FACTOR = 5,
 };
 
 /**
@@ -94,6 +95,7 @@ class Settings {
      * Minimum timeout between resizing.
      */
     long m_resize_timeout = 200;
+    double m_image_scale_factor = 2.0;
 
     /**
      * Get rounded color that would be exactly equivalent to char returned by Settings::getChar(const Color &).

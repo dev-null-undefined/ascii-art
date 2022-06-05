@@ -33,7 +33,7 @@
 ## Application:
 - [x] search depth
 ## Image
-- [ ] scale multiplier
+- [x] scale multiplier
 
 # Performance:
 - [ ] performance test
@@ -47,4 +47,4 @@
 
 # Gallery menu
 - [x] mouse support and zoom
-- [ ] font scale compensation
+- [x] font scale compensation
