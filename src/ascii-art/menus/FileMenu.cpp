@@ -311,7 +311,10 @@ bool FileMenu::handle_mouse() {
                 }
 
             }
-
+        } else if (event.bstate & 65536) {
+            return key_up();
+        } else if (event.bstate & 2097152) {
+            return key_down();
         }
     }
     return false;
