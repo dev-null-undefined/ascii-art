@@ -95,7 +95,7 @@ class Settings {
      * Minimum timeout between resizing.
      */
     long m_resize_timeout = 200;
-    double m_image_scale_factor = 2.0;
+    double m_image_scale_factor = 2.4;
 
     /**
      * Get rounded color that would be exactly equivalent to char returned by Settings::getChar(const Color &).

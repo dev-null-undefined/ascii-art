@@ -24,7 +24,7 @@ void Gallery::show(Vector initial_size) {
                                  0);
     m_status_window = boxed_window(STATUS_WINDOW_HEIGHT, static_cast<int>(m_main_window_size.m_x),
                                    static_cast<int>(m_main_window_size.m_y), 0);
-
+    m_image_size = m_main_window_size;
     refresh();
 }
 
@@ -98,6 +98,7 @@ void Gallery::update() const {
     Vector image_size = (m_main_window_size - Vector{2, 2}) * m_image_scale;
     auto resized = std::shared_ptr<Frame>(new ImageFrame(pixels.resize(image_size, m_settings->m_image_scale_factor)));
     auto original = resized->clone();
+    m_image_size = resized->getSize();
 // TODO: dithering and color dithering before resize
     Vector resolution = original->getSize();
     for (size_t y = 0, img_y = m_image_position.m_y;
@@ -194,14 +195,18 @@ bool Gallery::input(int input, bool & handled) {
             }
             break;
         case 'u':
-            if (m_settings->m_image_scale_factor + 0.1 < Matrix<Color>::MAXIMUM_SCALE_FACTOR) {
+            if (m_settings->m_image_scale_factor + 0.1 < Vector::MAXIMUM_SCALE_FACTOR) {
                 m_settings->m_image_scale_factor += 0.1;
+                Logger::log("Image scale factor change +" + std::to_string(m_settings->m_image_scale_factor),
+                            LogLevel::TRACE);
                 update = true;
             }
             break;
         case 'h':
-            if (m_settings->m_image_scale_factor - 0.1 > Matrix<Color>::MINIMUM_SCALE_FACTOR) {
+            if (m_settings->m_image_scale_factor - 0.1 > Vector::MINIMUM_SCALE_FACTOR) {
                 m_settings->m_image_scale_factor -= 0.1;
+                Logger::log("Image scale factor change -" + std::to_string(m_settings->m_image_scale_factor),
+                            LogLevel::TRACE);
                 update = true;
             }
             break;
@@ -264,43 +269,41 @@ Gallery::~Gallery() {
     Gallery::hide();
 }
 
+
+void Gallery::move(int x, int y) {
+    Vector image_size = m_image_size * m_image_scale; // use image size instead
+    size_t sx = x > 0 ? x : 0;
+    size_t sy = y > 0 ? y : 0;
+    m_image_position.m_x = sx < image_size.m_x / 2 ? sx : image_size.m_x / 2;
+    m_image_position.m_y = sy < image_size.m_y / 2 ? sy : image_size.m_y / 2;
+}
+
 void Gallery::zoom(int x, int y, double zoom) {
-    Vector image_size_before = m_main_window_size * m_image_scale;
+    double zoom_save = m_image_scale;
+    Vector image_size_before = m_image_size;
     m_image_scale = m_image_scale * zoom;
     if (m_image_scale < MINIMUM_ZOOM) {
         m_image_scale = MINIMUM_ZOOM;
     } else if (m_image_scale > MAXIMUM_ZOOM) {
         m_image_scale = MAXIMUM_ZOOM;
     }
-    Vector image_size_after = m_main_window_size * m_image_scale;
+    Vector image_size_after = m_image_size * (m_image_scale / zoom_save);
     int delta_x = ((int) image_size_after.m_x - (int) image_size_before.m_x);
     int delta_y = ((int) image_size_after.m_y - (int) image_size_before.m_y);
 
     double new_x = (double) m_image_position.m_x + x / (double) m_main_window_size.m_x * delta_x;
     double new_y = (double) m_image_position.m_y + y / (double) m_main_window_size.m_y * delta_y;
-    m_image_position.m_x = new_x > 0 ? (size_t) new_x : 0;
-    m_image_position.m_y = new_y > 0 ? (size_t) new_y : 0;
+    move(new_x, new_y);
 }
 
 bool Gallery::handle_mouse() {
     MEVENT event;
     if (getmouse(&event) == OK) {
-        Logger::log("Mouse event: x:" + std::to_string(event.x) + " y:" + std::to_string(event.y) + " state:" +
-                    std::to_string(event.bstate), LogLevel::TRACE);
         if (event.bstate & BUTTON1_PRESSED) {
             m_last_mouse_position = {static_cast<size_t>(event.x), static_cast<size_t>(event.y)};
         } else if (event.bstate & BUTTON1_RELEASED) {
-            m_image_position += m_last_mouse_position;
-            if (m_image_position.m_x < event.x) {
-                m_image_position.m_x = 0;
-            } else {
-                m_image_position.m_x -= event.x;
-            }
-            if (m_image_position.m_y < event.y) {
-                m_image_position.m_y = 0;
-            } else {
-                m_image_position.m_y -= event.y;
-            }
+            Vector pos = m_image_position + m_last_mouse_position;
+            move((int) pos.m_x - event.x, (int) pos.m_y - event.y);
             return true;
         } else if (event.bstate & 65536) {
             zoom(event.x, event.y, 1.1);

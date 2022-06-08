@@ -237,7 +237,7 @@ bool Settings::parseConfigField(ConfigKey key, const std::string & value) {
             break;
         case ConfigKey::IMAGE_SCALE_FACTOR:
             d_temp = getDouble(value, valid);
-            if (d_temp < Matrix<Color>::MINIMUM_SCALE_FACTOR || d_temp > Matrix<Color>::MAXIMUM_SCALE_FACTOR) {
+            if (d_temp < Vector::MINIMUM_SCALE_FACTOR || d_temp > Vector::MAXIMUM_SCALE_FACTOR) {
                 valid = false;
             }
             if (valid) {

@@ -42,7 +42,7 @@ class Gallery : public Menu {
 
     Vector m_last_mouse_position = {0, 0};
     Vector m_image_position;
-    Vector m_image_size;
+    mutable Vector m_image_size;
     double m_image_scale = 1.0;
 
     static constexpr int STATUS_WINDOW_HEIGHT = 3;
@@ -55,6 +55,8 @@ class Gallery : public Menu {
     void zoom(int x, int y, double zoom);
 
     bool handle_mouse();
+
+    void move(int x, int y);
 };
 
 
