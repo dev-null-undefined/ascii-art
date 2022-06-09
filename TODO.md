@@ -1,5 +1,5 @@
 # Testing:
-> ## Logger:
+## Logger:
 - [ ] file not writable
 - [ ] folder not accessible
 - [ ] no more space on disk
