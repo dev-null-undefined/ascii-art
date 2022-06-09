@@ -72,3 +72,12 @@ Vector Vector::resizeWithAspectRation(Vector maximum, Vector original, double as
 
     return {maximum.m_x, maximum.m_y};
 }
+
+bool Vector::operator==(const Vector & rhs) const {
+    return m_x == rhs.m_x &&
+           m_y == rhs.m_y;
+}
+
+bool Vector::operator!=(const Vector & rhs) const {
+    return !(rhs == *this);
+}

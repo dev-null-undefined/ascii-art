@@ -29,6 +29,10 @@ struct Vector {
 
     Vector operator-(const Vector & other) const;
 
+    bool operator==(const Vector & rhs) const;
+
+    bool operator!=(const Vector & rhs) const;
+
     constexpr Vector(size_t m_x = 0, size_t m_y = 0) : m_x(m_x), m_y(m_y) {}
 
     static constexpr double MINIMUM_SCALE_FACTOR = 0.2;
