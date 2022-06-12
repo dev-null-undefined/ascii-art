@@ -54,13 +54,14 @@ class FileManager {
 
     static void removeRegexPart(std::string & regex, size_t & current_position);
 
-  private:
     /**
-     * Tests if given char is file path separator.
-     * @param c char to be tested.
-     * @return true if c is file path separator.
-     */
+       * Tests if given char is file path separator.
+       * @param c char to be tested.
+       * @return true if c is file path separator.
+       */
     static bool is_separator(char c);
+
+  private:
 
     /**
      * Caches the home folder path.
