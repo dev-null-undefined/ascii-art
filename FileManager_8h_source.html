@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ascii-art
-   &#160;<span id="projectnumber">v0.1.0</span>
+   &#160;<span id="projectnumber">v0.1.1</span>
    </div>
   </td>
  </tr>
@@ -105,34 +105,42 @@ $(document).ready(function(){initNavTree('FileManager_8h_source.html',''); initR
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">static</span> std::set&lt;fs::path&gt; <a class="code" href="classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333">find_files</a>(<span class="keyword">const</span> std::string_view &amp; regex);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classFileManager.html#a66f79da55f4135915f43b0df87df9590">is_separator</a>(<span class="keywordtype">char</span> c);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classFileManager.html#a00ef4ff144d9f541f7757d1342c20cf5">   61</a></span>&#160;    <span class="keyword">static</span> std::optional&lt;std::string&gt; <a class="code" href="classFileManager.html#a00ef4ff144d9f541f7757d1342c20cf5">home</a>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classFileManager.html#a63cc7bbec2ee3ebb354c52862eb8c59a">   66</a></span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">char</span> <a class="code" href="classFileManager.html#a63cc7bbec2ee3ebb354c52862eb8c59a">PATH_SEPARATOR</a> = <span class="charliteral">&#39;/&#39;</span>; <span class="comment">// TODO: windows support</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif //ASCII_ART_FILEMANAGER_H_2C4E44A715064547842F83A65D4E575C</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classFileManager.html#a63cc7bbec2ee3ebb354c52862eb8c59a">   53</a></span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">char</span> <a class="code" href="classFileManager.html#a63cc7bbec2ee3ebb354c52862eb8c59a">PATH_SEPARATOR</a> = <span class="charliteral">&#39;/&#39;</span>; <span class="comment">// TODO: windows support</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classFileManager.html#ae3dfd90110885700e97a6ead9d1e5e9f">removeRegexPart</a>(std::string &amp; regex, <span class="keywordtype">size_t</span> &amp; current_position);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classFileManager.html#a66f79da55f4135915f43b0df87df9590">is_separator</a>(<span class="keywordtype">char</span> c);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classFileManager.html#a00ef4ff144d9f541f7757d1342c20cf5">   69</a></span>&#160;    <span class="keyword">static</span> std::optional&lt;std::string&gt; <a class="code" href="classFileManager.html#a00ef4ff144d9f541f7757d1342c20cf5">home</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classFileManager.html#a3f6b8e7fd0c2eb78485b8d3192f4d9db">   70</a></span>&#160;    <span class="keyword">static</span> constexpr <span class="keywordtype">size_t</span> <a class="code" href="classFileManager.html#a3f6b8e7fd0c2eb78485b8d3192f4d9db">MAXIMUM_VISITED_FILES</a> = 1000;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif //ASCII_ART_FILEMANAGER_H_2C4E44A715064547842F83A65D4E575C</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassFileManager_html_a63cc7bbec2ee3ebb354c52862eb8c59a"><div class="ttname"><a href="classFileManager.html#a63cc7bbec2ee3ebb354c52862eb8c59a">FileManager::PATH_SEPARATOR</a></div><div class="ttdeci">static constexpr char PATH_SEPARATOR</div><div class="ttdoc">Default file path separator.</div><div class="ttdef"><b>Definition:</b> FileManager.h:66</div></div>
-<div class="ttc" id="aclassFileManager_html_a00ef4ff144d9f541f7757d1342c20cf5"><div class="ttname"><a href="classFileManager.html#a00ef4ff144d9f541f7757d1342c20cf5">FileManager::home</a></div><div class="ttdeci">static std::optional&lt; std::string &gt; home</div><div class="ttdoc">Caches the home folder path.</div><div class="ttdef"><b>Definition:</b> FileManager.h:61</div></div>
+<div class="ttc" id="aclassFileManager_html_a63cc7bbec2ee3ebb354c52862eb8c59a"><div class="ttname"><a href="classFileManager.html#a63cc7bbec2ee3ebb354c52862eb8c59a">FileManager::PATH_SEPARATOR</a></div><div class="ttdeci">static constexpr char PATH_SEPARATOR</div><div class="ttdoc">Default file path separator.</div><div class="ttdef"><b>Definition:</b> FileManager.h:53</div></div>
+<div class="ttc" id="aclassFileManager_html_a00ef4ff144d9f541f7757d1342c20cf5"><div class="ttname"><a href="classFileManager.html#a00ef4ff144d9f541f7757d1342c20cf5">FileManager::home</a></div><div class="ttdeci">static std::optional&lt; std::string &gt; home</div><div class="ttdoc">Caches the home folder path.</div><div class="ttdef"><b>Definition:</b> FileManager.h:69</div></div>
 <div class="ttc" id="aclassLogger_html_a4b9b8f8616cb5d0a42113f6c88898798"><div class="ttname"><a href="classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798">Logger::log</a></div><div class="ttdeci">static void log(const std::string &amp;message, LogLevel logLevel=LogLevel::INFO)</div><div class="ttdef"><b>Definition:</b> Logger.cpp:17</div></div>
 <div class="ttc" id="aclassFileManager_html_a66f79da55f4135915f43b0df87df9590"><div class="ttname"><a href="classFileManager.html#a66f79da55f4135915f43b0df87df9590">FileManager::is_separator</a></div><div class="ttdeci">static bool is_separator(char c)</div><div class="ttdoc">Tests if given char is file path separator.</div><div class="ttdef"><b>Definition:</b> FileManager.cpp:20</div></div>
 <div class="ttc" id="aclassFileManager_html_ae4aab0c4fad16167fbfe9ba033cdb333"><div class="ttname"><a href="classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333">FileManager::find_files</a></div><div class="ttdeci">static std::set&lt; fs::path &gt; find_files(const std::string_view &amp;regex)</div><div class="ttdoc">Regex file name search.</div><div class="ttdef"><b>Definition:</b> FileManager.cpp:45</div></div>
 <div class="ttc" id="aLogLevel_8h_html_aca1fd1d8935433e6ba2e3918214e07f9abb1ca97ec761fc37101737ba0aa2e7c5"><div class="ttname"><a href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9abb1ca97ec761fc37101737ba0aa2e7c5">LogLevel::ERROR</a></div><div class="ttdeci">@ ERROR</div></div>
+<div class="ttc" id="aclassFileManager_html_a3f6b8e7fd0c2eb78485b8d3192f4d9db"><div class="ttname"><a href="classFileManager.html#a3f6b8e7fd0c2eb78485b8d3192f4d9db">FileManager::MAXIMUM_VISITED_FILES</a></div><div class="ttdeci">static constexpr size_t MAXIMUM_VISITED_FILES</div><div class="ttdef"><b>Definition:</b> FileManager.h:70</div></div>
 <div class="ttc" id="aclassFileManager_html_a8c6f24d88df9ed5217e5a149a47e35bc"><div class="ttname"><a href="classFileManager.html#a8c6f24d88df9ed5217e5a149a47e35bc">FileManager::normalize_path</a></div><div class="ttdeci">static std::string normalize_path(const std::string_view &amp;path, bool remove_home=false)</div><div class="ttdoc">Normalize path.</div><div class="ttdef"><b>Definition:</b> FileManager.cpp:24</div></div>
 <div class="ttc" id="aLogger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
+<div class="ttc" id="aLogLevel_8h_html_aca1fd1d8935433e6ba2e3918214e07f9a32bd8a1db2275458673903bdb84cb277"><div class="ttname"><a href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a32bd8a1db2275458673903bdb84cb277">LogLevel::WARN</a></div><div class="ttdeci">@ WARN</div></div>
 <div class="ttc" id="aclassFileManager_html_a79f086b623a49b3d43ae058961b0b12a"><div class="ttname"><a href="classFileManager.html#a79f086b623a49b3d43ae058961b0b12a">FileManager::get_home</a></div><div class="ttdeci">static std::string &amp; get_home()</div><div class="ttdoc">Get home folder based on the current user and ENV variables.</div><div class="ttdef"><b>Definition:</b> FileManager.cpp:9</div></div>
+<div class="ttc" id="aLogLevel_8cpp_html_ab92295a2eda07d5ec770244f8e47dbb7"><div class="ttname"><a href="LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7">to_string</a></div><div class="ttdeci">std::string to_string(LogLevel level)</div><div class="ttdef"><b>Definition:</b> LogLevel.cpp:2</div></div>
 <div class="ttc" id="aclassFileManager_html"><div class="ttname"><a href="classFileManager.html">FileManager</a></div><div class="ttdoc">FileManager class providing basic file management functions.</div><div class="ttdef"><b>Definition:</b> FileManager.h:15</div></div>
 <div class="ttc" id="aFileManager_8h_html"><div class="ttname"><a href="FileManager_8h.html">FileManager.h</a></div></div>
+<div class="ttc" id="aclassFileManager_html_ae3dfd90110885700e97a6ead9d1e5e9f"><div class="ttname"><a href="classFileManager.html#ae3dfd90110885700e97a6ead9d1e5e9f">FileManager::removeRegexPart</a></div><div class="ttdeci">static void removeRegexPart(std::string &amp;regex, size_t &amp;current_position)</div><div class="ttdef"><b>Definition:</b> FileManager.cpp:122</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="FileManager_8h.html">FileManager.h</a></li>
-    <li class="footer">Generated on Sun Jun 5 2022 12:16:09 for ascii-art by
+    <li class="footer">Generated on Sun Jun 12 2022 18:43:34 for ascii-art by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

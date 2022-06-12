@@ -1,25 +1,35 @@
 <map id="to_string" name="to_string">
-<area shape="rect" id="node1" title=" " alt="" coords="977,537,1056,564"/>
-<area shape="rect" id="node2" href="$classApplication.html#a73075e573b66f55b3f0f9fbc08a78af4" title="Application constructor." alt="" coords="293,208,469,235"/>
-<area shape="rect" id="node3" href="$classDataSource.html#a6073ecb8823c144cb95d45b950e67539" title=" " alt="" coords="763,917,929,944"/>
-<area shape="rect" id="node5" href="$classGallery.html#a8673f32694f0b3467e2f7288b5ca9451" title=" " alt="" coords="532,56,703,83"/>
-<area shape="rect" id="node7" href="$classApplication.html#a1f5f77905c8479b599d565b1f94068d2" title="Input handling loop." alt="" coords="295,512,466,539"/>
-<area shape="rect" id="node8" href="$classApplication.html#aa38ca47b50935092078cef4281ab66bc" title="Initializes ncurses and creates starts input loop." alt="" coords="108,512,241,539"/>
-<area shape="rect" id="node10" href="$classPNGImage.html#ad71ef3a95f6a165b0cedde8a5e27f723" title=" " alt="" coords="552,765,683,792"/>
-<area shape="rect" id="node11" href="$classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title=" " alt="" coords="799,461,893,488"/>
-<area shape="rect" id="node22" href="$classGallery.html#a825adafc747111ccccc471c27c0ea793" title=" " alt="" coords="771,5,921,32"/>
-<area shape="rect" id="node4" href="$classDataSource.html#aa6c592eb118bdb3264a0b4763a80b2fb" title=" " alt="" coords="530,917,705,944"/>
-<area shape="rect" id="node6" href="$classGallery.html#ae78af5e01a106a5dcee6e853775d4e54" title=" " alt="" coords="326,31,435,57"/>
-<area shape="rect" id="node9" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,512,60,539"/>
-<area shape="rect" id="node12" href="$classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333" title="Regex file name search." alt="" coords="533,259,701,285"/>
-<area shape="rect" id="node14" href="$classSettings.html#a58da5fdd52c2f6a3c70cbf3e8d5babf3" title="Calculates closes char to give color based on the Settings::maxValue() and Settings::colorValue(const..." alt="" coords="550,309,685,336"/>
-<area shape="rect" id="node15" href="$classImage.html#ac7edbeef1160bd4be0b7289b5fa81ca2" title=" " alt="" coords="550,360,685,387"/>
-<area shape="rect" id="node16" href="$classSettings.html#a940976240a0acc2e16a83c646180f314" title="Get rounded color that would be exactly equivalent to char returned by Settings::getChar(const Color ..." alt="" coords="520,411,715,437"/>
-<area shape="rect" id="node17" href="$classSettings.html#a70b2402a87e18c562a66cdba52315215" title="Parse key&#45;value pair based on the ConfigKey key provided." alt="" coords="522,715,713,741"/>
-<area shape="rect" id="node18" href="$classSettings.html#a0d8511ebdeb5ccb939dbccaf898a9e6a" title="Read line by line file and try to parse key&#45;value pair." alt="" coords="289,639,472,665"/>
-<area shape="rect" id="node19" href="$classGallery.html#acad3d3e68106ec916d2a8075ac3df766" title=" " alt="" coords="560,613,675,640"/>
-<area shape="rect" id="node20" href="$classGallery.html#a62e976e7c9f10bc0837954bf8081c5ac" title=" " alt="" coords="562,664,673,691"/>
-<area shape="rect" id="node21" href="$classApplication.html#a8cb17cae2c930fa642dd402e109b7040" title="Recursively adds sources from given path and all subdirectories." alt="" coords="522,461,713,488"/>
-<area shape="rect" id="node13" href="$classFileMenu.html#a6504cb078a595249e957827856cefd11" title=" " alt="" coords="297,259,465,285"/>
-<area shape="rect" id="node23" href="$classGallery.html#a25777aea40c19bcb746979ee6d75951c" title=" " alt="" coords="557,5,678,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1009,639,1088,665"/>
+<area shape="rect" id="node2" href="$classApplication.html#a73075e573b66f55b3f0f9fbc08a78af4" title="Application constructor." alt="" coords="307,715,483,741"/>
+<area shape="rect" id="node3" href="$classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333" title="Regex file name search." alt="" coords="548,208,716,235"/>
+<area shape="rect" id="node8" href="$classDataSource.html#a6073ecb8823c144cb95d45b950e67539" title=" " alt="" coords="786,968,953,995"/>
+<area shape="rect" id="node10" href="$classGallery.html#ae78af5e01a106a5dcee6e853775d4e54" title=" " alt="" coords="341,56,450,83"/>
+<area shape="rect" id="node11" href="$classApplication.html#a1f5f77905c8479b599d565b1f94068d2" title="Input handling loop." alt="" coords="310,487,481,513"/>
+<area shape="rect" id="node12" href="$classApplication.html#aa38ca47b50935092078cef4281ab66bc" title="Initializes ncurses and creates starts input loop." alt="" coords="115,309,249,336"/>
+<area shape="rect" id="node14" href="$classPNGImage.html#ad71ef3a95f6a165b0cedde8a5e27f723" title=" " alt="" coords="567,867,697,893"/>
+<area shape="rect" id="node15" href="$classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title=" " alt="" coords="822,563,917,589"/>
+<area shape="rect" id="node24" href="$Test_8h.html#ac6432cfc2b1e2431647226ead8797811" title=" " alt="" coords="843,1019,895,1045"/>
+<area shape="rect" id="node28" href="$Test_8h.html#a59513a9223bba7f07c4db9fe00206046" title=" " alt="" coords="823,1069,916,1096"/>
+<area shape="rect" id="node29" href="$structVector.html#a0e88e95842d85b4c62137d218ce81563" title=" " alt="" coords="777,1121,961,1162"/>
+<area shape="rect" id="node32" href="$classGallery.html#a825adafc747111ccccc471c27c0ea793" title=" " alt="" coords="794,5,945,32"/>
+<area shape="rect" id="node4" href="$classTestFileManager.html#a4c9e7ab6ca8ffb4d24c697336c33ed35" title=" " alt="" coords="304,208,487,235"/>
+<area shape="rect" id="node5" href="$classFileMenu.html#a6504cb078a595249e957827856cefd11" title=" " alt="" coords="311,107,479,133"/>
+<area shape="rect" id="node6" href="$classFileMenu.html#afae4b14ea9d8c657b6dfdf568efc085a" title=" " alt="" coords="108,132,256,159"/>
+<area shape="rect" id="node7" href="$classFileMenu.html#a8cfe51677d1b2f2706dff3c36e3c5951" title=" " alt="" coords="121,81,243,108"/>
+<area shape="rect" id="node9" href="$classDataSource.html#aa6c592eb118bdb3264a0b4763a80b2fb" title=" " alt="" coords="545,968,719,995"/>
+<area shape="rect" id="node13" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,309,60,336"/>
+<area shape="rect" id="node16" href="$classSettings.html#a58da5fdd52c2f6a3c70cbf3e8d5babf3" title="Calculates closes char to give color based on the Settings::maxValue() and Settings::colorValue(const..." alt="" coords="565,461,699,488"/>
+<area shape="rect" id="node17" href="$classImage.html#ac7edbeef1160bd4be0b7289b5fa81ca2" title=" " alt="" coords="565,512,699,539"/>
+<area shape="rect" id="node18" href="$classSettings.html#a940976240a0acc2e16a83c646180f314" title="Get rounded color that would be exactly equivalent to char returned by Settings::getChar(const Color ..." alt="" coords="535,563,729,589"/>
+<area shape="rect" id="node19" href="$classSettings.html#a70b2402a87e18c562a66cdba52315215" title="Parse key&#45;value pair based on the ConfigKey key provided." alt="" coords="537,765,727,792"/>
+<area shape="rect" id="node20" href="$classSettings.html#a0d8511ebdeb5ccb939dbccaf898a9e6a" title="Read line by line file and try to parse key&#45;value pair." alt="" coords="304,791,487,817"/>
+<area shape="rect" id="node21" href="$classGallery.html#acad3d3e68106ec916d2a8075ac3df766" title=" " alt="" coords="575,360,689,387"/>
+<area shape="rect" id="node22" href="$classGallery.html#a62e976e7c9f10bc0837954bf8081c5ac" title=" " alt="" coords="577,411,687,437"/>
+<area shape="rect" id="node23" href="$classApplication.html#a8cb17cae2c930fa642dd402e109b7040" title="Recursively adds sources from given path and all subdirectories." alt="" coords="537,664,727,691"/>
+<area shape="rect" id="node25" href="$classFileMenu.html#a95c0d509b88e729d0cbe1fadb60376ed" title=" " alt="" coords="565,1019,699,1045"/>
+<area shape="rect" id="node26" href="$classFileMenu.html#a63bf526109b2209f69c1b6c4094813da" title=" " alt="" coords="331,993,459,1020"/>
+<area shape="rect" id="node27" href="$classFileMenu.html#a69657f691506ab820b22cf0af010d818" title=" " alt="" coords="334,1044,457,1071"/>
+<area shape="rect" id="node30" href="$classMatrix.html#a1229b6585c0acd2bcce137167eff38de" title=" " alt="" coords="545,1153,719,1180"/>
+<area shape="rect" id="node31" href="$classTestVector.html#a03ed36b6837fbbeb352f72f6a61eb07d" title=" " alt="" coords="560,1103,704,1129"/>
+<area shape="rect" id="node33" href="$classGallery.html#a25777aea40c19bcb746979ee6d75951c" title=" " alt="" coords="571,5,693,32"/>
 </map>

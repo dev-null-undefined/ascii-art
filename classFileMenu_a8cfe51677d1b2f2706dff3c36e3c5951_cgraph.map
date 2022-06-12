@@ -1,13 +1,15 @@
 <map id="FileMenu::input" name="FileMenu::input">
-<area shape="rect" id="node1" title=" " alt="" coords="5,132,128,159"/>
-<area shape="rect" id="node2" href="$FileMenu_8cpp.html#afdf87bba516776c08119649e981d34f2" title=" " alt="" coords="247,5,289,32"/>
-<area shape="rect" id="node3" href="$classFileMenu.html#a5fd739a48446596668124499730417e8" title=" " alt="" coords="176,107,360,133"/>
-<area shape="rect" id="node4" href="$classFileMenu.html#afdb24fb7b8e1c9f1df864774a34b0527" title=" " alt="" coords="419,81,574,108"/>
-<area shape="rect" id="node5" href="$classFileMenu.html#af24324325acd5e4481eb0c2103662f2d" title=" " alt="" coords="429,157,564,184"/>
-<area shape="rect" id="node6" href="$classFileMenu.html#a521536927bc16505a0a54d67aaf82ddf" title=" " alt="" coords="408,208,585,235"/>
-<area shape="rect" id="node7" href="$classFileMenu.html#a6504cb078a595249e957827856cefd11" title=" " alt="" coords="184,259,352,285"/>
-<area shape="rect" id="node8" href="$classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333" title="Regex file name search." alt="" coords="413,259,581,285"/>
-<area shape="rect" id="node9" href="$classFileManager.html#a79f086b623a49b3d43ae058961b0b12a" title="Get home folder based on the current user and ENV variables." alt="" coords="892,233,1067,260"/>
-<area shape="rect" id="node10" href="$classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title=" " alt="" coords="691,309,786,336"/>
-<area shape="rect" id="node11" href="$classFileManager.html#a8c6f24d88df9ed5217e5a149a47e35bc" title="Normalize path." alt="" coords="633,208,844,235"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,157,128,184"/>
+<area shape="rect" id="node2" href="$FileMenu_8cpp.html#afdf87bba516776c08119649e981d34f2" title=" " alt="" coords="268,5,311,32"/>
+<area shape="rect" id="node3" href="$classFileMenu.html#a5fd739a48446596668124499730417e8" title=" " alt="" coords="197,157,381,184"/>
+<area shape="rect" id="node4" href="$classFileMenu.html#afdb24fb7b8e1c9f1df864774a34b0527" title=" " alt="" coords="462,69,617,96"/>
+<area shape="rect" id="node5" href="$classFileMenu.html#af24324325acd5e4481eb0c2103662f2d" title=" " alt="" coords="472,132,607,159"/>
+<area shape="rect" id="node6" href="$classFileMenu.html#a521536927bc16505a0a54d67aaf82ddf" title=" " alt="" coords="451,208,628,235"/>
+<area shape="rect" id="node7" href="$classFileManager.html#ae3dfd90110885700e97a6ead9d1e5e9f" title=" " alt="" coords="176,309,403,336"/>
+<area shape="rect" id="node8" href="$classFileMenu.html#a6504cb078a595249e957827856cefd11" title=" " alt="" coords="205,259,373,285"/>
+<area shape="rect" id="node9" href="$classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333" title="Regex file name search." alt="" coords="455,259,623,285"/>
+<area shape="rect" id="node10" href="$classFileManager.html#a79f086b623a49b3d43ae058961b0b12a" title="Get home folder based on the current user and ENV variables." alt="" coords="935,208,1109,235"/>
+<area shape="rect" id="node11" href="$classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title=" " alt="" coords="734,335,829,361"/>
+<area shape="rect" id="node12" href="$LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="983,309,1061,336"/>
+<area shape="rect" id="node13" href="$classFileManager.html#a8c6f24d88df9ed5217e5a149a47e35bc" title="Normalize path." alt="" coords="676,233,887,260"/>
 </map>

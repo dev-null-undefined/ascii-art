@@ -1,11 +1,11 @@
 <map id="FileManager::find_files" name="FileManager::find_files">
-<area shape="rect" id="node1" title="Regex file name search." alt="" coords="5,145,173,172"/>
+<area shape="rect" id="node1" title="Regex file name search." alt="" coords="5,132,173,159"/>
 <area shape="rect" id="node2" href="$classFileManager.html#a79f086b623a49b3d43ae058961b0b12a" title="Get home folder based on the current user and ENV variables." alt="" coords="488,157,663,184"/>
-<area shape="rect" id="node3" href="$classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title=" " alt="" coords="279,69,374,96"/>
-<area shape="rect" id="node8" href="$classFileManager.html#a8c6f24d88df9ed5217e5a149a47e35bc" title="Normalize path." alt="" coords="221,196,432,223"/>
+<area shape="rect" id="node3" href="$classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title=" " alt="" coords="279,56,374,83"/>
+<area shape="rect" id="node7" href="$LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="536,107,615,133"/>
+<area shape="rect" id="node8" href="$classFileManager.html#a8c6f24d88df9ed5217e5a149a47e35bc" title="Normalize path." alt="" coords="221,208,432,235"/>
 <area shape="rect" id="node4" href="$classLogger.html#acebb37f5538780e6c14f13de6ec497bc" title=" " alt="" coords="500,56,651,83"/>
-<area shape="rect" id="node6" href="$classLogger.html#afba40734614c0379be107002dc5d45ae" title=" " alt="" coords="523,107,627,133"/>
-<area shape="rect" id="node7" href="$LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="536,5,615,32"/>
+<area shape="rect" id="node6" href="$classLogger.html#afba40734614c0379be107002dc5d45ae" title=" " alt="" coords="523,5,627,32"/>
 <area shape="rect" id="node5" href="$classLogger.html#add0f34d4c753c86af8074840a72366b3" title=" " alt="" coords="719,56,837,83"/>
 <area shape="rect" id="node9" href="$classFileManager.html#a66f79da55f4135915f43b0df87df9590" title="Tests if given char is file path separator." alt="" coords="480,208,671,235"/>
 </map>

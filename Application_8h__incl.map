@@ -1,21 +1,21 @@
 <map id="src/ascii&#45;art/Application.h" name="src/ascii&#45;art/Application.h">
-<area shape="rect" id="node1" title=" " alt="" coords="681,5,868,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="25,453,87,480"/>
-<area shape="rect" id="node3" title=" " alt="" coords="870,80,954,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="979,80,1045,107"/>
-<area shape="rect" id="node5" href="$DataSource_8h.html" title=" " alt="" coords="525,155,688,181"/>
-<area shape="rect" id="node16" href="$Settings_8h.html" title=" " alt="" coords="206,80,293,107"/>
-<area shape="rect" id="node19" href="$Menu_8h.html" title=" " alt="" coords="819,304,938,331"/>
-<area shape="rect" id="node6" href="$Frame_8h.html" title=" " alt="" coords="311,304,385,331"/>
-<area shape="rect" id="node13" href="$SourceType_8h.html" title=" " alt="" coords="553,229,661,256"/>
-<area shape="rect" id="node14" href="$Filter_8h.html" title=" " alt="" coords="320,229,427,256"/>
-<area shape="rect" id="node15" title=" " alt="" coords="685,229,744,256"/>
-<area shape="rect" id="node7" title=" " alt="" coords="192,379,267,405"/>
-<area shape="rect" id="node8" title=" " alt="" coords="291,379,368,405"/>
-<area shape="rect" id="node9" href="$Color_8h.html" title=" " alt="" coords="101,379,168,405"/>
-<area shape="rect" id="node10" href="$Vector_8h.html" title=" " alt="" coords="581,379,744,405"/>
-<area shape="rect" id="node11" href="$Matrix_8h.html" title=" " alt="" coords="392,379,557,405"/>
-<area shape="rect" id="node12" title=" " alt="" coords="595,453,661,480"/>
+<area shape="rect" id="node1" title=" " alt="" coords="529,5,716,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="235,453,298,480"/>
+<area shape="rect" id="node3" title=" " alt="" coords="446,80,530,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="555,80,621,107"/>
+<area shape="rect" id="node5" href="$DataSource_8h.html" title=" " alt="" coords="503,155,665,181"/>
+<area shape="rect" id="node16" href="$Settings_8h.html" title=" " alt="" coords="107,80,194,107"/>
+<area shape="rect" id="node19" href="$Menu_8h.html" title=" " alt="" coords="777,304,895,331"/>
+<area shape="rect" id="node6" href="$Frame_8h.html" title=" " alt="" coords="356,304,431,331"/>
+<area shape="rect" id="node13" href="$SourceType_8h.html" title=" " alt="" coords="638,229,746,256"/>
+<area shape="rect" id="node14" href="$Filter_8h.html" title=" " alt="" coords="323,229,429,256"/>
+<area shape="rect" id="node15" title=" " alt="" coords="555,229,613,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="373,379,448,405"/>
+<area shape="rect" id="node8" title=" " alt="" coords="472,379,549,405"/>
+<area shape="rect" id="node9" href="$Color_8h.html" title=" " alt="" coords="93,379,160,405"/>
+<area shape="rect" id="node10" href="$Vector_8h.html" title=" " alt="" coords="607,453,769,480"/>
+<area shape="rect" id="node11" href="$Matrix_8h.html" title=" " alt="" coords="184,379,349,405"/>
+<area shape="rect" id="node12" title=" " alt="" coords="59,453,125,480"/>
 <area shape="rect" id="node17" title=" " alt="" coords="93,155,144,181"/>
 <area shape="rect" id="node18" href="$BasicFilter_8h.html" title=" " alt="" coords="219,155,415,181"/>
 </map>

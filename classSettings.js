@@ -19,6 +19,8 @@ var classSettings =
     [ "m_colors", "classSettings.html#afcff6912250182411ff272e1a5b00ca1", null ],
     [ "m_debug", "classSettings.html#ad52363c6548afb42a00efb9e50fdbc04", null ],
     [ "m_dithering", "classSettings.html#a7dbdfd9ee758479ff55a166ef4d8bc7c", null ],
+    [ "m_image_scale_factor", "classSettings.html#ab636f55088a3add8ec08c22e6a39cc46", null ],
     [ "m_max_depth", "classSettings.html#abbc6b5aadbf9d2fc8ef0db04164f4adf", null ],
-    [ "m_resize_timeout", "classSettings.html#ab943c93d04f21a2b0ba4e6ec68475177", null ]
+    [ "m_resize_timeout", "classSettings.html#ab943c93d04f21a2b0ba4e6ec68475177", null ],
+    [ "m_supports_colors", "classSettings.html#a02cf5a9fdda9303331357c2e24db0c30", null ]
 ];

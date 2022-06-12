@@ -1,6 +1,7 @@
 <map id="FileManager::find_files" name="FileManager::find_files">
-<area shape="rect" id="node1" title="Regex file name search." alt="" coords="417,31,585,57"/>
-<area shape="rect" id="node2" href="$classFileMenu.html#a6504cb078a595249e957827856cefd11" title=" " alt="" coords="201,31,369,57"/>
-<area shape="rect" id="node3" href="$classFileMenu.html#ab666b22609a0c0489324ab838805eb43" title=" " alt="" coords="5,5,153,32"/>
-<area shape="rect" id="node4" href="$classFileMenu.html#a8cfe51677d1b2f2706dff3c36e3c5951" title=" " alt="" coords="18,56,141,83"/>
+<area shape="rect" id="node1" title="Regex file name search." alt="" coords="432,31,600,57"/>
+<area shape="rect" id="node2" href="$classTestFileManager.html#a4c9e7ab6ca8ffb4d24c697336c33ed35" title=" " alt="" coords="201,5,384,32"/>
+<area shape="rect" id="node3" href="$classFileMenu.html#a6504cb078a595249e957827856cefd11" title=" " alt="" coords="209,56,377,83"/>
+<area shape="rect" id="node4" href="$classFileMenu.html#afae4b14ea9d8c657b6dfdf568efc085a" title=" " alt="" coords="5,31,153,57"/>
+<area shape="rect" id="node5" href="$classFileMenu.html#a8cfe51677d1b2f2706dff3c36e3c5951" title=" " alt="" coords="18,81,141,108"/>
 </map>

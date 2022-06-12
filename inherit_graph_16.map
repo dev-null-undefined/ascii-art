@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structVector.html" title="A vector class." alt="" coords="5,5,68,32"/>
+<area shape="rect" id="node1" href="$classTest.html" title=" " alt="" coords="5,56,53,83"/>
+<area shape="rect" id="node2" href="$classTestFileManager.html" title=" " alt="" coords="101,5,229,32"/>
+<area shape="rect" id="node3" href="$classTestMatrix.html" title=" " alt="" coords="120,56,211,83"/>
+<area shape="rect" id="node4" href="$classTestVector.html" title=" " alt="" coords="121,107,210,133"/>
 </map>

@@ -8,7 +8,7 @@
 <area shape="rect" id="node6" href="$classSettings.html#a58da5fdd52c2f6a3c70cbf3e8d5babf3" title="Calculates closes char to give color based on the Settings::maxValue() and Settings::colorValue(const..." alt="" coords="447,99,582,126"/>
 <area shape="rect" id="node7" href="$classImage.html#ac7edbeef1160bd4be0b7289b5fa81ca2" title=" " alt="" coords="447,150,582,176"/>
 <area shape="rect" id="node8" href="$classSettings.html#a940976240a0acc2e16a83c646180f314" title="Get rounded color that would be exactly equivalent to char returned by Settings::getChar(const Color ..." alt="" coords="417,200,612,227"/>
-<area shape="rect" id="node9" href="$classGallery.html#a8673f32694f0b3467e2f7288b5ca9451" title=" " alt="" coords="429,251,600,278"/>
+<area shape="rect" id="node9" href="$classGallery.html#ae78af5e01a106a5dcee6e853775d4e54" title=" " alt="" coords="460,251,569,278"/>
 <area shape="rect" id="node10" href="$classApplication.html#a1f5f77905c8479b599d565b1f94068d2" title="Input handling loop." alt="" coords="193,352,363,379"/>
 <area shape="rect" id="node11" href="$classApplication.html#aa38ca47b50935092078cef4281ab66bc" title="Initializes ncurses and creates starts input loop." alt="" coords="5,403,139,430"/>
 <area shape="rect" id="node12" href="$classPNGImage.html#ad71ef3a95f6a165b0cedde8a5e27f723" title=" " alt="" coords="449,403,580,430"/>

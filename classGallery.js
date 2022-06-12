@@ -5,11 +5,13 @@ var classGallery =
     [ "handle_mouse", "classGallery.html#a8673f32694f0b3467e2f7288b5ca9451", null ],
     [ "hide", "classGallery.html#a74ee63b8c405b0ff818c7e571752e886", null ],
     [ "input", "classGallery.html#ae78af5e01a106a5dcee6e853775d4e54", null ],
+    [ "move", "classGallery.html#a69120db3aa21b5aa0bb87f66952a59c5", null ],
     [ "resize", "classGallery.html#acad3d3e68106ec916d2a8075ac3df766", null ],
     [ "show", "classGallery.html#a62e976e7c9f10bc0837954bf8081c5ac", null ],
     [ "showStatus", "classGallery.html#a825adafc747111ccccc471c27c0ea793", null ],
     [ "update", "classGallery.html#a25777aea40c19bcb746979ee6d75951c", null ],
     [ "zoom", "classGallery.html#a08c906b5fcbc3f168bf981c5b89da0c9", null ],
+    [ "COLOR_FILTER_ADDITION", "classGallery.html#a0bf23fb653f4632e3040c0ce60c27791", null ],
     [ "m_current_index", "classGallery.html#a2997f6237f1705203b0363d0f138078c", null ],
     [ "m_frame_index", "classGallery.html#adde4b77f9784309fec32e48548b65d7d", null ],
     [ "m_image_position", "classGallery.html#a3085456139216ea46851286589f2832d", null ],
@@ -21,6 +23,8 @@ var classGallery =
     [ "m_settings", "classGallery.html#a9dfab153e850001087390c1299773726", null ],
     [ "m_sources", "classGallery.html#a3dfe43b9731c3f333a473c27d461f6ea", null ],
     [ "m_status_window", "classGallery.html#aaf089293717e563efd7371a2d60b0b1d", null ],
+    [ "MAXIMUM_ZOOM", "classGallery.html#afda32cc4d854e6569bfe3546853dabd3", null ],
     [ "MINIMUM_WINDOW_SIZE", "classGallery.html#a2a8a32e507a8f9b3bcd0205016a70e18", null ],
+    [ "MINIMUM_ZOOM", "classGallery.html#a4d888bdd7711bc61c93caa3cae3f4230", null ],
     [ "STATUS_WINDOW_HEIGHT", "classGallery.html#ab6637705f481b56f3d255d64d39703da", null ]
 ];

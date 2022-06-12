@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ascii-art
-   &#160;<span id="projectnumber">v0.1.0</span>
+   &#160;<span id="projectnumber">v0.1.1</span>
    </div>
   </td>
  </tr>
@@ -98,20 +98,21 @@ $(document).ready(function(){initNavTree('classMatrix.html',''); initResizable()
   <tr class="even"><td class="entry"><a class="el" href="classMatrix.html#a461078f0c8c487215778a1f4e20f2e70">m_height</a></td><td class="entry"><a class="el" href="classMatrix.html">Matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="classMatrix.html#a8096e0bc0cc47b2c9685adece4551837">m_width</a></td><td class="entry"><a class="el" href="classMatrix.html">Matrix&lt; T &gt;</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classMatrix.html#a90a9b9d2a96b92412874924e1b81eadd">Matrix</a>(number rows, number cols)</td><td class="entry"><a class="el" href="classMatrix.html">Matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classMatrix.html#ab829dc851f8fcafee35a729a31457d73">Matrix</a>(const Matrix &amp;other)</td><td class="entry"><a class="el" href="classMatrix.html">Matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classMatrix.html#a54ce5d5c00f8d62aa3337bdf82a7f756">Matrix</a>(Matrix &amp;&amp;other) noexcept</td><td class="entry"><a class="el" href="classMatrix.html">Matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classMatrix.html#af9cad420276e66f98304e2101a19eab3">number</a> typedef</td><td class="entry"><a class="el" href="classMatrix.html">Matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classMatrix.html#acc03dae842897a0901936ce03f1b75fe">operator=</a>(const Matrix &amp;other)</td><td class="entry"><a class="el" href="classMatrix.html">Matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classMatrix.html#aa8c3a2675a80676b84316639734cbc82">operator=</a>(Matrix &amp;&amp;other) noexcept</td><td class="entry"><a class="el" href="classMatrix.html">Matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classMatrix.html#ac1156e49ee71f19ae304ab36f148737f">resize</a>(Vector new_size) const</td><td class="entry"><a class="el" href="classMatrix.html">Matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classMatrix.html#ac825553e54a0ac040a7777fb7705b91f">rows</a>() const</td><td class="entry"><a class="el" href="classMatrix.html">Matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classMatrix.html#aad1e22cc8c4b843d2f7f20b01c5cd543">~Matrix</a>()=default</td><td class="entry"><a class="el" href="classMatrix.html">Matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classMatrix.html#a70a1e7f56727f693eabbae58d11ce34d">Matrix</a>(Vector size)</td><td class="entry"><a class="el" href="classMatrix.html">Matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classMatrix.html#ab829dc851f8fcafee35a729a31457d73">Matrix</a>(const Matrix &amp;other)</td><td class="entry"><a class="el" href="classMatrix.html">Matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classMatrix.html#a54ce5d5c00f8d62aa3337bdf82a7f756">Matrix</a>(Matrix &amp;&amp;other) noexcept</td><td class="entry"><a class="el" href="classMatrix.html">Matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classMatrix.html#af9cad420276e66f98304e2101a19eab3">number</a> typedef</td><td class="entry"><a class="el" href="classMatrix.html">Matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classMatrix.html#acc03dae842897a0901936ce03f1b75fe">operator=</a>(const Matrix &amp;other)</td><td class="entry"><a class="el" href="classMatrix.html">Matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classMatrix.html#aa8c3a2675a80676b84316639734cbc82">operator=</a>(Matrix &amp;&amp;other) noexcept</td><td class="entry"><a class="el" href="classMatrix.html">Matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classMatrix.html#a1229b6585c0acd2bcce137167eff38de">resize</a>(Vector new_size, double scale_multiplier=1.0) const</td><td class="entry"><a class="el" href="classMatrix.html">Matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classMatrix.html#ac825553e54a0ac040a7777fb7705b91f">rows</a>() const</td><td class="entry"><a class="el" href="classMatrix.html">Matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classMatrix.html#aad1e22cc8c4b843d2f7f20b01c5cd543">~Matrix</a>()=default</td><td class="entry"><a class="el" href="classMatrix.html">Matrix&lt; T &gt;</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Jun 5 2022 12:16:09 for ascii-art by
+    <li class="footer">Generated on Sun Jun 12 2022 18:43:34 for ascii-art by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

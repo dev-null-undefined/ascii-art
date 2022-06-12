@@ -20,7 +20,7 @@ var hierarchy =
       [ "BasicFilter", "classBasicFilter.html", null ]
     ] ],
     [ "Frame", "classFrame.html", [
-      [ "ImageFrame", "classImageFrame.html", null ]
+      [ "BufferedFrame", "classBufferedFrame.html", null ]
     ] ],
     [ "Logger", "classLogger.html", null ],
     [ "Matrix< T >", "classMatrix.html", null ],
@@ -30,5 +30,10 @@ var hierarchy =
       [ "Gallery", "classGallery.html", null ]
     ] ],
     [ "Settings", "classSettings.html", null ],
+    [ "Test", "classTest.html", [
+      [ "TestFileManager", "classTestFileManager.html", null ],
+      [ "TestMatrix", "classTestMatrix.html", null ],
+      [ "TestVector", "classTestVector.html", null ]
+    ] ],
     [ "Vector", "structVector.html", null ]
 ];

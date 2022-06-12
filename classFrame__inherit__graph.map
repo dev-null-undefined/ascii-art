@@ -1,4 +1,4 @@
 <map id="Frame" name="Frame">
-<area shape="rect" id="node1" title="Frame representing a 2D image." alt="" coords="10,5,141,215"/>
-<area shape="rect" id="node2" href="$classImageFrame.html" title=" " alt="" coords="5,263,145,428"/>
+<area shape="rect" id="node1" title="Frame representing a 2D image." alt="" coords="17,5,148,215"/>
+<area shape="rect" id="node2" href="$classBufferedFrame.html" title=" " alt="" coords="5,263,160,428"/>
 </map>

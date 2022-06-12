@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ascii-art
-   &#160;<span id="projectnumber">v0.1.0</span>
+   &#160;<span id="projectnumber">v0.1.1</span>
    </div>
   </td>
  </tr>
@@ -84,7 +84,7 @@ $(document).ready(function(){initNavTree('classFileManager.html',''); initResiza
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classFileManager-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -101,7 +101,7 @@ Collaboration diagram for FileManager:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFileManager__coll__graph.png" border="0" usemap="#FileManager_coll__map" alt="Collaboration graph"/></div>
 <map name="FileManager_coll__map" id="FileManager_coll__map">
-<area shape="rect" title="FileManager class providing basic file management functions." alt="" coords="5,5,153,141"/>
+<area shape="rect" title="FileManager class providing basic file management functions." alt="" coords="5,5,204,171"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -116,21 +116,25 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ae4aab0c4fad16167fbfe9ba033cdb333"><td class="memItemLeft" align="right" valign="top">static std::set&lt; fs::path &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333">find_files</a> (const std::string_view &amp;regex)</td></tr>
 <tr class="memdesc:ae4aab0c4fad16167fbfe9ba033cdb333"><td class="mdescLeft">&#160;</td><td class="mdescRight">Regex file name search.  <a href="classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333">More...</a><br /></td></tr>
 <tr class="separator:ae4aab0c4fad16167fbfe9ba033cdb333"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
-Static Private Member Functions</h2></td></tr>
+<tr class="memitem:ae3dfd90110885700e97a6ead9d1e5e9f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileManager.html#ae3dfd90110885700e97a6ead9d1e5e9f">removeRegexPart</a> (std::string &amp;regex, size_t &amp;current_position)</td></tr>
+<tr class="separator:ae3dfd90110885700e97a6ead9d1e5e9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66f79da55f4135915f43b0df87df9590"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileManager.html#a66f79da55f4135915f43b0df87df9590">is_separator</a> (char c)</td></tr>
 <tr class="memdesc:a66f79da55f4135915f43b0df87df9590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests if given char is file path separator.  <a href="classFileManager.html#a66f79da55f4135915f43b0df87df9590">More...</a><br /></td></tr>
 <tr class="separator:a66f79da55f4135915f43b0df87df9590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a63cc7bbec2ee3ebb354c52862eb8c59a"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileManager.html#a63cc7bbec2ee3ebb354c52862eb8c59a">PATH_SEPARATOR</a> = '/'</td></tr>
+<tr class="memdesc:a63cc7bbec2ee3ebb354c52862eb8c59a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default file path separator.  <a href="classFileManager.html#a63cc7bbec2ee3ebb354c52862eb8c59a">More...</a><br /></td></tr>
+<tr class="separator:a63cc7bbec2ee3ebb354c52862eb8c59a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a00ef4ff144d9f541f7757d1342c20cf5"><td class="memItemLeft" align="right" valign="top">static std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileManager.html#a00ef4ff144d9f541f7757d1342c20cf5">home</a></td></tr>
 <tr class="memdesc:a00ef4ff144d9f541f7757d1342c20cf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Caches the home folder path.  <a href="classFileManager.html#a00ef4ff144d9f541f7757d1342c20cf5">More...</a><br /></td></tr>
 <tr class="separator:a00ef4ff144d9f541f7757d1342c20cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63cc7bbec2ee3ebb354c52862eb8c59a"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileManager.html#a63cc7bbec2ee3ebb354c52862eb8c59a">PATH_SEPARATOR</a> = '/'</td></tr>
-<tr class="memdesc:a63cc7bbec2ee3ebb354c52862eb8c59a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default file path separator.  <a href="classFileManager.html#a63cc7bbec2ee3ebb354c52862eb8c59a">More...</a><br /></td></tr>
-<tr class="separator:a63cc7bbec2ee3ebb354c52862eb8c59a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f6b8e7fd0c2eb78485b8d3192f4d9db"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileManager.html#a3f6b8e7fd0c2eb78485b8d3192f4d9db">MAXIMUM_VISITED_FILES</a> = 1000</td></tr>
+<tr class="separator:a3f6b8e7fd0c2eb78485b8d3192f4d9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classFileManager.html" title="FileManager class providing basic file management functions.">FileManager</a> class providing basic file management functions. </p>
@@ -183,13 +187,13 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFileManager_ae4aab0c4fad16167fbfe9ba033cdb333_cgraph.png" border="0" usemap="#classFileManager_ae4aab0c4fad16167fbfe9ba033cdb333_cgraph" alt=""/></div>
 <map name="classFileManager_ae4aab0c4fad16167fbfe9ba033cdb333_cgraph" id="classFileManager_ae4aab0c4fad16167fbfe9ba033cdb333_cgraph">
-<area shape="rect" title="Regex file name search." alt="" coords="5,145,173,172"/>
+<area shape="rect" title="Regex file name search." alt="" coords="5,132,173,159"/>
 <area shape="rect" href="classFileManager.html#a79f086b623a49b3d43ae058961b0b12a" title="Get home folder based on the current user and ENV variables." alt="" coords="488,157,663,184"/>
-<area shape="rect" href="classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title=" " alt="" coords="279,69,374,96"/>
-<area shape="rect" href="classFileManager.html#a8c6f24d88df9ed5217e5a149a47e35bc" title="Normalize path." alt="" coords="221,196,432,223"/>
+<area shape="rect" href="classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title=" " alt="" coords="279,56,374,83"/>
+<area shape="rect" href="LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="536,107,615,133"/>
+<area shape="rect" href="classFileManager.html#a8c6f24d88df9ed5217e5a149a47e35bc" title="Normalize path." alt="" coords="221,208,432,235"/>
 <area shape="rect" href="classLogger.html#acebb37f5538780e6c14f13de6ec497bc" title=" " alt="" coords="500,56,651,83"/>
-<area shape="rect" href="classLogger.html#afba40734614c0379be107002dc5d45ae" title=" " alt="" coords="523,107,627,133"/>
-<area shape="rect" href="LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="536,5,615,32"/>
+<area shape="rect" href="classLogger.html#afba40734614c0379be107002dc5d45ae" title=" " alt="" coords="523,5,627,32"/>
 <area shape="rect" href="classLogger.html#add0f34d4c753c86af8074840a72366b3" title=" " alt="" coords="719,56,837,83"/>
 <area shape="rect" href="classFileManager.html#a66f79da55f4135915f43b0df87df9590" title="Tests if given char is file path separator." alt="" coords="480,208,671,235"/>
 </map>
@@ -199,10 +203,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFileManager_ae4aab0c4fad16167fbfe9ba033cdb333_icgraph.png" border="0" usemap="#classFileManager_ae4aab0c4fad16167fbfe9ba033cdb333_icgraph" alt=""/></div>
 <map name="classFileManager_ae4aab0c4fad16167fbfe9ba033cdb333_icgraph" id="classFileManager_ae4aab0c4fad16167fbfe9ba033cdb333_icgraph">
-<area shape="rect" title="Regex file name search." alt="" coords="417,31,585,57"/>
-<area shape="rect" href="classFileMenu.html#a6504cb078a595249e957827856cefd11" title=" " alt="" coords="201,31,369,57"/>
-<area shape="rect" href="classFileMenu.html#ab666b22609a0c0489324ab838805eb43" title=" " alt="" coords="5,5,153,32"/>
-<area shape="rect" href="classFileMenu.html#a8cfe51677d1b2f2706dff3c36e3c5951" title=" " alt="" coords="18,56,141,83"/>
+<area shape="rect" title="Regex file name search." alt="" coords="432,31,600,57"/>
+<area shape="rect" href="classTestFileManager.html#a4c9e7ab6ca8ffb4d24c697336c33ed35" title=" " alt="" coords="201,5,384,32"/>
+<area shape="rect" href="classFileMenu.html#a6504cb078a595249e957827856cefd11" title=" " alt="" coords="209,56,377,83"/>
+<area shape="rect" href="classFileMenu.html#afae4b14ea9d8c657b6dfdf568efc085a" title=" " alt="" coords="5,31,153,57"/>
+<area shape="rect" href="classFileMenu.html#a8cfe51677d1b2f2706dff3c36e3c5951" title=" " alt="" coords="18,81,141,108"/>
 </map>
 </div>
 
@@ -238,13 +243,14 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFileManager_a79f086b623a49b3d43ae058961b0b12a_icgraph.png" border="0" usemap="#classFileManager_a79f086b623a49b3d43ae058961b0b12a_icgraph" alt=""/></div>
 <map name="classFileManager_a79f086b623a49b3d43ae058961b0b12a_icgraph" id="classFileManager_a79f086b623a49b3d43ae058961b0b12a_icgraph">
-<area shape="rect" title="Get home folder based on the current user and ENV variables." alt="" coords="892,56,1067,83"/>
-<area shape="rect" href="classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333" title="Regex file name search." alt="" coords="417,31,585,57"/>
-<area shape="rect" href="classFileManager.html#a8c6f24d88df9ed5217e5a149a47e35bc" title="Normalize path." alt="" coords="633,81,844,108"/>
-<area shape="rect" href="classFileMenu.html#a6504cb078a595249e957827856cefd11" title=" " alt="" coords="201,31,369,57"/>
-<area shape="rect" href="classFileMenu.html#ab666b22609a0c0489324ab838805eb43" title=" " alt="" coords="5,5,153,32"/>
-<area shape="rect" href="classFileMenu.html#a8cfe51677d1b2f2706dff3c36e3c5951" title=" " alt="" coords="18,56,141,83"/>
-<area shape="rect" href="classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title="Settings constructor." alt="" coords="433,81,569,108"/>
+<area shape="rect" title="Get home folder based on the current user and ENV variables." alt="" coords="907,56,1081,83"/>
+<area shape="rect" href="classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333" title="Regex file name search." alt="" coords="432,107,600,133"/>
+<area shape="rect" href="classTestFileManager.html#a4c9e7ab6ca8ffb4d24c697336c33ed35" title=" " alt="" coords="201,5,384,32"/>
+<area shape="rect" href="classFileManager.html#a8c6f24d88df9ed5217e5a149a47e35bc" title="Normalize path." alt="" coords="648,56,859,83"/>
+<area shape="rect" href="classFileMenu.html#a6504cb078a595249e957827856cefd11" title=" " alt="" coords="209,107,377,133"/>
+<area shape="rect" href="classFileMenu.html#afae4b14ea9d8c657b6dfdf568efc085a" title=" " alt="" coords="5,81,153,108"/>
+<area shape="rect" href="classFileMenu.html#a8cfe51677d1b2f2706dff3c36e3c5951" title=" " alt="" coords="18,132,141,159"/>
+<area shape="rect" href="classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title="Settings constructor." alt="" coords="448,56,584,83"/>
 </map>
 </div>
 
@@ -269,7 +275,7 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -287,11 +293,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFileManager_a66f79da55f4135915f43b0df87df9590_icgraph.png" border="0" usemap="#classFileManager_a66f79da55f4135915f43b0df87df9590_icgraph" alt=""/></div>
 <map name="classFileManager_a66f79da55f4135915f43b0df87df9590_icgraph" id="classFileManager_a66f79da55f4135915f43b0df87df9590_icgraph">
-<area shape="rect" title="Tests if given char is file path separator." alt="" coords="696,31,887,57"/>
-<area shape="rect" href="classFileManager.html#a8c6f24d88df9ed5217e5a149a47e35bc" title="Normalize path." alt="" coords="437,31,648,57"/>
-<area shape="rect" href="classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333" title="Regex file name search." alt="" coords="221,5,389,32"/>
-<area shape="rect" href="classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title="Settings constructor." alt="" coords="237,56,373,83"/>
-<area shape="rect" href="classFileMenu.html#a6504cb078a595249e957827856cefd11" title=" " alt="" coords="5,5,173,32"/>
+<area shape="rect" title="Tests if given char is file path separator." alt="" coords="711,5,901,32"/>
+<area shape="rect" href="classFileManager.html#a8c6f24d88df9ed5217e5a149a47e35bc" title="Normalize path." alt="" coords="452,31,663,57"/>
+<area shape="rect" href="classTestFileManager.html#a4c9e7ab6ca8ffb4d24c697336c33ed35" title=" " alt="" coords="5,5,188,32"/>
+<area shape="rect" href="classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333" title="Regex file name search." alt="" coords="236,56,404,83"/>
+<area shape="rect" href="classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title="Settings constructor." alt="" coords="252,107,388,133"/>
+<area shape="rect" href="classFileMenu.html#a6504cb078a595249e957827856cefd11" title=" " alt="" coords="13,56,181,83"/>
 </map>
 </div>
 
@@ -355,12 +362,59 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFileManager_a8c6f24d88df9ed5217e5a149a47e35bc_icgraph.png" border="0" usemap="#classFileManager_a8c6f24d88df9ed5217e5a149a47e35bc_icgraph" alt=""/></div>
 <map name="classFileManager_a8c6f24d88df9ed5217e5a149a47e35bc_icgraph" id="classFileManager_a8c6f24d88df9ed5217e5a149a47e35bc_icgraph">
-<area shape="rect" title="Normalize path." alt="" coords="633,56,844,83"/>
-<area shape="rect" href="classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333" title="Regex file name search." alt="" coords="417,31,585,57"/>
-<area shape="rect" href="classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title="Settings constructor." alt="" coords="433,81,569,108"/>
-<area shape="rect" href="classFileMenu.html#a6504cb078a595249e957827856cefd11" title=" " alt="" coords="201,31,369,57"/>
-<area shape="rect" href="classFileMenu.html#ab666b22609a0c0489324ab838805eb43" title=" " alt="" coords="5,5,153,32"/>
-<area shape="rect" href="classFileMenu.html#a8cfe51677d1b2f2706dff3c36e3c5951" title=" " alt="" coords="18,56,141,83"/>
+<area shape="rect" title="Normalize path." alt="" coords="648,56,859,83"/>
+<area shape="rect" href="classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333" title="Regex file name search." alt="" coords="432,56,600,83"/>
+<area shape="rect" href="classTestFileManager.html#a4c9e7ab6ca8ffb4d24c697336c33ed35" title=" " alt="" coords="201,5,384,32"/>
+<area shape="rect" href="classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title="Settings constructor." alt="" coords="448,107,584,133"/>
+<area shape="rect" href="classFileMenu.html#a6504cb078a595249e957827856cefd11" title=" " alt="" coords="209,56,377,83"/>
+<area shape="rect" href="classFileMenu.html#afae4b14ea9d8c657b6dfdf568efc085a" title=" " alt="" coords="5,31,153,57"/>
+<area shape="rect" href="classFileMenu.html#a8cfe51677d1b2f2706dff3c36e3c5951" title=" " alt="" coords="18,81,141,108"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae3dfd90110885700e97a6ead9d1e5e9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3dfd90110885700e97a6ead9d1e5e9f">&#9670;&nbsp;</a></span>removeRegexPart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FileManager::removeRegexPart </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>regex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t &amp;&#160;</td>
+          <td class="paramname"><em>current_position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classFileManager_ae3dfd90110885700e97a6ead9d1e5e9f_icgraph.png" border="0" usemap="#classFileManager_ae3dfd90110885700e97a6ead9d1e5e9f_icgraph" alt=""/></div>
+<map name="classFileManager_ae3dfd90110885700e97a6ead9d1e5e9f_icgraph" id="classFileManager_ae3dfd90110885700e97a6ead9d1e5e9f_icgraph">
+<area shape="rect" title=" " alt="" coords="236,31,463,57"/>
+<area shape="rect" href="classFileMenu.html#a8cfe51677d1b2f2706dff3c36e3c5951" title=" " alt="" coords="35,5,158,32"/>
+<area shape="rect" href="classTestFileManager.html#a4c9e7ab6ca8ffb4d24c697336c33ed35" title=" " alt="" coords="5,56,188,83"/>
 </map>
 </div>
 
@@ -391,6 +445,28 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a3f6b8e7fd0c2eb78485b8d3192f4d9db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f6b8e7fd0c2eb78485b8d3192f4d9db">&#9670;&nbsp;</a></span>MAXIMUM_VISITED_FILES</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t FileManager::MAXIMUM_VISITED_FILES = 1000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a63cc7bbec2ee3ebb354c52862eb8c59a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a63cc7bbec2ee3ebb354c52862eb8c59a">&#9670;&nbsp;</a></span>PATH_SEPARATOR</h2>
 
@@ -406,7 +482,7 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -425,7 +501,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classFileManager.html">FileManager</a></li>
-    <li class="footer">Generated on Sun Jun 5 2022 12:16:09 for ascii-art by
+    <li class="footer">Generated on Sun Jun 12 2022 18:43:34 for ascii-art by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

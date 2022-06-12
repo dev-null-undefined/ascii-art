@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['whitespace_549',['WHITESPACE',['../Settings_8cpp.html#aebab32df5b81a7363596ac2d2b0b557a',1,'Settings.cpp']]]
+  ['unused_635',['unused',['../structBMPImage_1_1BMPColorHeader.html#ad0b5a4b7a08a9d9c37bd574a960dd697',1,'BMPImage::BMPColorHeader']]]
 ];

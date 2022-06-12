@@ -1,10 +1,10 @@
 <map id="src/ascii&#45;art/sources/filters/BasicFilter.h" name="src/ascii&#45;art/sources/filters/BasicFilter.h">
-<area shape="rect" id="node1" title=" " alt="" coords="203,5,355,47"/>
-<area shape="rect" id="node2" href="$Filter_8h.html" title=" " alt="" coords="281,95,348,121"/>
-<area shape="rect" id="node3" href="$Frame_8h.html" title=" " alt="" coords="237,169,323,196"/>
-<area shape="rect" id="node6" href="$Color_8h.html" title=" " alt="" coords="5,244,72,271"/>
-<area shape="rect" id="node7" href="$Vector_8h.html" title=" " alt="" coords="485,244,648,271"/>
-<area shape="rect" id="node4" title=" " alt="" coords="387,244,461,271"/>
-<area shape="rect" id="node5" title=" " alt="" coords="96,244,173,271"/>
-<area shape="rect" id="node8" href="$Matrix_8h.html" title=" " alt="" coords="197,244,363,271"/>
+<area shape="rect" id="node1" title=" " alt="" coords="256,5,408,47"/>
+<area shape="rect" id="node2" href="$Filter_8h.html" title=" " alt="" coords="264,95,331,121"/>
+<area shape="rect" id="node3" href="$Frame_8h.html" title=" " alt="" coords="290,169,377,196"/>
+<area shape="rect" id="node6" href="$Color_8h.html" title=" " alt="" coords="539,244,605,271"/>
+<area shape="rect" id="node7" href="$Vector_8h.html" title=" " alt="" coords="5,319,168,345"/>
+<area shape="rect" id="node4" title=" " alt="" coords="440,244,515,271"/>
+<area shape="rect" id="node5" title=" " alt="" coords="149,244,227,271"/>
+<area shape="rect" id="node8" href="$Matrix_8h.html" title=" " alt="" coords="251,244,416,271"/>
 </map>
