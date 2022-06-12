@@ -51,8 +51,8 @@ std::set<fs::path> FileManager::find_files(const std::string_view & regex) {
     if (path_regex[0] == PATH_SEPARATOR) {
         folders.insert("/");
         path_regex = path_regex.substr(1);
-    } else if (path_regex[0] == '~') {
-        path_regex = path_regex.substr(2);// TODO: check for separator after ~
+    } else if (path_regex[0] == '~' && path_regex[1] == PATH_SEPARATOR) {
+        path_regex = path_regex.substr(2);
         folders.insert(get_home());
     } else {
         folders.insert(fs::current_path());
