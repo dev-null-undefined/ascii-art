@@ -1,5 +1,5 @@
 #include "Gallery.h"
-#include "../sources/ImageFrame.h"
+#include "../sources/BufferedFrame.h"
 #include "../Application.h"
 #include "../logging/Logger.h"
 #include <iostream>
@@ -96,7 +96,7 @@ void Gallery::update() const {
 
     Vector maximum_size = (m_main_window_size - Vector{2, 2}) * m_image_scale;
     auto resized = std::shared_ptr<Frame>(
-            new ImageFrame(pixels.resize(maximum_size, m_settings->m_image_scale_factor)));
+            new BufferedFrame(pixels.resize(maximum_size, m_settings->m_image_scale_factor)));
     auto original = resized->clone();
     m_image_size = resized->getSize();
     // TODO: dithering and color dithering before resize

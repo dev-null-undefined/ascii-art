@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Application.h"
 #include "sources/DataSourceFactory.h"
-#include "sources/ImageFrame.h"
+#include "sources/BufferedFrame.h"
 #include "menus/Gallery.h"
 #include "./logging/Logger.h"
 #include "menus/FileMenu.h"
