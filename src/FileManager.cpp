@@ -94,7 +94,10 @@ std::set<fs::path> FileManager::find_files(const std::string_view & regex) {
                 fs::directory_iterator it(folder);
                 for (auto & entry : it) {
                     visited++;
-                    if (visited >= MAXIMUM_VISITED_FILES) return files;
+                    if (visited >= MAXIMUM_VISITED_FILES) {
+                        Logger::log("Maximum files visited:" + std::to_string(visited), LogLevel::WARN);
+                        return files;
+                    }
                     if (fs::is_directory(entry)) {
                         if (!path_regex.empty() && std::regex_match(entry.path().filename().string(), token_regex)) {
                             next_folders.insert(entry);
