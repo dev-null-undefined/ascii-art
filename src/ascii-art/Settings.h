@@ -76,6 +76,7 @@ class Settings {
      */
     bool m_colors = true;
     bool m_debug = false;
+    bool m_supports_colors = false;
 
     // TODO: should be base class instead of child
     /**

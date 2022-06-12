@@ -16,7 +16,6 @@ constexpr int ctrl(int key) {
 
 namespace fs = std::filesystem;
 
-// TODO: Add argument flags to change settings
 Application::Application(const std::vector<std::string> & args) : m_sources(
         std::make_shared<std::vector<std::shared_ptr<DataSource>>>()), m_settings(std::make_shared<Settings>()) {
     bool arguments = true;
@@ -184,12 +183,15 @@ void Application::start() {
 
     keypad(stdscr, TRUE); // enable keypad globally
     mouseinterval(0);
-    mousemask(ALL_MOUSE_EVENTS | REPORT_MOUSE_POSITION, NULL);
-    Logger::log("Mouse support: "+std::to_string(has_mouse()), LogLevel::TRACE);
+    mousemask(ALL_MOUSE_EVENTS | REPORT_MOUSE_POSITION, nullptr);
+    Logger::log("Mouse support: " + std::to_string(has_mouse()), LogLevel::TRACE);
 #ifdef NCURSES_WIDE_COLOR_SUPPORT
     if (has_colors()) {
         start_color();
-        initColorPairs();
+        if (COLORS >= 256) {
+            initColorPairs();
+            m_settings->m_supports_colors = true;
+        }
         Logger::log("Colors enabled: " + std::to_string(COLORS) + " Color pairs:" + std::to_string(COLOR_PAIRS),
                     LogLevel::TRACE);
     }

@@ -151,14 +151,14 @@ void Gallery::update() const {
             }
 
 #ifdef NCURSES_WIDE_COLOR_SUPPORT
-            if (has_colors() && m_settings->m_colors) {
+            if (has_colors() && m_settings->m_colors && m_settings->m_supports_colors) {
                 wattron(m_main_window, COLOR_PAIR(colorIndex));
             }
 #endif
             mvwaddch(m_main_window, y + 1, x + 1, ascii);
 
 #ifdef NCURSES_WIDE_COLOR_SUPPORT
-            if (has_colors() && m_settings->m_colors) {
+            if (has_colors() && m_settings->m_colors && m_settings->m_supports_colors) {
                 wattroff(m_main_window, COLOR_PAIR(colorIndex));
             }
 #endif
