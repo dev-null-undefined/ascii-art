@@ -3,6 +3,9 @@
 #include <string>
 #include "FileMenu.h"
 #include "../../FileManager.h"
+#include "../Application.h"
+
+const Color FileMenu::SELECTED_COLOR = Color{120, 120, 220};
 
 constexpr int ctrl(int key) {
     return (key) & 0x1f;
@@ -14,7 +17,6 @@ void FileMenu::show(Vector initial_size) {
     noecho();
     cbreak();
     keypad(stdscr, TRUE);
-    // TODO: don't use forms
     m_window = newwin((int) initial_size.m_y, (int) initial_size.m_x, 0, 0);
     m_window_size = initial_size - Vector{2, 2};
     box(m_window, 0, 0);
@@ -91,7 +93,13 @@ void FileMenu::update() const {
             ++iter_index;
         } else {
             wattron(m_window, A_BOLD); // TODO: use color?
+#ifdef NCURSES_WIDE_COLOR_SUPPORT
+            wattron(m_window, COLOR_PAIR(getRoundedColorIndex(SELECTED_COLOR)));
+#endif
             mvwprintw(m_window, (int) i, 1, "%s", iter_selected->c_str());
+#ifdef NCURSES_WIDE_COLOR_SUPPORT
+            wattroff(m_window, COLOR_PAIR(getRoundedColorIndex(SELECTED_COLOR)));
+#endif
             wattroff(m_window, A_BOLD);
             ++iter_selected;
         }

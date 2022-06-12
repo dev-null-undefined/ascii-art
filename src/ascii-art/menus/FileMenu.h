@@ -5,6 +5,7 @@
 #include <form.h>
 #include <set>
 #include "Menu.h"
+#include "../sources/Color.h"
 
 #include <filesystem>
 namespace fs = std::filesystem;
@@ -53,6 +54,8 @@ class FileMenu : public Menu {
     Vector m_window_size;
 
     static constexpr size_t MINIMAL_GAP = 5;
+
+    static const Color SELECTED_COLOR;
 
     bool handle_mouse();
 };
