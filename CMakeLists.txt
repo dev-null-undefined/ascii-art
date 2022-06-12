@@ -75,7 +75,7 @@ message(STATUS "zlib-dev: ${zlib-dev}")
 include_directories(${libjpeg-dev}/include ${ncurses-dev}/include ${libpng-dev}/include ${zlib-dev}/include)
 link_directories(${libjpeg}/lib ${ncurses}/lib ${libpng}/lib ${zlib}/lib)
 
-target_link_libraries(ascii_art jpeg ncurses png z form)
+target_link_libraries(ascii_art jpeg ncurses ncursesw png z form stdc++fs)
 target_link_directories(ascii_art PUBLIC ${libjpeg}/lib ${ncurses}/lib ${libpng}/lib ${zlib}/lib)
 
 set(CMAKE_LIBRARY_PATH ${libjpeg}/lib ${ncurses}/lib ${libpng}/lib ${zlib}/lib)
