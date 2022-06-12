@@ -15,7 +15,7 @@ WINDOW * boxed_window(int height, int width, int y, int x) {
 
 void Gallery::show(Vector initial_size) {
     curs_set(0);
-    if (initial_size.m_x < MINIMUM_WINDOW_SIZE.m_x && initial_size.m_y < MINIMUM_WINDOW_SIZE.m_y) {
+    if (initial_size.m_x < MINIMUM_WINDOW_SIZE.m_x || initial_size.m_y < MINIMUM_WINDOW_SIZE.m_y) {
         Logger::log("Terminal too small", LogLevel::FATAL);
         throw std::runtime_error("Terminal too small!");
     }
@@ -29,7 +29,7 @@ void Gallery::show(Vector initial_size) {
 }
 
 void Gallery::resize(Vector size) {
-    if (size.m_x < MINIMUM_WINDOW_SIZE.m_x && size.m_y < MINIMUM_WINDOW_SIZE.m_y) {
+    if (size.m_x < MINIMUM_WINDOW_SIZE.m_x || size.m_y < MINIMUM_WINDOW_SIZE.m_y) {
         Logger::log("Terminal too small", LogLevel::FATAL);
         throw std::runtime_error("Terminal too small!");
     }
@@ -167,7 +167,7 @@ void Gallery::update() const {
     wrefresh(m_main_window);
 }
 
-bool Gallery::input(int input, bool & handled) {
+bool Gallery::input(int input, bool &) {
     bool update = false;
     switch (input) {
         case KEY_LEFT:

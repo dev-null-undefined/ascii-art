@@ -4,6 +4,8 @@
 #include "FileMenu.h"
 #include "../../FileManager.h"
 #include "../Application.h"
+#include "../logging/Logger.h"
+#include "../logging/LogLevel.h"
 
 const Color FileMenu::SELECTED_COLOR = Color{120, 120, 220};
 
@@ -12,6 +14,10 @@ constexpr int ctrl(int key) {
 }
 
 void FileMenu::show(Vector initial_size) {
+    if (initial_size.m_y < MINIMUM_SCREEN_SIZE.m_y || initial_size.m_x < MINIMUM_SCREEN_SIZE.m_x) {
+        Logger::log("Terminal too small", LogLevel::FATAL);
+        throw std::runtime_error("Terminal too small!");
+    }
     curs_set(1);
     initscr();
     noecho();
@@ -27,7 +33,10 @@ void FileMenu::show(Vector initial_size) {
 }
 
 void FileMenu::resize(Vector size) {
-    // TODO: minimal size
+    if (size.m_y < MINIMUM_SCREEN_SIZE.m_y || size.m_x < MINIMUM_SCREEN_SIZE.m_x) {
+        Logger::log("Terminal too small", LogLevel::FATAL);
+        throw std::runtime_error("Terminal too small!");
+    }
     m_window_size = size - Vector{2, 2};
     wclear(m_window);
     wresize(m_window, (int) size.m_y, (int) size.m_x);
@@ -88,7 +97,8 @@ void FileMenu::update() const {
             wattron(m_window, A_UNDERLINE);
         }
         if (iter_selected == m_selected_files.end()) {
-            mvwprintw(m_window, (int) i, 1, "%s", iter->c_str());
+            std::string to_print = iter->string().substr(0, m_window_size.m_x - 1);
+            mvwprintw(m_window, (int) i, 1, "%s", to_print.c_str());
             ++iter;
             ++iter_index;
         } else {
@@ -96,7 +106,8 @@ void FileMenu::update() const {
 #ifdef NCURSES_WIDE_COLOR_SUPPORT
             wattron(m_window, COLOR_PAIR(getRoundedColorIndex(SELECTED_COLOR)));
 #endif
-            mvwprintw(m_window, (int) i, 1, "%s", iter_selected->c_str());
+            std::string to_print = iter_selected->string().substr(0, m_window_size.m_x - 1);
+            mvwprintw(m_window, (int) i, 1, "%s", to_print.c_str());
 #ifdef NCURSES_WIDE_COLOR_SUPPORT
             wattroff(m_window, COLOR_PAIR(getRoundedColorIndex(SELECTED_COLOR)));
 #endif
@@ -301,10 +312,11 @@ bool FileMenu::handle_mouse() {
     if (getmouse(&event) == OK) {
         if (event.bstate & BUTTON1_PRESSED) {
             int actual_index = (int) (event.y + m_scroll) - 3;
-            if (event.y < m_window_size.m_y && event.y > 1 && actual_index < m_files.size() + m_selected_files.size() &&
+            if (static_cast<size_t>(event.y) < m_window_size.m_y && event.y > 1 &&
+                static_cast<size_t>(actual_index) < m_files.size() + m_selected_files.size() &&
                 !m_files.empty()) {
                 std::string path;
-                if (actual_index < m_selected_files.size()) {
+                if (static_cast<size_t>(actual_index) < m_selected_files.size()) {
                     path = *std::next(m_selected_files.begin(), (long) actual_index);
                 } else {
                     path = *std::next(m_files.begin(), (long) (actual_index - m_selected_files.size()));
@@ -319,8 +331,8 @@ bool FileMenu::handle_mouse() {
                 }
                 return true;
 
-            } else if (event.y == 1 && event.x < m_window_size.m_x) {
-                if (event.x - 1 <= m_regex.size()) {
+            } else if (event.y == 1 && static_cast<size_t>(event.x) < m_window_size.m_x) {
+                if (static_cast<size_t>(event.x - 1) <= m_regex.size()) {
                     m_regex_index = event.x - 1;
                     return true;
                 } else {

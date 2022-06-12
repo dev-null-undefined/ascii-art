@@ -4,7 +4,9 @@
 
 #include "Frame.h"
 #include "../../container/Matrix.h"
-
+/**
+ * @brief loaded pixel frame in memory.
+ */
 class BufferedFrame : public Frame {
   public:
     explicit BufferedFrame(Matrix<Color> pixels);

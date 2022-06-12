@@ -1,12 +1,13 @@
 #ifndef ASCII_ART_BASICFILTER_H_D1EB76B78C9E4755BDEDA4AF355E242E
 #define ASCII_ART_BASICFILTER_H_D1EB76B78C9E4755BDEDA4AF355E242E
 
-
 #include "Filter.h"
 #include "../Color.h"
 #include "../../../container/Vector.h"
 #include "../Frame.h"
-
+/**
+ * @brief Basic filter for multiplying/adding constants to Color channels.
+ */
 class BasicFilter : public Filter {
 
   public:

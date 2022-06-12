@@ -73,9 +73,14 @@ class Settings {
 
     /**
      * Color settings.
+     * Editable while running to toggle colors on/off.
      */
     bool m_colors = true;
     bool m_debug = false;
+    /**
+     * Status if current terminal supports colors.
+     * can not be changed by user.
+     */
     bool m_supports_colors = false;
 
     // TODO: should be base class instead of child
@@ -96,6 +101,9 @@ class Settings {
      * Minimum timeout between resizing.
      */
     long m_resize_timeout = 200;
+    /**
+     * Image scale factor to compensate for non-square font
+     */
     double m_image_scale_factor = 2.4;
 
     /**

@@ -8,12 +8,12 @@
 #include "../sources/Color.h"
 
 #include <filesystem>
+
 namespace fs = std::filesystem;
 
 class FileMenu : public Menu {
   public:
-//    explicit FileMenu(const std::string & m_regex = "~/Images/.*(png|jpg|jpeg)$");
-    explicit FileMenu(const std::string & m_regex = "~/.*/.*(png|jpg|jpeg)$");
+    explicit FileMenu(const std::string & m_regex = "~/Images/.*(png|jpg|jpeg)$");
 
     ~FileMenu() override;
 
@@ -57,6 +57,7 @@ class FileMenu : public Menu {
     static constexpr size_t MINIMAL_GAP = 5;
 
     static const Color SELECTED_COLOR;
+    static constexpr Vector MINIMUM_SCREEN_SIZE = {10, 10};
 
     bool handle_mouse();
 };

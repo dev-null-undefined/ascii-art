@@ -38,6 +38,15 @@ class Matrix {
 
     const T & at(Vector position) const;
 
+    /**
+     * @brief Resize matrix to new size using linear average.
+     * Resize matrix to new size using linear average while keeping the same aspect ratio as original.
+     * The new size is calculated using the Vector::resizeWithAspectRation(). With the original being the current Matrix size.
+     * And the maximum new_size.
+     * @param new_size Maximum possible size for the new Matrix.
+     * @param scale_multiplier Scale multiplier to apply to the ratio.
+     * @return new Matrix with modified size and values calculated using linear average.
+     */
     Matrix<T> resize(Vector new_size, double scale_multiplier = 1.0) const;
 
   private:
