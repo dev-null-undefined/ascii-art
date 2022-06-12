@@ -24,6 +24,7 @@
 # Configuration:
 - [x] configuration file
 - [x] flags as arguments
+- [ ] Save current configuration to file
 ## Logger:
 - [ ] path for log file
 ## Filters:
