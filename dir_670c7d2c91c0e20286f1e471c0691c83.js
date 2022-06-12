@@ -11,7 +11,7 @@ var dir_670c7d2c91c0e20286f1e471c0691c83 =
     [ "JPEGImage.h", "JPEGImage_8h.html", [
       [ "JPEGImage", "classJPEGImage.html", "classJPEGImage" ]
     ] ],
-    [ "PNGImage.cpp", "PNGImage_8cpp.html", null ],
+    [ "PNGImage.cpp", "PNGImage_8cpp.html", "PNGImage_8cpp" ],
     [ "PNGImage.h", "PNGImage_8h.html", [
       [ "PNGImage", "classPNGImage.html", "classPNGImage" ]
     ] ]

@@ -73,6 +73,8 @@ var NAVTREEINDEX0 =
 "Menu_8h.html":[1,0,0,0,1,4],
 "Menu_8h_source.html":[1,0,0,0,1,4],
 "PNGImage_8cpp.html":[1,0,0,0,2,1,4],
+"PNGImage_8cpp.html#a53a07f556ff32f066e8ee95f2b8884b7":[1,0,0,0,2,1,4,0],
+"PNGImage_8cpp.html#a5c89aebc34a0b26873a395667b4b1c07":[1,0,0,0,2,1,4,1],
 "PNGImage_8h.html":[1,0,0,0,2,1,5],
 "PNGImage_8h_source.html":[1,0,0,0,2,1,5],
 "Settings_8cpp.html":[1,0,0,0,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "classFilter.html#a41373a82033e3f3a2b19481462188ca2":[0,0,10,2],
 "classFilter.html#a6537f14bba2878ee6079000a176d6c4e":[0,0,10,0],
 "classFilter.html#a91a89b652d7b9af6ad374828bf14db73":[0,0,10,1],
-"classFrame.html":[0,0,11],
-"classFrame.html#a0e6884e77aa2641d6add98ba13dff9aa":[0,0,11,5],
-"classFrame.html#a1d99c5a354bcd7be2ca1db2014dd5b65":[0,0,11,2]
+"classFrame.html":[0,0,11]
 };

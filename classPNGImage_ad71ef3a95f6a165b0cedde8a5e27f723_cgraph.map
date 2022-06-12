@@ -1,11 +1,13 @@
 <map id="PNGImage::Load" name="PNGImage::Load">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,136,108"/>
-<area shape="rect" id="node2" href="$classMatrix.html#ae6df601fe5adb724b49bf548f877ac83" title=" " alt="" coords="202,5,287,32"/>
-<area shape="rect" id="node3" href="$classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title=" " alt="" coords="197,56,292,83"/>
-<area shape="rect" id="node7" href="$LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="389,107,468,133"/>
-<area shape="rect" id="node8" href="$classColor.html#a5a2ee79a52784cf2d5f4c9a2fea97021" title=" " alt="" coords="184,157,305,184"/>
-<area shape="rect" id="node4" href="$classLogger.html#acebb37f5538780e6c14f13de6ec497bc" title=" " alt="" coords="353,5,504,32"/>
-<area shape="rect" id="node6" href="$classLogger.html#afba40734614c0379be107002dc5d45ae" title=" " alt="" coords="377,56,481,83"/>
-<area shape="rect" id="node5" href="$classLogger.html#add0f34d4c753c86af8074840a72366b3" title=" " alt="" coords="552,5,671,32"/>
-<area shape="rect" id="node9" href="$Color_8cpp.html#ae75a63a3cb862b7bc29a8adc6c32f62a" title=" " alt="" coords="376,157,481,184"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,132,136,159"/>
+<area shape="rect" id="node2" href="$classMatrix.html#ae6df601fe5adb724b49bf548f877ac83" title=" " alt="" coords="207,5,292,32"/>
+<area shape="rect" id="node3" href="$classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title=" " alt="" coords="368,107,463,133"/>
+<area shape="rect" id="node7" href="$LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="552,56,631,83"/>
+<area shape="rect" id="node8" href="$PNGImage_8cpp.html#a53a07f556ff32f066e8ee95f2b8884b7" title=" " alt="" coords="185,157,313,184"/>
+<area shape="rect" id="node9" href="$PNGImage_8cpp.html#a5c89aebc34a0b26873a395667b4b1c07" title=" " alt="" coords="184,208,315,235"/>
+<area shape="rect" id="node10" href="$classColor.html#a5a2ee79a52784cf2d5f4c9a2fea97021" title=" " alt="" coords="189,259,310,285"/>
+<area shape="rect" id="node4" href="$classLogger.html#acebb37f5538780e6c14f13de6ec497bc" title=" " alt="" coords="516,107,667,133"/>
+<area shape="rect" id="node6" href="$classLogger.html#afba40734614c0379be107002dc5d45ae" title=" " alt="" coords="539,157,643,184"/>
+<area shape="rect" id="node5" href="$classLogger.html#add0f34d4c753c86af8074840a72366b3" title=" " alt="" coords="715,107,833,133"/>
+<area shape="rect" id="node11" href="$Color_8cpp.html#ae75a63a3cb862b7bc29a8adc6c32f62a" title=" " alt="" coords="363,259,468,285"/>
 </map>
