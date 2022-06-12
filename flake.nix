@@ -84,7 +84,7 @@
           ascii-art = let
             inherit system;
             pname = "ascii-art";
-            version = "v0.1.0";
+            version = "v0.1.1";
           in pkgs.stdenv.mkDerivation {
             pname = pname;
             version = version;
@@ -92,16 +92,15 @@
               owner = "dev-null-undefined";
               repo = pname;
               rev = version;
-              sha256 = "sha256-coigICY3YOc4QkhttTC9YYrIX82Ls3mVRYS9ZQJQ90U=";
+              sha256 = "sha256-vjJIxG1CzwwAOQLe1CJZbkxW+U2Qwa1fKd8SfxQskW4=";
               fetchSubmodules = true;
             };
             buildInputs = [ pkgs.libjpeg_original pkgs.ncurses pkgs.libpng12 ];
             configurePhase = ''
-              make clean
-              make deps
+              ${pkgs.gnumake}/bin/make clean
             '';
             buildPhase = ''
-              make fast
+              ${pkgs.gnumake}/bin/make fast
             '';
             installPhase = ''
               mkdir -p $out/bin
