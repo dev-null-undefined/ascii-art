@@ -66,6 +66,7 @@ class FileManager {
      * Caches the home folder path.
      */
     static std::optional<std::string> home;
+    static constexpr size_t MAXIMUM_VISITED_FILES = 1000;
 };
 
 

@@ -44,6 +44,7 @@ std::string FileManager::normalize_path(const std::string_view & path, bool remo
 
 std::set<fs::path> FileManager::find_files(const std::string_view & regex) {
     std::string path_regex = normalize_path(regex);
+    size_t visited = 0;
     std::set<fs::path> files;
     std::set<fs::path> folders;
     std::set<fs::path> next_folders;
@@ -82,24 +83,31 @@ std::set<fs::path> FileManager::find_files(const std::string_view & regex) {
         }
         for (const auto & folder : folders) {
             if (!path_regex.empty() && (token == "\\.\\." || token == ".." || token == "\\.." || token == ".\\.")) {
-                next_folders.insert(folder.parent_path()); // TODO: maximum depth to avoid infinite loop
+                next_folders.insert(folder.parent_path());
                 continue;
             }
             if (!path_regex.empty() && (token == "\\." || token == ".")) {
                 next_folders.insert(folder);
                 continue;
             }
-            fs::directory_iterator it(folder);
-            for (auto & entry : it) {
-                if (fs::is_directory(entry)) {
-                    if (!path_regex.empty() && std::regex_match(entry.path().filename().string(), token_regex)) {
-                        next_folders.insert(entry);
-                    }
-                } else if (path_regex.empty()) {
-                    if (std::regex_match(entry.path().filename().string(), token_regex)) {
-                        files.insert(entry);
+            try {
+                fs::directory_iterator it(folder);
+                for (auto & entry : it) {
+                    visited++;
+                    if (visited >= MAXIMUM_VISITED_FILES) return files;
+                    if (fs::is_directory(entry)) {
+                        if (!path_regex.empty() && std::regex_match(entry.path().filename().string(), token_regex)) {
+                            next_folders.insert(entry);
+                        }
+                    } else if (path_regex.empty()) {
+                        if (std::regex_match(entry.path().filename().string(), token_regex)) {
+                            files.insert(entry);
+                        }
                     }
                 }
+            } catch (std::exception & exception) {
+                Logger::log("Error while trying to itarate trough " + folder.string() + ", e:" + exception.what(),
+                            LogLevel::WARN);
             }
         }
         folders = std::move(next_folders);
