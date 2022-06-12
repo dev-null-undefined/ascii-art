@@ -222,6 +222,8 @@ void Application::tryAddSource(const std::string & path, size_t depth) {
     } else {
         try {
             std::shared_ptr<DataSource> dataSource = DataSourceFactory::getDataSource(path);
+            // loading first frame to catch exception if file corrupted
+            // TODO: should be handled inside the gallery class instead
             dataSource->getFrame(0);
             m_sources->push_back(dataSource);
             Logger::log("Added: " + path, LogLevel::TRACE);
