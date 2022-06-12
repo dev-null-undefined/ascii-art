@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 3.12)
 project(ascii_art)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pedantic -Wall -Wextra -Wno-long-long -D DEBUG -D LOG_LEVEL=10")
-#set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -fno-omit-frame-pointer -fsanitize=address")
-#set(CMAKE_LINKER_FLAGS_DEBUG "${CMAKE_LINKER_FLAGS_DEBUG} -fno-omit-frame-pointer -fsanitize=address")
+# Tests
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pedantic -Wall -Wextra -Wno-long-long -D DEBUG -D LOG_LEVEL=10 -rdynamic -D __TESTING__")
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -fno-omit-frame-pointer -fsanitize=address")
+set(CMAKE_LINKER_FLAGS_DEBUG "${CMAKE_LINKER_FLAGS_DEBUG} -fno-omit-frame-pointer -fsanitize=address")
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -75,7 +76,7 @@ message(STATUS "zlib-dev: ${zlib-dev}")
 include_directories(${libjpeg-dev}/include ${ncurses-dev}/include ${libpng-dev}/include ${zlib-dev}/include)
 link_directories(${libjpeg}/lib ${ncurses}/lib ${libpng}/lib ${zlib}/lib)
 
-target_link_libraries(ascii_art jpeg ncurses png z form)
+target_link_libraries(ascii_art jpeg ncurses ncursesw png z form stdc++fs)
 target_link_directories(ascii_art PUBLIC ${libjpeg}/lib ${ncurses}/lib ${libpng}/lib ${zlib}/lib)
 
 set(CMAKE_LIBRARY_PATH ${libjpeg}/lib ${ncurses}/lib ${libpng}/lib ${zlib}/lib)

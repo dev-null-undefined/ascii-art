@@ -50,7 +50,8 @@ void Logger::print(const std::string & message) {
 Logger & Logger::getInstance() {
     if(instance == nullptr) {
         instance = std::unique_ptr<Logger>(new Logger(std::string("log.txt")));
-//        instance = std::unique_ptr<Logger>(new Logger());
+        if (!instance->m_file)
+            instance->setPath("/tmp/ascii-art-xF2u570uf5");
     }
     return *instance;
 }

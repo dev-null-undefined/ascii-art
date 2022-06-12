@@ -5,6 +5,7 @@
 #include <cmath>
 #include <cstdlib>
 #include <stdexcept>
+#include "Vector.h"
 
 template<typename T>
 class Matrix {
@@ -12,6 +13,8 @@ class Matrix {
     typedef size_t number;
 
     Matrix(number rows, number cols);
+
+    Matrix(Vector size);
 
     Matrix(const Matrix & other);
 
@@ -35,7 +38,7 @@ class Matrix {
 
     const T & at(Vector position) const;
 
-    Matrix<T> resize(Vector new_size) const;
+    Matrix<T> resize(Vector new_size, double scale_multiplier = 1.0) const;
 
   private:
     std::vector<T> m_data;
@@ -51,6 +54,16 @@ Matrix<T>::Matrix(number rows, number cols) {
     m_width = cols;
     m_height = rows;
     m_data.resize(rows * cols);
+}
+
+template<typename T>
+Matrix<T>::Matrix(Vector size) {
+    if (size.m_y == 0 || size.m_x == 0) {
+        throw std::invalid_argument("Matrix dimensions must be positive");
+    }
+    m_width = size.m_x;
+    m_height = size.m_y;
+    m_data.resize(size.m_x * size.m_y);
 }
 
 template<typename T>
@@ -126,29 +139,16 @@ const T & Matrix<T>::at(Vector position) const {
     return at(position.m_x, position.m_y);
 }
 
-inline size_t size_t_cast(double number) {
-    return static_cast<size_t>(number);
-}
-
 inline double double_cast(size_t number) {
     return static_cast<double>(number);
 }
 
 template<typename T>
-Matrix<T> Matrix<T>::resize(Vector new_size) const {
-    // Calculate the maximum size while keeping the same scale as the original matrix and
-    // being smaller or equal to the new_size
-    double matrix_scale = m_width / double_cast(m_height);
+Matrix<T> Matrix<T>::resize(Vector new_size, double scale_multiplier) const {
 
-    double desired_scale = double_cast(new_size.m_x) / double_cast(new_size.m_y);
+    new_size = Vector::resizeWithAspectRation(new_size, {m_width, m_height}, scale_multiplier);
 
-    if (desired_scale > matrix_scale) {
-        new_size.m_x = size_t_cast(double_cast(new_size.m_y) * matrix_scale);
-    } else {
-        new_size.m_y = size_t_cast(double_cast(new_size.m_x) / matrix_scale);
-    }
-
-    Matrix<T> newMatrix(new_size.m_y, new_size.m_x);
+    Matrix<T> newMatrix(new_size);
     double realScale = static_cast<double>(new_size.m_x) / static_cast<double>(m_width);
     if (realScale <= 1) {
         double box_size = 1 / realScale;
@@ -157,12 +157,13 @@ Matrix<T> Matrix<T>::resize(Vector new_size) const {
         for (size_t x = 0; x < new_size.m_x; x++) {
             for (size_t y = 0; y < new_size.m_y; y++) {
                 double dx = double_cast(x);
-                double dy = double_cast(y);
+                double dy = double_cast(y) * scale_multiplier;
                 T value{};
                 double count = 0;
                 for (size_t j = 0; double_cast(j) < box_rounded && double_cast(j) + dx * box_size < m_width; ++j) {
                     for (size_t k = 0; double_cast(k) < box_rounded && double_cast(k) + dy * box_size < m_height; ++k) {
-                        value += at(static_cast<size_t>(dx * box_size + double_cast(j)), static_cast<size_t>(dy * box_size + double_cast(k)));
+                        value += at(static_cast<size_t>(dx * box_size + double_cast(j)),
+                                    static_cast<size_t>(dy * box_size + double_cast(k)));
                         count++;
                     }
                     if (box_rounded + dy * box_size < m_height) {
@@ -187,7 +188,7 @@ Matrix<T> Matrix<T>::resize(Vector new_size) const {
         for (size_t x = 0; x < new_size.m_x; x++) {
             for (size_t y = 0; y < new_size.m_y; y++) {
                 double dx = double_cast(x);
-                double dy = double_cast(y);
+                double dy = double_cast(y) * scale_multiplier;
                 T value = at(static_cast<size_t>(dx / realScale), static_cast<size_t>(dy / realScale));
                 newMatrix.at(x, y) = value;
             }

@@ -1,5 +1,5 @@
 # Testing:
-> ## Logger:
+## Logger:
 - [ ] file not writable
 - [ ] folder not accessible
 - [ ] no more space on disk
@@ -24,6 +24,7 @@
 # Configuration:
 - [x] configuration file
 - [x] flags as arguments
+- [ ] Save current configuration to file
 ## Logger:
 - [ ] path for log file
 ## Filters:
@@ -33,7 +34,7 @@
 ## Application:
 - [x] search depth
 ## Image
-- [ ] scale multiplier
+- [x] scale multiplier
 
 # Performance:
 - [ ] performance test
@@ -47,4 +48,4 @@
 
 # Gallery menu
 - [x] mouse support and zoom
-- [ ] font scale compensation
+- [x] font scale compensation

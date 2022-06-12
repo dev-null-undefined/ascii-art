@@ -4,7 +4,7 @@
 #include <csetjmp>
 #include "JPEGImage.h"
 #include "../../../container/Matrix.h"
-#include "../ImageFrame.h"
+#include "../BufferedFrame.h"
 
 extern JSAMPLE * image_buffer;    /* Points to large array of R,G,B-order data */
 extern int image_height;    /* Number of rows in image */
@@ -177,7 +177,7 @@ void JPEGImage::Load() {
             }
         }
 
-        m_frame = std::shared_ptr<Frame>(new ImageFrame(std::move(pixels)));
+        m_frame = std::shared_ptr<Frame>(new BufferedFrame(std::move(pixels)));
 
 
         /* Step 7: Finish decompression */

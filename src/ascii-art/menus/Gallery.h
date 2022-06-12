@@ -42,15 +42,21 @@ class Gallery : public Menu {
 
     Vector m_last_mouse_position = {0, 0};
     Vector m_image_position;
-    Vector m_image_size;
+    mutable Vector m_image_size;
     double m_image_scale = 1.0;
 
     static constexpr int STATUS_WINDOW_HEIGHT = 3;
+    static constexpr int COLOR_FILTER_ADDITION = 10;
+
+    static constexpr double MINIMUM_ZOOM = 0.5;
+    static constexpr double MAXIMUM_ZOOM = 10.0;
     static constexpr Vector MINIMUM_WINDOW_SIZE = {10, 10};
 
     void zoom(int x, int y, double zoom);
 
     bool handle_mouse();
+
+    void move(int x, int y);
 };
 
 

@@ -1,5 +1,5 @@
 #include "Gallery.h"
-#include "../sources/ImageFrame.h"
+#include "../sources/BufferedFrame.h"
 #include "../Application.h"
 #include "../logging/Logger.h"
 #include <iostream>
@@ -24,7 +24,7 @@ void Gallery::show(Vector initial_size) {
                                  0);
     m_status_window = boxed_window(STATUS_WINDOW_HEIGHT, static_cast<int>(m_main_window_size.m_x),
                                    static_cast<int>(m_main_window_size.m_y), 0);
-
+    m_image_size = m_main_window_size;
     refresh();
 }
 
@@ -91,14 +91,15 @@ void Gallery::update() const {
     Frame & frame = m_sources->at(m_current_index)->getFrame(
             m_frame_index); // TODO: handle exception with invalid format while loading
     box(m_main_window, 0, 0);
-    std::shared_ptr<Frame> frame_ptr = frame.clone();
 
-    Matrix<Color> pixels = frame_ptr->getPixels();
+    Matrix<Color> pixels = frame.getPixels();
 
-    Vector image_size = (m_main_window_size - Vector{2, 2}) * m_image_scale;
-    auto resized = std::shared_ptr<Frame>(new ImageFrame(pixels.resize(image_size)));
-    auto original = std::shared_ptr<Frame>(new ImageFrame(pixels.resize(image_size)));
-// TODO: dithering and color dithering before resize
+    Vector maximum_size = (m_main_window_size - Vector{2, 2}) * m_image_scale;
+    auto resized = std::shared_ptr<Frame>(
+            new BufferedFrame(pixels.resize(maximum_size, m_settings->m_image_scale_factor)));
+    auto original = resized->clone();
+    m_image_size = resized->getSize();
+    // TODO: dithering and color dithering before resize
     Vector resolution = original->getSize();
     for (size_t y = 0, img_y = m_image_position.m_y;
          img_y < resolution.m_y && y < m_main_window_size.m_y - 2; y++, img_y++) {
@@ -150,14 +151,14 @@ void Gallery::update() const {
             }
 
 #ifdef NCURSES_WIDE_COLOR_SUPPORT
-            if (has_colors() && m_settings->m_colors) {
+            if (has_colors() && m_settings->m_colors && m_settings->m_supports_colors) {
                 wattron(m_main_window, COLOR_PAIR(colorIndex));
             }
 #endif
             mvwaddch(m_main_window, y + 1, x + 1, ascii);
 
 #ifdef NCURSES_WIDE_COLOR_SUPPORT
-            if (has_colors() && m_settings->m_colors) {
+            if (has_colors() && m_settings->m_colors && m_settings->m_supports_colors) {
                 wattroff(m_main_window, COLOR_PAIR(colorIndex));
             }
 #endif
@@ -193,6 +194,22 @@ bool Gallery::input(int input, bool & handled) {
                 m_frame_index = 0;
             }
             break;
+        case 'u':
+            if (m_settings->m_image_scale_factor + 0.1 < Vector::MAXIMUM_SCALE_FACTOR) {
+                m_settings->m_image_scale_factor += 0.1;
+                Logger::log("Image scale factor change +" + std::to_string(m_settings->m_image_scale_factor),
+                            LogLevel::TRACE);
+                update = true;
+            }
+            break;
+        case 'h':
+            if (m_settings->m_image_scale_factor - 0.1 > Vector::MINIMUM_SCALE_FACTOR) {
+                m_settings->m_image_scale_factor -= 0.1;
+                Logger::log("Image scale factor change -" + std::to_string(m_settings->m_image_scale_factor),
+                            LogLevel::TRACE);
+                update = true;
+            }
+            break;
         case 'd':
             m_settings->m_dithering = !m_settings->m_dithering;
             update = true;
@@ -206,27 +223,27 @@ bool Gallery::input(int input, bool & handled) {
             update = true;
             break;
         case 'i':
-            m_settings->m_color_filter.m_red_offset += 10; // TODO: move to constant
+            m_settings->m_color_filter.m_red_offset += COLOR_FILTER_ADDITION;
             update = true;
             break;
         case 'j':
-            m_settings->m_color_filter.m_red_offset -= 10;
+            m_settings->m_color_filter.m_red_offset -= COLOR_FILTER_ADDITION;
             update = true;
             break;
         case 'o':
-            m_settings->m_color_filter.m_green_offset += 10;
+            m_settings->m_color_filter.m_green_offset += COLOR_FILTER_ADDITION;
             update = true;
             break;
         case 'k':
-            m_settings->m_color_filter.m_green_offset -= 10;
+            m_settings->m_color_filter.m_green_offset -= COLOR_FILTER_ADDITION;
             update = true;
             break;
         case 'p':
-            m_settings->m_color_filter.m_blue_offset += 10;
+            m_settings->m_color_filter.m_blue_offset += COLOR_FILTER_ADDITION;
             update = true;
             break;
         case 'l':
-            m_settings->m_color_filter.m_blue_offset -= 10;
+            m_settings->m_color_filter.m_blue_offset -= COLOR_FILTER_ADDITION;
             update = true;
             break;
         case 's':
@@ -252,48 +269,46 @@ Gallery::~Gallery() {
     Gallery::hide();
 }
 
+
+void Gallery::move(int x, int y) {
+    Vector image_size = m_image_size * m_image_scale; // use image size instead
+    size_t sx = x > 0 ? x : 0;
+    size_t sy = y > 0 ? y : 0;
+    m_image_position.m_x = sx < image_size.m_x / 2 ? sx : image_size.m_x / 2;
+    m_image_position.m_y = sy < image_size.m_y / 2 ? sy : image_size.m_y / 2;
+}
+
 void Gallery::zoom(int x, int y, double zoom) {
-    Vector image_size_before = m_main_window_size * m_image_scale;
+    double zoom_save = m_image_scale;
+    Vector image_size_before = m_image_size;
     m_image_scale = m_image_scale * zoom;
-    if (m_image_scale < 0.5) {
-        m_image_scale = 0.5;
-    } else if (m_image_scale > 2.0) {
-        m_image_scale = 2.0;
+    if (m_image_scale < MINIMUM_ZOOM) {
+        m_image_scale = MINIMUM_ZOOM;
+    } else if (m_image_scale > MAXIMUM_ZOOM) {
+        m_image_scale = MAXIMUM_ZOOM;
     }
-    Vector image_size_after = m_main_window_size * m_image_scale;
+    Vector image_size_after = m_image_size * (m_image_scale / zoom_save);
     int delta_x = ((int) image_size_after.m_x - (int) image_size_before.m_x);
     int delta_y = ((int) image_size_after.m_y - (int) image_size_before.m_y);
 
     double new_x = (double) m_image_position.m_x + x / (double) m_main_window_size.m_x * delta_x;
     double new_y = (double) m_image_position.m_y + y / (double) m_main_window_size.m_y * delta_y;
-    m_image_position.m_x = new_x > 0 ? (size_t) new_x : 0;
-    m_image_position.m_y = new_y > 0 ? (size_t) new_y : 0;
+    move(new_x, new_y);
 }
 
 bool Gallery::handle_mouse() {
     MEVENT event;
     if (getmouse(&event) == OK) {
-        Logger::log("Mouse event: x:" + std::to_string(event.x) + " y:" + std::to_string(event.y) + " state:" +
-                    std::to_string(event.bstate), LogLevel::TRACE);
         if (event.bstate & BUTTON1_PRESSED) {
             m_last_mouse_position = {static_cast<size_t>(event.x), static_cast<size_t>(event.y)};
         } else if (event.bstate & BUTTON1_RELEASED) {
-            m_image_position += m_last_mouse_position;
-            if (m_image_position.m_x < event.x) {
-                m_image_position.m_x = 0;
-            } else {
-                m_image_position.m_x -= event.x;
-            }
-            if (m_image_position.m_y < event.y) {
-                m_image_position.m_y = 0;
-            } else {
-                m_image_position.m_y -= event.y;
-            }
+            Vector pos = m_image_position + m_last_mouse_position;
+            move((int) pos.m_x - event.x, (int) pos.m_y - event.y);
             return true;
-        } else if (event.bstate & 65536) {// in
+        } else if (event.bstate & 65536) {
             zoom(event.x, event.y, 1.1);
             return true;
-        } else if (event.bstate & 2097152) { // out
+        } else if (event.bstate & 2097152) {
             zoom(event.x, event.y, 0.9);
             return true;
         }

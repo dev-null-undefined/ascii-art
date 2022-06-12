@@ -1,6 +1,6 @@
 #include "PNGImage.h"
 #include "../../../container/Matrix.h"
-#include "../ImageFrame.h"
+#include "../BufferedFrame.h"
 #include "../../logging/Logger.h"
 #include <png.h>
 #include <stdexcept>
@@ -73,7 +73,7 @@ void PNGImage::Load() {
                 pixels.at(x, y) = color;
             }
         }
-        m_frame = std::shared_ptr<Frame>(new ImageFrame(std::move(pixels)));
+        m_frame = std::shared_ptr<Frame>(new BufferedFrame(std::move(pixels)));
     } else {
         Logger::log("Non-standard color type(" + std::to_string(color_type) + ") " + m_filename, LogLevel::INFO);
     }

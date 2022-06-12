@@ -4,7 +4,6 @@ build/
 .idea/
 cmake-build-debug/
 cmake-build-vm/
-examples/
 result
 doc/
 log.txt

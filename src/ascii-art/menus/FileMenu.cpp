@@ -3,6 +3,9 @@
 #include <string>
 #include "FileMenu.h"
 #include "../../FileManager.h"
+#include "../Application.h"
+
+const Color FileMenu::SELECTED_COLOR = Color{120, 120, 220};
 
 constexpr int ctrl(int key) {
     return (key) & 0x1f;
@@ -14,7 +17,6 @@ void FileMenu::show(Vector initial_size) {
     noecho();
     cbreak();
     keypad(stdscr, TRUE);
-    // TODO: don't use forms
     m_window = newwin((int) initial_size.m_y, (int) initial_size.m_x, 0, 0);
     m_window_size = initial_size - Vector{2, 2};
     box(m_window, 0, 0);
@@ -91,7 +93,13 @@ void FileMenu::update() const {
             ++iter_index;
         } else {
             wattron(m_window, A_BOLD); // TODO: use color?
+#ifdef NCURSES_WIDE_COLOR_SUPPORT
+            wattron(m_window, COLOR_PAIR(getRoundedColorIndex(SELECTED_COLOR)));
+#endif
             mvwprintw(m_window, (int) i, 1, "%s", iter_selected->c_str());
+#ifdef NCURSES_WIDE_COLOR_SUPPORT
+            wattroff(m_window, COLOR_PAIR(getRoundedColorIndex(SELECTED_COLOR)));
+#endif
             wattroff(m_window, A_BOLD);
             ++iter_selected;
         }
@@ -99,7 +107,11 @@ void FileMenu::update() const {
             wattroff(m_window, A_UNDERLINE);
         }
     }
-    mvwprintw(m_window, 1, 1, "%s", (m_regex + " ").c_str());
+    std::string print = m_regex;
+    for (size_t x = m_regex.size(); x < m_window_size.m_x; x++) {
+        print += ' ';
+    }
+    mvwprintw(m_window, 1, 1, "%s", print.c_str());
     wmove(m_window, 1, (int) m_regex_index + 1);
     wrefresh(m_window);
 }
@@ -139,6 +151,13 @@ bool FileMenu::input(int input, bool & handled) {
             }
             break;
         case KEY_BACKSPACE:
+            // Delete the char before cursor with ctrl modifier
+            if (!m_regex.empty() && m_regex_index > 0) {
+                FileManager::removeRegexPart(m_regex, m_regex_index);
+                update_files(m_regex);
+                return true;
+            }
+            break;
         case 127:
             // Delete the char before cursor
             if (!m_regex.empty() && m_regex_index > 0) {
@@ -195,7 +214,7 @@ bool FileMenu::input(int input, bool & handled) {
         case KEY_MOUSE:
             return handle_mouse();
         default:
-            if (isprint(input)) {
+            if (isprint(input) && m_regex.size() < m_window_size.m_x) {
                 m_regex.insert(m_regex_index, 1, (char) input);
                 m_regex_index++;
                 update_files(m_regex);
@@ -273,8 +292,7 @@ void FileMenu::update_index() {
         if (m_scroll >= m_files.size() + m_selected_files.size()) {
             m_scroll = 0;
         }
-        m_index = m_files.size() +
-                  m_selected_files.size() - 1 - m_scroll;
+        m_index = m_files.size() + m_selected_files.size() - m_scroll;
     }
 }
 

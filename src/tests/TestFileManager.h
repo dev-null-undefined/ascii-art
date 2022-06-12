@@ -1,0 +1,16 @@
+#ifndef ASCII_ART_TESTFILEMANAGER_H_DF8BDBF33B074F8BBB56E061B3C20C8F
+#define ASCII_ART_TESTFILEMANAGER_H_DF8BDBF33B074F8BBB56E061B3C20C8F
+
+
+#include "Test.h"
+
+class TestFileManager : public Test {
+  public:
+
+    int runTest() override;
+
+    TestFileManager() : Test("FileManager") {}
+};
+
+
+#endif //ASCII_ART_TESTFILEMANAGER_H_DF8BDBF33B074F8BBB56E061B3C20C8F
