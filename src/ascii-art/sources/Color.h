@@ -42,6 +42,10 @@ class Color {
 
     void setAlpha(number alpha);
 
+    /**
+     * Normalize each part of color to the max/min 0-255 values
+     * @return new normalized color.
+     */
     Color normalize() const;
 
   private:

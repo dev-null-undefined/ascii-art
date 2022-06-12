@@ -42,7 +42,7 @@ all: release doc
 doc: Doxyfile
 	doxygen Doxyfile
 
-debug: CXXFLAGS += -g -pg -O0 -DDEBUG -DLOG_LEVEL=0 -fsanitize=address -fPIE -fno-omit-frame-pointer
+debug: CXXFLAGS += -g -pg -O0 -DDEBUG -DLOG_LEVEL=0 -fPIE -fno-omit-frame-pointer # -fsanitize=address
 debug: LDFLAGS +=
 debug: compile
 

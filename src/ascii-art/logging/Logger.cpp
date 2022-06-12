@@ -27,8 +27,10 @@ void Logger::log(const std::string & message, LogLevel logLevel) {
 
 
 Logger::~Logger() {
-    if (m_file && m_file->is_open()) {
-        m_file->flush();
+    if (m_file) {
+        if (m_file->is_open()) {
+            m_file->flush();
+        }
         m_file->close();
     }
 }
