@@ -292,8 +292,7 @@ void FileMenu::update_index() {
         if (m_scroll >= m_files.size() + m_selected_files.size()) {
             m_scroll = 0;
         }
-        m_index = m_files.size() +
-                  m_selected_files.size() - 1 - m_scroll;
+        m_index = m_files.size() + m_selected_files.size() - m_scroll;
     }
 }
 
