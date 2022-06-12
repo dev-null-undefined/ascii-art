@@ -1,4 +1,4 @@
-.PHONY: all clean run compile release debug fast fast-debug doc
+.PHONY: all clean run compile release debug fast fast-debug doc perf-compile fast-perf report benchmark directories
 .DEFAULT_GOAL = all
 PROJECT = ascii-art
 VERSION = v0.1.0
@@ -31,6 +31,9 @@ fast:
 fast-debug:
 	$(MAKE) -j12 debug
 
+fast-perf:
+	$(MAKE) -j12 perf-compile
+
 all: release doc
 
 doc: Doxyfile
@@ -39,6 +42,11 @@ doc: Doxyfile
 debug: CXXFLAGS += -g -pg -O0 -DDEBUG -DLOG_LEVEL=0 -fsanitize=address -fPIE -fno-omit-frame-pointer
 debug: LDFLAGS +=
 debug: compile
+
+perf-compile: CXXFLAGS += -g -pg -O2 -fno-omit-frame-pointer
+perf-compile: LDFLAGS +=
+perf-compile: compile
+
 
 release: CXXFLAGS += -O2
 release: compile
@@ -52,6 +60,9 @@ endif
 
 run: fast
 	./$(BIN_DIR)/$(PROJECT) $(RUN_ARGS)
+
+benchmark: fast-perf
+	perf record -g ./$(BIN_DIR)/$(PROJECT) ./examples
 
 
 $(OUT_DIR)/%.o:
@@ -84,7 +95,6 @@ $(1)
 
 endef
 
-deps: $(MAKE_INCLUDE)/deps
 
 $(MAKE_INCLUDE)/deps: $(MAKE_INCLUDE) $(SOURCE_DIR) $(SOURCE_FILES)
 	: > $(MAKE_INCLUDE)/deps

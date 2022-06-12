@@ -5,6 +5,7 @@
 #include <cmath>
 #include <cstdlib>
 #include <stdexcept>
+#include "Vector.h"
 
 template<typename T>
 class Matrix {
