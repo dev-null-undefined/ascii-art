@@ -1,6 +1,6 @@
 var classFileMenu =
 [
-    [ "FileMenu", "classFileMenu.html#afae4b14ea9d8c657b6dfdf568efc085a", null ],
+    [ "FileMenu", "classFileMenu.html#ab666b22609a0c0489324ab838805eb43", null ],
     [ "~FileMenu", "classFileMenu.html#a3a2997b808b2dec197d4c88fb16770c8", null ],
     [ "getRegex", "classFileMenu.html#ab47facecce8a6c74c786347ce62dff97", null ],
     [ "getSelectedFiles", "classFileMenu.html#a8d68bdab0a9260bea8fe1d56a9306372", null ],
@@ -24,5 +24,6 @@ var classFileMenu =
     [ "m_window", "classFileMenu.html#a61ab626b1e2f8fd5de8e21ab5df8d752", null ],
     [ "m_window_size", "classFileMenu.html#ae81482b3153267239bdaffab1832e82d", null ],
     [ "MINIMAL_GAP", "classFileMenu.html#aa82fd114b8f1d0397bd76ae627898658", null ],
+    [ "MINIMUM_SCREEN_SIZE", "classFileMenu.html#a249db01d6125ac2299c9f8e5e77233ec", null ],
     [ "SELECTED_COLOR", "classFileMenu.html#ad835c9a2844c6fa94fbc85b897cb905b", null ]
 ];

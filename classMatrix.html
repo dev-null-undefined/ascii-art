@@ -145,6 +145,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae86c488dcbf855c0c0acd46b8bea1ed6"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#ae86c488dcbf855c0c0acd46b8bea1ed6">at</a> (<a class="el" href="structVector.html">Vector</a> position) const</td></tr>
 <tr class="separator:ae86c488dcbf855c0c0acd46b8bea1ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1229b6585c0acd2bcce137167eff38de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMatrix.html">Matrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatrix.html#a1229b6585c0acd2bcce137167eff38de">resize</a> (<a class="el" href="structVector.html">Vector</a> new_size, double scale_multiplier=1.0) const</td></tr>
+<tr class="memdesc:a1229b6585c0acd2bcce137167eff38de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize matrix to new size using linear average.  <a href="classMatrix.html#a1229b6585c0acd2bcce137167eff38de">More...</a><br /></td></tr>
 <tr class="separator:a1229b6585c0acd2bcce137167eff38de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -512,14 +513,24 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Resize matrix to new size using linear average. </p>
+<p>Resize matrix to new size using linear average while keeping the same aspect ratio as original. The new size is calculated using the <a class="el" href="structVector.html#a0e88e95842d85b4c62137d218ce81563" title="Calculate maximum Vector size that would fit into the maximum Vector param.">Vector::resizeWithAspectRation()</a>. With the original being the current <a class="el" href="classMatrix.html">Matrix</a> size. And the maximum new_size. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">new_size</td><td>Maximum possible size for the new <a class="el" href="classMatrix.html">Matrix</a>. </td></tr>
+    <tr><td class="paramname">scale_multiplier</td><td>Scale multiplier to apply to the ratio. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>new <a class="el" href="classMatrix.html">Matrix</a> with modified size and values calculated using linear average. </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classMatrix_a1229b6585c0acd2bcce137167eff38de_icgraph.png" border="0" usemap="#classMatrix_a1229b6585c0acd2bcce137167eff38de_icgraph" alt=""/></div>
 <map name="classMatrix_a1229b6585c0acd2bcce137167eff38de_icgraph" id="classMatrix_a1229b6585c0acd2bcce137167eff38de_icgraph">
-<area shape="rect" title=" " alt="" coords="332,5,443,32"/>
-<area shape="rect" href="classGallery.html#a25777aea40c19bcb746979ee6d75951c" title=" " alt="" coords="163,5,284,32"/>
-<area shape="rect" href="classGallery.html#ae78af5e01a106a5dcee6e853775d4e54" title=" " alt="" coords="5,5,115,32"/>
+<area shape="rect" title="Resize matrix to new size using linear average." alt="" coords="332,5,443,32"/>
+<area shape="rect" href="classGallery.html#a25777aea40c19bcb746979ee6d75951c" title="Render new frame of scene." alt="" coords="163,5,284,32"/>
+<area shape="rect" href="classGallery.html#ae78af5e01a106a5dcee6e853775d4e54" title="Handle key input." alt="" coords="5,5,115,32"/>
 </map>
 </div>
 
@@ -632,7 +643,7 @@ template&lt;typename T &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classMatrix.html">Matrix</a></li>
-    <li class="footer">Generated on Sun Jun 12 2022 19:55:52 for ascii-art by
+    <li class="footer">Generated on Sun Jun 12 2022 22:07:54 for ascii-art by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

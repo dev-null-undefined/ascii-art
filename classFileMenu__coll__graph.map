@@ -1,6 +1,6 @@
 <map id="FileMenu" name="FileMenu">
-<area shape="rect" id="node1" title=" " alt="" coords="153,365,307,751"/>
-<area shape="rect" id="node2" href="$classMenu.html" title=" " alt="" coords="5,79,100,229"/>
+<area shape="rect" id="node1" title=" " alt="" coords="153,380,307,765"/>
+<area shape="rect" id="node2" href="$classMenu.html" title="Virtual class representing single ncurses scene/menu." alt="" coords="5,79,100,229"/>
 <area shape="rect" id="node3" href="$structVector.html" title="A vector class." alt="" coords="125,5,335,303"/>
-<area shape="rect" id="node4" href="$classColor.html" title=" " alt="" coords="359,20,483,288"/>
+<area shape="rect" id="node4" href="$classColor.html" title=" " alt="" coords="368,20,492,288"/>
 </map>

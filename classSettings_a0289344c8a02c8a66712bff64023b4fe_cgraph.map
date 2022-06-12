@@ -1,11 +1,11 @@
 <map id="Settings::maxValue" name="Settings::maxValue">
 <area shape="rect" id="node1" title="Maximum possible that could be returned by Settings::colorValue(const Color &amp;)." alt="" coords="5,119,153,145"/>
 <area shape="rect" id="node2" href="$classSettings.html#ac1a553bc915a982882e6cf33af491982" title="Applies filters and returns the resulting sum of the color components." alt="" coords="201,119,352,145"/>
-<area shape="rect" id="node3" href="$classBasicFilter.html#a53dd02e4446bf9be681f9e2fea06ee55" title=" " alt="" coords="400,93,535,120"/>
+<area shape="rect" id="node3" href="$classBasicFilter.html#a53dd02e4446bf9be681f9e2fea06ee55" title="Apply filter to color." alt="" coords="400,93,535,120"/>
 <area shape="rect" id="node4" href="$classColor.html#a12bb22611f2d16f78d1743d81e5ec654" title=" " alt="" coords="591,5,713,32"/>
 <area shape="rect" id="node5" href="$classColor.html#a67f3bba3742cf37c11e48bf8f60d89fa" title=" " alt="" coords="595,68,709,95"/>
 <area shape="rect" id="node6" href="$classColor.html#aee907dc6ce04385d4988a5b1221f2e3b" title=" " alt="" coords="590,144,714,171"/>
 <area shape="rect" id="node7" href="$classColor.html#a7871f5a72a9f40efd31ce53fa403fffe" title=" " alt="" coords="597,195,707,221"/>
-<area shape="rect" id="node8" href="$classColor.html#ac3a32ddc028428076d68debd2bec8eec" title=" " alt="" coords="403,245,532,272"/>
+<area shape="rect" id="node8" href="$classColor.html#ac3a32ddc028428076d68debd2bec8eec" title="Normalize each part of color to the max/min 0&#45;255 values." alt="" coords="403,245,532,272"/>
 <area shape="rect" id="node9" href="$Color_8cpp.html#a54c2579ab3a14c8be20185336ab9e3b3" title=" " alt="" coords="583,245,721,272"/>
 </map>

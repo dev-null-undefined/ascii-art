@@ -1,5 +1,5 @@
 <map id="Menu" name="Menu">
-<area shape="rect" id="node1" title=" " alt="" coords="137,5,231,156"/>
-<area shape="rect" id="node2" href="$classFileMenu.html" title=" " alt="" coords="5,219,160,633"/>
-<area shape="rect" id="node3" href="$classGallery.html" title=" " alt="" coords="185,204,389,648"/>
+<area shape="rect" id="node1" title="Virtual class representing single ncurses scene/menu." alt="" coords="164,5,259,156"/>
+<area shape="rect" id="node2" href="$classFileMenu.html" title=" " alt="" coords="5,211,196,641"/>
+<area shape="rect" id="node3" href="$classGallery.html" title=" " alt="" coords="220,204,424,648"/>
 </map>

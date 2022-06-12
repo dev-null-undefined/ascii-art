@@ -1,6 +1,6 @@
 <map id="size_t_cast" name="size_t_cast">
 <area shape="rect" id="node1" title=" " alt="" coords="460,31,555,57"/>
-<area shape="rect" id="node2" href="$structVector.html#a0e88e95842d85b4c62137d218ce81563" title=" " alt="" coords="228,23,412,65"/>
-<area shape="rect" id="node3" href="$classMatrix.html#a1229b6585c0acd2bcce137167eff38de" title=" " alt="" coords="5,5,180,32"/>
+<area shape="rect" id="node2" href="$structVector.html#a0e88e95842d85b4c62137d218ce81563" title="Calculate maximum Vector size that would fit into the maximum Vector param." alt="" coords="228,23,412,65"/>
+<area shape="rect" id="node3" href="$classMatrix.html#a1229b6585c0acd2bcce137167eff38de" title="Resize matrix to new size using linear average." alt="" coords="5,5,180,32"/>
 <area shape="rect" id="node4" href="$classTestVector.html#a03ed36b6837fbbeb352f72f6a61eb07d" title=" " alt="" coords="21,56,165,83"/>
 </map>

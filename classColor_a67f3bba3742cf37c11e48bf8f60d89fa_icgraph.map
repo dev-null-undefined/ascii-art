@@ -1,11 +1,11 @@
 <map id="Color::getBlue" name="Color::getBlue">
 <area shape="rect" id="node1" title=" " alt="" coords="849,107,964,133"/>
-<area shape="rect" id="node2" href="$classBasicFilter.html#a53dd02e4446bf9be681f9e2fea06ee55" title=" " alt="" coords="667,81,801,108"/>
+<area shape="rect" id="node2" href="$classBasicFilter.html#a53dd02e4446bf9be681f9e2fea06ee55" title="Apply filter to color." alt="" coords="667,81,801,108"/>
 <area shape="rect" id="node3" href="$classSettings.html#ac1a553bc915a982882e6cf33af491982" title="Applies filters and returns the resulting sum of the color components." alt="" coords="456,31,607,57"/>
 <area shape="rect" id="node5" href="$classSettings.html#a940976240a0acc2e16a83c646180f314" title="Get rounded color that would be exactly equivalent to char returned by Settings::getChar(const Color ..." alt="" coords="5,81,200,108"/>
-<area shape="rect" id="node8" href="$classGallery.html#a25777aea40c19bcb746979ee6d75951c" title=" " alt="" coords="673,183,795,209"/>
+<area shape="rect" id="node8" href="$classGallery.html#a25777aea40c19bcb746979ee6d75951c" title="Render new frame of scene." alt="" coords="673,183,795,209"/>
 <area shape="rect" id="node7" href="$classSettings.html#a7fbf289a31ac7211f1eb78750ddb1e74" title="Get color after color Filter is applied." alt="" coords="444,81,619,108"/>
 <area shape="rect" id="node4" href="$classSettings.html#a58da5fdd52c2f6a3c70cbf3e8d5babf3" title="Calculates closes char to give color based on the Settings::maxValue() and Settings::colorValue(const..." alt="" coords="35,5,170,32"/>
 <area shape="rect" id="node6" href="$classSettings.html#a0289344c8a02c8a66712bff64023b4fe" title="Maximum possible that could be returned by Settings::colorValue(const Color &amp;)." alt="" coords="248,31,396,57"/>
-<area shape="rect" id="node9" href="$classGallery.html#ae78af5e01a106a5dcee6e853775d4e54" title=" " alt="" coords="477,183,586,209"/>
+<area shape="rect" id="node9" href="$classGallery.html#ae78af5e01a106a5dcee6e853775d4e54" title="Handle key input." alt="" coords="477,183,586,209"/>
 </map>

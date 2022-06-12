@@ -2,12 +2,12 @@
 <area shape="rect" id="node1" title="Input handling loop." alt="" coords="5,107,176,133"/>
 <area shape="rect" id="node2" href="$Application_8cpp.html#afdf87bba516776c08119649e981d34f2" title=" " alt="" coords="299,5,342,32"/>
 <area shape="rect" id="node3" href="$classApplication.html#a4164012b8fcc4d4e800af7ca2c39e0c4" title="Returns size of the terminal." alt="" coords="224,56,417,83"/>
-<area shape="rect" id="node4" href="$classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title=" " alt="" coords="493,157,588,184"/>
+<area shape="rect" id="node4" href="$classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title="Log method to log message." alt="" coords="493,157,588,184"/>
 <area shape="rect" id="node8" href="$LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="700,107,779,133"/>
 <area shape="rect" id="node9" href="$classApplication.html#a8cb17cae2c930fa642dd402e109b7040" title="Recursively adds sources from given path and all subdirectories." alt="" coords="225,208,416,235"/>
-<area shape="rect" id="node5" href="$classLogger.html#acebb37f5538780e6c14f13de6ec497bc" title=" " alt="" coords="664,208,815,235"/>
+<area shape="rect" id="node5" href="$classLogger.html#acebb37f5538780e6c14f13de6ec497bc" title="Get the singleton Logger instance." alt="" coords="664,208,815,235"/>
 <area shape="rect" id="node7" href="$classLogger.html#afba40734614c0379be107002dc5d45ae" title=" " alt="" coords="687,157,791,184"/>
 <area shape="rect" id="node6" href="$classLogger.html#add0f34d4c753c86af8074840a72366b3" title=" " alt="" coords="863,208,981,235"/>
-<area shape="rect" id="node10" href="$classDataSourceFactory.html#ac540dff85527bf934d656dcbe59ae82d" title=" " alt="" coords="465,230,616,271"/>
+<area shape="rect" id="node10" href="$classDataSourceFactory.html#ac540dff85527bf934d656dcbe59ae82d" title="Returns shared_ptr to DataSource based on filename extension." alt="" coords="465,230,616,271"/>
 <area shape="rect" id="node11" href="$DataSourceFactory_8cpp.html#aff875062104f1676411c5f9ae67d6354" title=" " alt="" coords="695,259,783,285"/>
 </map>

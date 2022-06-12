@@ -90,22 +90,23 @@ $(document).ready(function(){initNavTree('LogLevel_8h_source.html',''); initResi
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define ASCII_ART_LOGLEVEL_H_D4B07D87413A4CE99D71099FD03E2FBF</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">    5</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> {</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a>,</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a551b723eafd6a31d444fcb2f5920fbd3">INFO</a>,</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a32bd8a1db2275458673903bdb84cb277">WARN</a>,</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9abb1ca97ec761fc37101737ba0aa2e7c5">ERROR</a>,</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a19da7170bea36556dde582519795f3fc">FATAL</a></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;};</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;std::string <a class="code" href="LogLevel_8h.html#ab92295a2eda07d5ec770244f8e47dbb7">to_string</a>(<a class="code" href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> level);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif //ASCII_ART_LOGLEVEL_H_D4B07D87413A4CE99D71099FD03E2FBF</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">   10</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a2d3e4144aa384b18849ab9a8abad74d6">TRACE</a> = 0,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a551b723eafd6a31d444fcb2f5920fbd3">INFO</a> = 1,</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a32bd8a1db2275458673903bdb84cb277">WARN</a> = 2,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9abb1ca97ec761fc37101737ba0aa2e7c5">ERROR</a> = 3,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a19da7170bea36556dde582519795f3fc">FATAL</a> = 4</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;std::string <a class="code" href="LogLevel_8h.html#ab92295a2eda07d5ec770244f8e47dbb7">to_string</a>(<a class="code" href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> level);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif //ASCII_ART_LOGLEVEL_H_D4B07D87413A4CE99D71099FD03E2FBF</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aLogLevel_8h_html_aca1fd1d8935433e6ba2e3918214e07f9abb1ca97ec761fc37101737ba0aa2e7c5"><div class="ttname"><a href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9abb1ca97ec761fc37101737ba0aa2e7c5">LogLevel::ERROR</a></div><div class="ttdeci">@ ERROR</div></div>
 <div class="ttc" id="aLogLevel_8h_html_aca1fd1d8935433e6ba2e3918214e07f9a551b723eafd6a31d444fcb2f5920fbd3"><div class="ttname"><a href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a551b723eafd6a31d444fcb2f5920fbd3">LogLevel::INFO</a></div><div class="ttdeci">@ INFO</div></div>
-<div class="ttc" id="aLogLevel_8h_html_aca1fd1d8935433e6ba2e3918214e07f9"><div class="ttname"><a href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a></div><div class="ttdeci">LogLevel</div><div class="ttdef"><b>Definition:</b> LogLevel.h:5</div></div>
+<div class="ttc" id="aLogLevel_8h_html_aca1fd1d8935433e6ba2e3918214e07f9"><div class="ttname"><a href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a></div><div class="ttdeci">LogLevel</div><div class="ttdoc">Log levels in increasing order Used for setting the level of verbosity of the Logger.</div><div class="ttdef"><b>Definition:</b> LogLevel.h:10</div></div>
 <div class="ttc" id="aLogLevel_8h_html_aca1fd1d8935433e6ba2e3918214e07f9a19da7170bea36556dde582519795f3fc"><div class="ttname"><a href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a19da7170bea36556dde582519795f3fc">LogLevel::FATAL</a></div><div class="ttdeci">@ FATAL</div></div>
 <div class="ttc" id="aLogLevel_8h_html_aca1fd1d8935433e6ba2e3918214e07f9a32bd8a1db2275458673903bdb84cb277"><div class="ttname"><a href="LogLevel_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a32bd8a1db2275458673903bdb84cb277">LogLevel::WARN</a></div><div class="ttdeci">@ WARN</div></div>
 <div class="ttc" id="aLogLevel_8cpp_html_ab92295a2eda07d5ec770244f8e47dbb7"><div class="ttname"><a href="LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7">to_string</a></div><div class="ttdeci">std::string to_string(LogLevel level)</div><div class="ttdef"><b>Definition:</b> LogLevel.cpp:2</div></div>
@@ -116,7 +117,7 @@ $(document).ready(function(){initNavTree('LogLevel_8h_source.html',''); initResi
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e54a2744356c30f22bb916660f7ffa66.html">ascii-art</a></li><li class="navelem"><a class="el" href="dir_c6699d49cdf6c80e2990ff8bc23defa3.html">logging</a></li><li class="navelem"><a class="el" href="LogLevel_8h.html">LogLevel.h</a></li>
-    <li class="footer">Generated on Sun Jun 12 2022 19:55:52 for ascii-art by
+    <li class="footer">Generated on Sun Jun 12 2022 22:07:54 for ascii-art by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

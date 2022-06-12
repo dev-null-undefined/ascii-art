@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('classFileMenu.html',''); initResizable
 
 <p>This is the complete list of members for <a class="el" href="classFileMenu.html">FileMenu</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classFileMenu.html#afae4b14ea9d8c657b6dfdf568efc085a">FileMenu</a>(const std::string &amp;m_regex=&quot;~/.*/.*(png|jpg|jpeg)$&quot;)</td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"><span class="mlabel">explicit</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classFileMenu.html#ab666b22609a0c0489324ab838805eb43">FileMenu</a>(const std::string &amp;m_regex=&quot;~/Images/.*(png|jpg|jpeg)$&quot;)</td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"><span class="mlabel">explicit</span></td></tr>
   <tr><td class="entry"><a class="el" href="classFileMenu.html#ab47facecce8a6c74c786347ce62dff97">getRegex</a>() const</td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classFileMenu.html#a8d68bdab0a9260bea8fe1d56a9306372">getSelectedFiles</a>() const</td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classFileMenu.html#a5fd739a48446596668124499730417e8">handle_mouse</a>()</td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
@@ -106,21 +106,22 @@ $(document).ready(function(){initNavTree('classFileMenu.html',''); initResizable
   <tr class="even"><td class="entry"><a class="el" href="classFileMenu.html#a61ab626b1e2f8fd5de8e21ab5df8d752">m_window</a></td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="classFileMenu.html#ae81482b3153267239bdaffab1832e82d">m_window_size</a></td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classFileMenu.html#aa82fd114b8f1d0397bd76ae627898658">MINIMAL_GAP</a></td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classFileMenu.html#a63bf526109b2209f69c1b6c4094813da">resize</a>(Vector size) override</td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classFileMenu.html#ad835c9a2844c6fa94fbc85b897cb905b">SELECTED_COLOR</a></td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classFileMenu.html#a1738a742bfbe5e1f98690cbb6a48a4d7">selectFile</a>(const std::string_view &amp;view)</td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classFileMenu.html#a69657f691506ab820b22cf0af010d818">show</a>(Vector initial_size) override</td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classFileMenu.html#a95c0d509b88e729d0cbe1fadb60376ed">update</a>() const override</td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classFileMenu.html#a6504cb078a595249e957827856cefd11">update_files</a>(const std::string &amp;regex)</td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classFileMenu.html#a521536927bc16505a0a54d67aaf82ddf">update_index</a>()</td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classFileMenu.html#a3a2997b808b2dec197d4c88fb16770c8">~FileMenu</a>() override</td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classMenu.html#a8fc4104b08c9a24d1dab18b82a82b7da">~Menu</a>()=default</td><td class="entry"><a class="el" href="classMenu.html">Menu</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classFileMenu.html#a249db01d6125ac2299c9f8e5e77233ec">MINIMUM_SCREEN_SIZE</a></td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classFileMenu.html#a63bf526109b2209f69c1b6c4094813da">resize</a>(Vector size) override</td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classFileMenu.html#ad835c9a2844c6fa94fbc85b897cb905b">SELECTED_COLOR</a></td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classFileMenu.html#a1738a742bfbe5e1f98690cbb6a48a4d7">selectFile</a>(const std::string_view &amp;view)</td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classFileMenu.html#a69657f691506ab820b22cf0af010d818">show</a>(Vector initial_size) override</td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classFileMenu.html#a95c0d509b88e729d0cbe1fadb60376ed">update</a>() const override</td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classFileMenu.html#a6504cb078a595249e957827856cefd11">update_files</a>(const std::string &amp;regex)</td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classFileMenu.html#a521536927bc16505a0a54d67aaf82ddf">update_index</a>()</td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classFileMenu.html#a3a2997b808b2dec197d4c88fb16770c8">~FileMenu</a>() override</td><td class="entry"><a class="el" href="classFileMenu.html">FileMenu</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classMenu.html#a8fc4104b08c9a24d1dab18b82a82b7da">~Menu</a>()=default</td><td class="entry"><a class="el" href="classMenu.html">Menu</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Jun 12 2022 19:55:52 for ascii-art by
+    <li class="footer">Generated on Sun Jun 12 2022 22:07:54 for ascii-art by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

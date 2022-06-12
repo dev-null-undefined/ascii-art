@@ -1,4 +1,4 @@
 <map id="DataSourceFactory::getDataSource" name="DataSourceFactory::getDataSource">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,156,47"/>
+<area shape="rect" id="node1" title="Returns shared_ptr to DataSource based on filename extension." alt="" coords="5,5,156,47"/>
 <area shape="rect" id="node2" href="$DataSourceFactory_8cpp.html#aff875062104f1676411c5f9ae67d6354" title=" " alt="" coords="204,13,292,39"/>
 </map>

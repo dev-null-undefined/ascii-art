@@ -1,6 +1,10 @@
 <map id="FileMenu::resize" name="FileMenu::resize">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,133,32"/>
-<area shape="rect" id="node2" href="$classFileMenu.html#a95c0d509b88e729d0cbe1fadb60376ed" title=" " alt="" coords="181,5,316,32"/>
-<area shape="rect" id="node3" href="$Test_8h.html#ac6432cfc2b1e2431647226ead8797811" title=" " alt="" coords="364,5,416,32"/>
-<area shape="rect" id="node4" href="$LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="464,5,543,32"/>
+<area shape="rect" id="node1" title="Resize method invoked on terminal resize." alt="" coords="5,107,133,133"/>
+<area shape="rect" id="node2" href="$classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title="Log method to log message." alt="" coords="201,69,296,96"/>
+<area shape="rect" id="node7" href="$classFileMenu.html#a95c0d509b88e729d0cbe1fadb60376ed" title="Render new frame of scene." alt="" coords="181,132,316,159"/>
+<area shape="rect" id="node3" href="$classLogger.html#acebb37f5538780e6c14f13de6ec497bc" title="Get the singleton Logger instance." alt="" coords="364,5,515,32"/>
+<area shape="rect" id="node5" href="$classLogger.html#afba40734614c0379be107002dc5d45ae" title=" " alt="" coords="387,56,491,83"/>
+<area shape="rect" id="node6" href="$LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="583,132,661,159"/>
+<area shape="rect" id="node4" href="$classLogger.html#add0f34d4c753c86af8074840a72366b3" title=" " alt="" coords="563,5,681,32"/>
+<area shape="rect" id="node8" href="$Test_8h.html#ac6432cfc2b1e2431647226ead8797811" title=" " alt="" coords="413,157,465,184"/>
 </map>

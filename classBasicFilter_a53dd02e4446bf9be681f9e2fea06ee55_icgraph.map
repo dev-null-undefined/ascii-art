@@ -1,5 +1,5 @@
 <map id="BasicFilter::apply" name="BasicFilter::apply">
-<area shape="rect" id="node1" title=" " alt="" coords="667,56,801,83"/>
+<area shape="rect" id="node1" title="Apply filter to color." alt="" coords="667,56,801,83"/>
 <area shape="rect" id="node2" href="$classSettings.html#ac1a553bc915a982882e6cf33af491982" title="Applies filters and returns the resulting sum of the color components." alt="" coords="456,31,607,57"/>
 <area shape="rect" id="node6" href="$classSettings.html#a7fbf289a31ac7211f1eb78750ddb1e74" title="Get color after color Filter is applied." alt="" coords="444,81,619,108"/>
 <area shape="rect" id="node3" href="$classSettings.html#a58da5fdd52c2f6a3c70cbf3e8d5babf3" title="Calculates closes char to give color based on the Settings::maxValue() and Settings::colorValue(const..." alt="" coords="35,5,170,32"/>

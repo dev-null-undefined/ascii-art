@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"classFrame.html":[0,0,11],
 "classFrame.html#a0e6884e77aa2641d6add98ba13dff9aa":[0,0,11,5],
 "classFrame.html#a1d99c5a354bcd7be2ca1db2014dd5b65":[0,0,11,2],
 "classFrame.html#a2f69da5bf4e6b4afeefe1eac320ca6e0":[0,0,11,1],

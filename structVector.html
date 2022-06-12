@@ -136,6 +136,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a0e88e95842d85b4c62137d218ce81563"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structVector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVector.html#a0e88e95842d85b4c62137d218ce81563">resizeWithAspectRation</a> (<a class="el" href="structVector.html">Vector</a> maximum, <a class="el" href="structVector.html">Vector</a> original, double aspectMultiplier=1.0)</td></tr>
+<tr class="memdesc:a0e88e95842d85b4c62137d218ce81563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate maximum <a class="el" href="structVector.html" title="A vector class.">Vector</a> size that would fit into the <em>maximum</em> <a class="el" href="structVector.html" title="A vector class.">Vector</a> param.  <a href="structVector.html#a0e88e95842d85b4c62137d218ce81563">More...</a><br /></td></tr>
 <tr class="separator:a0e88e95842d85b4c62137d218ce81563"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -148,8 +149,10 @@ Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:aaa9241a32bf2b0a16bb2de74456dc956"><td class="memItemLeft" align="right" valign="top">static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVector.html#aaa9241a32bf2b0a16bb2de74456dc956">MINIMUM_SCALE_FACTOR</a> = 0.2</td></tr>
+<tr class="memdesc:aaa9241a32bf2b0a16bb2de74456dc956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum aspectMultiplier for the <a class="el" href="structVector.html#a0e88e95842d85b4c62137d218ce81563" title="Calculate maximum Vector size that would fit into the maximum Vector param.">Vector::resizeWithAspectRation</a> method.  <a href="structVector.html#aaa9241a32bf2b0a16bb2de74456dc956">More...</a><br /></td></tr>
 <tr class="separator:aaa9241a32bf2b0a16bb2de74456dc956"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7c97b3563065b0a5935dbd25d7aa153"><td class="memItemLeft" align="right" valign="top">static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVector.html#ae7c97b3563065b0a5935dbd25d7aa153">MAXIMUM_SCALE_FACTOR</a> = 4</td></tr>
+<tr class="memdesc:ae7c97b3563065b0a5935dbd25d7aa153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum aspectMultiplier for the <a class="el" href="structVector.html#a0e88e95842d85b4c62137d218ce81563" title="Calculate maximum Vector size that would fit into the maximum Vector param.">Vector::resizeWithAspectRation</a> method.  <a href="structVector.html#ae7c97b3563065b0a5935dbd25d7aa153">More...</a><br /></td></tr>
 <tr class="separator:ae7c97b3563065b0a5935dbd25d7aa153"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -476,12 +479,23 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Calculate maximum <a class="el" href="structVector.html" title="A vector class.">Vector</a> size that would fit into the <em>maximum</em> <a class="el" href="structVector.html" title="A vector class.">Vector</a> param. </p>
+<p>Calculate maximum <a class="el" href="structVector.html" title="A vector class.">Vector</a> while keeping the same sides ratios as the <em>original</em> <a class="el" href="structVector.html" title="A vector class.">Vector</a> multiplied by the <em>aspectMultiplier</em>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">maximum</td><td>Maximum size for the new <a class="el" href="structVector.html" title="A vector class.">Vector</a> possible. </td></tr>
+    <tr><td class="paramname">original</td><td><a class="el" href="structVector.html" title="A vector class.">Vector</a> to resize. </td></tr>
+    <tr><td class="paramname">aspectMultiplier</td><td>Aspect ratio multiplier to multiply the ratio by. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Resized <a class="el" href="structVector.html" title="A vector class.">Vector</a> not bigger than the <em>maximum</em> with same ratio as <em>original</em>. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="structVector_a0e88e95842d85b4c62137d218ce81563_cgraph.png" border="0" usemap="#structVector_a0e88e95842d85b4c62137d218ce81563_cgraph" alt=""/></div>
 <map name="structVector_a0e88e95842d85b4c62137d218ce81563_cgraph" id="structVector_a0e88e95842d85b4c62137d218ce81563_cgraph">
-<area shape="rect" title=" " alt="" coords="5,49,189,90"/>
+<area shape="rect" title="Calculate maximum Vector size that would fit into the maximum Vector param." alt="" coords="5,49,189,90"/>
 <area shape="rect" href="Vector_8cpp.html#aa18558ab8c1c2d61857ce90a91579efd" title=" " alt="" coords="237,5,337,32"/>
 <area shape="rect" href="Vector_8cpp.html#aa117796a5016327fa395d60e0efa91a6" title=" " alt="" coords="240,56,335,83"/>
 <area shape="rect" href="LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="248,107,327,133"/>
@@ -492,8 +506,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="structVector_a0e88e95842d85b4c62137d218ce81563_icgraph.png" border="0" usemap="#structVector_a0e88e95842d85b4c62137d218ce81563_icgraph" alt=""/></div>
 <map name="structVector_a0e88e95842d85b4c62137d218ce81563_icgraph" id="structVector_a0e88e95842d85b4c62137d218ce81563_icgraph">
-<area shape="rect" title=" " alt="" coords="228,23,412,65"/>
-<area shape="rect" href="classMatrix.html#a1229b6585c0acd2bcce137167eff38de" title=" " alt="" coords="5,5,180,32"/>
+<area shape="rect" title="Calculate maximum Vector size that would fit into the maximum Vector param." alt="" coords="228,23,412,65"/>
+<area shape="rect" href="classMatrix.html#a1229b6585c0acd2bcce137167eff38de" title="Resize matrix to new size using linear average." alt="" coords="5,5,180,32"/>
 <area shape="rect" href="classTestVector.html#a03ed36b6837fbbeb352f72f6a61eb07d" title=" " alt="" coords="21,56,165,83"/>
 </map>
 </div>
@@ -549,6 +563,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Maximum aspectMultiplier for the <a class="el" href="structVector.html#a0e88e95842d85b4c62137d218ce81563" title="Calculate maximum Vector size that would fit into the maximum Vector param.">Vector::resizeWithAspectRation</a> method. </p>
+
 </div>
 </div>
 <a id="aaa9241a32bf2b0a16bb2de74456dc956"></a>
@@ -571,6 +587,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Minimum aspectMultiplier for the <a class="el" href="structVector.html#a0e88e95842d85b4c62137d218ce81563" title="Calculate maximum Vector size that would fit into the maximum Vector param.">Vector::resizeWithAspectRation</a> method. </p>
+
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
@@ -583,7 +601,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="structVector.html">Vector</a></li>
-    <li class="footer">Generated on Sun Jun 12 2022 19:55:52 for ascii-art by
+    <li class="footer">Generated on Sun Jun 12 2022 22:07:54 for ascii-art by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

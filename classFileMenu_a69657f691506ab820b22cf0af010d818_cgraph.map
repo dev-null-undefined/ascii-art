@@ -1,6 +1,10 @@
 <map id="FileMenu::show" name="FileMenu::show">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,128,32"/>
-<area shape="rect" id="node2" href="$classFileMenu.html#a95c0d509b88e729d0cbe1fadb60376ed" title=" " alt="" coords="176,5,311,32"/>
-<area shape="rect" id="node3" href="$Test_8h.html#ac6432cfc2b1e2431647226ead8797811" title=" " alt="" coords="359,5,411,32"/>
-<area shape="rect" id="node4" href="$LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="459,5,537,32"/>
+<area shape="rect" id="node1" title="Show method used to initialize ncurses windows and private fields of the class." alt="" coords="5,107,128,133"/>
+<area shape="rect" id="node2" href="$classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title="Log method to log message." alt="" coords="196,69,291,96"/>
+<area shape="rect" id="node7" href="$classFileMenu.html#a95c0d509b88e729d0cbe1fadb60376ed" title="Render new frame of scene." alt="" coords="176,132,311,159"/>
+<area shape="rect" id="node3" href="$classLogger.html#acebb37f5538780e6c14f13de6ec497bc" title="Get the singleton Logger instance." alt="" coords="359,5,509,32"/>
+<area shape="rect" id="node5" href="$classLogger.html#afba40734614c0379be107002dc5d45ae" title=" " alt="" coords="382,56,486,83"/>
+<area shape="rect" id="node6" href="$LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="577,132,656,159"/>
+<area shape="rect" id="node4" href="$classLogger.html#add0f34d4c753c86af8074840a72366b3" title=" " alt="" coords="557,5,676,32"/>
+<area shape="rect" id="node8" href="$Test_8h.html#ac6432cfc2b1e2431647226ead8797811" title=" " alt="" coords="408,157,460,184"/>
 </map>

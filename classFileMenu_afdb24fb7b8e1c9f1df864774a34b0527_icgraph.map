@@ -1,5 +1,5 @@
 <map id="FileMenu::key_down" name="FileMenu::key_down">
 <area shape="rect" id="node1" title=" " alt="" coords="408,31,563,57"/>
 <area shape="rect" id="node2" href="$classFileMenu.html#a5fd739a48446596668124499730417e8" title=" " alt="" coords="176,5,360,32"/>
-<area shape="rect" id="node3" href="$classFileMenu.html#a8cfe51677d1b2f2706dff3c36e3c5951" title=" " alt="" coords="5,31,128,57"/>
+<area shape="rect" id="node3" href="$classFileMenu.html#a8cfe51677d1b2f2706dff3c36e3c5951" title="Handle key input." alt="" coords="5,31,128,57"/>
 </map>

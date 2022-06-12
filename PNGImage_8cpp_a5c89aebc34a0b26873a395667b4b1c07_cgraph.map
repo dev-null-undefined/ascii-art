@@ -1,7 +1,7 @@
 <map id="pngWarnHandler" name="pngWarnHandler">
 <area shape="rect" id="node1" title=" " alt="" coords="5,56,136,83"/>
-<area shape="rect" id="node2" href="$classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title=" " alt="" coords="184,56,279,83"/>
-<area shape="rect" id="node3" href="$classLogger.html#acebb37f5538780e6c14f13de6ec497bc" title=" " alt="" coords="327,5,477,32"/>
+<area shape="rect" id="node2" href="$classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title="Log method to log message." alt="" coords="184,56,279,83"/>
+<area shape="rect" id="node3" href="$classLogger.html#acebb37f5538780e6c14f13de6ec497bc" title="Get the singleton Logger instance." alt="" coords="327,5,477,32"/>
 <area shape="rect" id="node5" href="$classLogger.html#afba40734614c0379be107002dc5d45ae" title=" " alt="" coords="350,56,454,83"/>
 <area shape="rect" id="node6" href="$LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="363,107,441,133"/>
 <area shape="rect" id="node4" href="$classLogger.html#add0f34d4c753c86af8074840a72366b3" title=" " alt="" coords="525,5,644,32"/>

@@ -90,15 +90,18 @@ $(document).ready(function(){initNavTree('classMenu.html',''); initResizable(); 
 </div><!--header-->
 <div class="contents">
 
+<p>Virtual class representing single ncurses scene/menu.  
+ <a href="classMenu.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Menu_8h_source.html">Menu.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Menu:</div>
 <div class="dyncontent">
 <div class="center"><img src="classMenu__inherit__graph.png" border="0" usemap="#Menu_inherit__map" alt="Inheritance graph"/></div>
 <map name="Menu_inherit__map" id="Menu_inherit__map">
-<area shape="rect" title=" " alt="" coords="137,5,231,156"/>
-<area shape="rect" href="classFileMenu.html" title=" " alt="" coords="5,219,160,633"/>
-<area shape="rect" href="classGallery.html" title=" " alt="" coords="185,204,389,648"/>
+<area shape="rect" title="Virtual class representing single ncurses scene/menu." alt="" coords="164,5,259,156"/>
+<area shape="rect" href="classFileMenu.html" title=" " alt="" coords="5,211,196,641"/>
+<area shape="rect" href="classGallery.html" title=" " alt="" coords="220,204,424,648"/>
 </map>
 </div>
 <div class="dynheader">
@@ -106,7 +109,7 @@ Collaboration diagram for Menu:</div>
 <div class="dyncontent">
 <div class="center"><img src="classMenu__coll__graph.png" border="0" usemap="#Menu_coll__map" alt="Collaboration graph"/></div>
 <map name="Menu_coll__map" id="Menu_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,100,156"/>
+<area shape="rect" title="Virtual class representing single ncurses scene/menu." alt="" coords="5,5,100,156"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -115,17 +118,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8fc4104b08c9a24d1dab18b82a82b7da"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenu.html#a8fc4104b08c9a24d1dab18b82a82b7da">~Menu</a> ()=default</td></tr>
 <tr class="separator:a8fc4104b08c9a24d1dab18b82a82b7da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b02778b244b727ed865501adffff91a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenu.html#a6b02778b244b727ed865501adffff91a">show</a> (<a class="el" href="structVector.html">Vector</a> initial_size)=0</td></tr>
+<tr class="memdesc:a6b02778b244b727ed865501adffff91a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show method used to initialize ncurses windows and private fields of the class.  <a href="classMenu.html#a6b02778b244b727ed865501adffff91a">More...</a><br /></td></tr>
 <tr class="separator:a6b02778b244b727ed865501adffff91a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa09b3606d651c11045b7928e637dc63"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenu.html#afa09b3606d651c11045b7928e637dc63">resize</a> (<a class="el" href="structVector.html">Vector</a> size)=0</td></tr>
+<tr class="memdesc:afa09b3606d651c11045b7928e637dc63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize method invoked on terminal resize.  <a href="classMenu.html#afa09b3606d651c11045b7928e637dc63">More...</a><br /></td></tr>
 <tr class="separator:afa09b3606d651c11045b7928e637dc63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5a3d1f5978d580165da78cf7ceb92e9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenu.html#ad5a3d1f5978d580165da78cf7ceb92e9">hide</a> ()=0</td></tr>
+<tr class="memdesc:ad5a3d1f5978d580165da78cf7ceb92e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all ncurses windows and private fields.  <a href="classMenu.html#ad5a3d1f5978d580165da78cf7ceb92e9">More...</a><br /></td></tr>
 <tr class="separator:ad5a3d1f5978d580165da78cf7ceb92e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af02eea1dae4b7fa4a63c6d851a1ae03f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenu.html#af02eea1dae4b7fa4a63c6d851a1ae03f">update</a> () const =0</td></tr>
+<tr class="memdesc:af02eea1dae4b7fa4a63c6d851a1ae03f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render new frame of scene.  <a href="classMenu.html#af02eea1dae4b7fa4a63c6d851a1ae03f">More...</a><br /></td></tr>
 <tr class="separator:af02eea1dae4b7fa4a63c6d851a1ae03f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1ad05d80918e71abf45c524dc36e672"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenu.html#ae1ad05d80918e71abf45c524dc36e672">input</a> (int input, bool &amp;handled)=0</td></tr>
+<tr class="memdesc:ae1ad05d80918e71abf45c524dc36e672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle key input.  <a href="classMenu.html#ae1ad05d80918e71abf45c524dc36e672">More...</a><br /></td></tr>
 <tr class="separator:ae1ad05d80918e71abf45c524dc36e672"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Virtual class representing single ncurses scene/menu. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8fc4104b08c9a24d1dab18b82a82b7da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8fc4104b08c9a24d1dab18b82a82b7da">&#9670;&nbsp;</a></span>~Menu()</h2>
 
@@ -175,6 +185,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Clear all ncurses windows and private fields. </p>
+
 <p>Implemented in <a class="el" href="classFileMenu.html#a32c52a2fa869e6531d699350ceca47e3">FileMenu</a>, and <a class="el" href="classGallery.html#a74ee63b8c405b0ff818c7e571752e886">Gallery</a>.</p>
 
 </div>
@@ -213,6 +225,16 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Handle key input. </p>
+<p>This method handles any scene specific key shortcuts. If shortcut was handled it will set the <em>handled</em> bit to true. If the scene also needs redraw after the key stroke it will return true. Returning true also means the key was handled automatically. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">input</td><td>Key code that was pressed. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">handled</td><td>out parameter signalizing if the key was handled by the scene. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if update/redraw is needed, otherwise false. </dd></dl>
+
 <p>Implemented in <a class="el" href="classFileMenu.html#a8cfe51677d1b2f2706dff3c36e3c5951">FileMenu</a>, and <a class="el" href="classGallery.html#ae78af5e01a106a5dcee6e853775d4e54">Gallery</a>.</p>
 
 </div>
@@ -240,6 +262,14 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Resize method invoked on terminal resize. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>new maximum terminal size. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="classFileMenu.html#a63bf526109b2209f69c1b6c4094813da">FileMenu</a>, and <a class="el" href="classGallery.html#acad3d3e68106ec916d2a8075ac3df766">Gallery</a>.</p>
 
@@ -269,6 +299,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Show method used to initialize ncurses windows and private fields of the class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initial_size</td><td>Initial maximum screen size. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implemented in <a class="el" href="classFileMenu.html#a69657f691506ab820b22cf0af010d818">FileMenu</a>, and <a class="el" href="classGallery.html#a62e976e7c9f10bc0837954bf8081c5ac">Gallery</a>.</p>
 
 </div>
@@ -296,6 +334,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Render new frame of scene. </p>
+
 <p>Implemented in <a class="el" href="classFileMenu.html#a95c0d509b88e729d0cbe1fadb60376ed">FileMenu</a>, and <a class="el" href="classGallery.html#a25777aea40c19bcb746979ee6d75951c">Gallery</a>.</p>
 
 </div>
@@ -309,7 +349,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classMenu.html">Menu</a></li>
-    <li class="footer">Generated on Sun Jun 12 2022 19:55:52 for ascii-art by
+    <li class="footer">Generated on Sun Jun 12 2022 22:07:54 for ascii-art by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

@@ -1,5 +1,5 @@
 <map id="Settings" name="Settings">
 <area shape="rect" id="node1" title="Settings class." alt="" coords="5,463,189,819"/>
-<area shape="rect" id="node2" href="$classBasicFilter.html" title=" " alt="" coords="28,161,167,385"/>
+<area shape="rect" id="node2" href="$classBasicFilter.html" title="Basic filter for multiplying/adding constants to Color channels." alt="" coords="28,161,167,385"/>
 <area shape="rect" id="node3" href="$classFilter.html" title=" " alt="" coords="52,5,143,112"/>
 </map>

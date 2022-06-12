@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['zoom_521',['zoom',['../classGallery.html#a08c906b5fcbc3f168bf981c5b89da0c9',1,'Gallery']]]
+  ['zoom_522',['zoom',['../classGallery.html#a08c906b5fcbc3f168bf981c5b89da0c9',1,'Gallery']]]
 ];

@@ -95,27 +95,29 @@ $(document).ready(function(){initNavTree('Filter_8h_source.html',''); initResiza
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../Color.h&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classFilter.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFilter.html">Filter</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classFilter.html#a6537f14bba2878ee6079000a176d6c4e">~Filter</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classColor.html">Color</a> <a class="code" href="classFilter.html#a41373a82033e3f3a2b19481462188ca2">apply</a>(<a class="code" href="classColor.html">Color</a> color, <a class="code" href="structVector.html">Vector</a> position, <a class="code" href="classFrame.html">Frame</a> &amp; frame) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classColor.html">Color</a> <a class="code" href="classFilter.html#a41373a82033e3f3a2b19481462188ca2">apply</a>(<a class="code" href="classColor.html">Color</a> color, <a class="code" href="structVector.html">Vector</a> position) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;};</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif //ASCII_ART_FILTER_H_83871D30DE3040108B811AC25379E177</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classColor.html">Color</a> <a class="code" href="classFilter.html#a41373a82033e3f3a2b19481462188ca2">apply</a>(<a class="code" href="classColor.html">Color</a> color, <a class="code" href="structVector.html">Vector</a> position, <a class="code" href="classFrame.html">Frame</a> &amp; frame) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classColor.html">Color</a> <a class="code" href="classFilter.html#a41373a82033e3f3a2b19481462188ca2">apply</a>(<a class="code" href="classColor.html">Color</a> color, <a class="code" href="structVector.html">Vector</a> position) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif //ASCII_ART_FILTER_H_83871D30DE3040108B811AC25379E177</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astructVector_html"><div class="ttname"><a href="structVector.html">Vector</a></div><div class="ttdoc">A vector class.</div><div class="ttdef"><b>Definition:</b> Vector.h:10</div></div>
 <div class="ttc" id="aclassFilter_html_a6537f14bba2878ee6079000a176d6c4e"><div class="ttname"><a href="classFilter.html#a6537f14bba2878ee6079000a176d6c4e">Filter::~Filter</a></div><div class="ttdeci">virtual ~Filter()=default</div></div>
 <div class="ttc" id="aclassFrame_html"><div class="ttname"><a href="classFrame.html">Frame</a></div><div class="ttdoc">Frame representing a 2D image.</div><div class="ttdef"><b>Definition:</b> Frame.h:14</div></div>
 <div class="ttc" id="aclassFilter_html"><div class="ttname"><a href="classFilter.html">Filter</a></div><div class="ttdef"><b>Definition:</b> Filter.h:9</div></div>
-<div class="ttc" id="aclassFilter_html_a41373a82033e3f3a2b19481462188ca2"><div class="ttname"><a href="classFilter.html#a41373a82033e3f3a2b19481462188ca2">Filter::apply</a></div><div class="ttdeci">virtual Color apply(Color color, Vector position, Frame &amp;frame) const =0</div></div>
+<div class="ttc" id="aclassFilter_html_a41373a82033e3f3a2b19481462188ca2"><div class="ttname"><a href="classFilter.html#a41373a82033e3f3a2b19481462188ca2">Filter::apply</a></div><div class="ttdeci">virtual Color apply(Color color, Vector position, Frame &amp;frame) const =0</div><div class="ttdoc">Apply filter to color.</div></div>
 <div class="ttc" id="aclassColor_html"><div class="ttname"><a href="classColor.html">Color</a></div><div class="ttdef"><b>Definition:</b> Color.h:5</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e54a2744356c30f22bb916660f7ffa66.html">ascii-art</a></li><li class="navelem"><a class="el" href="dir_ddb0c640d5688e7654897cc1a7e8d945.html">sources</a></li><li class="navelem"><a class="el" href="dir_848a9f546231c3b1fceca0fb64d8ea7c.html">filters</a></li><li class="navelem"><a class="el" href="Filter_8h.html">Filter.h</a></li>
-    <li class="footer">Generated on Sun Jun 12 2022 19:55:52 for ascii-art by
+    <li class="footer">Generated on Sun Jun 12 2022 22:07:54 for ascii-art by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

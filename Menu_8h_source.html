@@ -91,35 +91,37 @@ $(document).ready(function(){initNavTree('Menu_8h_source.html',''); initResizabl
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../../container/Vector.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classMenu.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMenu.html">Menu</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classMenu.html#a8fc4104b08c9a24d1dab18b82a82b7da">~Menu</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMenu.html#a6b02778b244b727ed865501adffff91a">show</a>(<a class="code" href="structVector.html">Vector</a> initial_size) = 0;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMenu.html#afa09b3606d651c11045b7928e637dc63">resize</a>(<a class="code" href="structVector.html">Vector</a> size) = 0;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMenu.html#ad5a3d1f5978d580165da78cf7ceb92e9">hide</a>() = 0; <span class="comment">// TODO: add assert if hidden/shown twice in row</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMenu.html#af02eea1dae4b7fa4a63c6d851a1ae03f">update</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classMenu.html#ae1ad05d80918e71abf45c524dc36e672">input</a>(<span class="keywordtype">int</span> <a class="code" href="classMenu.html#ae1ad05d80918e71abf45c524dc36e672">input</a>, <span class="keywordtype">bool</span> &amp; handled) = 0;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;};</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classMenu.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMenu.html">Menu</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classMenu.html#a8fc4104b08c9a24d1dab18b82a82b7da">~Menu</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMenu.html#a6b02778b244b727ed865501adffff91a">show</a>(<a class="code" href="structVector.html">Vector</a> initial_size) = 0;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif //ASCII_ART_MENU_H_C5098B7A070F4C7DA3A521D26B32DDFF</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMenu.html#afa09b3606d651c11045b7928e637dc63">resize</a>(<a class="code" href="structVector.html">Vector</a> size) = 0;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMenu.html#ad5a3d1f5978d580165da78cf7ceb92e9">hide</a>() = 0; <span class="comment">// TODO: add assert if hidden/shown twice in row</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classMenu.html#af02eea1dae4b7fa4a63c6d851a1ae03f">update</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classMenu.html#ae1ad05d80918e71abf45c524dc36e672">input</a>(<span class="keywordtype">int</span> <a class="code" href="classMenu.html#ae1ad05d80918e71abf45c524dc36e672">input</a>, <span class="keywordtype">bool</span> &amp; handled) = 0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif //ASCII_ART_MENU_H_C5098B7A070F4C7DA3A521D26B32DDFF</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astructVector_html"><div class="ttname"><a href="structVector.html">Vector</a></div><div class="ttdoc">A vector class.</div><div class="ttdef"><b>Definition:</b> Vector.h:10</div></div>
-<div class="ttc" id="aclassMenu_html_ae1ad05d80918e71abf45c524dc36e672"><div class="ttname"><a href="classMenu.html#ae1ad05d80918e71abf45c524dc36e672">Menu::input</a></div><div class="ttdeci">virtual bool input(int input, bool &amp;handled)=0</div></div>
-<div class="ttc" id="aclassMenu_html_ad5a3d1f5978d580165da78cf7ceb92e9"><div class="ttname"><a href="classMenu.html#ad5a3d1f5978d580165da78cf7ceb92e9">Menu::hide</a></div><div class="ttdeci">virtual void hide()=0</div></div>
-<div class="ttc" id="aclassMenu_html"><div class="ttname"><a href="classMenu.html">Menu</a></div><div class="ttdef"><b>Definition:</b> Menu.h:7</div></div>
-<div class="ttc" id="aclassMenu_html_afa09b3606d651c11045b7928e637dc63"><div class="ttname"><a href="classMenu.html#afa09b3606d651c11045b7928e637dc63">Menu::resize</a></div><div class="ttdeci">virtual void resize(Vector size)=0</div></div>
+<div class="ttc" id="aclassMenu_html_ae1ad05d80918e71abf45c524dc36e672"><div class="ttname"><a href="classMenu.html#ae1ad05d80918e71abf45c524dc36e672">Menu::input</a></div><div class="ttdeci">virtual bool input(int input, bool &amp;handled)=0</div><div class="ttdoc">Handle key input.</div></div>
+<div class="ttc" id="aclassMenu_html_ad5a3d1f5978d580165da78cf7ceb92e9"><div class="ttname"><a href="classMenu.html#ad5a3d1f5978d580165da78cf7ceb92e9">Menu::hide</a></div><div class="ttdeci">virtual void hide()=0</div><div class="ttdoc">Clear all ncurses windows and private fields.</div></div>
+<div class="ttc" id="aclassMenu_html"><div class="ttname"><a href="classMenu.html">Menu</a></div><div class="ttdoc">Virtual class representing single ncurses scene/menu.</div><div class="ttdef"><b>Definition:</b> Menu.h:9</div></div>
+<div class="ttc" id="aclassMenu_html_afa09b3606d651c11045b7928e637dc63"><div class="ttname"><a href="classMenu.html#afa09b3606d651c11045b7928e637dc63">Menu::resize</a></div><div class="ttdeci">virtual void resize(Vector size)=0</div><div class="ttdoc">Resize method invoked on terminal resize.</div></div>
 <div class="ttc" id="aclassMenu_html_a8fc4104b08c9a24d1dab18b82a82b7da"><div class="ttname"><a href="classMenu.html#a8fc4104b08c9a24d1dab18b82a82b7da">Menu::~Menu</a></div><div class="ttdeci">virtual ~Menu()=default</div></div>
-<div class="ttc" id="aclassMenu_html_a6b02778b244b727ed865501adffff91a"><div class="ttname"><a href="classMenu.html#a6b02778b244b727ed865501adffff91a">Menu::show</a></div><div class="ttdeci">virtual void show(Vector initial_size)=0</div></div>
-<div class="ttc" id="aclassMenu_html_af02eea1dae4b7fa4a63c6d851a1ae03f"><div class="ttname"><a href="classMenu.html#af02eea1dae4b7fa4a63c6d851a1ae03f">Menu::update</a></div><div class="ttdeci">virtual void update() const =0</div></div>
+<div class="ttc" id="aclassMenu_html_a6b02778b244b727ed865501adffff91a"><div class="ttname"><a href="classMenu.html#a6b02778b244b727ed865501adffff91a">Menu::show</a></div><div class="ttdeci">virtual void show(Vector initial_size)=0</div><div class="ttdoc">Show method used to initialize ncurses windows and private fields of the class.</div></div>
+<div class="ttc" id="aclassMenu_html_af02eea1dae4b7fa4a63c6d851a1ae03f"><div class="ttname"><a href="classMenu.html#af02eea1dae4b7fa4a63c6d851a1ae03f">Menu::update</a></div><div class="ttdeci">virtual void update() const =0</div><div class="ttdoc">Render new frame of scene.</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e54a2744356c30f22bb916660f7ffa66.html">ascii-art</a></li><li class="navelem"><a class="el" href="dir_438f8607c9650cca25b3846b1f0d3618.html">menus</a></li><li class="navelem"><a class="el" href="Menu_8h.html">Menu.h</a></li>
-    <li class="footer">Generated on Sun Jun 12 2022 19:55:52 for ascii-art by
+    <li class="footer">Generated on Sun Jun 12 2022 22:07:54 for ascii-art by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

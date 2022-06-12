@@ -97,7 +97,7 @@ Inheritance diagram for Filter:</div>
 <div class="center"><img src="classFilter__inherit__graph.png" border="0" usemap="#Filter_inherit__map" alt="Inheritance graph"/></div>
 <map name="Filter_inherit__map" id="Filter_inherit__map">
 <area shape="rect" title=" " alt="" coords="29,5,120,112"/>
-<area shape="rect" href="classBasicFilter.html" title=" " alt="" coords="5,160,144,384"/>
+<area shape="rect" href="classBasicFilter.html" title="Basic filter for multiplying/adding constants to Color channels." alt="" coords="5,160,144,384"/>
 </map>
 </div>
 <div class="dynheader">
@@ -114,8 +114,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6537f14bba2878ee6079000a176d6c4e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFilter.html#a6537f14bba2878ee6079000a176d6c4e">~Filter</a> ()=default</td></tr>
 <tr class="separator:a6537f14bba2878ee6079000a176d6c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41373a82033e3f3a2b19481462188ca2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFilter.html#a41373a82033e3f3a2b19481462188ca2">apply</a> (<a class="el" href="classColor.html">Color</a> color, <a class="el" href="structVector.html">Vector</a> position, <a class="el" href="classFrame.html">Frame</a> &amp;frame) const =0</td></tr>
+<tr class="memdesc:a41373a82033e3f3a2b19481462188ca2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply filter to color.  <a href="classFilter.html#a41373a82033e3f3a2b19481462188ca2">More...</a><br /></td></tr>
 <tr class="separator:a41373a82033e3f3a2b19481462188ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91a89b652d7b9af6ad374828bf14db73"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classColor.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFilter.html#a91a89b652d7b9af6ad374828bf14db73">apply</a> (<a class="el" href="classColor.html">Color</a> color, <a class="el" href="structVector.html">Vector</a> position) const =0</td></tr>
+<tr class="memdesc:a91a89b652d7b9af6ad374828bf14db73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply filter to color.  <a href="classFilter.html#a91a89b652d7b9af6ad374828bf14db73">More...</a><br /></td></tr>
 <tr class="separator:a91a89b652d7b9af6ad374828bf14db73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -179,6 +181,16 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Apply filter to color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td><a class="el" href="classColor.html">Color</a> on <em>position</em> to apply filter to. </td></tr>
+    <tr><td class="paramname">position</td><td>Position of the <em>color</em>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>new <a class="el" href="classColor.html">Color</a> after filter applied. </dd></dl>
+
 <p>Implemented in <a class="el" href="classBasicFilter.html#a66f15b5a416ebfba5bd1f9538b3eea08">BasicFilter</a>.</p>
 
 </div>
@@ -223,13 +235,24 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Apply filter to color. </p>
+<p>Abstract class method for applying any kind of filter to pixel map. (based on position,color,etc.) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td><a class="el" href="classColor.html">Color</a> on <em>position</em> to apply filter to. </td></tr>
+    <tr><td class="paramname">position</td><td>Position of the <em>color</em>. </td></tr>
+    <tr><td class="paramname">frame</td><td>Whole frame that the <em>color</em> came from in case of complicated filters for edge detection etc. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>new <a class="el" href="classColor.html">Color</a> to be placed instead of the original one. </dd></dl>
+
 <p>Implemented in <a class="el" href="classBasicFilter.html#a53dd02e4446bf9be681f9e2fea06ee55">BasicFilter</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFilter_a41373a82033e3f3a2b19481462188ca2_icgraph.png" border="0" usemap="#classFilter_a41373a82033e3f3a2b19481462188ca2_icgraph" alt=""/></div>
 <map name="classFilter_a41373a82033e3f3a2b19481462188ca2_icgraph" id="classFilter_a41373a82033e3f3a2b19481462188ca2_icgraph">
-<area shape="rect" title=" " alt="" coords="228,5,327,32"/>
+<area shape="rect" title="Apply filter to color." alt="" coords="228,5,327,32"/>
 <area shape="rect" href="classDataSource.html#aa6c592eb118bdb3264a0b4763a80b2fb" title=" " alt="" coords="5,5,180,32"/>
 </map>
 </div>
@@ -245,7 +268,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classFilter.html">Filter</a></li>
-    <li class="footer">Generated on Sun Jun 12 2022 19:55:52 for ascii-art by
+    <li class="footer">Generated on Sun Jun 12 2022 22:07:54 for ascii-art by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
