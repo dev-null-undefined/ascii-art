@@ -167,7 +167,7 @@ void Gallery::update() const {
     wrefresh(m_main_window);
 }
 
-bool Gallery::input(int input, bool & handled) {
+bool Gallery::input(int input, bool &) {
     bool update = false;
     switch (input) {
         case KEY_LEFT:

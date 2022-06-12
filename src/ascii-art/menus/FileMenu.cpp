@@ -312,10 +312,11 @@ bool FileMenu::handle_mouse() {
     if (getmouse(&event) == OK) {
         if (event.bstate & BUTTON1_PRESSED) {
             int actual_index = (int) (event.y + m_scroll) - 3;
-            if (event.y < m_window_size.m_y && event.y > 1 && actual_index < m_files.size() + m_selected_files.size() &&
+            if (static_cast<size_t>(event.y) < m_window_size.m_y && event.y > 1 &&
+                static_cast<size_t>(actual_index) < m_files.size() + m_selected_files.size() &&
                 !m_files.empty()) {
                 std::string path;
-                if (actual_index < m_selected_files.size()) {
+                if (static_cast<size_t>(actual_index) < m_selected_files.size()) {
                     path = *std::next(m_selected_files.begin(), (long) actual_index);
                 } else {
                     path = *std::next(m_files.begin(), (long) (actual_index - m_selected_files.size()));
@@ -330,8 +331,8 @@ bool FileMenu::handle_mouse() {
                 }
                 return true;
 
-            } else if (event.y == 1 && event.x < m_window_size.m_x) {
-                if (event.x - 1 <= m_regex.size()) {
+            } else if (event.y == 1 && static_cast<size_t>(event.x) < m_window_size.m_x) {
+                if (static_cast<size_t>(event.x - 1) <= m_regex.size()) {
                     m_regex_index = event.x - 1;
                     return true;
                 } else {
