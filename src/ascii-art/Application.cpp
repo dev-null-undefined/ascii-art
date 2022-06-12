@@ -228,7 +228,7 @@ void Application::tryAddSource(const std::string & path, size_t depth) {
             m_sources->push_back(dataSource);
             Logger::log("Added: " + path, LogLevel::TRACE);
         } catch (std::exception & e) {
-            Logger::log(e.what(), LogLevel::INFO);
+            Logger::log(e.what(), LogLevel::ERROR);
         }
     }
 }

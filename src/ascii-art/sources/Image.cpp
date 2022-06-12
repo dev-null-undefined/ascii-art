@@ -10,7 +10,7 @@ Frame & Image::GetFrame(size_t) {
     if (!m_frame) {
         Logger::log("Loading " + std::string(filename()), LogLevel::INFO);
         Load();
-        Logger::log("Loading " + std::string(filename()), LogLevel::INFO);
+        Logger::log("Loaded " + std::string(filename()), LogLevel::INFO);
     }
 #ifdef DEBUG
     if (!m_frame) {
