@@ -91,15 +91,15 @@ void Gallery::update() const {
     Frame & frame = m_sources->at(m_current_index)->getFrame(
             m_frame_index); // TODO: handle exception with invalid format while loading
     box(m_main_window, 0, 0);
-    std::shared_ptr<Frame> frame_ptr = frame.clone();
 
-    Matrix<Color> pixels = frame_ptr->getPixels();
+    Matrix<Color> pixels = frame.getPixels();
 
-    Vector image_size = (m_main_window_size - Vector{2, 2}) * m_image_scale;
-    auto resized = std::shared_ptr<Frame>(new ImageFrame(pixels.resize(image_size, m_settings->m_image_scale_factor)));
+    Vector maximum_size = (m_main_window_size - Vector{2, 2}) * m_image_scale;
+    auto resized = std::shared_ptr<Frame>(
+            new ImageFrame(pixels.resize(maximum_size, m_settings->m_image_scale_factor)));
     auto original = resized->clone();
     m_image_size = resized->getSize();
-// TODO: dithering and color dithering before resize
+    // TODO: dithering and color dithering before resize
     Vector resolution = original->getSize();
     for (size_t y = 0, img_y = m_image_position.m_y;
          img_y < resolution.m_y && y < m_main_window_size.m_y - 2; y++, img_y++) {
