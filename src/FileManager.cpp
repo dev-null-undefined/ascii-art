@@ -107,3 +107,11 @@ std::set<fs::path> FileManager::find_files(const std::string_view & regex) {
     }
     return files;
 }
+
+void FileManager::removeRegexPart(std::string & regex, size_t & current_position) {
+    size_t first_after = regex.find(FileManager::PATH_SEPARATOR, current_position);
+    size_t last_before = regex.rfind(PATH_SEPARATOR, current_position);
+    last_before = last_before == std::string::npos ? 0 : last_before;
+    regex.erase(last_before, first_after - last_before);
+    current_position = last_before;
+}

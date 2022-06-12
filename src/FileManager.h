@@ -47,6 +47,13 @@ class FileManager {
      */
     static std::set<fs::path> find_files(const std::string_view & regex);
 
+    /**
+       * Default file path separator.
+       */
+    static constexpr char PATH_SEPARATOR = '/'; // TODO: windows support
+
+    static void removeRegexPart(std::string & regex, size_t & current_position);
+
   private:
     /**
      * Tests if given char is file path separator.
@@ -59,11 +66,6 @@ class FileManager {
      * Caches the home folder path.
      */
     static std::optional<std::string> home;
-
-    /**
-     * Default file path separator.
-     */
-    static constexpr char PATH_SEPARATOR = '/'; // TODO: windows support
 };
 
 

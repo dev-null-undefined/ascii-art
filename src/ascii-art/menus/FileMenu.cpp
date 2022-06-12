@@ -99,7 +99,11 @@ void FileMenu::update() const {
             wattroff(m_window, A_UNDERLINE);
         }
     }
-    mvwprintw(m_window, 1, 1, "%s", (m_regex + " ").c_str());
+    std::string print = m_regex;
+    for (size_t x = m_regex.size(); x < m_window_size.m_x; x++) {
+        print += ' ';
+    }
+    mvwprintw(m_window, 1, 1, "%s", print.c_str());
     wmove(m_window, 1, (int) m_regex_index + 1);
     wrefresh(m_window);
 }
@@ -139,6 +143,13 @@ bool FileMenu::input(int input, bool & handled) {
             }
             break;
         case KEY_BACKSPACE:
+            // Delete the char before cursor with ctrl modifier
+            if (!m_regex.empty() && m_regex_index > 0) {
+                FileManager::removeRegexPart(m_regex, m_regex_index);
+                update_files(m_regex);
+                return true;
+            }
+            break;
         case 127:
             // Delete the char before cursor
             if (!m_regex.empty() && m_regex_index > 0) {
@@ -195,7 +206,7 @@ bool FileMenu::input(int input, bool & handled) {
         case KEY_MOUSE:
             return handle_mouse();
         default:
-            if (isprint(input)) {
+            if (isprint(input) && m_regex.size() < m_window_size.m_x) {
                 m_regex.insert(m_regex_index, 1, (char) input);
                 m_regex_index++;
                 update_files(m_regex);
