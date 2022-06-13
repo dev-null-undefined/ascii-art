@@ -5,14 +5,11 @@
 #include "../../../Test.h"
 
 class TestJPEGImage : public Test {
-
   public:
     TestJPEGImage() : Test("JPEGImage") {
-
     }
 
     int runTest() override;
-
 };
 
 
