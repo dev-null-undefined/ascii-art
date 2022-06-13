@@ -78,19 +78,16 @@ void PNGImage::Load() {
         Logger::log("Non-standard color type(" + std::to_string(color_type) + ") " + m_filename, LogLevel::INFO);
     }
 
-    png_free_data(png_ptr, end_ptr, PNG_FREE_ALL, -1);
-
-    png_destroy_read_struct(&png_ptr, nullptr,
-                            &end_ptr);
-
+    png_read_end(png_ptr, end_ptr);
 
     /* cleanup heap allocation */
     for (png_uint_32 y = 0; y < height; y++)
-        free(row_pointers[y]);
-    free(row_pointers);
-    free(png_ptr);
-    free(end_ptr);
+        png_free(png_ptr, row_pointers[y]);
+    png_free(png_ptr, row_pointers);
 
+    png_data_freer(png_ptr, end_ptr, PNG_DESTROY_WILL_FREE_DATA, PNG_FREE_ALL);
+
+    png_destroy_read_struct(&png_ptr, &end_ptr, nullptr);
 
     fclose(fp);
 
