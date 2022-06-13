@@ -27,6 +27,7 @@
 - [ ] Save current configuration to file
 ## Logger:
 - [ ] path for log file
+- [ ] minimum log level
 ## Filters:
 - [ ] default values for basic filter
 ## Gallery:
