@@ -42,4 +42,4 @@ There are few ways to get help:
 
 ## :memo: Documentation
 
-Code documentation is available on [github-pages](dev-null-undefined.github.io/ascii-art)
+Code documentation is available on [github-pages](https://dev-null-undefined.github.io/ascii-art/)
