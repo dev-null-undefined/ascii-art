@@ -3,6 +3,16 @@
 > ascii-art terminal based image viewer
 > with zoom,move and color capabilities
 
+## :computer: Running using nix package manager
+This requires [flake](https://nixos.wiki/wiki/Flakes) experimental commands
+```
+# Create shell environment with the ascii-art package
+nix shell github:dev-null-undefined/ascii-art --no-write-lock-file
+
+# Or you can just run it
+nix run github:dev-null-undefined/ascii-art --no-write-lock-file
+```
+
 ## :cloud: Installation from sources
 
 ```sh
