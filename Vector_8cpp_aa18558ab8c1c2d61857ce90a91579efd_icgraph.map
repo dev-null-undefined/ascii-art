@@ -1,6 +1,7 @@
 <map id="double_cast" name="double_cast">
-<area shape="rect" id="node1" title=" " alt="" coords="460,31,560,57"/>
-<area shape="rect" id="node2" href="$structVector.html#a0e88e95842d85b4c62137d218ce81563" title="Calculate maximum Vector size that would fit into the maximum Vector param." alt="" coords="228,23,412,65"/>
-<area shape="rect" id="node3" href="$classMatrix.html#a1229b6585c0acd2bcce137167eff38de" title="Resize matrix to new size using linear average." alt="" coords="5,5,180,32"/>
-<area shape="rect" id="node4" href="$classTestVector.html#a03ed36b6837fbbeb352f72f6a61eb07d" title=" " alt="" coords="21,56,165,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="599,31,699,57"/>
+<area shape="rect" id="node2" href="$structVector.html#a0e88e95842d85b4c62137d218ce81563" title="Calculate maximum Vector size that would fit into the maximum Vector param." alt="" coords="367,23,551,65"/>
+<area shape="rect" id="node3" href="$classMatrix.html#a1229b6585c0acd2bcce137167eff38de" title="Resize matrix to new size using linear average." alt="" coords="191,5,302,32"/>
+<area shape="rect" id="node5" href="$classTestVector.html#a03ed36b6837fbbeb352f72f6a61eb07d" title=" " alt="" coords="175,56,319,83"/>
+<area shape="rect" id="node4" href="$classGallery.html#a25777aea40c19bcb746979ee6d75951c" title="Render new frame of scene." alt="" coords="5,5,127,32"/>
 </map>

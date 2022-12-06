@@ -8,7 +8,7 @@
 <area shape="rect" id="node8" href="$classColor.html#ac3a32ddc028428076d68debd2bec8eec" title="Normalize each part of color to the max/min 0&#45;255 values." alt="" coords="645,360,775,387"/>
 <area shape="rect" id="node10" href="$classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title="Log method to log message." alt="" coords="275,411,369,437"/>
 <area shape="rect" id="node15" href="$classSettings.html#a0289344c8a02c8a66712bff64023b4fe" title="Maximum possible that could be returned by Settings::colorValue(const Color &amp;)." alt="" coords="248,208,396,235"/>
-<area shape="rect" id="node16" href="$Settings_8cpp.html#a539a058a0ec1f4de8457dbe7a78bd251" title="to_string method for ConfigKey enum." alt="" coords="283,485,361,512"/>
+<area shape="rect" id="node16" href="$Settings_8cpp.html#a539a058a0ec1f4de8457dbe7a78bd251" title="to_string method for ConfigKey enum." alt="" coords="283,461,361,488"/>
 <area shape="rect" id="node3" href="$classBasicFilter.html#a53dd02e4446bf9be681f9e2fea06ee55" title="Apply filter to color." alt="" coords="643,107,777,133"/>
 <area shape="rect" id="node9" href="$Color_8cpp.html#a54c2579ab3a14c8be20185336ab9e3b3" title=" " alt="" coords="825,360,964,387"/>
 <area shape="rect" id="node11" href="$classLogger.html#acebb37f5538780e6c14f13de6ec497bc" title="Get the singleton Logger instance." alt="" coords="444,411,595,437"/>

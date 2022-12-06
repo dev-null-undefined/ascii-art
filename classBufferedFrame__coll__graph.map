@@ -1,6 +1,6 @@
 <map id="BufferedFrame" name="BufferedFrame">
-<area shape="rect" id="node1" title="loaded pixel frame in memory." alt="" coords="43,725,197,891"/>
-<area shape="rect" id="node2" href="$classFrame.html" title="Frame representing a 2D image." alt="" coords="5,409,136,619"/>
-<area shape="rect" id="node3" href="$classMatrix.html" title=" " alt="" coords="160,365,288,663"/>
-<area shape="rect" id="node4" href="$classMatrix.html" title=" " alt="" coords="167,5,281,303"/>
+<area shape="rect" id="node1" title="loaded pixel frame in memory." alt="" coords="22,1033,234,1301"/>
+<area shape="rect" id="node2" href="$classFrame.html" title="Frame representing a 2D image." alt="" coords="5,571,208,912"/>
+<area shape="rect" id="node3" href="$classMatrix.html" title=" " alt="" coords="233,512,442,971"/>
+<area shape="rect" id="node4" href="$classMatrix.html" title=" " alt="" coords="235,5,440,449"/>
 </map>

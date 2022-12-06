@@ -1,5 +1,7 @@
 <map id="Vector::resizeWithAspectRation" name="Vector::resizeWithAspectRation">
-<area shape="rect" id="node1" title="Calculate maximum Vector size that would fit into the maximum Vector param." alt="" coords="228,23,412,65"/>
-<area shape="rect" id="node2" href="$classMatrix.html#a1229b6585c0acd2bcce137167eff38de" title="Resize matrix to new size using linear average." alt="" coords="5,5,180,32"/>
-<area shape="rect" id="node3" href="$classTestVector.html#a03ed36b6837fbbeb352f72f6a61eb07d" title=" " alt="" coords="21,56,165,83"/>
+<area shape="rect" id="node1" title="Calculate maximum Vector size that would fit into the maximum Vector param." alt="" coords="524,23,708,65"/>
+<area shape="rect" id="node2" href="$classMatrix.html#a1229b6585c0acd2bcce137167eff38de" title="Resize matrix to new size using linear average." alt="" coords="349,5,459,32"/>
+<area shape="rect" id="node5" href="$classTestVector.html#a03ed36b6837fbbeb352f72f6a61eb07d" title=" " alt="" coords="332,56,476,83"/>
+<area shape="rect" id="node3" href="$classGallery.html#a25777aea40c19bcb746979ee6d75951c" title="Render new frame of scene." alt="" coords="163,5,284,32"/>
+<area shape="rect" id="node4" href="$classGallery.html#ae78af5e01a106a5dcee6e853775d4e54" title="Handle key input." alt="" coords="5,5,115,32"/>
 </map>

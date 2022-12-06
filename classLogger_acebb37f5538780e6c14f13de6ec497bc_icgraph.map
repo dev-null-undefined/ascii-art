@@ -14,10 +14,10 @@
 <area shape="rect" id="node14" href="$classSettings.html#a70b2402a87e18c562a66cdba52315215" title="Parse key&#45;value pair based on the ConfigKey key provided." alt="" coords="419,588,610,615"/>
 <area shape="rect" id="node15" href="$classSettings.html#a0d8511ebdeb5ccb939dbccaf898a9e6a" title="Read line by line file and try to parse key&#45;value pair." alt="" coords="187,563,369,589"/>
 <area shape="rect" id="node16" href="$PNGImage_8cpp.html#a5c89aebc34a0b26873a395667b4b1c07" title=" " alt="" coords="449,436,580,463"/>
-<area shape="rect" id="node17" href="$classGallery.html#acad3d3e68106ec916d2a8075ac3df766" title="Resize method invoked on terminal resize." alt="" coords="457,639,572,665"/>
-<area shape="rect" id="node18" href="$classFileMenu.html#a63bf526109b2209f69c1b6c4094813da" title="Resize method invoked on terminal resize." alt="" coords="451,689,579,716"/>
-<area shape="rect" id="node19" href="$classGallery.html#a62e976e7c9f10bc0837954bf8081c5ac" title="Show method used to initialize ncurses windows and private fields of the class." alt="" coords="459,740,570,767"/>
-<area shape="rect" id="node20" href="$classFileMenu.html#a69657f691506ab820b22cf0af010d818" title="Show method used to initialize ncurses windows and private fields of the class." alt="" coords="453,791,576,817"/>
+<area shape="rect" id="node17" href="$classFileMenu.html#a63bf526109b2209f69c1b6c4094813da" title="Resize method invoked on terminal resize." alt="" coords="451,639,579,665"/>
+<area shape="rect" id="node18" href="$classGallery.html#acad3d3e68106ec916d2a8075ac3df766" title="Resize method invoked on terminal resize." alt="" coords="457,689,572,716"/>
+<area shape="rect" id="node19" href="$classFileMenu.html#a69657f691506ab820b22cf0af010d818" title="Show method used to initialize ncurses windows and private fields of the class." alt="" coords="453,740,576,767"/>
+<area shape="rect" id="node20" href="$classGallery.html#a62e976e7c9f10bc0837954bf8081c5ac" title="Show method used to initialize ncurses windows and private fields of the class." alt="" coords="459,791,570,817"/>
 <area shape="rect" id="node21" href="$classApplication.html#a8cb17cae2c930fa642dd402e109b7040" title="Recursively adds sources from given path and all subdirectories." alt="" coords="419,335,610,361"/>
 <area shape="rect" id="node5" href="$classTestFileManager.html#a4c9e7ab6ca8ffb4d24c697336c33ed35" title=" " alt="" coords="187,56,369,83"/>
 <area shape="rect" id="node6" href="$classFileMenu.html#a6504cb078a595249e957827856cefd11" title=" " alt="" coords="194,5,362,32"/>

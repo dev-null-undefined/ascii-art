@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gallery_337',['Gallery',['../classGallery.html',1,'']]]
+  ['gallery_345',['Gallery',['../classGallery.html',1,'']]]
 ];

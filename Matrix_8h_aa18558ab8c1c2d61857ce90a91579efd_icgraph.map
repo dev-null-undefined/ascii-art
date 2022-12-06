@@ -1,4 +1,6 @@
 <map id="double_cast" name="double_cast">
-<area shape="rect" id="node1" title=" " alt="" coords="228,5,328,32"/>
-<area shape="rect" id="node2" href="$classMatrix.html#a1229b6585c0acd2bcce137167eff38de" title="Resize matrix to new size using linear average." alt="" coords="5,5,180,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="491,5,591,32"/>
+<area shape="rect" id="node2" href="$classMatrix.html#a1229b6585c0acd2bcce137167eff38de" title="Resize matrix to new size using linear average." alt="" coords="332,5,443,32"/>
+<area shape="rect" id="node3" href="$classGallery.html#a25777aea40c19bcb746979ee6d75951c" title="Render new frame of scene." alt="" coords="163,5,284,32"/>
+<area shape="rect" id="node4" href="$classGallery.html#ae78af5e01a106a5dcee6e853775d4e54" title="Handle key input." alt="" coords="5,5,115,32"/>
 </map>

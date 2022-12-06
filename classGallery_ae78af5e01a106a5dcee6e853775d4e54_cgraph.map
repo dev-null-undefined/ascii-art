@@ -2,20 +2,22 @@
 <area shape="rect" id="node1" title="Handle key input." alt="" coords="5,183,115,209"/>
 <area shape="rect" id="node2" href="$classGallery.html#a8673f32694f0b3467e2f7288b5ca9451" title=" " alt="" coords="163,31,333,57"/>
 <area shape="rect" id="node5" href="$classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title="Log method to log message." alt="" coords="201,157,295,184"/>
-<area shape="rect" id="node9" href="$LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="610,233,689,260"/>
+<area shape="rect" id="node9" href="$LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="812,409,891,436"/>
 <area shape="rect" id="node10" href="$classGallery.html#a25777aea40c19bcb746979ee6d75951c" title="Render new frame of scene." alt="" coords="187,436,309,463"/>
-<area shape="rect" id="node3" href="$classGallery.html#a69120db3aa21b5aa0bb87f66952a59c5" title=" " alt="" coords="593,5,706,32"/>
+<area shape="rect" id="node3" href="$classGallery.html#a69120db3aa21b5aa0bb87f66952a59c5" title=" " alt="" coords="615,5,729,32"/>
 <area shape="rect" id="node4" href="$classGallery.html#a08c906b5fcbc3f168bf981c5b89da0c9" title=" " alt="" coords="401,31,513,57"/>
-<area shape="rect" id="node6" href="$classLogger.html#acebb37f5538780e6c14f13de6ec497bc" title="Get the singleton Logger instance." alt="" coords="381,132,532,159"/>
-<area shape="rect" id="node8" href="$classLogger.html#afba40734614c0379be107002dc5d45ae" title=" " alt="" coords="405,81,509,108"/>
-<area shape="rect" id="node7" href="$classLogger.html#add0f34d4c753c86af8074840a72366b3" title=" " alt="" coords="590,132,709,159"/>
-<area shape="rect" id="node11" href="$classColor.html#a12bb22611f2d16f78d1743d81e5ec654" title=" " alt="" coords="395,588,518,615"/>
-<area shape="rect" id="node12" href="$classColor.html#a67f3bba3742cf37c11e48bf8f60d89fa" title=" " alt="" coords="399,639,514,665"/>
-<area shape="rect" id="node13" href="$classColor.html#aee907dc6ce04385d4988a5b1221f2e3b" title=" " alt="" coords="395,335,519,361"/>
-<area shape="rect" id="node14" href="$classFrame.html#a76a1c1e6779a548e10c726d666cff2cf" title=" " alt="" coords="391,385,522,412"/>
-<area shape="rect" id="node15" href="$classColor.html#a7871f5a72a9f40efd31ce53fa403fffe" title=" " alt="" coords="401,436,512,463"/>
+<area shape="rect" id="node6" href="$classLogger.html#acebb37f5538780e6c14f13de6ec497bc" title="Get the singleton Logger instance." alt="" coords="381,81,532,108"/>
+<area shape="rect" id="node8" href="$classLogger.html#afba40734614c0379be107002dc5d45ae" title=" " alt="" coords="405,132,509,159"/>
+<area shape="rect" id="node7" href="$classLogger.html#add0f34d4c753c86af8074840a72366b3" title=" " alt="" coords="613,81,731,108"/>
+<area shape="rect" id="node11" href="$classColor.html#a12bb22611f2d16f78d1743d81e5ec654" title=" " alt="" coords="395,284,518,311"/>
+<area shape="rect" id="node12" href="$classColor.html#a67f3bba3742cf37c11e48bf8f60d89fa" title=" " alt="" coords="399,335,514,361"/>
+<area shape="rect" id="node13" href="$classColor.html#aee907dc6ce04385d4988a5b1221f2e3b" title=" " alt="" coords="395,385,519,412"/>
+<area shape="rect" id="node14" href="$classFrame.html#a76a1c1e6779a548e10c726d666cff2cf" title=" " alt="" coords="391,436,522,463"/>
+<area shape="rect" id="node15" href="$classColor.html#a7871f5a72a9f40efd31ce53fa403fffe" title=" " alt="" coords="401,487,512,513"/>
 <area shape="rect" id="node16" href="$classColor.html#ac3a32ddc028428076d68debd2bec8eec" title="Normalize each part of color to the max/min 0&#45;255 values." alt="" coords="392,537,521,564"/>
-<area shape="rect" id="node18" href="$classMatrix.html#a1229b6585c0acd2bcce137167eff38de" title="Resize matrix to new size using linear average." alt="" coords="401,487,512,513"/>
-<area shape="rect" id="node19" href="$classGallery.html#a825adafc747111ccccc471c27c0ea793" title=" " alt="" coords="381,284,532,311"/>
-<area shape="rect" id="node17" href="$Color_8cpp.html#a54c2579ab3a14c8be20185336ab9e3b3" title=" " alt="" coords="580,537,719,564"/>
+<area shape="rect" id="node18" href="$classMatrix.html#a1229b6585c0acd2bcce137167eff38de" title="Resize matrix to new size using linear average." alt="" coords="401,588,512,615"/>
+<area shape="rect" id="node21" href="$classGallery.html#a825adafc747111ccccc471c27c0ea793" title=" " alt="" coords="597,644,747,671"/>
+<area shape="rect" id="node17" href="$Color_8cpp.html#a54c2579ab3a14c8be20185336ab9e3b3" title=" " alt="" coords="603,476,741,503"/>
+<area shape="rect" id="node19" href="$Matrix_8h.html#aa18558ab8c1c2d61857ce90a91579efd" title=" " alt="" coords="622,527,722,553"/>
+<area shape="rect" id="node20" href="$structVector.html#a0e88e95842d85b4c62137d218ce81563" title="Calculate maximum Vector size that would fit into the maximum Vector param." alt="" coords="580,578,764,619"/>
 </map>

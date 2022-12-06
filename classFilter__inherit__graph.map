@@ -1,4 +1,4 @@
 <map id="Filter" name="Filter">
-<area shape="rect" id="node1" title=" " alt="" coords="29,5,120,112"/>
-<area shape="rect" id="node2" href="$classBasicFilter.html" title="Basic filter for multiplying/adding constants to Color channels." alt="" coords="5,160,144,384"/>
+<area shape="rect" id="node1" title=" " alt="" coords="47,5,241,185"/>
+<area shape="rect" id="node2" href="$classBasicFilter.html" title="Basic filter for multiplying/adding constants to Color channels." alt="" coords="5,233,283,619"/>
 </map>

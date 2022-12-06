@@ -1,0 +1,8 @@
+<map id="Matrix::resize" name="Matrix::resize">
+<area shape="rect" id="node1" title="Resize matrix to new size using linear average." alt="" coords="5,35,116,61"/>
+<area shape="rect" id="node2" href="$Matrix_8h.html#aa18558ab8c1c2d61857ce90a91579efd" title=" " alt="" coords="206,5,306,32"/>
+<area shape="rect" id="node3" href="$structVector.html#a0e88e95842d85b4c62137d218ce81563" title="Calculate maximum Vector size that would fit into the maximum Vector param." alt="" coords="164,57,348,98"/>
+<area shape="rect" id="node4" href="$Vector_8cpp.html#aa18558ab8c1c2d61857ce90a91579efd" title=" " alt="" coords="396,13,496,40"/>
+<area shape="rect" id="node5" href="$Vector_8cpp.html#aa117796a5016327fa395d60e0efa91a6" title=" " alt="" coords="399,64,493,91"/>
+<area shape="rect" id="node6" href="$LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="407,115,485,141"/>
+</map>

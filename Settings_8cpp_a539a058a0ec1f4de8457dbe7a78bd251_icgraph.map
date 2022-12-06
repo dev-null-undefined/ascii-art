@@ -1,9 +1,8 @@
 <map id="to_string" name="to_string">
-<area shape="rect" id="node1" title="to_string method for ConfigKey enum." alt="" coords="789,83,868,110"/>
-<area shape="rect" id="node2" href="$classSettings.html#a58da5fdd52c2f6a3c70cbf3e8d5babf3" title="Calculates closes char to give color based on the Settings::maxValue() and Settings::colorValue(const..." alt="" coords="450,8,585,35"/>
-<area shape="rect" id="node3" href="$classSettings.html#a940976240a0acc2e16a83c646180f314" title="Get rounded color that would be exactly equivalent to char returned by Settings::getChar(const Color ..." alt="" coords="420,83,615,110"/>
-<area shape="rect" id="node4" href="$classSettings.html#a70b2402a87e18c562a66cdba52315215" title="Parse key&#45;value pair based on the ConfigKey key provided." alt="" coords="422,146,613,172"/>
-<area shape="rect" id="node7" href="$Settings_8h.html#a539a058a0ec1f4de8457dbe7a78bd251" title="to_string method for ConfigKey enum." alt="" coords="663,58,741,84"/>
-<area shape="rect" id="node5" href="$classSettings.html#a0d8511ebdeb5ccb939dbccaf898a9e6a" title="Read line by line file and try to parse key&#45;value pair." alt="" coords="189,146,372,172"/>
-<area shape="rect" id="node6" href="$classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title="Settings constructor." alt="" coords="5,146,141,172"/>
+<area shape="rect" id="node1" title="to_string method for ConfigKey enum." alt="" coords="663,56,741,83"/>
+<area shape="rect" id="node2" href="$classSettings.html#a58da5fdd52c2f6a3c70cbf3e8d5babf3" title="Calculates closes char to give color based on the Settings::maxValue() and Settings::colorValue(const..." alt="" coords="450,5,585,32"/>
+<area shape="rect" id="node3" href="$classSettings.html#a940976240a0acc2e16a83c646180f314" title="Get rounded color that would be exactly equivalent to char returned by Settings::getChar(const Color ..." alt="" coords="420,56,615,83"/>
+<area shape="rect" id="node4" href="$classSettings.html#a70b2402a87e18c562a66cdba52315215" title="Parse key&#45;value pair based on the ConfigKey key provided." alt="" coords="422,107,613,133"/>
+<area shape="rect" id="node5" href="$classSettings.html#a0d8511ebdeb5ccb939dbccaf898a9e6a" title="Read line by line file and try to parse key&#45;value pair." alt="" coords="189,107,372,133"/>
+<area shape="rect" id="node6" href="$classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title="Settings constructor." alt="" coords="5,107,141,133"/>
 </map>

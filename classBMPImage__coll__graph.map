@@ -1,8 +1,8 @@
 <map id="BMPImage" name="BMPImage">
-<area shape="rect" id="node1" title=" " alt="" coords="304,507,437,628"/>
-<area shape="rect" id="node2" href="$classImage.html" title=" " alt="" coords="10,264,134,400"/>
-<area shape="rect" id="node3" href="$classDataSource.html" title=" " alt="" coords="5,5,139,171"/>
-<area shape="rect" id="node4" href="$structBMPImage_1_1BMPInfoHeader.html" title=" " alt="" coords="158,220,359,444"/>
-<area shape="rect" id="node5" href="$structBMPImage_1_1BMPFileHeader.html" title="The BMPHeader structures are sourced from: https://en.wikipedia.org/wiki/BMP_file_format." alt="" coords="383,264,582,400"/>
-<area shape="rect" id="node6" href="$structBMPImage_1_1BMPColorHeader.html" title=" " alt="" coords="605,257,816,407"/>
+<area shape="rect" id="node1" title=" " alt="" coords="349,653,535,819"/>
+<area shape="rect" id="node2" href="$classImage.html" title=" " alt="" coords="12,345,205,569"/>
+<area shape="rect" id="node3" href="$classDataSource.html" title=" " alt="" coords="5,5,212,273"/>
+<area shape="rect" id="node4" href="$structBMPImage_1_1BMPInfoHeader.html" title=" " alt="" coords="229,323,431,591"/>
+<area shape="rect" id="node5" href="$structBMPImage_1_1BMPFileHeader.html" title="The BMPHeader structures are sourced from: https://en.wikipedia.org/wiki/BMP_file_format." alt="" coords="455,389,653,525"/>
+<area shape="rect" id="node6" href="$structBMPImage_1_1BMPColorHeader.html" title=" " alt="" coords="677,381,887,532"/>
 </map>

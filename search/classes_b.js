@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pngimage_344',['PNGImage',['../classPNGImage.html',1,'']]]
+  ['pngimage_352',['PNGImage',['../classPNGImage.html',1,'']]]
 ];
