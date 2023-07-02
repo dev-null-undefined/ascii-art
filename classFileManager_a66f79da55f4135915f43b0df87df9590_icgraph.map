@@ -1,8 +1,10 @@
 <map id="FileManager::is_separator" name="FileManager::is_separator">
-<area shape="rect" id="node1" title="Tests if given char is file path separator." alt="" coords="711,5,901,32"/>
-<area shape="rect" id="node2" href="$classFileManager.html#a8c6f24d88df9ed5217e5a149a47e35bc" title="Normalize path." alt="" coords="452,31,663,57"/>
-<area shape="rect" id="node4" href="$classTestFileManager.html#a4c9e7ab6ca8ffb4d24c697336c33ed35" title=" " alt="" coords="5,5,188,32"/>
-<area shape="rect" id="node3" href="$classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333" title="Regex file name search." alt="" coords="236,56,404,83"/>
-<area shape="rect" id="node6" href="$classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title="Settings constructor." alt="" coords="252,107,388,133"/>
-<area shape="rect" id="node5" href="$classFileMenu.html#a6504cb078a595249e957827856cefd11" title=" " alt="" coords="13,56,181,83"/>
+<area shape="rect" id="node1" title="Tests if given char is file path separator." alt="" coords="711,208,901,235"/>
+<area shape="rect" id="node2" href="$classFileManager.html#a8c6f24d88df9ed5217e5a149a47e35bc" title="Normalize path." alt="" coords="452,157,663,184"/>
+<area shape="rect" id="node6" href="$classTestFileManager.html#a4c9e7ab6ca8ffb4d24c697336c33ed35" title=" " alt="" coords="5,157,188,184"/>
+<area shape="rect" id="node3" href="$classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333" title="Regex file name search." alt="" coords="236,81,404,108"/>
+<area shape="rect" id="node8" href="$classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title="Settings constructor." alt="" coords="252,183,388,209"/>
+<area shape="rect" id="node4" href="$classTestJPEGImage.html#ae8ee728996028047b25472b7a3fd5bd0" title=" " alt="" coords="9,5,184,32"/>
+<area shape="rect" id="node5" href="$classTestPNGImage.html#ae540ab78c17ac8fb2fe61e3ef170393a" title=" " alt="" coords="11,56,183,83"/>
+<area shape="rect" id="node7" href="$classFileMenu.html#a6504cb078a595249e957827856cefd11" title=" " alt="" coords="13,107,181,133"/>
 </map>

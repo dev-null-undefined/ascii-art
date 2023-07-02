@@ -22,7 +22,9 @@ var annotated_dup =
     [ "Settings", "classSettings.html", "classSettings" ],
     [ "Test", "classTest.html", "classTest" ],
     [ "TestFileManager", "classTestFileManager.html", "classTestFileManager" ],
+    [ "TestJPEGImage", "classTestJPEGImage.html", "classTestJPEGImage" ],
     [ "TestMatrix", "classTestMatrix.html", "classTestMatrix" ],
+    [ "TestPNGImage", "classTestPNGImage.html", "classTestPNGImage" ],
     [ "TestVector", "classTestVector.html", "classTestVector" ],
     [ "Vector", "structVector.html", "structVector" ],
     [ "Video", "classVideo.html", "classVideo" ]

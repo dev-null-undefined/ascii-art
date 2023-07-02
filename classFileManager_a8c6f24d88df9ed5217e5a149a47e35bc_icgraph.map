@@ -1,9 +1,11 @@
 <map id="FileManager::normalize_path" name="FileManager::normalize_path">
-<area shape="rect" id="node1" title="Normalize path." alt="" coords="648,56,859,83"/>
-<area shape="rect" id="node2" href="$classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333" title="Regex file name search." alt="" coords="432,56,600,83"/>
-<area shape="rect" id="node3" href="$classTestFileManager.html#a4c9e7ab6ca8ffb4d24c697336c33ed35" title=" " alt="" coords="201,5,384,32"/>
-<area shape="rect" id="node7" href="$classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title="Settings constructor." alt="" coords="448,107,584,133"/>
-<area shape="rect" id="node4" href="$classFileMenu.html#a6504cb078a595249e957827856cefd11" title=" " alt="" coords="209,56,377,83"/>
-<area shape="rect" id="node5" href="$classFileMenu.html#ab666b22609a0c0489324ab838805eb43" title=" " alt="" coords="5,31,153,57"/>
-<area shape="rect" id="node6" href="$classFileMenu.html#a8cfe51677d1b2f2706dff3c36e3c5951" title="Handle key input." alt="" coords="18,81,141,108"/>
+<area shape="rect" id="node1" title="Normalize path." alt="" coords="648,157,859,184"/>
+<area shape="rect" id="node2" href="$classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333" title="Regex file name search." alt="" coords="432,107,600,133"/>
+<area shape="rect" id="node5" href="$classTestFileManager.html#a4c9e7ab6ca8ffb4d24c697336c33ed35" title=" " alt="" coords="201,157,384,184"/>
+<area shape="rect" id="node9" href="$classSettings.html#ab7169a6eefce79566dd07db3b1e5e967" title="Settings constructor." alt="" coords="448,208,584,235"/>
+<area shape="rect" id="node3" href="$classTestJPEGImage.html#ae8ee728996028047b25472b7a3fd5bd0" title=" " alt="" coords="205,5,380,32"/>
+<area shape="rect" id="node4" href="$classTestPNGImage.html#ae540ab78c17ac8fb2fe61e3ef170393a" title=" " alt="" coords="207,56,379,83"/>
+<area shape="rect" id="node6" href="$classFileMenu.html#a6504cb078a595249e957827856cefd11" title=" " alt="" coords="209,107,377,133"/>
+<area shape="rect" id="node7" href="$classFileMenu.html#ab666b22609a0c0489324ab838805eb43" title=" " alt="" coords="5,81,153,108"/>
+<area shape="rect" id="node8" href="$classFileMenu.html#a8cfe51677d1b2f2706dff3c36e3c5951" title="Handle key input." alt="" coords="18,132,141,159"/>
 </map>

@@ -1,6 +1,8 @@
 <map id="Test" name="Test">
-<area shape="rect" id="node1" title=" " alt="" coords="171,5,408,347"/>
+<area shape="rect" id="node1" title=" " alt="" coords="368,5,605,347"/>
 <area shape="rect" id="node2" href="$classTestFileManager.html" title=" " alt="" coords="5,395,179,487"/>
-<area shape="rect" id="node3" href="$classTestMatrix.html" title=" " alt="" coords="203,395,376,487"/>
-<area shape="rect" id="node4" href="$classTestVector.html" title=" " alt="" coords="400,395,573,487"/>
+<area shape="rect" id="node3" href="$classTestJPEGImage.html" title=" " alt="" coords="203,395,376,487"/>
+<area shape="rect" id="node4" href="$classTestMatrix.html" title=" " alt="" coords="400,395,573,487"/>
+<area shape="rect" id="node5" href="$classTestPNGImage.html" title=" " alt="" coords="597,395,771,487"/>
+<area shape="rect" id="node6" href="$classTestVector.html" title=" " alt="" coords="795,395,968,487"/>
 </map>

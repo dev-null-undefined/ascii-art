@@ -1,0 +1,19 @@
+<map id="TestPNGImage::runTest" name="TestPNGImage::runTest">
+<area shape="rect" id="node1" title=" " alt="" coords="5,311,177,337"/>
+<area shape="rect" id="node2" href="$classFileManager.html#ae4aab0c4fad16167fbfe9ba033cdb333" title="Regex file name search." alt="" coords="225,132,393,159"/>
+<area shape="rect" id="node10" href="$classDataSource.html#a6073ecb8823c144cb95d45b950e67539" title=" " alt="" coords="226,291,393,317"/>
+<area shape="rect" id="node13" href="$classFrame.html#a0e6884e77aa2641d6add98ba13dff9aa" title="Returns the size of the frame." alt="" coords="250,348,369,375"/>
+<area shape="rect" id="node15" href="$classTest.html#a1d3398793051af1ae9712975d567424c" title=" " alt="" coords="248,411,371,437"/>
+<area shape="rect" id="node3" href="$classFileManager.html#a79f086b623a49b3d43ae058961b0b12a" title="Get home folder based on the current user and ENV variables." alt="" coords="708,56,883,83"/>
+<area shape="rect" id="node4" href="$classLogger.html#a4b9b8f8616cb5d0a42113f6c88898798" title="Log method to log message." alt="" coords="499,132,594,159"/>
+<area shape="rect" id="node7" href="$LogLevel_8cpp.html#ab92295a2eda07d5ec770244f8e47dbb7" title=" " alt="" coords="756,208,835,235"/>
+<area shape="rect" id="node8" href="$classFileManager.html#a8c6f24d88df9ed5217e5a149a47e35bc" title="Normalize path." alt="" coords="441,31,652,57"/>
+<area shape="rect" id="node5" href="$classLogger.html#acebb37f5538780e6c14f13de6ec497bc" title="Get the singleton Logger instance." alt="" coords="720,157,871,184"/>
+<area shape="rect" id="node6" href="$classLogger.html#afba40734614c0379be107002dc5d45ae" title=" " alt="" coords="743,107,847,133"/>
+<area shape="rect" id="node9" href="$classFileManager.html#a66f79da55f4135915f43b0df87df9590" title="Tests if given char is file path separator." alt="" coords="700,5,891,32"/>
+<area shape="rect" id="node11" href="$classDataSource.html#adc12942ab5046bbd723ff263a441ac20" title=" " alt="" coords="455,284,638,311"/>
+<area shape="rect" id="node12" href="$classDataSource.html#a2804b5bfc74b6252095fa850b2c086b0" title=" " alt="" coords="462,335,631,361"/>
+<area shape="rect" id="node14" href="$classFrame.html#a886460f90a8be33fa126993ea490fd3d" title="Computes the size of the frame." alt="" coords="486,385,607,412"/>
+<area shape="rect" id="node16" href="$classTest.html#af4930c8889e14582c99386770f04da76" title=" " alt="" coords="481,436,613,463"/>
+<area shape="rect" id="node17" href="$Test_8h.html#a6ff3858889fb6c93d595f9500a7eb232" title=" " alt="" coords="749,436,841,463"/>
+</map>

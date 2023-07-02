@@ -1,5 +1,9 @@
 <map id="Test::assertEqual" name="Test::assertEqual">
-<area shape="rect" id="node1" title=" " alt="" coords="236,31,368,57"/>
+<area shape="rect" id="node1" title=" " alt="" coords="407,56,539,83"/>
 <area shape="rect" id="node2" href="$classTestMatrix.html#a526463a4c5f114377e4be77bf406a668" title=" " alt="" coords="24,5,169,32"/>
 <area shape="rect" id="node3" href="$classTestFileManager.html#a4c9e7ab6ca8ffb4d24c697336c33ed35" title=" " alt="" coords="5,56,188,83"/>
+<area shape="rect" id="node4" href="$classTest.html#a1d3398793051af1ae9712975d567424c" title=" " alt="" coords="236,107,359,133"/>
+<area shape="rect" id="node5" href="$classTestJPEGImage.html#ae8ee728996028047b25472b7a3fd5bd0" title=" " alt="" coords="9,107,184,133"/>
+<area shape="rect" id="node6" href="$classTestPNGImage.html#ae540ab78c17ac8fb2fe61e3ef170393a" title=" " alt="" coords="11,157,183,184"/>
+<area shape="rect" id="node7" href="$classTestVector.html#a03ed36b6837fbbeb352f72f6a61eb07d" title=" " alt="" coords="25,208,169,235"/>
 </map>

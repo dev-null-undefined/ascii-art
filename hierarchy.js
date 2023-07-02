@@ -32,7 +32,9 @@ var hierarchy =
     [ "Settings", "classSettings.html", null ],
     [ "Test", "classTest.html", [
       [ "TestFileManager", "classTestFileManager.html", null ],
+      [ "TestJPEGImage", "classTestJPEGImage.html", null ],
       [ "TestMatrix", "classTestMatrix.html", null ],
+      [ "TestPNGImage", "classTestPNGImage.html", null ],
       [ "TestVector", "classTestVector.html", null ]
     ] ],
     [ "Vector", "structVector.html", null ]

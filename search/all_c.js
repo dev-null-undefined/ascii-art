@@ -91,6 +91,5 @@ var searchData=
   ['minimum_5fzoom_216',['MINIMUM_ZOOM',['../classGallery.html#a4d888bdd7711bc61c93caa3cae3f4230',1,'Gallery']]],
   ['modifiedcolor_217',['modifiedColor',['../classSettings.html#a7fbf289a31ac7211f1eb78750ddb1e74',1,'Settings']]],
   ['move_218',['move',['../classGallery.html#a69120db3aa21b5aa0bb87f66952a59c5',1,'Gallery']]],
-  ['my_5ferror_5fexit_219',['my_error_exit',['../JPEGImage_8cpp.html#a4de3ecd55401b56f0cdd500fac21c655',1,'JPEGImage.cpp']]],
-  ['my_5ferror_5fptr_220',['my_error_ptr',['../JPEGImage_8cpp.html#a17bb08c876725fc3608be875c457af71',1,'JPEGImage.cpp']]]
+  ['my_5ferror_5fexit_219',['my_error_exit',['../JPEGImage_8cpp.html#a4de3ecd55401b56f0cdd500fac21c655',1,'JPEGImage.cpp']]]
 ];
