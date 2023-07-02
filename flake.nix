@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    devshell.url = "github:numtide/devshell/master";
+    devshell.url = "github:numtide/devshell/main";
   };
 
   outputs = { self, nixpkgs, flake-utils, devshell }:
@@ -9,7 +9,7 @@
       let
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [ devshell.overlay ];
+          overlays = [ devshell.overlays.default ];
         };
       in rec {
         apps = {
