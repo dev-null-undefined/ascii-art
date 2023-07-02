@@ -1,0 +1,16 @@
+#ifndef ASCII_ART_TESTJPEGIMAGE_H_FA08B5130DD34B6E8E6D14BACB793311
+#define ASCII_ART_TESTJPEGIMAGE_H_FA08B5130DD34B6E8E6D14BACB793311
+
+
+#include "../../../Test.h"
+
+class TestJPEGImage : public Test {
+  public:
+    TestJPEGImage() : Test("JPEGImage") {
+    }
+
+    int runTest() override;
+};
+
+
+#endif //ASCII_ART_TESTJPEGIMAGE_H_FA08B5130DD34B6E8E6D14BACB793311

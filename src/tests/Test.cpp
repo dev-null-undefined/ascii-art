@@ -1,5 +1,5 @@
-#include <iostream>
 #include "Test.h"
+#include <iostream>
 #include <cstdio>
 #include <execinfo.h>
 
@@ -27,7 +27,7 @@ int Test::runAllTests() {
 }
 
 void Test::testAssert(bool value) {
-    if (!value) throw std::invalid_argument("Assert failed");
+    assertEqual(value, true);
 }
 
 std::vector<std::shared_ptr<Test>> Test::TESTS = {};
