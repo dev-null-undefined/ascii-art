@@ -90,7 +90,7 @@
         ascii-art = let
           inherit system;
           pname = "ascii-art";
-          version = "v0.1.1";
+          version = "v0.1.2";
         in
           pkgs.stdenv.mkDerivation {
             pname = pname;
@@ -99,7 +99,7 @@
               owner = "dev-null-undefined";
               repo = pname;
               rev = version;
-              sha256 = "sha256-vjJIxG1CzwwAOQLe1CJZbkxW+U2Qwa1fKd8SfxQskW4=";
+              sha256 = "sha256-dQJjBH0gxn8FBMyyC9DRYOergOUzns/+jUNJ1KSVTtk=";
               fetchSubmodules = true;
             };
             buildInputs = libs;

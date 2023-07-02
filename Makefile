@@ -1,7 +1,7 @@
 .PHONY: all clean run compile release debug fast fast-debug doc perf-compile fast-perf report benchmark directories test-compile fast-test test
 .DEFAULT_GOAL = all
 PROJECT = ascii-art
-VERSION = v0.1.1
+VERSION = v0.1.2
 
 SOURCE_EXT = .cpp
 HEADER_EXT = .h
