@@ -1,4 +1,4 @@
-.PHONY: all clean run compile release debug fast fast-debug doc perf-compile fast-perf report benchmark directories test-compile fast-test test
+.PHONY: all clean run compile release debug fast fast-debug doc perf-compile fast-perf report benchmark directories test-compile fast-test test binaries
 .DEFAULT_GOAL = all
 PROJECT = ascii-art
 VERSION = v0.1.2
