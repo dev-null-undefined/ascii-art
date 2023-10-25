@@ -22,23 +22,25 @@
         libpng12
         zlib
       ];
-    in rec {
+
+      program-name = "ascii-art";
+    in {
       apps = {
         default = {
           type = "app";
-          program = self.packages.${system}.ascii-art + "/bin/ascii-art";
+          program = self.packages.${system}.${program-name} + "/bin/${program-name}";
         };
       };
 
       defaultApp = {
         type = "app";
-        program = self.packages.${system}.ascii-art + "/bin/ascii-art";
+        program = self.packages.${system}.${program-name} + "/bin/${program-name}";
       };
 
       devShell = pkgs.devshell.mkShell {
-        name = "ascii-art";
+        name = "${program-name}";
         imports = ["${devshell}/extra/language/c.nix"];
-        packages = with pkgs; [glibc libcxx doxygen graphviz];
+        packages = with pkgs; [gcc glibc libcxx doxygen graphviz ];
 
         language.c = {
           libraries = libs;
@@ -77,7 +79,6 @@
           }
         ];
         bash = {
-          interactive = "zsh";
           extra = ''
             export CPLUS_INCLUDE_PATH="$C_INCLUDE_PATH"
             export LIBRARY_PATH="$LD_LIBRARY_PATH"
@@ -85,17 +86,15 @@
         };
       };
 
-      defaultPackage = self.packages.${system}.ascii-art;
+      defaultPackage = self.packages.${system}.${program-name};
 
       packages = {
-        ascii-art = let
-          inherit system;
-          pname = "ascii-art";
+        ${program-name} = let
+          pname = "${program-name}";
           version = "v0.1.2";
         in
           pkgs.stdenv.mkDerivation {
-            pname = pname;
-            version = version;
+            inherit pname version;
             src = pkgs.fetchFromGitHub {
               owner = "dev-null-undefined";
               repo = pname;
@@ -103,13 +102,9 @@
               sha256 = "sha256-dQJjBH0gxn8FBMyyC9DRYOergOUzns/+jUNJ1KSVTtk=";
               fetchSubmodules = true;
             };
-            buildInputs = libs;
-            configurePhase = ''
-              ${pkgs.gnumake}/bin/make clean
-            '';
-            buildPhase = ''
-              ${pkgs.gnumake}/bin/make fast
-            '';
+
+            buildInputs = libs ++ [ pkgs.doxygen ];
+
             installPhase = ''
               mkdir -p $out/bin
               mv bin/${pname} $out/bin/
@@ -122,7 +117,14 @@
               platforms = platforms.linux;
             };
           };
-        default = self.packages.${system}.ascii-art;
+        default = self.packages.${system}.${program-name};
+      };
+
+      formatter = pkgs.alejandra;
+
+      cmake-helper = {
+        libs = builtins.map builtins.toString (builtins.map pkgs.lib.getLib libs);
+        includes = builtins.map builtins.toString (builtins.map pkgs.lib.getDev libs);
       };
     });
 }
