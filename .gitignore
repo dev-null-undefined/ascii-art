@@ -4,6 +4,7 @@ build/
 .idea/
 cmake-build-debug/
 cmake-build-vm/
+cmake-build-debug-event-trace/
 result
 doc/
 log.txt
