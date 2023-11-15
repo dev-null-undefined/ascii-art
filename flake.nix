@@ -23,6 +23,11 @@
         zlib
       ];
 
+      cmake-helper = {
+        libs = builtins.map builtins.toString (builtins.map pkgs.lib.getLib libs);
+        includes = builtins.map builtins.toString (builtins.map pkgs.lib.getDev libs);
+      };
+
       program-name = "ascii-art";
     in {
       apps = {
@@ -40,7 +45,7 @@
       devShell = pkgs.devshell.mkShell {
         name = "${program-name}";
         imports = ["${devshell}/extra/language/c.nix"];
-        packages = with pkgs; [gcc glibc libcxx doxygen graphviz ];
+        packages = with pkgs; [gcc glibc libcxx doxygen graphviz];
 
         language.c = {
           libraries = libs;
@@ -103,7 +108,7 @@
               fetchSubmodules = true;
             };
 
-            buildInputs = libs ++ [ pkgs.doxygen ];
+            buildInputs = libs ++ [pkgs.doxygen];
 
             installPhase = ''
               mkdir -p $out/bin
@@ -117,14 +122,19 @@
               platforms = platforms.linux;
             };
           };
+
         default = self.packages.${system}.${program-name};
       };
 
       formatter = pkgs.alejandra;
 
       cmake-helper = {
-        libs = builtins.map builtins.toString (builtins.map pkgs.lib.getLib libs);
-        includes = builtins.map builtins.toString (builtins.map pkgs.lib.getDev libs);
+        inherit (cmake-helper) libs includes;
+
+        cmake-file = pkgs.writeText "CMakeList.txt" (pkgs.lib.strings.concatLines (
+          (builtins.map (lib: ''target_link_directories(''${CMAKE_PROJECT_NAME} PUBLIC ${lib}/lib)'') cmake-helper.libs)
+          ++ (builtins.map (include: ''include_directories(${include}/include)'') cmake-helper.includes)
+        ));
       };
     });
 }

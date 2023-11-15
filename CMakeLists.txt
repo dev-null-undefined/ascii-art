@@ -15,70 +15,38 @@ file(GLOB_RECURSE ascii_art_SRC CONFIGURE_DEPENDS
 
 add_executable(ascii_art ${ascii_art_SRC})
 
-execute_process(COMMAND nix build --no-link nixpkgs\#libjpeg_original.dev
-        OUTPUT_VARIABLE tmp
-        COMMAND nix path-info nixpkgs\#libjpeg_original.dev
+execute_process(COMMAND nix eval .\#cmake-helper.x86_64-linux.includes --json
         OUTPUT_STRIP_TRAILING_WHITESPACE
         WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-        OUTPUT_VARIABLE libjpeg-dev)
-execute_process(COMMAND nix build --no-link nixpkgs\#libjpeg_original.out
-        OUTPUT_VARIABLE tmp
-        COMMAND nix path-info nixpkgs\#libjpeg_original.out
-        OUTPUT_STRIP_TRAILING_WHITESPACE
-        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-        OUTPUT_VARIABLE libjpeg)
-execute_process(COMMAND nix build --no-link nixpkgs\#libpng.dev
-        OUTPUT_VARIABLE tmp
-        COMMAND nix path-info nixpkgs\#libpng.dev
-        OUTPUT_STRIP_TRAILING_WHITESPACE
-        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-        OUTPUT_VARIABLE libpng-dev)
-execute_process(COMMAND nix build --no-link nixpkgs\#libpng.out
-        OUTPUT_VARIABLE tmp
-        COMMAND nix path-info nixpkgs\#libpng.out
-        OUTPUT_STRIP_TRAILING_WHITESPACE
-        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-        OUTPUT_VARIABLE libpng)
-execute_process(COMMAND nix build --no-link nixpkgs\#zlib.dev
-        OUTPUT_VARIABLE tmp
-        COMMAND nix path-info nixpkgs\#zlib.dev
-        OUTPUT_STRIP_TRAILING_WHITESPACE
-        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-        OUTPUT_VARIABLE zlib-dev)
-execute_process(COMMAND nix build --no-link nixpkgs\#zlib.out
-        OUTPUT_VARIABLE tmp
-        COMMAND nix path-info nixpkgs\#zlib.out
-        OUTPUT_STRIP_TRAILING_WHITESPACE
-        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-        OUTPUT_VARIABLE zlib)
-execute_process(COMMAND nix build --no-link nixpkgs\#ncurses.dev
-        OUTPUT_VARIABLE tmp
-        COMMAND nix path-info nixpkgs\#ncurses.dev
-        OUTPUT_STRIP_TRAILING_WHITESPACE
-        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-        OUTPUT_VARIABLE ncurses-dev)
-execute_process(COMMAND nix build --no-link nixpkgs\#ncurses.out
-        OUTPUT_VARIABLE tmp
-        COMMAND nix path-info nixpkgs\#ncurses.out
-        OUTPUT_STRIP_TRAILING_WHITESPACE
-        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-        OUTPUT_VARIABLE ncurses)
+        OUTPUT_VARIABLE includes)
 
-message(STATUS "ncures: ${ncurses}")
-message(STATUS "ncurses-dev: ${ncurses-dev}")
-message(STATUS "libjpeg: ${libjpeg}")
-message(STATUS "libjpeg-dev: ${libjpeg-dev}")
-message(STATUS "libpng: ${libpng}")
-message(STATUS "libpng-dev: ${libpng-dev}")
-message(STATUS "zlib: ${zlib}")
-message(STATUS "zlib-dev: ${zlib-dev}")
+execute_process(COMMAND nix eval .\#cmake-helper.x86_64-linux.libs --json
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+        OUTPUT_VARIABLE libs)
 
-include_directories(${libjpeg-dev}/include ${ncurses-dev}/include ${libpng-dev}/include ${zlib-dev}/include)
-link_directories(${libjpeg}/lib ${ncurses}/lib ${libpng}/lib ${zlib}/lib)
+string(JSON libs-length LENGTH ${libs})
+string(JSON includes-length LENGTH ${includes})
+
+message(STATUS "includes: ${includes-length} ${includes}")
+message(STATUS "libs: ${libs-length} ${libs}")
+
+math(EXPR libs-length "${libs-length} - 1")
+math(EXPR includes-length "${includes-length} - 1")
+
+foreach (IDX RANGE ${libs-length})
+        string(JSON libs-${IDX} GET ${libs} ${IDX})
+        message(STATUS "libs-${IDX}: ${libs-${IDX}}")
+        link_directories(${libs-${IDX}}/lib)
+        target_link_directories(${CMAKE_PROJECT_NAME} PUBLIC ${libs-${IDX}}/lib)
+        set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} ${libs-${IDX}}/lib)
+endforeach ()
+
+foreach (IDX RANGE ${includes-length})
+        string(JSON includes-${IDX} GET ${includes} ${IDX})
+        message(STATUS "includes-${IDX}: ${includes-${IDX}}")
+        include_directories(${includes-${IDX}}/include)
+endforeach ()
 
 target_link_libraries(ascii_art jpeg ncurses ncursesw png z form stdc++fs)
-target_link_directories(ascii_art PUBLIC ${libjpeg}/lib ${ncurses}/lib ${libpng}/lib ${zlib}/lib)
-
-set(CMAKE_LIBRARY_PATH ${libjpeg}/lib ${ncurses}/lib ${libpng}/lib ${zlib}/lib)
-
 
