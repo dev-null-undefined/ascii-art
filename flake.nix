@@ -16,35 +16,59 @@
         inherit system;
         overlays = [devshell.overlays.default];
       };
-      libs = with pkgs; [
+      libraries = with pkgs; [
         libjpeg_original
         ncurses
         libpng12
         zlib
       ];
-      program-name = "ascii-art";
-    in {
-      apps = {
-        default = {
-          type = "app";
-          program = self.packages.${system}.${program-name} + "/bin/${program-name}";
+      compiler = pkgs.gcc;
+      dev-deps = with pkgs; [glibc libcxx doxygen graphviz];
+      package-config = rec {
+        pname = "ascii-art";
+        packages-name = pname;
+        version = "v0.0.0";
+        src = pkgs.fetchFromGitHub {
+          owner = "dev-null-undefined";
+          repo = pname;
+          rev = version;
+          sha256 = "sha256-dQJjBH0gxn8FBMyyC9DRYOergOUzns/+jUNJ1KSVTtk=";
         };
       };
+      packages = {
+        ${package-config.packages-name} = pkgs.stdenv.mkDerivation rec {
+          inherit (package-config) pname version src;
 
-      defaultApp = {
-        type = "app";
-        program = self.packages.${system}.${program-name} + "/bin/${program-name}";
+          buildInputs = libraries ++ [pkgs.doxygen];
+
+          installPhase = ''
+            mkdir -p $out/bin
+            mv bin/${pname} $out/bin/
+          '';
+
+          meta = with pkgs.lib; {
+            homepage = "";
+            description = "";
+            longDescription = "";
+            platforms = platforms.linux;
+          };
+        };
+        default = self.packages.${system}.${package-config.packages-name};
       };
-
+      default-app = {
+        type = "app";
+        program = self.packages.${system}.default + "/bin/${package-config.pname}";
+      };
+    in {
+      apps.default = default-app;
       devShell = pkgs.devshell.mkShell {
-        name = "${program-name}";
+        name = package-config.pname;
         imports = ["${devshell}/extra/language/c.nix"];
-        packages = with pkgs; [gcc glibc libcxx doxygen graphviz];
+        packages = dev-deps;
 
         language.c = {
-          libraries = libs;
-          includes = libs;
-          compiler = pkgs.gcc;
+          inherit compiler libraries;
+          includes = libraries;
         };
         commands = [
           {
@@ -85,51 +109,18 @@
         };
       };
 
-      defaultPackage = self.packages.${system}.${program-name};
+      defaultPackage = self.packages.${system}.default;
 
-      packages = {
-        ${program-name} = let
-          pname = "${program-name}";
-          version = "v0.1.2";
-        in
-          pkgs.stdenv.mkDerivation {
-            inherit pname version;
-            src = pkgs.fetchFromGitHub {
-              owner = "dev-null-undefined";
-              repo = pname;
-              rev = version;
-              sha256 = "sha256-dQJjBH0gxn8FBMyyC9DRYOergOUzns/+jUNJ1KSVTtk=";
-              fetchSubmodules = true;
-            };
-
-            buildInputs = libs ++ [pkgs.doxygen];
-
-            installPhase = ''
-              mkdir -p $out/bin
-              mv bin/${pname} $out/bin/
-            '';
-
-            meta = with pkgs.lib; {
-              homepage = "";
-              description = "";
-              longDescription = "";
-              platforms = platforms.linux;
-            };
-          };
-
-        default = self.packages.${system}.${program-name};
-      };
+      inherit packages;
 
       formatter = pkgs.alejandra;
-      cmake-helper = let
-        libs' = builtins.map builtins.toString (builtins.map pkgs.lib.getLib libs);
-        includes' = builtins.map builtins.toString (builtins.map pkgs.lib.getDev libs);
-      in {
-        libs = libs';
-        includes = includes';
+
+      cmake-helper = rec {
+        libs = builtins.map builtins.toString (builtins.map pkgs.lib.getLib libraries);
+        includes = builtins.map builtins.toString (builtins.map pkgs.lib.getDev libraries);
         cmake-file = pkgs.writeText "CMakeList.txt" (pkgs.lib.strings.concatLines (
-          (builtins.map (lib: ''target_link_directories(''${CMAKE_PROJECT_NAME} PUBLIC ${lib}/lib)'') libs')
-          ++ (builtins.map (include: ''include_directories(${include}/include)'') includes')
+          (builtins.map (lib: ''target_link_directories(''${CMAKE_PROJECT_NAME} PUBLIC ${lib}/lib)'') libs)
+          ++ (builtins.map (include: ''include_directories(${include}/include)'') includes)
         ));
       };
     });
