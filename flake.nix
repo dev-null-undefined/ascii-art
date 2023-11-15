@@ -22,12 +22,6 @@
         libpng12
         zlib
       ];
-
-      cmake-helper = {
-        libs = builtins.map builtins.toString (builtins.map pkgs.lib.getLib libs);
-        includes = builtins.map builtins.toString (builtins.map pkgs.lib.getDev libs);
-      };
-
       program-name = "ascii-art";
     in {
       apps = {
@@ -127,13 +121,15 @@
       };
 
       formatter = pkgs.alejandra;
-
-      cmake-helper = {
-        inherit (cmake-helper) libs includes;
-
+      cmake-helper = let
+        libs' = builtins.map builtins.toString (builtins.map pkgs.lib.getLib libs);
+        includes' = builtins.map builtins.toString (builtins.map pkgs.lib.getDev libs);
+      in {
+        libs = libs';
+        includes = includes';
         cmake-file = pkgs.writeText "CMakeList.txt" (pkgs.lib.strings.concatLines (
-          (builtins.map (lib: ''target_link_directories(''${CMAKE_PROJECT_NAME} PUBLIC ${lib}/lib)'') cmake-helper.libs)
-          ++ (builtins.map (include: ''include_directories(${include}/include)'') cmake-helper.includes)
+          (builtins.map (lib: ''target_link_directories(''${CMAKE_PROJECT_NAME} PUBLIC ${lib}/lib)'') libs')
+          ++ (builtins.map (include: ''include_directories(${include}/include)'') includes')
         ));
       };
     });
