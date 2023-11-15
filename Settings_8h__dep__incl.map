@@ -1,10 +1,10 @@
 <map id="src/ascii&#45;art/Settings.h" name="src/ascii&#45;art/Settings.h">
-<area shape="rect" id="node1" title=" " alt="" coords="307,5,474,32"/>
-<area shape="rect" id="node2" href="$Application_8h.html" title=" " alt="" coords="297,87,484,114"/>
-<area shape="rect" id="node7" href="$Gallery_8h.html" title=" " alt="" coords="127,80,273,121"/>
-<area shape="rect" id="node8" href="$Settings_8cpp.html" title=" " alt="" coords="509,87,691,114"/>
-<area shape="rect" id="node3" href="$Application_8cpp.html" title=" " alt="" coords="5,177,208,203"/>
-<area shape="rect" id="node4" href="$FileMenu_8cpp.html" title=" " alt="" coords="403,169,549,211"/>
-<area shape="rect" id="node5" href="$Gallery_8cpp.html" title=" " alt="" coords="232,169,379,211"/>
-<area shape="rect" id="node6" href="$main_8cpp.html" title=" " alt="" coords="574,177,679,203"/>
+<area shape="rect" id="node1" title=" " alt="" coords="426,5,593,32"/>
+<area shape="rect" id="node2" href="$Application_8h.html" title=" " alt="" coords="225,87,412,114"/>
+<area shape="rect" id="node7" href="$Gallery_8h.html" title=" " alt="" coords="436,80,583,121"/>
+<area shape="rect" id="node8" href="$Settings_8cpp.html" title=" " alt="" coords="607,87,790,114"/>
+<area shape="rect" id="node3" href="$FileMenu_8cpp.html" title=" " alt="" coords="5,169,152,211"/>
+<area shape="rect" id="node4" href="$Application_8cpp.html" title=" " alt="" coords="307,177,509,203"/>
+<area shape="rect" id="node5" href="$Gallery_8cpp.html" title=" " alt="" coords="533,169,680,211"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title=" " alt="" coords="177,177,282,203"/>
 </map>
